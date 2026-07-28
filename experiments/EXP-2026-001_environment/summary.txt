@@ -1,0 +1,9 @@
+Time: 2026-07-29T01:47:40+08:00
+OS: Ubuntu 24.04.4 LTS
+Kernel: 7.0.0-28-generic
+ROS_DISTRO: jazzy
+Python: Python 3.12.3
+Git: git version 2.43.0
+CMake: cmake version 3.28.3
+NVIDIA: NVIDIA GeForce RTX 5060 Laptop GPU, 595.84, 8151 MiB
+Zephyr west: unavailable in current terminal
