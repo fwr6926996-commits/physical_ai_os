@@ -1,0 +1,34 @@
+{
+  "recorded_at_utc": "2026-09-14T08:41:42Z",
+  "phase": "Phase 3.1B NPU compatibility gate",
+  "device": "NPU",
+  "device_full_name": "Intel(R) AI Boost",
+  "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+  "model": "act_cpu_reference.xml",
+  "default_precision_path": {
+    "compile_status": "PASS",
+    "inference_status": "PASS",
+    "strict_correctness_status": "FAIL",
+    "compile_ms": 1463.930753,
+    "first_inference_ms": 102.909773,
+    "rtol": 0.0001,
+    "atol": 0.00001,
+    "max_abs_error": 0.002484560012817383,
+    "mean_abs_error": 0.0005053336499258876,
+    "evidence": "correctness_npu.json"
+  },
+  "f32_recovery_path": {
+    "compile_status": "UNSUPPORTED",
+    "failure_stage": "compile configuration parsing",
+    "requested_inference_precision": "f32",
+    "plugin_reported_supported_values": [
+      "f16",
+      "i8"
+    ],
+    "error_summary": "Wrong value f32 for INFERENCE_PRECISION_HINT; supported values are f16 and i8."
+  },
+  "latency_benchmark_status": "SKIPPED_BY_CORRECTNESS_GATE",
+  "compatibility_status": "PASS_COMPILE_AND_INFERENCE",
+  "core_deployment_status": "EXCLUDED_STRICT_CORRECTNESS_FAIL",
+  "decision": "Keep NPU as documented compatibility evidence only. Do not relax the frozen correctness threshold and do not use NPU for the L1 Core execution path."
+}

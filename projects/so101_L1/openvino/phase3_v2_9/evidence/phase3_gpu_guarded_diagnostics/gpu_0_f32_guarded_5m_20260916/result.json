@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-09-16T04:35:57.446175+00:00",
+  "run_id": "gpu_0_f32_guarded_5m_20260916",
+  "status": "COMPLETED_NO_HANG_REPRODUCED",
+  "purpose": "Bounded reproduction only; this is not a 30-minute stability acceptance run.",
+  "configuration": {
+    "duration_minutes": 5.0,
+    "watchdog_seconds": 5.0,
+    "startup_seconds": 60.0,
+    "device": "GPU.0",
+    "precision": "f32"
+  },
+  "artifacts": {
+    "ir_xml_sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "ir_bin_sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a"
+  },
+  "worker_ready": {
+    "type": "ready",
+    "pid": 157536,
+    "available_devices": [
+      "CPU",
+      "GPU.0",
+      "GPU.1",
+      "NPU"
+    ],
+    "runtime_device": "GPU.0",
+    "device_full_name": "Intel(R) Arc(TM) Graphics (iGPU)",
+    "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+    "plugin_versions": {
+      "GPU": {
+        "build_number": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+        "description": "Intel GPU plugin"
+      }
+    },
+    "initial_max_abs_error": 1.430511474609375e-06
+  },
+  "heartbeat_count": 10211,
+  "last_completed_inference": {
+    "type": "heartbeat",
+    "iteration": 10211,
+    "elapsed_s": 300.0266151980031,
+    "latency_ms": 32.599306,
+    "finite": true,
+    "correct": true,
+    "max_abs_error": 1.430511474609375e-06
+  },
+  "final_event": {
+    "type": "completed",
+    "iteration": 10211,
+    "elapsed_s": 300.0267491269915
+  },
+  "worker_exitcode": 0,
+  "recovery": null,
+  "heartbeats_csv": "heartbeats.csv"
+}

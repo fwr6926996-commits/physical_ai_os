@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 3.1 OpenVINO conversion, load, compile and CPU correctness",
+  "status": "PASS",
+  "python_executable": "/home/lucas/intel_ws/openvino_env/bin/python",
+  "python_version": "3.12.3",
+  "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+  "device": "CPU",
+  "precision": "FP32 IR (compress_to_fp16=False)",
+  "timing_ms": {
+    "exported_program_load": 1315.528291,
+    "conversion": 2624.32203,
+    "ir_save": 87.034048,
+    "ir_load": 17.297951,
+    "compile": 349.789973,
+    "first_inference": 63.965295
+  },
+  "tensor_contract": {
+    "state": [
+      1,
+      6
+    ],
+    "wrist_image": [
+      1,
+      3,
+      480,
+      640
+    ],
+    "normalized_action_chunk": [
+      1,
+      100,
+      6
+    ]
+  },
+  "correctness": {
+    "comparison": "frozen PyTorch CPU vs OpenVINO CPU normalized ACT action chunk",
+    "rtol": 0.0001,
+    "atol": 1e-05,
+    "max_abs_error": 2.6226043701171875e-06,
+    "mean_abs_error": 4.817048875338514e-07
+  },
+  "ir": {
+    "xml": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9/act_fp32.xml",
+    "xml_sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "bin_sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a"
+  }
+}

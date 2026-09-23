@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "checked_at_local_date": "2026-09-15",
+  "overall_status": "ONE_CONCEPT_REMAINS",
+  "passed": {
+    "normalization_error_scaling": "Correctly calculated FP32 action 30, INT8 action 42, error 12.",
+    "mae": "Correctly defined mean absolute error and explained dilution of dangerous spikes.",
+    "first_action": "Correctly explained dilution when the first action is averaged with the rest of one 100-action chunk."
+  },
+  "terminology_correction": "The model emits one action chunk containing 100 action steps, not 100 chunks.",
+  "remaining_gap": "Human still classified the correctness-failing INT8 candidate as admitted, conflating successful PTQ execution with deployment admission.",
+  "next_check": "Ask only whether the candidate passed correctness and is authorized for deployment."
+}

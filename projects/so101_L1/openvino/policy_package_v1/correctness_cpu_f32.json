@@ -1,0 +1,27 @@
+{
+  "timestamp_utc": "2026-09-14T08:45:30.654243+00:00",
+  "device": "CPU",
+  "device_full_name": "Intel(R) Core(TM) Ultra 7 255H",
+  "available_devices": [
+    "CPU"
+  ],
+  "requested_inference_precision": "f32",
+  "comparison": "normalized ACT action chunk: PyTorch CPU vs OpenVINO CPU",
+  "input_shapes": {
+    "state": "[1,6]",
+    "wrist_image": "[1,3,480,640]"
+  },
+  "output_shape": [
+    1,
+    100,
+    6
+  ],
+  "output_dtype": "float32",
+  "rtol": 0.0001,
+  "atol": 1e-05,
+  "max_abs_error": 2.6226043701171875e-06,
+  "mean_abs_error": 4.817048875338514e-07,
+  "compile_ms": 342.014642,
+  "first_inference_ms": 58.573515,
+  "status": "PASS"
+}

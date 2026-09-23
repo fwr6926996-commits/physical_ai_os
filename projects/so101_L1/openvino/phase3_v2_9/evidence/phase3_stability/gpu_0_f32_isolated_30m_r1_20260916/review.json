@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "reviewed_at_local_date": "2026-09-16",
+  "sequence_round": 1,
+  "verdict": "FAIL",
+  "status": "FAIL_HANG_REPRODUCED_WATCHDOG_RECOVERED",
+  "qualification_scope": "Isolated inference-worker GPU.0 FP32 architecture",
+  "last_completed_inference": {
+    "iteration": 3270,
+    "worker_elapsed_seconds": 94.11761809201562,
+    "latency_ms": 18.458669,
+    "finite": true,
+    "correct": true,
+    "max_abs_error": 1.430511474609375e-06
+  },
+  "hard_gate_review": {
+    "completed_30_minutes": false,
+    "worker_exitcode_zero": false,
+    "nonfinite_outputs": 0,
+    "correctness_failures": 0,
+    "watchdog_timeout": true,
+    "watchdog_seconds_without_heartbeat": 15.071002923999913,
+    "watchdog_recovery": "SIGTERM"
+  },
+  "pre_hang_observations": {
+    "latency_p50_ms": 31.655755,
+    "latency_p95_ms": 47.08750059999999,
+    "latency_p99_ms": 49.63589166,
+    "first_window_mean_ms": 28.689219285371703,
+    "partial_second_window_mean_ms": 28.713519261603366,
+    "worker_rss_after_startup_first_bytes": 659668992,
+    "worker_rss_last_bytes": 659800064,
+    "worker_rss_change_after_startup_bytes": 131072,
+    "maximum_observed_sensor_temperature_c": 72.0
+  },
+  "interpretation": [
+    "Correctness, output finiteness, latency distribution, post-startup RSS, and temperature did not show a preceding acceptance failure.",
+    "The inference worker stopped producing heartbeats while still reported as running with CPU activity, so the 30-minute stability hard gate failed.",
+    "This is sequence FAIL number one; one additional consecutive FAIL triggers the frozen abandon-GPU.0 rule."
+  ],
+  "evidence_sha256": {
+    "result_json": "0a8a2eceba2eb6cb06a92c9e90c8d92d89b020a13eb8edc51776c8c3e4075b26",
+    "latencies_csv": "eb7f5e26529539c820aa744832dd385eb318e23c4810d0470b13fc0125eb22c1",
+    "supervisor_telemetry_csv": "4444880b68116fa106fb80bf38ac57b59ac505a8b69436b3a82f80751a34c61c"
+  }
+}

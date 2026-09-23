@@ -1,0 +1,30 @@
+{
+  "timestamp_utc": "2026-09-14T08:28:22.876477+00:00",
+  "device": "GPU.0",
+  "device_full_name": "Intel(R) Arc(TM) Graphics (iGPU)",
+  "available_devices": [
+    "CPU",
+    "GPU.0",
+    "GPU.1",
+    "NPU"
+  ],
+  "requested_inference_precision": "f32",
+  "comparison": "normalized ACT action chunk: PyTorch CPU vs OpenVINO GPU.0",
+  "input_shapes": {
+    "state": "[1,6]",
+    "wrist_image": "[1,3,480,640]"
+  },
+  "output_shape": [
+    1,
+    100,
+    6
+  ],
+  "output_dtype": "float32",
+  "rtol": 0.0001,
+  "atol": 1e-05,
+  "max_abs_error": 1.430511474609375e-06,
+  "mean_abs_error": 2.6454529233888024e-07,
+  "compile_ms": 2307.135494,
+  "first_inference_ms": 36.591822,
+  "status": "PASS"
+}

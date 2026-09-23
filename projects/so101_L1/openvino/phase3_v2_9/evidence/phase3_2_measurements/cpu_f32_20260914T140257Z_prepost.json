@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-09-14T14:02:59.424312+00:00",
+  "run_id": "cpu_f32_20260914T140257Z",
+  "status": "PASS",
+  "scope": "Saved LeRobot preprocessing and postprocessing only; model inference excluded.",
+  "python": "3.12.13",
+  "torch": "2.11.0+cu130",
+  "runtime_device": "cpu",
+  "cuda_visible_devices": "-1",
+  "warmup_iterations": 10,
+  "measured_iterations": 100,
+  "latency_ms": {
+    "preprocessing": {
+      "min": 0.134053,
+      "mean": 0.17759552,
+      "p50": 0.1443335,
+      "p95": 0.20999845,
+      "p99": 1.0983510100000016,
+      "max": 1.373869
+    },
+    "postprocessing": {
+      "min": 0.00726,
+      "mean": 0.007807080000000001,
+      "p50": 0.0075715,
+      "p95": 0.008037749999999998,
+      "p99": 0.016225100000000006,
+      "max": 0.017225
+    }
+  },
+  "process_rss_bytes": {
+    "before": 1031200768,
+    "after": 1031200768,
+    "delta": 0
+  }
+}

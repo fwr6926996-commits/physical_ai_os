@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "recorded_at_local_date": "2026-09-16",
+  "status": "INCOMPLETE_NOT_ADMISSIBLE",
+  "requested_duration_minutes": 30,
+  "observed_partial_duration_seconds": 30.01429866500257,
+  "observed_partial_iterations": 744,
+  "partial_correctness_failures": 0,
+  "termination_source": "Codex escalated host execution channel ended the child process at its approximately 30-second command boundary.",
+  "interpretation": "This is an orchestration-channel limitation, not evidence of an OpenVINO or GPU.0 runtime failure.",
+  "acceptance_use": "FORBIDDEN",
+  "partial_latency_csv_sha256": "f9f0b423696cfca18a1c1db993189b18581da435094624a27968d689f64c6093",
+  "required_action": "Run the same frozen design from the user's host terminal with a new run-id."
+}

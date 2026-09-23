@@ -1,0 +1,751 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 3 V2.9 255H Intel Pre-Deployment",
+  "generated_on_local_date": "2026-09-23",
+  "root": "projects/so101_L1/openvino/phase3_v2_9",
+  "exclusions": [
+    "__pycache__",
+    "phase3_artifact_manifest.json"
+  ],
+  "file_count": 123,
+  "files": [
+    {
+      "path": "INT8_ARCHITECTURE_DECISION_WORKSHEET.md",
+      "size_bytes": 5690,
+      "sha256": "80ee0f0f466f3ce922fada04656743ed18c06b22ce27ae233a7c529a801635c1",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "PHASE3_3_INT8_PTQ_DESIGN_PROPOSAL.md",
+      "size_bytes": 3454,
+      "sha256": "df65616d38ab5a14da834e05f10f220743ddc9ff575bd3cb49f2da01abbc0195",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "PHASE3_FINAL_REPORT.md",
+      "size_bytes": 6282,
+      "sha256": "7c65e3a6e08a0f813ece6fc76ffb39a3f73c7ba27177fb0ff04dbe0976ccd41f",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "PHASE3_RETROSPECTIVE_AND_ACCEPTANCE.md",
+      "size_bytes": 5632,
+      "sha256": "1360be9e74412f709894aa18135ec3dedd558db2d8441c10906b459e35a4016d",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "PHASE3_V2_9_GAP_ANALYSIS.md",
+      "size_bytes": 4490,
+      "sha256": "b9338fcf934aa1ab3d4447fb35afe7ea4104b8ad3fbcf50ca544ded9a3e7124d",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 2105,
+      "sha256": "423b35e148e5575a8e148d6d496886a5bc32095e352f541be120c115ca0f164b",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "active_runtime_config.yaml",
+      "size_bytes": 1669,
+      "sha256": "728ae7ab8df1b7dbe2e788e372aa58d0b212efccda6cb3f337f44dda328945d2",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "benchmark_device_v2_9.py",
+      "size_bytes": 8347,
+      "sha256": "043b7a9419c297a937d2bab158f33ad87c18741d66c1a0ca2d37aaaf9f59fef0",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "benchmark_prepost_v2_9.py",
+      "size_bytes": 4485,
+      "sha256": "af89c8e18e386a79b8670a9fb6c89ee2c9abd8e738a418ef05e73cf65d2459b0",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "build_phase3_3_indices.py",
+      "size_bytes": 3465,
+      "sha256": "a137fd05262747382bc4c49cdf19d0158bc807a5df7cf0029089498f0c068383",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "capture_phase3_baseline.py",
+      "size_bytes": 8682,
+      "sha256": "ddcbda6fb1f5002d5e1b9152052548f7b9886165b1c19f944c63f1651a99fe7c",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "convert_validate_phase3_1.py",
+      "size_bytes": 4445,
+      "sha256": "46600153be7ecd88dc4c955132938c819db206be6f2c9d1acf84d0dbb6855e02",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_0_baseline/baseline_20260914T115117Z.json",
+      "size_bytes": 48633,
+      "sha256": "2d10126c246f7ba5f822d350a83d35e4e3414d7fb1cfd0803801de41ca7e1485",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_0_baseline/baseline_review.json",
+      "size_bytes": 1274,
+      "sha256": "5a33894c07a008e94de43ab68ec6fe33abe599883524b51ac0c9cfcc66de03e7",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_0_baseline/memory_topology_dmidecode_20260914.txt",
+      "size_bytes": 657,
+      "sha256": "a661f972178a1a08e29d87dc6df395c765537bef1f6ebdb4dfb6157900523026",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_1_policy_package/conversion_compile_load_cpu.json",
+      "size_bytes": 1306,
+      "sha256": "20f1eb994ca314af1b2c8d4e55cb21b314a38841e691b0ef689fcbe71d6ae290",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_1_policy_package/phase3_1_review.json",
+      "size_bytes": 1837,
+      "sha256": "35cfbfe1939ed899944a41a4a03837728a9ac8fb0306ec40aeda5e5a4601bde5",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_1_policy_package/source_reference_export.json",
+      "size_bytes": 1318,
+      "sha256": "7989f4479790177dade120a18719e8b790e61826eeb3795fdba1a497754ed824",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurement_protocol.json",
+      "size_bytes": 1447,
+      "sha256": "5d510ad4db6cc52c19e47f65eff23d382bd4849563a1e1d2116b0f978e4c17d8",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/cpu_f16_20260914_correctness.json",
+      "size_bytes": 686,
+      "sha256": "22f11936db76bcb699dd5c8df040b3006d8467b5be14232a206c59b1799b6dc8",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_correctness.json",
+      "size_bytes": 666,
+      "sha256": "cdbdefd0771bddce21be2f86ad2af88013f9a9cacbce47da2b1942e2bf470d14",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_inference.csv",
+      "size_bytes": 1404,
+      "sha256": "bd4c269f0271da4ccbaf602c94449bd34e463141342d419bf6f8fce44f483674",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_inference.json",
+      "size_bytes": 4978,
+      "sha256": "9fba6effc44751a088f79793748a28c04812f40c5b51eb4c8a118b59c7ea50e6",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_postprocessing.csv",
+      "size_bytes": 1305,
+      "sha256": "fe879ccd27c7623e1a01788b1ec13f301e2808512fe6c84f06404b7934d8c12f",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_prepost.json",
+      "size_bytes": 906,
+      "sha256": "905d391d707838b273e82e33ba1d707b0887110bd34a49cd5b982fd1c78b098f",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_preprocessing.csv",
+      "size_bytes": 1308,
+      "sha256": "6b665ea06269c172ca66901ee2c7fc2fdfe72d8e308e22710a12662727c38853",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_review.json",
+      "size_bytes": 1789,
+      "sha256": "89400261a060306970dbfbb0bff6651ccba077401fa7812b6db23c4ed38070df",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_segmented_summary.json",
+      "size_bytes": 1422,
+      "sha256": "a58a3acc046ae02538cf6998301a4be7f16439801a86c5cb6cb436a9fb3d9985",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f16_20260914_correctness.json",
+      "size_bytes": 692,
+      "sha256": "488a056cca6f604093a95c4a9ba43e246a6f7fa64beaf82e94cbde4c0e7b0aed",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_correctness.json",
+      "size_bytes": 700,
+      "sha256": "19b35594e3da6749385e2e1f68fc9c82ee44ed7755e7d3a2dd2a01ed78cdd5d9",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_inference.csv",
+      "size_bytes": 1408,
+      "sha256": "abcc419a0e269fd09fe0b6a1c1298eeca88917760cf76fbb2a1f425e2d15729a",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_inference.json",
+      "size_bytes": 5005,
+      "sha256": "f99ffe4380e5a3686518eb0b9451d1923a00d6a091da3acaa40b847d7fba9d19",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_postprocessing.csv",
+      "size_bytes": 1309,
+      "sha256": "69631954ac8dc87047b77bcac81d934554df2a1869a70990389106fadf17e232",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_prepost.json",
+      "size_bytes": 914,
+      "sha256": "8d9ae2d746f36613c926224cfa8cedfd6f84b04fcdd93ca2cb34387c8be0129d",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_preprocessing.csv",
+      "size_bytes": 1400,
+      "sha256": "1de0d2a74b922840b151cf7c34807b6ee378eab8056c92e7ebf078b6bb8c9759",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_segmented_summary.json",
+      "size_bytes": 1454,
+      "sha256": "c5b7dfcc323a9855f12bc3e1518ffa3bb69530553b64635482d71d0b4e35138b",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_diagnostic_20260914_correctness.json",
+      "size_bytes": 704,
+      "sha256": "d6d169263cc2c3889c1d3e6fe6cf0a967cf6d3d96a626534b63c035cee21b9a1",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_diagnostic_20260914_inference.csv",
+      "size_bytes": 4381,
+      "sha256": "6c9a66deb1f4e1b25ae084f738ca28ef5680c31b6262796c891f1bae4aaf88ba",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_diagnostic_20260914_inference.json",
+      "size_bytes": 5027,
+      "sha256": "ea5f59fc935e3d61b61fe75445e9f16bd56cf764e8b79c15da4e0e09f9f078ec",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/gpu_0_f32_jitter_review.json",
+      "size_bytes": 1391,
+      "sha256": "e499322753eb2d9fafb251f0723cbb3724295938143b213124304896d0b470f0",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/learning_check_correctness_before_performance.json",
+      "size_bytes": 812,
+      "sha256": "78b81fa4f0db12404265839894165b5f9ae088ff6770839d01c33d5acc9ddc09",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/npu_f16_20260914_correctness.json",
+      "size_bytes": 672,
+      "sha256": "77964b23a7c82c10d25258c6982673f10e73a73d3d752de9687afa6fcadc396b",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/npu_f32_unsupported_20260914_compile_failure.json",
+      "size_bytes": 1885,
+      "sha256": "041bda60491de769f85f308f0222fa6f61aac566071ef5ba716929d06d0c9cc6",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/precision_device_matrix_review.json",
+      "size_bytes": 1965,
+      "sha256": "111d6df70846219c12295eb3c73c97d35c6c106909ebe91990a3951ed12bd10f",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/precision_mental_model_verification_round1.json",
+      "size_bytes": 1533,
+      "sha256": "b3dc08a49b3949b92ba61fdd0cea7c7f2fab3db989e4470c596ebf8018643cb0",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_2_measurements/precision_mental_model_verification_round2.json",
+      "size_bytes": 1461,
+      "sha256": "b1ae6090378e2f09f0d3307fd929ce1498bc1e1f2b494517d7f5996515b93363",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_3_int8/architecture_decision_learning.json",
+      "size_bytes": 1776,
+      "sha256": "9fa88755fa76ef177c094da276d781fd0adbd2d3fd4eb550a259b5fb75707416",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_3_int8/index_manifest.json",
+      "size_bytes": 58931,
+      "sha256": "ee8662f1fa8390880dda5529d44b0a39c5c0772fa670b99e007925e2290d8459",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_3_int8/int8_feasibility_closure_20260915.json",
+      "size_bytes": 3429,
+      "sha256": "ca845f06a9fd71d6313c1b31cff0da53b822313ca9fb02e77f7a3824a079e4fa",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_3_int8/int8_mixed_20260915T072410Z/int8_fidelity_report.json",
+      "size_bytes": 4179,
+      "sha256": "2b7f34c41f17917f583fc44bc2c3920463c6f17ae81546b923614532a71fdfa9",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_3_int8/int8_mixed_20260915T072410Z/learning_verification_final.json",
+      "size_bytes": 1247,
+      "sha256": "73988f5d333b9b70208a0587c877b27a79106bf78ab0ba6a1804b3b2bb76fcea",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_3_int8/int8_mixed_20260915T072410Z/learning_verification_round1.json",
+      "size_bytes": 949,
+      "sha256": "8689fb2afd465d55dff0ad0bd35a1633f581eb2be8fed8da885e89e8ecb2367f",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_3_int8/int8_mixed_20260915T072410Z/learning_verification_round2.json",
+      "size_bytes": 822,
+      "sha256": "83ecacc37ffc9f1cd4da240f6b0d6160118e58f99822929270450d930c7eacba",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_3_int8/int8_mixed_20260915T072410Z/review.json",
+      "size_bytes": 2955,
+      "sha256": "852da047986df78e56cb8703e0bb216c1f71e12084cebe1928fa920808cefcef",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_3_int8/preparation_review.json",
+      "size_bytes": 1252,
+      "sha256": "0bf942d4f9c16a8a8050f53be3223d7089fb171fc9c9bebe5b6619c5a652d75d",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_bottleneck_profiling/cpu_f32_profile_first_20260915.json",
+      "size_bytes": 17608,
+      "sha256": "136267eb3d414b023e921d3406064d2572431b70fa7f8789999e57ca737e785a",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_bottleneck_profiling/cpu_f32_profile_first_20260915_operations.csv",
+      "size_bytes": 40721,
+      "sha256": "4605ae68ea6861f8da41702a192e7388296a2283282fdcb3fef449846fa9cde9",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_bottleneck_profiling/cpu_f32_profile_first_20260915_raw.csv",
+      "size_bytes": 727449,
+      "sha256": "1cc430ec6331aac8ba2f5f464150b0cc0db1f91f41e49e6de4ac64da3466095e",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_bottleneck_profiling/cpu_f32_profile_first_20260915_review.json",
+      "size_bytes": 3608,
+      "sha256": "4d3b28e895a321c173c94273b5abaf543ded18de9bc0b0cbaee2d6e9eff7af5b",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_gpu_guarded_diagnostics/gpu_0_f32_guarded_5m_20260916/heartbeats.csv",
+      "size_bytes": 676873,
+      "sha256": "3fcf01cf88ad34b5b7607444e2383e1b299a489be5d82421f179e936f524286c",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_gpu_guarded_diagnostics/gpu_0_f32_guarded_5m_20260916/result.json",
+      "size_bytes": 1607,
+      "sha256": "ab4f85e32ababc0ac532196bf2e33363c938f7b1dd747b3edc0427f35642e4d4",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_gpu_guarded_diagnostics/gpu_0_f32_guarded_5m_20260916/review.json",
+      "size_bytes": 1194,
+      "sha256": "5d7857599031efdb86638b49c62aa370c88c3e9abccff7fbbedad8e6e46d9750",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_harness_stream_smoke_1m_20260916/latencies.csv",
+      "size_bytes": 70531,
+      "sha256": "4a60e4a9587ecfd4b4b6ecb0a5ec3d4595dd8f27d05dcdad2f8e423c75139906",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_harness_stream_smoke_1m_20260916/result.json",
+      "size_bytes": 3709,
+      "sha256": "59cf393a4fe3ff6d4a6535270bba87ab32df17ec10314532470503f2be9f9b9e",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_harness_stream_smoke_1m_20260916/telemetry.csv",
+      "size_bytes": 891,
+      "sha256": "28fdf7493f04e3f70c1a982fea9f5e38326b52f5fb1a9843dfaf1ca5187d9dc4",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_stability_30m_20260916/latencies.csv",
+      "size_bytes": 2372500,
+      "sha256": "7af4df6d0ef50d945b18bf2d34f1b2d01fc9cee6417c1a4b51d461e582a7e7c0",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_stability_30m_20260916/result.json",
+      "size_bytes": 12617,
+      "sha256": "2bfac3f85e82852b17eab0d0d2dcd46e1527b867441fe70c65bdc89c8b8cbf89",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_stability_30m_20260916/review.json",
+      "size_bytes": 1845,
+      "sha256": "1e26338e84f5244abf2b66e4ddb2a736c5db2f67b0fcbab029ea515e0f21d171",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_stability_30m_20260916/telemetry.csv",
+      "size_bytes": 20796,
+      "sha256": "c3bb9359853f311545917f7800899dde89588b013c081e563faaf385271af1d8",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_stability_30m_streamed_20260916/latencies.csv",
+      "size_bytes": 2164325,
+      "sha256": "3e2e726aa8ba5450538318ca9c35060db52e066ceced3e399a95c52f44b7ab5e",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_stability_30m_streamed_20260916/result.json",
+      "size_bytes": 12518,
+      "sha256": "e652808e5512d448fd54b0ab2fb60278cce54b79f1d88517b8214ea090005fbd",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_stability_30m_streamed_20260916/review.json",
+      "size_bytes": 1999,
+      "sha256": "5eb1a5d7715abb5067f407ddb88b2137eee7382a1848508d9840a3d95dba9fb6",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/cpu_f32_stability_30m_streamed_20260916/telemetry.csv",
+      "size_bytes": 20775,
+      "sha256": "9ff664a5fad59550a55e0bba2d645a1580d20c3f071d10da7b209c3d0dd93fa6",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_deployment_closure_20260916.json",
+      "size_bytes": 1525,
+      "sha256": "44f6473bc61a15fd86b5ce7b3a69f4bb6f5f8982201756f1515884a70ce97ac3",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_isolated_30m_r1_20260916/latencies.csv",
+      "size_bytes": 221647,
+      "sha256": "eb7f5e26529539c820aa744832dd385eb318e23c4810d0470b13fc0125eb22c1",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_isolated_30m_r1_20260916/result.json",
+      "size_bytes": 4827,
+      "sha256": "0a8a2eceba2eb6cb06a92c9e90c8d92d89b020a13eb8edc51776c8c3e4075b26",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_isolated_30m_r1_20260916/review.json",
+      "size_bytes": 1933,
+      "sha256": "5ea93ef3e573be8fbfc52d893377f8c09efb8eb39f0ba6aeac420a4570cbb575",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_isolated_30m_r1_20260916/supervisor_telemetry.csv",
+      "size_bytes": 1515,
+      "sha256": "4444880b68116fa106fb80bf38ac57b59ac505a8b69436b3a82f80751a34c61c",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_isolated_30m_r2_20260916/latencies.csv",
+      "size_bytes": 121503,
+      "sha256": "c63d04d054d646e57feec0ea07859d8bf937fdcfd727008316af2317c6b3149a",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_isolated_30m_r2_20260916/result.json",
+      "size_bytes": 4516,
+      "sha256": "aa133f8b66a01ccabab8f68097b432c184056e7576596f5baaca72fc2c5e278f",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_isolated_30m_r2_20260916/review.json",
+      "size_bytes": 1721,
+      "sha256": "0b4acbd4c04134edd2d8e939d7960cd694e5910bed72b4235280bddd770024d7",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_isolated_30m_r2_20260916/supervisor_telemetry.csv",
+      "size_bytes": 972,
+      "sha256": "b9a830cef6639d18963fc296e9be05a0dad752b100cf9f8980fdaf81a39dfd6c",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_split_telemetry_ab_5m_20260916/latencies.csv",
+      "size_bytes": 8225,
+      "sha256": "fb4e73b4434b027875fe8415540a4392c2f06815b8f8d316c695bc1bd4b7ff6d",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_split_telemetry_ab_5m_20260916/review.json",
+      "size_bytes": 2778,
+      "sha256": "0f789251bedc8a25ad8104c5bcb02869f0c7257377f10326ff978e456188bc54",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_split_telemetry_ab_5m_20260916/supervisor_result.json",
+      "size_bytes": 1397,
+      "sha256": "e4cc789011767edf743a62787feee128f64158499f4f98190bfe72c956eb2994",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_split_telemetry_ab_5m_20260916/supervisor_telemetry.csv",
+      "size_bytes": 366,
+      "sha256": "fcc72d2603467225f52fb4173f48c84b6dc8d6112f02b6bddad2d433f59295dd",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_split_telemetry_ab_5m_20260916/telemetry.csv",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_stability_30m_guarded_host_20260916/latencies.csv",
+      "size_bytes": 11497,
+      "sha256": "dbe908f3714b34850ed5e0051488913d9dda7eb861087c2f327f4942421c874a",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_stability_30m_guarded_host_20260916/review.json",
+      "size_bytes": 1476,
+      "sha256": "fa27a745cf1cafb31196abefdf1959106d2a9cbeb7b85a08238f137e1e6cc7c3",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_stability_30m_guarded_host_20260916/supervisor_result.json",
+      "size_bytes": 1218,
+      "sha256": "83c8b7d77860d0ac17ed0c19a4e4886223e22886a87fb53c643c82cd5ba60baf",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_stability_30m_guarded_host_20260916/telemetry.csv",
+      "size_bytes": 227,
+      "sha256": "5839245d9eaf4a6a8c473aeb25f1cfea3e7e1674cd54c03da642ea58914ded66",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_stability_30m_host_20260916/HANG_FAILURE.json",
+      "size_bytes": 1618,
+      "sha256": "ef0f5eeb61c2f5c3cbadd093c346bd8ed5ae3cc823f7e95ee0ac636ed60d1101",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_stability_30m_host_20260916/latencies.csv",
+      "size_bytes": 337528,
+      "sha256": "94728b3535ae0867229668763c0095b38456b8911b61791bef7c9a50d62092d9",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_stability_30m_streamed_20260916/INCOMPLETE_RUN.json",
+      "size_bytes": 772,
+      "sha256": "985aa938125a9fc72d4353117d965ccfb2785b80be3bc2fd178de334831618ac",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/gpu_0_f32_stability_30m_streamed_20260916/latencies.csv",
+      "size_bytes": 50115,
+      "sha256": "f9f0b423696cfca18a1c1db993189b18581da435094624a27968d689f64c6093",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/isolated_gpu_architecture_decision_20260916.json",
+      "size_bytes": 2548,
+      "sha256": "2a03f26d1bd6dd7a4fef82ff8b4a96e1ea5418b7d665a9bf6d3343b2fdbc6882",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/phase3_stability/stability_acceptance_design_20260916.json",
+      "size_bytes": 1604,
+      "sha256": "560f9cc24896e1bd910ac6e6664ab1a18e76c155ec37d152e24d2fbd5873a20e",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "evidence/reference_version_audit_20260915.json",
+      "size_bytes": 1619,
+      "sha256": "84ead5c9d935907a327ea45aaae282e6208560b5bbabdb1c083df22cd318b77b",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "phase3_final_gate.json",
+      "size_bytes": 2465,
+      "sha256": "ffd47c54e6a1b07fcb230a249a53439c9d4de9b2bfe1f6f50646960ae3fdccd6",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/act_fp32.bin",
+      "size_bytes": 131800756,
+      "sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/act_fp32.xml",
+      "size_bytes": 1020143,
+      "sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/act_tensor_wrapper.pt2",
+      "size_bytes": 213392618,
+      "sha256": "ddc8ac394b2342205525bc0cd6e64463b6fd1b5173fa74ff1d51f3c6eb095ac4",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/int8_candidates/int8_mixed_20260915T072410Z/act_int8_mixed.bin",
+      "size_bytes": 33644796,
+      "sha256": "d03ed46f6b9301d644c80034dc4c472a2e48fa396eff14686e8fb8acaf0071aa",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/int8_candidates/int8_mixed_20260915T072410Z/act_int8_mixed.xml",
+      "size_bytes": 1224887,
+      "sha256": "41ec686cb67a7f9e8c859e0382b843603b8047dbc868452ec12e7a43fd515b71",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/int8_candidates/int8_mixed_20260915T072410Z/validation_outputs_normalized.npz",
+      "size_bytes": 439350,
+      "sha256": "a025a66c666831b5728d2e06b6263a98435c540e32ca9c84ca6f63e02fbab4d8",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/int8_candidates/int8_mixed_20260915T072410Z/validation_outputs_postprocessed.npz",
+      "size_bytes": 440752,
+      "sha256": "1335247eca8da643453151741ec7bd6b5c71e1eeec90c71bdefbb2641543886e",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/manifest.json",
+      "size_bytes": 2056,
+      "sha256": "cd43e19690a1214ccbdfe875dedc2ee2a8b6c7c318ab20b07952a058de102e6a",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/reference_model_input.pt",
+      "size_bytes": 3688405,
+      "sha256": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/reference_output_action_chunk.pt",
+      "size_bytes": 4227,
+      "sha256": "b1f021b8db0ad975dbfff45a9d8d2ec5bfe2434bd48371e97d75402d5b1590cb",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/reference_output_normalized.pt",
+      "size_bytes": 4213,
+      "sha256": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "policy_package_v2_9/reference_raw_observation.pt",
+      "size_bytes": 3688501,
+      "sha256": "3a8e3e905ba6d96d75f903f3ce96e9d855dd8e6d1e33549712d05a90e0c20c73",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "postprocess_phase3_3_outputs.py",
+      "size_bytes": 1358,
+      "sha256": "b472e74fcefd0fe41173697e14804b1d33a7d3d2f2e98b03d42acf484cbdded2",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "prepare_phase3_1_source.py",
+      "size_bytes": 3836,
+      "sha256": "fc0d5dd4b3f270ccde70892dd29a55aa1b59a6145d3b9caf48791545764f585c",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "profile_bottleneck_v2_9.py",
+      "size_bytes": 10665,
+      "sha256": "d7e342289f506d8a85e02a162d9bc316dabb9d9bb09cf81aa7e216b6c400f1a5",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "quantize_validate_phase3_3_int8.py",
+      "size_bytes": 11477,
+      "sha256": "7ed47fbc31e14fdc4bdabf24dc76acec30f53c2916ed7605ac34facc5a190651",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "run_first_cpu_segmented_benchmark.py",
+      "size_bytes": 2430,
+      "sha256": "2ea59c7b5699a13872cee6a2bf422d4561c432c0f8cfff366dbdd141b2bc2660",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "run_guarded_gpu_diagnostic_v2_9.py",
+      "size_bytes": 10369,
+      "sha256": "a575ecb84b0de5b18f380940d42b42a38d7c96215d32eb5a1c9dc0233e16b471",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "run_guarded_stability_supervisor_v2_9.py",
+      "size_bytes": 7492,
+      "sha256": "3791dd26a5d569f0652ee43a9d239f6aa1dce5e793817c9662b44c67f42b6cfa",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "run_isolated_gpu_stability_v2_9.py",
+      "size_bytes": 20096,
+      "sha256": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "run_segmented_benchmark.py",
+      "size_bytes": 3080,
+      "sha256": "a6c29f4fd700e1bd51842b43e6d2697c8af7d28e6fd48bf637521064076f4bbb",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "run_stability_v2_9.py",
+      "size_bytes": 16297,
+      "sha256": "2021edc151eb4c8323cbf44bfbc37070cd731a72b845e8290f570b2ed372e926",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "status.json",
+      "size_bytes": 2853,
+      "sha256": "27a7cb8ebb7c6ec62176e74c1918b7a5253cdf298d20bbb907e119934ca2010e",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    },
+    {
+      "path": "stream_phase3_3_samples.py",
+      "size_bytes": 3328,
+      "sha256": "0985bb4c7c71848c6cce9afa09026fde509e8362cbdfa0e96eab98e5df1241e0",
+      "git_payload_policy": "TRACKED_EVIDENCE_OR_SOURCE"
+    }
+  ]
+}

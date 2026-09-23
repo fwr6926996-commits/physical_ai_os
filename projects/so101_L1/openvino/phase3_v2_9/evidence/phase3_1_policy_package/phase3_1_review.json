@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 3.1 reproducible ACT export and OpenVINO CPU validation",
+  "technical_status": "PASS",
+  "learning_status": "PENDING_INDEPENDENT_VERIFICATION",
+  "confirmed_contract": {
+    "state": [1, 6],
+    "wrist_image": [1, 3, 480, 640],
+    "normalized_action_chunk": [1, 100, 6]
+  },
+  "correctness": {
+    "device": "CPU",
+    "rtol": 0.0001,
+    "atol": 0.00001,
+    "max_abs_error": 0.0000026226043701171875,
+    "mean_abs_error": 0.0000004817048875338514,
+    "status": "PASS"
+  },
+  "reproducibility": {
+    "new_ir_matches_v2_8_xml_sha256": true,
+    "new_ir_matches_v2_8_bin_sha256": true,
+    "xml_sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "bin_sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a"
+  },
+  "execution_corrections": [
+    {
+      "symptom": "Hugging Face dataset lock creation failed under the read-only user cache.",
+      "classification": "execution-environment boundary, not a model failure",
+      "correction": "Set HF_HOME=/tmp/so101_phase3_hf_cache for this isolated run."
+    },
+    {
+      "symptom": "AttributeError for ov.hint during CPU compilation.",
+      "classification": "script API namespace defect, not a conversion or device failure",
+      "correction": "Use ov.properties.hint for OpenVINO 2026.3.1 and rerun all deployment stages."
+    }
+  ],
+  "warnings_to_revisit": [
+    "torch.export reported potential module side effects; strict export and exact pre-export wrapper comparison passed.",
+    "OpenVINO telemetry could not write under /home/lucas; telemetry was disabled by the environment and inference was unaffected."
+  ],
+  "decision": "Phase 3.1 technical gate passes. Continue to Intel device correctness and measurement preparation; final learning acceptance remains human-owned."
+}

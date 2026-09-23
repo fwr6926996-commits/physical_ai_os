@@ -1,0 +1,3 @@
+elapsed_s,iteration,process_rss_bytes,system_available_memory_bytes,package_temperature_c,max_sensor_temperature_c
+0.032217717001913115,1,684326912,11245596672,52.0,54.0
+5.020357436005725,171,684335104,11303243776,54.0,54.0

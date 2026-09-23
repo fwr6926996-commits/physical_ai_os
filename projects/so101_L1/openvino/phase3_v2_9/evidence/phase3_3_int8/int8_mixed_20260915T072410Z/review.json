@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "run_id": "int8_mixed_20260915T072410Z",
+  "technical_status": "PTQ_PIPELINE_PASS",
+  "admission_status": "NOT_ADMITTED_PENDING_HUMAN_THRESHOLD_AND_DECISION",
+  "engineering_recommendation": "DO_NOT_ADMIT_CURRENT_BASIC_MIXED_PTQ_CANDIDATE",
+  "confirmed": {
+    "calibration_samples": 300,
+    "validation_samples": 100,
+    "index_overlap": 0,
+    "fp32_artifact_unchanged": true,
+    "int8_artifact_generated": true,
+    "strict_reference_gate": "FAIL",
+    "performance_ranking_performed": false
+  },
+  "artifact": {
+    "fp32_xml_plus_bin_bytes": 132820899,
+    "int8_xml_plus_bin_bytes": 34869683,
+    "int8_to_fp32_ratio": 0.26253159903698586,
+    "size_reduction_percent": 73.74684009630142,
+    "graph_evidence": {
+      "fp32_fake_quantize_ops": 0,
+      "int8_fake_quantize_ops": 54,
+      "int8_typed_outputs": 52
+    }
+  },
+  "error_localization": {
+    "action_dimension_names": ["shoulder_pan.pos", "shoulder_lift.pos", "elbow_flex.pos", "wrist_flex.pos", "wrist_roll.pos", "gripper.pos"],
+    "unit_statement": "Dataset metadata names these position values but does not declare a physical unit; errors are reported in recorded position units, not assumed degrees.",
+    "full_chunk": {
+      "overall_mae": 0.8778473138809204,
+      "overall_p95_abs_error": 3.4916229248046875,
+      "overall_max_abs_error": 28.128536224365234,
+      "elbow_flex_p95_abs_error": 16.883739471435547,
+      "elbow_flex_positions_over_5_units_out_of_10000": 1684,
+      "elbow_flex_positions_over_10_units_out_of_10000": 986,
+      "gripper_p95_abs_error": 0.8027281761169434,
+      "gripper_positions_over_20_units_out_of_10000": 42
+    },
+    "first_action": {
+      "overall_mae": 1.2641011476516724,
+      "overall_p95_abs_error": 8.679591178894043,
+      "overall_max_abs_error": 25.363121032714844,
+      "elbow_flex_mae": 4.668766975402832,
+      "elbow_flex_p95_abs_error": 21.009511947631836,
+      "gripper_max_abs_error": 22.509349822998047
+    },
+    "worst_persistent_case": {
+      "episode_index": 42,
+      "frame_index": 218,
+      "dataset_index": 31408,
+      "action_dimension": "elbow_flex.pos",
+      "maximum_abs_error": 28.128536224365234,
+      "behavior": "Large error persists across multiple future chunk positions rather than appearing as one isolated scalar."
+    }
+  },
+  "interpretation": [
+    "The near-quarter artifact size and inserted INT8/FakeQuantize graph elements confirm that meaningful quantization occurred.",
+    "Size reduction proves compression, not behavioral fidelity.",
+    "The error distribution is dimension- and sample-dependent, with material persistent elbow deviation and rare large gripper spikes.",
+    "Quantization and paired-validation elapsed times are workflow durations, not inference benchmark scores."
+  ],
+  "next_gate": "Human demonstrates correct interpretation, then freezes a task-relevant admission decision or authorizes an accuracy-recovery experiment."
+}

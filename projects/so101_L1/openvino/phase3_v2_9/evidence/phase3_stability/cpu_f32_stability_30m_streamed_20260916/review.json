@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "reviewed_at_local_date": "2026-09-16",
+  "run_id": "cpu_f32_stability_30m_streamed_20260916",
+  "status": "PASS",
+  "hard_gates": {
+    "completed_duration_seconds": 1800.073535543008,
+    "iterations": 30654,
+    "inference_exceptions": 0,
+    "nonfinite_outputs": 0,
+    "correctness_failures": 0,
+    "maximum_abs_error": 0.0000026226043701171875
+  },
+  "latency": {
+    "overall_p50_ms": 58.120643,
+    "overall_p95_ms": 64.2604304,
+    "overall_p99_ms": 67.79019179,
+    "maximum_ms": 149.287225,
+    "samples_at_or_above_100_ms": 8,
+    "first_to_last_full_window_drift_percent": {
+      "mean": 1.919,
+      "p50": 1.276,
+      "p95": 3.299
+    },
+    "interpretation": "No sustained latency runaway was observed. Isolated maxima do not replace the percentile and window trend evidence."
+  },
+  "memory": {
+    "process_rss_first_bytes": 659865600,
+    "process_rss_last_bytes": 660295680,
+    "process_rss_delta_bytes": 430080,
+    "status": "PASS_NO_UNBOUNDED_PROCESS_RSS_GROWTH_OBSERVED",
+    "measurement_harness": "Per-inference evidence was streamed to CSV; only compact numeric arrays were retained."
+  },
+  "temperature": {
+    "first_5_minutes_mean_c": 75.95,
+    "last_5_minutes_mean_c": 76.32,
+    "maximum_c": 91.0,
+    "last_c": 77.0,
+    "status": "PASS_NO_SUSTAINED_UPWARD_TREND_OR_FUNCTIONAL_FAILURE"
+  },
+  "environment_note": "The Codex execution sandbox exposed only CPU during this rerun. CPU identity, model hashes and FP32 configuration matched the frozen design; the separate host hardware-truth evidence remains authoritative for the full device inventory.",
+  "supersedes_for_ram_interpretation": "../cpu_f32_stability_30m_20260916/review.json",
+  "evidence_sha256": {
+    "result_json": "e652808e5512d448fd54b0ab2fb60278cce54b79f1d88517b8214ea090005fbd",
+    "latencies_csv": "3e2e726aa8ba5450538318ca9c35060db52e066ceced3e399a95c52f44b7ab5e",
+    "telemetry_csv": "9ff664a5fad59550a55e0bba2d645a1580d20c3f071d10da7b209c3d0dd93fa6"
+  }
+}

@@ -1,0 +1,24 @@
+Captured by the human operator on 2026-09-14 (Asia/Shanghai).
+
+Command:
+sudo dmidecode --type 17 |
+  grep -E '^[[:space:]]*(Size|Locator|Bank Locator|Type|Speed|Configured Memory Speed):'
+
+Output:
+	Size: 16 GB
+	Locator: Controller0-ChannelA-DIMM0
+	Bank Locator: BANK 0
+	Type: DDR5
+	Speed: 5600 MT/s
+	Configured Memory Speed: 5600 MT/s
+	Size: 16 GB
+	Locator: Controller1-ChannelA-DIMM0
+	Bank Locator: BANK 0
+	Type: DDR5
+	Speed: 5600 MT/s
+	Configured Memory Speed: 5600 MT/s
+
+Reviewed interpretation:
+- Installed capacity: 32 GB (2 x 16 GB)
+- Memory type and configured speed: DDR5-5600
+- Population: Controller0-ChannelA-DIMM0 and Controller1-ChannelA-DIMM0

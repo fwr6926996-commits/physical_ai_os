@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "reviewed_at_local_date": "2026-09-16",
+  "run_id": "cpu_f32_stability_30m_20260916",
+  "status": "PARTIAL_PASS_RERUN_REQUIRED_FOR_UNCONFOUNDED_RAM_EVIDENCE",
+  "valid_findings": {
+    "duration_seconds": 1800.0338681419962,
+    "iterations": 33596,
+    "inference_exceptions": 0,
+    "nonfinite_outputs": 0,
+    "correctness_failures": 0,
+    "functional_stability": "PASS",
+    "first_to_last_full_window_drift_percent": {
+      "mean": 1.246,
+      "p50": 0.379,
+      "p95": 3.949
+    },
+    "latency_stability": "PASS_NO_MATERIAL_RUNAWAY_OBSERVED",
+    "temperature": {
+      "first_5_minutes_mean_c": 76.27,
+      "last_5_minutes_mean_c": 74.37,
+      "maximum_c": 91.0,
+      "last_c": 76.0,
+      "interpretation": "Intermittent peaks occurred, but no sustained upward thermal trend or functional failure was observed."
+    }
+  },
+  "invalid_or_confounded_finding": {
+    "metric": "process RSS trend",
+    "observed_delta_bytes": 13881344,
+    "observed_linear_slope_bytes_per_second": 7756.163,
+    "cause": "The measurement harness retained one Python dictionary per inference in latency_rows; 33,596 retained records contaminated process RSS.",
+    "conclusion": "This run cannot distinguish harness growth from OpenVINO/model memory growth and therefore cannot close the RAM stability requirement."
+  },
+  "corrective_action": {
+    "script_change": "Stream per-inference rows to CSV and retain only compact numeric latency arrays.",
+    "cpu_rerun_required": true,
+    "gpu_run_before_fix_forbidden": true
+  },
+  "evidence_sha256": {
+    "result_json": "2bfac3f85e82852b17eab0d0d2dcd46e1527b867441fe70c65bdc89c8b8cbf89",
+    "latencies_csv": "7af4df6d0ef50d945b18bf2d34f1b2d01fc9cee6417c1a4b51d461e582a7e7c0",
+    "telemetry_csv": "c3bb9359853f311545917f7800899dde89588b013c081e563faaf385271af1d8"
+  }
+}

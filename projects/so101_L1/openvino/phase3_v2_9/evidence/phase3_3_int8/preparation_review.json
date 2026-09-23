@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "reviewed_at_local_date": "2026-09-15",
+  "status": "PASS_READY_FOR_FIRST_HUMAN_PTQ_RUN",
+  "human_design_approval": true,
+  "quantization_executed": false,
+  "performance_ranking_executed": false,
+  "index_manifest": {
+    "calibration_count": 300,
+    "validation_count": 100,
+    "episode_coverage": 50,
+    "overlap_count": 0,
+    "content_sha256": "869697c9b02514380a50e8252ce667a16afb99652c76b2d30967993cc5545e90"
+  },
+  "default_ptq_configuration": {
+    "preset": "mixed",
+    "activation_scheme": "asymmetric",
+    "weight_scheme": "symmetric",
+    "target_device": "ANY",
+    "model_type": "TRANSFORMER",
+    "subset_size": 300,
+    "compress_remaining_fp_weights_to_fp16": false
+  },
+  "validation": {
+    "device": "CPU",
+    "execution_mode": "ACCURACY",
+    "metrics": ["MAE", "RMSE", "P95 absolute error", "maximum absolute error", "per-action-dimension error"],
+    "normalized_and_postprocessed_outputs": true,
+    "admission_threshold": "NOT_YET_FROZEN",
+    "latency_ranking": "FORBIDDEN_UNTIL_ADMISSION"
+  },
+  "smoke_tests": {
+    "python_syntax_and_imports": "PASS",
+    "cross_environment_preprocessed_sample_stream": "PASS",
+    "postprocessor_bridge": "PASS",
+    "nncf_quantize_called": false
+  }
+}

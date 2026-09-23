@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-09-14T14:07:34.927394+00:00",
+  "run_id": "gpu_0_f32_20260914T140727Z",
+  "device": "GPU.0",
+  "runtime_device": "GPU",
+  "device_full_name": "Intel(R) Arc(TM) Graphics (iGPU)",
+  "available_devices": [
+    "CPU",
+    "GPU",
+    "NPU"
+  ],
+  "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "requested_inference_precision": "f32",
+  "compile_ms": 1673.515172,
+  "first_inference_ms": 61.91724,
+  "correctness": {
+    "rtol": 0.0001,
+    "atol": 1e-05,
+    "max_abs_error": 1.430511474609375e-06,
+    "mean_abs_error": 2.6454529233888024e-07,
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "scope": "OpenVINO synchronous model inference only; preprocessing/postprocessing excluded.",
+  "warmup_iterations": 10,
+  "measured_iterations": 100,
+  "latency_ms": {
+    "min": 17.14236,
+    "mean": 39.42285034,
+    "p50": 20.6623115,
+    "p95": 71.36959169999999,
+    "p99": 72.03915895,
+    "max": 72.194188
+  },
+  "resources": {
+    "process_rss_bytes": {
+      "before": 652337152,
+      "after": 652345344,
+      "delta": 8192
+    },
+    "system_available_memory_bytes": {
+      "before": 15087247360,
+      "after": 15172034560
+    },
+    "temperatures": {
+      "before": {
+        "nvme": [
+          {
+            "label": "Composite",
+            "current_c": 35.85
+          }
+        ],
+        "coretemp": [
+          {
+            "label": "Package id 0",
+            "current_c": 57.0
+          },
+          {
+            "label": "Core 8",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 9",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 10",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 11",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 12",
+            "current_c": 54.0
+          },
+          {
+            "label": "Core 13",
+            "current_c": 54.0
+          },
+          {
+            "label": "Core 14",
+            "current_c": 54.0
+          },
+          {
+            "label": "Core 15",
+            "current_c": 54.0
+          },
+          {
+            "label": "Core 16",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 0",
+            "current_c": 60.0
+          },
+          {
+            "label": "Core 20",
+            "current_c": 54.0
+          },
+          {
+            "label": "Core 24",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 28",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 32",
+            "current_c": 52.0
+          },
+          {
+            "label": "Core 33",
+            "current_c": 52.0
+          },
+          {
+            "label": "Core 4",
+            "current_c": 54.0
+          }
+        ],
+        "iwlwifi_1": [
+          {
+            "label": "",
+            "current_c": 53.0
+          }
+        ]
+      },
+      "after": {
+        "nvme": [
+          {
+            "label": "Composite",
+            "current_c": 36.85
+          }
+        ],
+        "coretemp": [
+          {
+            "label": "Package id 0",
+            "current_c": 58.0
+          },
+          {
+            "label": "Core 8",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 9",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 10",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 11",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 12",
+            "current_c": 54.0
+          },
+          {
+            "label": "Core 13",
+            "current_c": 54.0
+          },
+          {
+            "label": "Core 14",
+            "current_c": 54.0
+          },
+          {
+            "label": "Core 15",
+            "current_c": 54.0
+          },
+          {
+            "label": "Core 16",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 0",
+            "current_c": 60.0
+          },
+          {
+            "label": "Core 20",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 24",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 28",
+            "current_c": 56.0
+          },
+          {
+            "label": "Core 32",
+            "current_c": 51.0
+          },
+          {
+            "label": "Core 33",
+            "current_c": 51.0
+          },
+          {
+            "label": "Core 4",
+            "current_c": 54.0
+          }
+        ],
+        "iwlwifi_1": [
+          {
+            "label": "",
+            "current_c": 53.0
+          }
+        ]
+      }
+    }
+  },
+  "correctness_evidence": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_correctness.json"
+}

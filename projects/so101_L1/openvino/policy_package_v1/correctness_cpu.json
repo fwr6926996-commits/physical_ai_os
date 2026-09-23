@@ -1,0 +1,26 @@
+{
+  "device": "CPU",
+  "comparison": "normalized ACT action chunk: PyTorch CPU vs OpenVINO CPU",
+  "input_shapes": {
+    "state": [
+      1,
+      6
+    ],
+    "wrist_image": [
+      1,
+      3,
+      480,
+      640
+    ]
+  },
+  "output_shape": [
+    1,
+    100,
+    6
+  ],
+  "rtol": 0.0001,
+  "atol": 1e-05,
+  "max_abs_error": 2.6226043701171875e-06,
+  "mean_abs_error": 4.817048875338514e-07,
+  "status": "PASS"
+}

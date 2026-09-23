@@ -1,0 +1,30 @@
+{
+  "timestamp_utc": "2026-09-14T08:39:20.208673+00:00",
+  "device": "NPU",
+  "device_full_name": "Intel(R) AI Boost",
+  "available_devices": [
+    "CPU",
+    "GPU.0",
+    "GPU.1",
+    "NPU"
+  ],
+  "requested_inference_precision": "default",
+  "comparison": "normalized ACT action chunk: PyTorch CPU vs OpenVINO NPU",
+  "input_shapes": {
+    "state": "[1,6]",
+    "wrist_image": "[1,3,480,640]"
+  },
+  "output_shape": [
+    1,
+    100,
+    6
+  ],
+  "output_dtype": "float32",
+  "rtol": 0.0001,
+  "atol": 1e-05,
+  "max_abs_error": 0.002484560012817383,
+  "mean_abs_error": 0.0005053336499258876,
+  "compile_ms": 1463.930753,
+  "first_inference_ms": 102.909773,
+  "status": "FAIL"
+}

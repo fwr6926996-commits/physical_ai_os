@@ -1,0 +1,78 @@
+schema_version: 1
+phase: "Phase 3.0 Hardware Truth"
+frozen_at_utc: "2026-09-14T11:51:17Z"
+review_status: PASS
+
+host:
+  vendor: LENOVO
+  product_code: "21TL"
+  product_name: "ThinkBook 16 G7+ IAH"
+  board: LNVNB161216
+  bios: R5CN53WW
+
+processor:
+  model: "Intel(R) Core(TM) Ultra 7 255H"
+
+memory:
+  installed_total_gb: 32
+  os_visible_bytes: 33044353024
+  technology: DDR5
+  rated_speed_mt_s: 5600
+  configured_speed_mt_s: 5600
+  modules:
+    - size_gb: 16
+      locator: Controller0-ChannelA-DIMM0
+      bank_locator: BANK 0
+    - size_gb: 16
+      locator: Controller1-ChannelA-DIMM0
+      bank_locator: BANK 0
+  topology_statement: "Two 16 GB modules; one populated ChannelA DIMM under each of Controller0 and Controller1."
+  topology_source: "sudo dmidecode --type 17, supplied by the human operator on 2026-09-14"
+
+openvino_devices:
+  runtime_version: "2026.3.1-22476-759c5a6ab8c-releases/2026/3"
+  available_devices: [CPU, GPU.0, GPU.1, NPU]
+  mappings:
+    CPU:
+      full_name: "Intel(R) Core(TM) Ultra 7 255H"
+      type: INTEGRATED
+      capabilities: [BF16, FP32, FP16, INT8, BIN, EXPORT_IMPORT]
+      phase3_role: benchmark
+    GPU.0:
+      full_name: "Intel(R) Arc(TM) Graphics (iGPU)"
+      vendor_id: "0x8086"
+      type: INTEGRATED
+      capabilities: [FP32, BIN, FP16, INT8, GPU_HW_MATMUL, GPU_USM_MEMORY, EXPORT_IMPORT]
+      phase3_role: benchmark
+    GPU.1:
+      full_name: "NVIDIA GeForce RTX 5060 Laptop GPU (dGPU)"
+      vendor_id: "0x10de"
+      type: DISCRETE
+      capabilities: [FP32, BIN, INT8, EXPORT_IMPORT]
+      phase3_role: excluded
+      exclusion_reason: "L1 V2.9 Phase 3 is Intel pre-deployment; RTX inference is isolated."
+    NPU:
+      full_name: "Intel(R) AI Boost"
+      architecture: "3720"
+      type: INTEGRATED
+      capabilities: [FP16, INT8, EXPORT_IMPORT]
+      phase3_role: compatibility_and_benchmark_if_correct
+
+storage:
+  data_mount:
+    path: /data
+    source: /dev/nvme0n1p6
+    filesystem: ext4
+    mode: rw
+    total_bytes: 105089261568
+    available_bytes_at_capture: 81030922240
+
+thermal_observability:
+  status: PASS
+  cpu_package_temperature_at_baseline_c: 54.0
+  note: "Baseline observation only; performance runs require synchronized temperature capture."
+
+evidence:
+  machine_snapshot: "openvino/phase3_v2_9/evidence/phase3_0_baseline/baseline_20260914T115117Z.json"
+  memory_topology: "openvino/phase3_v2_9/evidence/phase3_0_baseline/memory_topology_dmidecode_20260914.txt"
+  human_review: "openvino/phase3_v2_9/evidence/phase3_0_baseline/baseline_review.json"

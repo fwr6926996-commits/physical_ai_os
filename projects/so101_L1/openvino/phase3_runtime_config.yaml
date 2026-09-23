@@ -1,0 +1,69 @@
+schema_version: 1
+phase: "Phase 3 255H Intel Pre-Deployment"
+status: "ARCHIVED_DO_NOT_DEPLOY"
+superseded_by: "phase3_v2_9/active_runtime_config.yaml"
+historical_scope: "V2.8 evidence only; GPU.0 primary was invalidated by V2.9 stability failures"
+
+policy_package:
+  directory: "policy_package_v1"
+  model_xml: "policy_package_v1/act_cpu_reference.xml"
+  model_bin: "policy_package_v1/act_cpu_reference.bin"
+  input_contract:
+    state: "float32[1,6]"
+    wrist_image: "float32[1,3,480,640]"
+  output_contract:
+    action_chunk: "float32[1,100,6]"
+
+device_policy:
+  selection_mode: "EXPLICIT_ONLY"
+  primary:
+    device: "GPU.0"
+    required_full_name_substrings:
+      - "Intel"
+      - "Arc"
+    forbidden_full_name_substrings:
+      - "NVIDIA"
+    performance_hint: "LATENCY"
+    inference_precision: "f32"
+    evidence:
+      correctness: "policy_package_v1/correctness_gpu_0_f32.json"
+      benchmark: "policy_package_v1/benchmark_gpu_0_f32.json"
+  fallback:
+    device: "CPU"
+    required_full_name_substrings:
+      - "Intel"
+      - "Core"
+      - "255H"
+    performance_hint: "LATENCY"
+    inference_precision: "f32"
+    evidence:
+      correctness: "policy_package_v1/correctness_cpu_f32.json"
+      benchmark: "policy_package_v1/benchmark_cpu_f32.json"
+
+excluded_paths:
+  - device: "GPU.1"
+    full_name: "NVIDIA GeForce RTX 5060 Laptop GPU"
+    reason: "Phase 3 is Intel-only; cross-vendor GPU inference is outside the Core gate."
+  - device: "NPU"
+    full_name: "Intel(R) AI Boost"
+    reason: "Default path compiles and infers but fails the frozen correctness threshold; f32 is unsupported."
+  - device: "AUTO"
+    reason: "Automatic selection could use GPU.1 and would make device attribution non-auditable."
+  - device: "HETERO"
+    reason: "Not required for the Phase 3 single-device evidence and could hide device placement."
+
+correctness_gate:
+  reference: "PyTorch CPU normalized ACT action chunk"
+  rtol: 0.0001
+  atol: 0.00001
+  failure_policy: "Do not benchmark or admit a backend after a correctness failure."
+
+scope_boundary:
+  included: "OpenVINO model-only compile, correctness, and latency on ThinkBook Core Ultra 7 255H"
+  excluded:
+    - "Robot motion"
+    - "Preprocessing and postprocessing latency"
+    - "DK-2500 deployment"
+    - "30-60 minute edge stability"
+    - "Power and thermal validation"
+    - "Phase 4 and later work"

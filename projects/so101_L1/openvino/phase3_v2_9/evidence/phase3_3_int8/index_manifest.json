@@ -1,0 +1,2734 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN",
+  "dataset": {
+    "repo_id": "lucasly527/so101_pick_place_cube_v1_20260803_014054",
+    "root": "/data/datasets/so101_pick_place_cube_v1_20260803_014054",
+    "total_episodes": 50,
+    "total_frames": 37009
+  },
+  "selection": {
+    "calibration_fractions": [
+      0.1,
+      0.25,
+      0.4,
+      0.6,
+      0.75,
+      0.9
+    ],
+    "validation_fractions": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "calibration_count": 300,
+    "validation_count": 100,
+    "overlap_count": 0
+  },
+  "episode_bounds": [
+    {
+      "episode_index": 0,
+      "length": 1274,
+      "dataset_from_index": 0,
+      "dataset_to_index_exclusive": 1274
+    },
+    {
+      "episode_index": 1,
+      "length": 779,
+      "dataset_from_index": 1274,
+      "dataset_to_index_exclusive": 2053
+    },
+    {
+      "episode_index": 2,
+      "length": 709,
+      "dataset_from_index": 2053,
+      "dataset_to_index_exclusive": 2762
+    },
+    {
+      "episode_index": 3,
+      "length": 654,
+      "dataset_from_index": 2762,
+      "dataset_to_index_exclusive": 3416
+    },
+    {
+      "episode_index": 4,
+      "length": 644,
+      "dataset_from_index": 3416,
+      "dataset_to_index_exclusive": 4060
+    },
+    {
+      "episode_index": 5,
+      "length": 573,
+      "dataset_from_index": 4060,
+      "dataset_to_index_exclusive": 4633
+    },
+    {
+      "episode_index": 6,
+      "length": 883,
+      "dataset_from_index": 4633,
+      "dataset_to_index_exclusive": 5516
+    },
+    {
+      "episode_index": 7,
+      "length": 683,
+      "dataset_from_index": 5516,
+      "dataset_to_index_exclusive": 6199
+    },
+    {
+      "episode_index": 8,
+      "length": 681,
+      "dataset_from_index": 6199,
+      "dataset_to_index_exclusive": 6880
+    },
+    {
+      "episode_index": 9,
+      "length": 651,
+      "dataset_from_index": 6880,
+      "dataset_to_index_exclusive": 7531
+    },
+    {
+      "episode_index": 10,
+      "length": 706,
+      "dataset_from_index": 7531,
+      "dataset_to_index_exclusive": 8237
+    },
+    {
+      "episode_index": 11,
+      "length": 599,
+      "dataset_from_index": 8237,
+      "dataset_to_index_exclusive": 8836
+    },
+    {
+      "episode_index": 12,
+      "length": 593,
+      "dataset_from_index": 8836,
+      "dataset_to_index_exclusive": 9429
+    },
+    {
+      "episode_index": 13,
+      "length": 605,
+      "dataset_from_index": 9429,
+      "dataset_to_index_exclusive": 10034
+    },
+    {
+      "episode_index": 14,
+      "length": 669,
+      "dataset_from_index": 10034,
+      "dataset_to_index_exclusive": 10703
+    },
+    {
+      "episode_index": 15,
+      "length": 686,
+      "dataset_from_index": 10703,
+      "dataset_to_index_exclusive": 11389
+    },
+    {
+      "episode_index": 16,
+      "length": 818,
+      "dataset_from_index": 11389,
+      "dataset_to_index_exclusive": 12207
+    },
+    {
+      "episode_index": 17,
+      "length": 680,
+      "dataset_from_index": 12207,
+      "dataset_to_index_exclusive": 12887
+    },
+    {
+      "episode_index": 18,
+      "length": 715,
+      "dataset_from_index": 12887,
+      "dataset_to_index_exclusive": 13602
+    },
+    {
+      "episode_index": 19,
+      "length": 774,
+      "dataset_from_index": 13602,
+      "dataset_to_index_exclusive": 14376
+    },
+    {
+      "episode_index": 20,
+      "length": 674,
+      "dataset_from_index": 14376,
+      "dataset_to_index_exclusive": 15050
+    },
+    {
+      "episode_index": 21,
+      "length": 733,
+      "dataset_from_index": 15050,
+      "dataset_to_index_exclusive": 15783
+    },
+    {
+      "episode_index": 22,
+      "length": 779,
+      "dataset_from_index": 15783,
+      "dataset_to_index_exclusive": 16562
+    },
+    {
+      "episode_index": 23,
+      "length": 748,
+      "dataset_from_index": 16562,
+      "dataset_to_index_exclusive": 17310
+    },
+    {
+      "episode_index": 24,
+      "length": 691,
+      "dataset_from_index": 17310,
+      "dataset_to_index_exclusive": 18001
+    },
+    {
+      "episode_index": 25,
+      "length": 886,
+      "dataset_from_index": 18001,
+      "dataset_to_index_exclusive": 18887
+    },
+    {
+      "episode_index": 26,
+      "length": 830,
+      "dataset_from_index": 18887,
+      "dataset_to_index_exclusive": 19717
+    },
+    {
+      "episode_index": 27,
+      "length": 814,
+      "dataset_from_index": 19717,
+      "dataset_to_index_exclusive": 20531
+    },
+    {
+      "episode_index": 28,
+      "length": 756,
+      "dataset_from_index": 20531,
+      "dataset_to_index_exclusive": 21287
+    },
+    {
+      "episode_index": 29,
+      "length": 828,
+      "dataset_from_index": 21287,
+      "dataset_to_index_exclusive": 22115
+    },
+    {
+      "episode_index": 30,
+      "length": 773,
+      "dataset_from_index": 22115,
+      "dataset_to_index_exclusive": 22888
+    },
+    {
+      "episode_index": 31,
+      "length": 808,
+      "dataset_from_index": 22888,
+      "dataset_to_index_exclusive": 23696
+    },
+    {
+      "episode_index": 32,
+      "length": 843,
+      "dataset_from_index": 23696,
+      "dataset_to_index_exclusive": 24539
+    },
+    {
+      "episode_index": 33,
+      "length": 737,
+      "dataset_from_index": 24539,
+      "dataset_to_index_exclusive": 25276
+    },
+    {
+      "episode_index": 34,
+      "length": 723,
+      "dataset_from_index": 25276,
+      "dataset_to_index_exclusive": 25999
+    },
+    {
+      "episode_index": 35,
+      "length": 733,
+      "dataset_from_index": 25999,
+      "dataset_to_index_exclusive": 26732
+    },
+    {
+      "episode_index": 36,
+      "length": 890,
+      "dataset_from_index": 26732,
+      "dataset_to_index_exclusive": 27622
+    },
+    {
+      "episode_index": 37,
+      "length": 618,
+      "dataset_from_index": 27622,
+      "dataset_to_index_exclusive": 28240
+    },
+    {
+      "episode_index": 38,
+      "length": 679,
+      "dataset_from_index": 28240,
+      "dataset_to_index_exclusive": 28919
+    },
+    {
+      "episode_index": 39,
+      "length": 841,
+      "dataset_from_index": 28919,
+      "dataset_to_index_exclusive": 29760
+    },
+    {
+      "episode_index": 40,
+      "length": 691,
+      "dataset_from_index": 29760,
+      "dataset_to_index_exclusive": 30451
+    },
+    {
+      "episode_index": 41,
+      "length": 739,
+      "dataset_from_index": 30451,
+      "dataset_to_index_exclusive": 31190
+    },
+    {
+      "episode_index": 42,
+      "length": 656,
+      "dataset_from_index": 31190,
+      "dataset_to_index_exclusive": 31846
+    },
+    {
+      "episode_index": 43,
+      "length": 822,
+      "dataset_from_index": 31846,
+      "dataset_to_index_exclusive": 32668
+    },
+    {
+      "episode_index": 44,
+      "length": 696,
+      "dataset_from_index": 32668,
+      "dataset_to_index_exclusive": 33364
+    },
+    {
+      "episode_index": 45,
+      "length": 679,
+      "dataset_from_index": 33364,
+      "dataset_to_index_exclusive": 34043
+    },
+    {
+      "episode_index": 46,
+      "length": 737,
+      "dataset_from_index": 34043,
+      "dataset_to_index_exclusive": 34780
+    },
+    {
+      "episode_index": 47,
+      "length": 673,
+      "dataset_from_index": 34780,
+      "dataset_to_index_exclusive": 35453
+    },
+    {
+      "episode_index": 48,
+      "length": 817,
+      "dataset_from_index": 35453,
+      "dataset_to_index_exclusive": 36270
+    },
+    {
+      "episode_index": 49,
+      "length": 739,
+      "dataset_from_index": 36270,
+      "dataset_to_index_exclusive": 37009
+    }
+  ],
+  "calibration": [
+    {
+      "episode_index": 0,
+      "frame_index": 127,
+      "dataset_index": 127,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 0,
+      "frame_index": 318,
+      "dataset_index": 318,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 0,
+      "frame_index": 509,
+      "dataset_index": 509,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 0,
+      "frame_index": 764,
+      "dataset_index": 764,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 0,
+      "frame_index": 955,
+      "dataset_index": 955,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 0,
+      "frame_index": 1146,
+      "dataset_index": 1146,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 1,
+      "frame_index": 78,
+      "dataset_index": 1352,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 1,
+      "frame_index": 194,
+      "dataset_index": 1468,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 1,
+      "frame_index": 311,
+      "dataset_index": 1585,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 1,
+      "frame_index": 467,
+      "dataset_index": 1741,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 1,
+      "frame_index": 584,
+      "dataset_index": 1858,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 1,
+      "frame_index": 700,
+      "dataset_index": 1974,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 2,
+      "frame_index": 71,
+      "dataset_index": 2124,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 2,
+      "frame_index": 177,
+      "dataset_index": 2230,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 2,
+      "frame_index": 283,
+      "dataset_index": 2336,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 2,
+      "frame_index": 425,
+      "dataset_index": 2478,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 2,
+      "frame_index": 531,
+      "dataset_index": 2584,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 2,
+      "frame_index": 637,
+      "dataset_index": 2690,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 3,
+      "frame_index": 65,
+      "dataset_index": 2827,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 3,
+      "frame_index": 163,
+      "dataset_index": 2925,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 3,
+      "frame_index": 261,
+      "dataset_index": 3023,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 3,
+      "frame_index": 392,
+      "dataset_index": 3154,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 3,
+      "frame_index": 490,
+      "dataset_index": 3252,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 3,
+      "frame_index": 588,
+      "dataset_index": 3350,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 4,
+      "frame_index": 64,
+      "dataset_index": 3480,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 4,
+      "frame_index": 161,
+      "dataset_index": 3577,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 4,
+      "frame_index": 257,
+      "dataset_index": 3673,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 4,
+      "frame_index": 386,
+      "dataset_index": 3802,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 4,
+      "frame_index": 482,
+      "dataset_index": 3898,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 4,
+      "frame_index": 579,
+      "dataset_index": 3995,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 5,
+      "frame_index": 57,
+      "dataset_index": 4117,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 5,
+      "frame_index": 143,
+      "dataset_index": 4203,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 5,
+      "frame_index": 229,
+      "dataset_index": 4289,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 5,
+      "frame_index": 343,
+      "dataset_index": 4403,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 5,
+      "frame_index": 429,
+      "dataset_index": 4489,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 5,
+      "frame_index": 515,
+      "dataset_index": 4575,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 6,
+      "frame_index": 88,
+      "dataset_index": 4721,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 6,
+      "frame_index": 220,
+      "dataset_index": 4853,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 6,
+      "frame_index": 353,
+      "dataset_index": 4986,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 6,
+      "frame_index": 529,
+      "dataset_index": 5162,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 6,
+      "frame_index": 662,
+      "dataset_index": 5295,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 6,
+      "frame_index": 794,
+      "dataset_index": 5427,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 7,
+      "frame_index": 68,
+      "dataset_index": 5584,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 7,
+      "frame_index": 170,
+      "dataset_index": 5686,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 7,
+      "frame_index": 273,
+      "dataset_index": 5789,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 7,
+      "frame_index": 409,
+      "dataset_index": 5925,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 7,
+      "frame_index": 512,
+      "dataset_index": 6028,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 7,
+      "frame_index": 614,
+      "dataset_index": 6130,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 8,
+      "frame_index": 68,
+      "dataset_index": 6267,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 8,
+      "frame_index": 170,
+      "dataset_index": 6369,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 8,
+      "frame_index": 272,
+      "dataset_index": 6471,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 8,
+      "frame_index": 408,
+      "dataset_index": 6607,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 8,
+      "frame_index": 510,
+      "dataset_index": 6709,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 8,
+      "frame_index": 612,
+      "dataset_index": 6811,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 9,
+      "frame_index": 65,
+      "dataset_index": 6945,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 9,
+      "frame_index": 162,
+      "dataset_index": 7042,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 9,
+      "frame_index": 260,
+      "dataset_index": 7140,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 9,
+      "frame_index": 390,
+      "dataset_index": 7270,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 9,
+      "frame_index": 488,
+      "dataset_index": 7368,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 9,
+      "frame_index": 585,
+      "dataset_index": 7465,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 10,
+      "frame_index": 70,
+      "dataset_index": 7601,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 10,
+      "frame_index": 176,
+      "dataset_index": 7707,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 10,
+      "frame_index": 282,
+      "dataset_index": 7813,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 10,
+      "frame_index": 423,
+      "dataset_index": 7954,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 10,
+      "frame_index": 529,
+      "dataset_index": 8060,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 10,
+      "frame_index": 634,
+      "dataset_index": 8165,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 11,
+      "frame_index": 60,
+      "dataset_index": 8297,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 11,
+      "frame_index": 150,
+      "dataset_index": 8387,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 11,
+      "frame_index": 239,
+      "dataset_index": 8476,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 11,
+      "frame_index": 359,
+      "dataset_index": 8596,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 11,
+      "frame_index": 448,
+      "dataset_index": 8685,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 11,
+      "frame_index": 538,
+      "dataset_index": 8775,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 12,
+      "frame_index": 59,
+      "dataset_index": 8895,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 12,
+      "frame_index": 148,
+      "dataset_index": 8984,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 12,
+      "frame_index": 237,
+      "dataset_index": 9073,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 12,
+      "frame_index": 355,
+      "dataset_index": 9191,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 12,
+      "frame_index": 444,
+      "dataset_index": 9280,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 12,
+      "frame_index": 533,
+      "dataset_index": 9369,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 13,
+      "frame_index": 60,
+      "dataset_index": 9489,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 13,
+      "frame_index": 151,
+      "dataset_index": 9580,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 13,
+      "frame_index": 242,
+      "dataset_index": 9671,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 13,
+      "frame_index": 362,
+      "dataset_index": 9791,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 13,
+      "frame_index": 453,
+      "dataset_index": 9882,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 13,
+      "frame_index": 544,
+      "dataset_index": 9973,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 14,
+      "frame_index": 67,
+      "dataset_index": 10101,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 14,
+      "frame_index": 167,
+      "dataset_index": 10201,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 14,
+      "frame_index": 267,
+      "dataset_index": 10301,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 14,
+      "frame_index": 401,
+      "dataset_index": 10435,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 14,
+      "frame_index": 501,
+      "dataset_index": 10535,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 14,
+      "frame_index": 601,
+      "dataset_index": 10635,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 15,
+      "frame_index": 68,
+      "dataset_index": 10771,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 15,
+      "frame_index": 171,
+      "dataset_index": 10874,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 15,
+      "frame_index": 274,
+      "dataset_index": 10977,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 15,
+      "frame_index": 411,
+      "dataset_index": 11114,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 15,
+      "frame_index": 514,
+      "dataset_index": 11217,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 15,
+      "frame_index": 616,
+      "dataset_index": 11319,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 16,
+      "frame_index": 82,
+      "dataset_index": 11471,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 16,
+      "frame_index": 204,
+      "dataset_index": 11593,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 16,
+      "frame_index": 327,
+      "dataset_index": 11716,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 16,
+      "frame_index": 490,
+      "dataset_index": 11879,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 16,
+      "frame_index": 613,
+      "dataset_index": 12002,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 16,
+      "frame_index": 735,
+      "dataset_index": 12124,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 17,
+      "frame_index": 68,
+      "dataset_index": 12275,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 17,
+      "frame_index": 170,
+      "dataset_index": 12377,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 17,
+      "frame_index": 272,
+      "dataset_index": 12479,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 17,
+      "frame_index": 407,
+      "dataset_index": 12614,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 17,
+      "frame_index": 509,
+      "dataset_index": 12716,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 17,
+      "frame_index": 611,
+      "dataset_index": 12818,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 18,
+      "frame_index": 71,
+      "dataset_index": 12958,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 18,
+      "frame_index": 178,
+      "dataset_index": 13065,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 18,
+      "frame_index": 286,
+      "dataset_index": 13173,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 18,
+      "frame_index": 428,
+      "dataset_index": 13315,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 18,
+      "frame_index": 536,
+      "dataset_index": 13423,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 18,
+      "frame_index": 643,
+      "dataset_index": 13530,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 19,
+      "frame_index": 77,
+      "dataset_index": 13679,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 19,
+      "frame_index": 193,
+      "dataset_index": 13795,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 19,
+      "frame_index": 309,
+      "dataset_index": 13911,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 19,
+      "frame_index": 464,
+      "dataset_index": 14066,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 19,
+      "frame_index": 580,
+      "dataset_index": 14182,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 19,
+      "frame_index": 696,
+      "dataset_index": 14298,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 20,
+      "frame_index": 67,
+      "dataset_index": 14443,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 20,
+      "frame_index": 168,
+      "dataset_index": 14544,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 20,
+      "frame_index": 269,
+      "dataset_index": 14645,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 20,
+      "frame_index": 404,
+      "dataset_index": 14780,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 20,
+      "frame_index": 505,
+      "dataset_index": 14881,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 20,
+      "frame_index": 606,
+      "dataset_index": 14982,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 21,
+      "frame_index": 73,
+      "dataset_index": 15123,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 21,
+      "frame_index": 183,
+      "dataset_index": 15233,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 21,
+      "frame_index": 293,
+      "dataset_index": 15343,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 21,
+      "frame_index": 439,
+      "dataset_index": 15489,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 21,
+      "frame_index": 549,
+      "dataset_index": 15599,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 21,
+      "frame_index": 659,
+      "dataset_index": 15709,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 22,
+      "frame_index": 78,
+      "dataset_index": 15861,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 22,
+      "frame_index": 194,
+      "dataset_index": 15977,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 22,
+      "frame_index": 311,
+      "dataset_index": 16094,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 22,
+      "frame_index": 467,
+      "dataset_index": 16250,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 22,
+      "frame_index": 584,
+      "dataset_index": 16367,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 22,
+      "frame_index": 700,
+      "dataset_index": 16483,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 23,
+      "frame_index": 75,
+      "dataset_index": 16637,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 23,
+      "frame_index": 187,
+      "dataset_index": 16749,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 23,
+      "frame_index": 299,
+      "dataset_index": 16861,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 23,
+      "frame_index": 448,
+      "dataset_index": 17010,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 23,
+      "frame_index": 560,
+      "dataset_index": 17122,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 23,
+      "frame_index": 672,
+      "dataset_index": 17234,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 24,
+      "frame_index": 69,
+      "dataset_index": 17379,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 24,
+      "frame_index": 172,
+      "dataset_index": 17482,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 24,
+      "frame_index": 276,
+      "dataset_index": 17586,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 24,
+      "frame_index": 414,
+      "dataset_index": 17724,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 24,
+      "frame_index": 518,
+      "dataset_index": 17828,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 24,
+      "frame_index": 621,
+      "dataset_index": 17931,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 25,
+      "frame_index": 88,
+      "dataset_index": 18089,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 25,
+      "frame_index": 221,
+      "dataset_index": 18222,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 25,
+      "frame_index": 354,
+      "dataset_index": 18355,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 25,
+      "frame_index": 531,
+      "dataset_index": 18532,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 25,
+      "frame_index": 664,
+      "dataset_index": 18665,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 25,
+      "frame_index": 796,
+      "dataset_index": 18797,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 26,
+      "frame_index": 83,
+      "dataset_index": 18970,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 26,
+      "frame_index": 207,
+      "dataset_index": 19094,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 26,
+      "frame_index": 332,
+      "dataset_index": 19219,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 26,
+      "frame_index": 497,
+      "dataset_index": 19384,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 26,
+      "frame_index": 622,
+      "dataset_index": 19509,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 26,
+      "frame_index": 746,
+      "dataset_index": 19633,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 27,
+      "frame_index": 81,
+      "dataset_index": 19798,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 27,
+      "frame_index": 203,
+      "dataset_index": 19920,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 27,
+      "frame_index": 325,
+      "dataset_index": 20042,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 27,
+      "frame_index": 488,
+      "dataset_index": 20205,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 27,
+      "frame_index": 610,
+      "dataset_index": 20327,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 27,
+      "frame_index": 732,
+      "dataset_index": 20449,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 28,
+      "frame_index": 76,
+      "dataset_index": 20607,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 28,
+      "frame_index": 189,
+      "dataset_index": 20720,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 28,
+      "frame_index": 302,
+      "dataset_index": 20833,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 28,
+      "frame_index": 453,
+      "dataset_index": 20984,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 28,
+      "frame_index": 566,
+      "dataset_index": 21097,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 28,
+      "frame_index": 680,
+      "dataset_index": 21211,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 29,
+      "frame_index": 83,
+      "dataset_index": 21370,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 29,
+      "frame_index": 207,
+      "dataset_index": 21494,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 29,
+      "frame_index": 331,
+      "dataset_index": 21618,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 29,
+      "frame_index": 496,
+      "dataset_index": 21783,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 29,
+      "frame_index": 620,
+      "dataset_index": 21907,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 29,
+      "frame_index": 744,
+      "dataset_index": 22031,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 30,
+      "frame_index": 77,
+      "dataset_index": 22192,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 30,
+      "frame_index": 193,
+      "dataset_index": 22308,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 30,
+      "frame_index": 309,
+      "dataset_index": 22424,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 30,
+      "frame_index": 463,
+      "dataset_index": 22578,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 30,
+      "frame_index": 579,
+      "dataset_index": 22694,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 30,
+      "frame_index": 695,
+      "dataset_index": 22810,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 31,
+      "frame_index": 81,
+      "dataset_index": 22969,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 31,
+      "frame_index": 202,
+      "dataset_index": 23090,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 31,
+      "frame_index": 323,
+      "dataset_index": 23211,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 31,
+      "frame_index": 484,
+      "dataset_index": 23372,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 31,
+      "frame_index": 605,
+      "dataset_index": 23493,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 31,
+      "frame_index": 726,
+      "dataset_index": 23614,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 32,
+      "frame_index": 84,
+      "dataset_index": 23780,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 32,
+      "frame_index": 210,
+      "dataset_index": 23906,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 32,
+      "frame_index": 337,
+      "dataset_index": 24033,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 32,
+      "frame_index": 505,
+      "dataset_index": 24201,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 32,
+      "frame_index": 632,
+      "dataset_index": 24328,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 32,
+      "frame_index": 758,
+      "dataset_index": 24454,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 33,
+      "frame_index": 74,
+      "dataset_index": 24613,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 33,
+      "frame_index": 184,
+      "dataset_index": 24723,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 33,
+      "frame_index": 294,
+      "dataset_index": 24833,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 33,
+      "frame_index": 442,
+      "dataset_index": 24981,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 33,
+      "frame_index": 552,
+      "dataset_index": 25091,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 33,
+      "frame_index": 662,
+      "dataset_index": 25201,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 34,
+      "frame_index": 72,
+      "dataset_index": 25348,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 34,
+      "frame_index": 180,
+      "dataset_index": 25456,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 34,
+      "frame_index": 289,
+      "dataset_index": 25565,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 34,
+      "frame_index": 433,
+      "dataset_index": 25709,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 34,
+      "frame_index": 542,
+      "dataset_index": 25818,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 34,
+      "frame_index": 650,
+      "dataset_index": 25926,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 35,
+      "frame_index": 73,
+      "dataset_index": 26072,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 35,
+      "frame_index": 183,
+      "dataset_index": 26182,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 35,
+      "frame_index": 293,
+      "dataset_index": 26292,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 35,
+      "frame_index": 439,
+      "dataset_index": 26438,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 35,
+      "frame_index": 549,
+      "dataset_index": 26548,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 35,
+      "frame_index": 659,
+      "dataset_index": 26658,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 36,
+      "frame_index": 89,
+      "dataset_index": 26821,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 36,
+      "frame_index": 222,
+      "dataset_index": 26954,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 36,
+      "frame_index": 356,
+      "dataset_index": 27088,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 36,
+      "frame_index": 533,
+      "dataset_index": 27265,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 36,
+      "frame_index": 667,
+      "dataset_index": 27399,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 36,
+      "frame_index": 800,
+      "dataset_index": 27532,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 37,
+      "frame_index": 62,
+      "dataset_index": 27684,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 37,
+      "frame_index": 154,
+      "dataset_index": 27776,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 37,
+      "frame_index": 247,
+      "dataset_index": 27869,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 37,
+      "frame_index": 370,
+      "dataset_index": 27992,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 37,
+      "frame_index": 463,
+      "dataset_index": 28085,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 37,
+      "frame_index": 555,
+      "dataset_index": 28177,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 38,
+      "frame_index": 68,
+      "dataset_index": 28308,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 38,
+      "frame_index": 170,
+      "dataset_index": 28410,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 38,
+      "frame_index": 271,
+      "dataset_index": 28511,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 38,
+      "frame_index": 407,
+      "dataset_index": 28647,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 38,
+      "frame_index": 508,
+      "dataset_index": 28748,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 38,
+      "frame_index": 610,
+      "dataset_index": 28850,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 39,
+      "frame_index": 84,
+      "dataset_index": 29003,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 39,
+      "frame_index": 210,
+      "dataset_index": 29129,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 39,
+      "frame_index": 336,
+      "dataset_index": 29255,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 39,
+      "frame_index": 504,
+      "dataset_index": 29423,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 39,
+      "frame_index": 630,
+      "dataset_index": 29549,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 39,
+      "frame_index": 756,
+      "dataset_index": 29675,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 40,
+      "frame_index": 69,
+      "dataset_index": 29829,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 40,
+      "frame_index": 172,
+      "dataset_index": 29932,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 40,
+      "frame_index": 276,
+      "dataset_index": 30036,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 40,
+      "frame_index": 414,
+      "dataset_index": 30174,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 40,
+      "frame_index": 518,
+      "dataset_index": 30278,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 40,
+      "frame_index": 621,
+      "dataset_index": 30381,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 41,
+      "frame_index": 74,
+      "dataset_index": 30525,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 41,
+      "frame_index": 184,
+      "dataset_index": 30635,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 41,
+      "frame_index": 295,
+      "dataset_index": 30746,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 41,
+      "frame_index": 443,
+      "dataset_index": 30894,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 41,
+      "frame_index": 554,
+      "dataset_index": 31005,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 41,
+      "frame_index": 664,
+      "dataset_index": 31115,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 42,
+      "frame_index": 66,
+      "dataset_index": 31256,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 42,
+      "frame_index": 164,
+      "dataset_index": 31354,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 42,
+      "frame_index": 262,
+      "dataset_index": 31452,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 42,
+      "frame_index": 393,
+      "dataset_index": 31583,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 42,
+      "frame_index": 491,
+      "dataset_index": 31681,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 42,
+      "frame_index": 590,
+      "dataset_index": 31780,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 43,
+      "frame_index": 82,
+      "dataset_index": 31928,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 43,
+      "frame_index": 205,
+      "dataset_index": 32051,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 43,
+      "frame_index": 328,
+      "dataset_index": 32174,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 43,
+      "frame_index": 493,
+      "dataset_index": 32339,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 43,
+      "frame_index": 616,
+      "dataset_index": 32462,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 43,
+      "frame_index": 739,
+      "dataset_index": 32585,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 44,
+      "frame_index": 70,
+      "dataset_index": 32738,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 44,
+      "frame_index": 174,
+      "dataset_index": 32842,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 44,
+      "frame_index": 278,
+      "dataset_index": 32946,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 44,
+      "frame_index": 417,
+      "dataset_index": 33085,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 44,
+      "frame_index": 521,
+      "dataset_index": 33189,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 44,
+      "frame_index": 626,
+      "dataset_index": 33294,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 45,
+      "frame_index": 68,
+      "dataset_index": 33432,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 45,
+      "frame_index": 170,
+      "dataset_index": 33534,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 45,
+      "frame_index": 271,
+      "dataset_index": 33635,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 45,
+      "frame_index": 407,
+      "dataset_index": 33771,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 45,
+      "frame_index": 508,
+      "dataset_index": 33872,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 45,
+      "frame_index": 610,
+      "dataset_index": 33974,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 46,
+      "frame_index": 74,
+      "dataset_index": 34117,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 46,
+      "frame_index": 184,
+      "dataset_index": 34227,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 46,
+      "frame_index": 294,
+      "dataset_index": 34337,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 46,
+      "frame_index": 442,
+      "dataset_index": 34485,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 46,
+      "frame_index": 552,
+      "dataset_index": 34595,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 46,
+      "frame_index": 662,
+      "dataset_index": 34705,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 47,
+      "frame_index": 67,
+      "dataset_index": 34847,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 47,
+      "frame_index": 168,
+      "dataset_index": 34948,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 47,
+      "frame_index": 269,
+      "dataset_index": 35049,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 47,
+      "frame_index": 403,
+      "dataset_index": 35183,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 47,
+      "frame_index": 504,
+      "dataset_index": 35284,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 47,
+      "frame_index": 605,
+      "dataset_index": 35385,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 48,
+      "frame_index": 82,
+      "dataset_index": 35535,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 48,
+      "frame_index": 204,
+      "dataset_index": 35657,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 48,
+      "frame_index": 326,
+      "dataset_index": 35779,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 48,
+      "frame_index": 490,
+      "dataset_index": 35943,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 48,
+      "frame_index": 612,
+      "dataset_index": 36065,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 48,
+      "frame_index": 734,
+      "dataset_index": 36187,
+      "target_fraction": 0.9
+    },
+    {
+      "episode_index": 49,
+      "frame_index": 74,
+      "dataset_index": 36344,
+      "target_fraction": 0.1
+    },
+    {
+      "episode_index": 49,
+      "frame_index": 184,
+      "dataset_index": 36454,
+      "target_fraction": 0.25
+    },
+    {
+      "episode_index": 49,
+      "frame_index": 295,
+      "dataset_index": 36565,
+      "target_fraction": 0.4
+    },
+    {
+      "episode_index": 49,
+      "frame_index": 443,
+      "dataset_index": 36713,
+      "target_fraction": 0.6
+    },
+    {
+      "episode_index": 49,
+      "frame_index": 554,
+      "dataset_index": 36824,
+      "target_fraction": 0.75
+    },
+    {
+      "episode_index": 49,
+      "frame_index": 664,
+      "dataset_index": 36934,
+      "target_fraction": 0.9
+    }
+  ],
+  "validation": [
+    {
+      "episode_index": 0,
+      "frame_index": 424,
+      "dataset_index": 424,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 0,
+      "frame_index": 849,
+      "dataset_index": 849,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 1,
+      "frame_index": 259,
+      "dataset_index": 1533,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 1,
+      "frame_index": 519,
+      "dataset_index": 1793,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 2,
+      "frame_index": 236,
+      "dataset_index": 2289,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 2,
+      "frame_index": 472,
+      "dataset_index": 2525,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 3,
+      "frame_index": 218,
+      "dataset_index": 2980,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 3,
+      "frame_index": 435,
+      "dataset_index": 3197,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 4,
+      "frame_index": 214,
+      "dataset_index": 3630,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 4,
+      "frame_index": 429,
+      "dataset_index": 3845,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 5,
+      "frame_index": 191,
+      "dataset_index": 4251,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 5,
+      "frame_index": 381,
+      "dataset_index": 4441,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 6,
+      "frame_index": 294,
+      "dataset_index": 4927,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 6,
+      "frame_index": 588,
+      "dataset_index": 5221,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 7,
+      "frame_index": 227,
+      "dataset_index": 5743,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 7,
+      "frame_index": 455,
+      "dataset_index": 5971,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 8,
+      "frame_index": 227,
+      "dataset_index": 6426,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 8,
+      "frame_index": 453,
+      "dataset_index": 6652,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 9,
+      "frame_index": 217,
+      "dataset_index": 7097,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 9,
+      "frame_index": 433,
+      "dataset_index": 7313,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 10,
+      "frame_index": 235,
+      "dataset_index": 7766,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 10,
+      "frame_index": 470,
+      "dataset_index": 8001,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 11,
+      "frame_index": 199,
+      "dataset_index": 8436,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 11,
+      "frame_index": 399,
+      "dataset_index": 8636,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 12,
+      "frame_index": 197,
+      "dataset_index": 9033,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 12,
+      "frame_index": 395,
+      "dataset_index": 9231,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 13,
+      "frame_index": 201,
+      "dataset_index": 9630,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 13,
+      "frame_index": 403,
+      "dataset_index": 9832,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 14,
+      "frame_index": 223,
+      "dataset_index": 10257,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 14,
+      "frame_index": 445,
+      "dataset_index": 10479,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 15,
+      "frame_index": 228,
+      "dataset_index": 10931,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 15,
+      "frame_index": 457,
+      "dataset_index": 11160,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 16,
+      "frame_index": 272,
+      "dataset_index": 11661,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 16,
+      "frame_index": 545,
+      "dataset_index": 11934,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 17,
+      "frame_index": 226,
+      "dataset_index": 12433,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 17,
+      "frame_index": 453,
+      "dataset_index": 12660,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 18,
+      "frame_index": 238,
+      "dataset_index": 13125,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 18,
+      "frame_index": 476,
+      "dataset_index": 13363,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 19,
+      "frame_index": 258,
+      "dataset_index": 13860,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 19,
+      "frame_index": 515,
+      "dataset_index": 14117,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 20,
+      "frame_index": 224,
+      "dataset_index": 14600,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 20,
+      "frame_index": 449,
+      "dataset_index": 14825,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 21,
+      "frame_index": 244,
+      "dataset_index": 15294,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 21,
+      "frame_index": 488,
+      "dataset_index": 15538,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 22,
+      "frame_index": 259,
+      "dataset_index": 16042,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 22,
+      "frame_index": 519,
+      "dataset_index": 16302,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 23,
+      "frame_index": 249,
+      "dataset_index": 16811,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 23,
+      "frame_index": 498,
+      "dataset_index": 17060,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 24,
+      "frame_index": 230,
+      "dataset_index": 17540,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 24,
+      "frame_index": 460,
+      "dataset_index": 17770,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 25,
+      "frame_index": 295,
+      "dataset_index": 18296,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 25,
+      "frame_index": 590,
+      "dataset_index": 18591,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 26,
+      "frame_index": 276,
+      "dataset_index": 19163,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 26,
+      "frame_index": 553,
+      "dataset_index": 19440,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 27,
+      "frame_index": 271,
+      "dataset_index": 19988,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 27,
+      "frame_index": 542,
+      "dataset_index": 20259,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 28,
+      "frame_index": 252,
+      "dataset_index": 20783,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 28,
+      "frame_index": 503,
+      "dataset_index": 21034,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 29,
+      "frame_index": 276,
+      "dataset_index": 21563,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 29,
+      "frame_index": 551,
+      "dataset_index": 21838,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 30,
+      "frame_index": 257,
+      "dataset_index": 22372,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 30,
+      "frame_index": 515,
+      "dataset_index": 22630,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 31,
+      "frame_index": 269,
+      "dataset_index": 23157,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 31,
+      "frame_index": 538,
+      "dataset_index": 23426,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 32,
+      "frame_index": 281,
+      "dataset_index": 23977,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 32,
+      "frame_index": 561,
+      "dataset_index": 24257,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 33,
+      "frame_index": 245,
+      "dataset_index": 24784,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 33,
+      "frame_index": 491,
+      "dataset_index": 25030,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 34,
+      "frame_index": 241,
+      "dataset_index": 25517,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 34,
+      "frame_index": 481,
+      "dataset_index": 25757,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 35,
+      "frame_index": 244,
+      "dataset_index": 26243,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 35,
+      "frame_index": 488,
+      "dataset_index": 26487,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 36,
+      "frame_index": 296,
+      "dataset_index": 27028,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 36,
+      "frame_index": 593,
+      "dataset_index": 27325,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 37,
+      "frame_index": 206,
+      "dataset_index": 27828,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 37,
+      "frame_index": 411,
+      "dataset_index": 28033,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 38,
+      "frame_index": 226,
+      "dataset_index": 28466,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 38,
+      "frame_index": 452,
+      "dataset_index": 28692,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 39,
+      "frame_index": 280,
+      "dataset_index": 29199,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 39,
+      "frame_index": 560,
+      "dataset_index": 29479,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 40,
+      "frame_index": 230,
+      "dataset_index": 29990,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 40,
+      "frame_index": 460,
+      "dataset_index": 30220,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 41,
+      "frame_index": 246,
+      "dataset_index": 30697,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 41,
+      "frame_index": 492,
+      "dataset_index": 30943,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 42,
+      "frame_index": 218,
+      "dataset_index": 31408,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 42,
+      "frame_index": 437,
+      "dataset_index": 31627,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 43,
+      "frame_index": 274,
+      "dataset_index": 32120,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 43,
+      "frame_index": 547,
+      "dataset_index": 32393,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 44,
+      "frame_index": 232,
+      "dataset_index": 32900,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 44,
+      "frame_index": 463,
+      "dataset_index": 33131,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 45,
+      "frame_index": 226,
+      "dataset_index": 33590,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 45,
+      "frame_index": 452,
+      "dataset_index": 33816,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 46,
+      "frame_index": 245,
+      "dataset_index": 34288,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 46,
+      "frame_index": 491,
+      "dataset_index": 34534,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 47,
+      "frame_index": 224,
+      "dataset_index": 35004,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 47,
+      "frame_index": 448,
+      "dataset_index": 35228,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 48,
+      "frame_index": 272,
+      "dataset_index": 35725,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 48,
+      "frame_index": 544,
+      "dataset_index": 35997,
+      "target_fraction": 0.6666666666666666
+    },
+    {
+      "episode_index": 49,
+      "frame_index": 246,
+      "dataset_index": 36516,
+      "target_fraction": 0.3333333333333333
+    },
+    {
+      "episode_index": 49,
+      "frame_index": 492,
+      "dataset_index": 36762,
+      "target_fraction": 0.6666666666666666
+    }
+  ],
+  "content_sha256": "869697c9b02514380a50e8252ce667a16afb99652c76b2d30967993cc5545e90"
+}

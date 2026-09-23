@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "run_id": "cpu_f32_harness_stream_smoke_1m_20260916",
+  "started_at_utc": "2026-09-16T02:42:07.067578+00:00",
+  "ended_at_utc": "2026-09-16T02:43:07.694688+00:00",
+  "status": "HARD_GATES_PASS_DIAGNOSTIC_REVIEW_PENDING",
+  "scope": "OpenVINO synchronous FP32 inference only; preprocessing, postprocessing, profiling and robot/system paths excluded.",
+  "device": {
+    "logical": "CPU",
+    "runtime": "CPU",
+    "full_name": "Intel(R) Core(TM) Ultra 7 255H",
+    "available_devices": [
+      "CPU"
+    ]
+  },
+  "environment": {
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3"
+  },
+  "configuration": {
+    "performance_hint": "LATENCY",
+    "inference_precision": "f32",
+    "requested_duration_minutes": 1.0,
+    "warmup_iterations": 2,
+    "telemetry_interval_seconds": 5.0,
+    "latency_window_seconds": 30.0
+  },
+  "artifacts": {
+    "ir_xml_sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "ir_bin_sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+    "reference_input_sha256": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output_sha256": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a"
+  },
+  "compile_ms": 337.923539,
+  "initial_correctness": {
+    "rtol": 0.0001,
+    "atol": 1e-05,
+    "max_abs_error": 2.6226043701171875e-06,
+    "mean_abs_error": 4.817048875338514e-07,
+    "status": "PASS"
+  },
+  "execution": {
+    "actual_duration_seconds": 60.04488689500431,
+    "iterations": 1033,
+    "maximum_abs_error": 2.6226043701171875e-06,
+    "hard_gates": {
+      "completed_requested_duration": true,
+      "inference_exceptions": 0,
+      "nonfinite_outputs": 0,
+      "correctness_failures": 0,
+      "process_crashes": 0,
+      "interrupted": false
+    },
+    "failure_message": null,
+    "failure_traceback": null
+  },
+  "latency_ms": {
+    "min": 48.858984,
+    "mean": 57.77703742594385,
+    "p50": 57.351703,
+    "p95": 63.30942999999999,
+    "p99": 73.00728027999999,
+    "max": 100.445055
+  },
+  "latency_histogram_ms": {
+    "<20": 0,
+    "20-40": 0,
+    "40-60": 784,
+    "60-80": 243,
+    "80-100": 5,
+    ">=100": 1
+  },
+  "window_summaries": [
+    {
+      "window_index": 0,
+      "start_s": 0.0,
+      "end_s": 30.0,
+      "iterations": 522,
+      "latency_ms": {
+        "min": 48.858984,
+        "mean": 57.08763146934866,
+        "p50": 56.987556999999995,
+        "p95": 61.81641005,
+        "p99": 64.12024844,
+        "max": 72.846174
+      }
+    },
+    {
+      "window_index": 1,
+      "start_s": 30.0,
+      "end_s": 60.0,
+      "iterations": 510,
+      "latency_ms": {
+        "min": 48.909219,
+        "mean": 58.48796566470588,
+        "p50": 57.710296,
+        "p95": 64.78150044999998,
+        "p99": 80.17507785999992,
+        "max": 100.445055
+      }
+    },
+    {
+      "window_index": 2,
+      "start_s": 60.0,
+      "end_s": 90.0,
+      "iterations": 1,
+      "latency_ms": {
+        "min": 55.073545,
+        "mean": 55.073545,
+        "p50": 55.073545,
+        "p95": 55.073545,
+        "p99": 55.073545,
+        "max": 55.073545
+      }
+    }
+  ],
+  "telemetry_summary": {
+    "samples": 14,
+    "process_rss_bytes": {
+      "first": 659730432,
+      "last": 659808256,
+      "min": 659730432,
+      "max": 659808256
+    },
+    "system_available_memory_bytes": {
+      "first": 11860508672,
+      "last": 11983310848
+    },
+    "package_temperature_c": {
+      "first": 65.0,
+      "last": 76.0,
+      "max": 87.0
+    },
+    "max_sensor_temperature_c": 87.0
+  },
+  "latency_csv": "latencies.csv",
+  "telemetry_csv": "telemetry.csv"
+}

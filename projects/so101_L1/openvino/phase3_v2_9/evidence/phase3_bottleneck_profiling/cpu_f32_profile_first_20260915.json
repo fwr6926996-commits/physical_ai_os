@@ -1,0 +1,695 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-09-15T12:30:52.448725+00:00",
+  "run_id": "cpu_f32_profile_first_20260915",
+  "status": "PASS",
+  "scope": "OpenVINO synchronous FP32 inference with per-operation profiling enabled; preprocessing and postprocessing excluded.",
+  "interpretation_limits": [
+    "Profiling instrumentation changes runtime behavior and does not replace the formal latency benchmark.",
+    "Per-operation times can overlap or run in parallel; their sum is not end-to-end latency.",
+    "Plugin fusion may cause one reported execution node to represent multiple graph operations."
+  ],
+  "device": {
+    "logical": "CPU",
+    "runtime": "CPU",
+    "full_name": "Intel(R) Core(TM) Ultra 7 255H",
+    "available_devices": [
+      "CPU",
+      "GPU.0",
+      "GPU.1",
+      "NPU"
+    ]
+  },
+  "environment": {
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3"
+  },
+  "configuration": {
+    "performance_hint": "LATENCY",
+    "inference_precision": "f32",
+    "profiling_enabled": true,
+    "warmup_iterations": 5,
+    "measured_iterations": 20
+  },
+  "artifacts": {
+    "ir_xml": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9/act_fp32.xml",
+    "ir_xml_sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "ir_bin_sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+    "reference_input_sha256": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output_sha256": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a"
+  },
+  "correctness_gate": {
+    "rtol": 0.0001,
+    "atol": 1e-05,
+    "max_abs_error": 2.6226043701171875e-06,
+    "mean_abs_error": 4.817048875338514e-07,
+    "status": "PASS"
+  },
+  "compile_ms": 327.892422,
+  "wall_clock_latency_ms": {
+    "min": 48.946241,
+    "mean": 52.8401336,
+    "p50": 52.365245,
+    "p95": 60.05769295,
+    "p99": 63.20144739,
+    "max": 63.987386
+  },
+  "per_iteration_sum_of_profiled_real_time_ms": {
+    "min": 51.37700000000004,
+    "mean": 51.80770000000003,
+    "p50": 51.71650000000003,
+    "p95": 52.34120000000002,
+    "p99": 52.40504000000003,
+    "max": 52.421000000000035
+  },
+  "operation_count": 478,
+  "top_operations_by_mean_real_time": [
+    {
+      "node_name": "mul_2/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.9789999999999999,
+        "mean": 2.02025,
+        "p50": 2.016,
+        "p95": 2.0645000000000002,
+        "p99": 2.0873,
+        "max": 2.093
+      },
+      "cpu_time_ms": {
+        "min": 1.9789999999999999,
+        "mean": 2.02025,
+        "p50": 2.016,
+        "p95": 2.0645000000000002,
+        "p99": 2.0873,
+        "max": 2.093
+      }
+    },
+    {
+      "node_name": "mul_11/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.936,
+        "mean": 1.9875500000000001,
+        "p50": 1.9665,
+        "p95": 2.0797000000000003,
+        "p99": 2.09034,
+        "max": 2.093
+      },
+      "cpu_time_ms": {
+        "min": 1.936,
+        "mean": 1.9875500000000001,
+        "p50": 1.9665,
+        "p95": 2.0797000000000003,
+        "p99": 2.09034,
+        "max": 2.093
+      }
+    },
+    {
+      "node_name": "mul_14/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.9120000000000001,
+        "mean": 1.9546,
+        "p50": 1.9449999999999998,
+        "p95": 2.0250500000000002,
+        "p99": 2.04101,
+        "max": 2.045
+      },
+      "cpu_time_ms": {
+        "min": 1.9120000000000001,
+        "mean": 1.9546,
+        "p50": 1.9449999999999998,
+        "p95": 2.0250500000000002,
+        "p99": 2.04101,
+        "max": 2.045
+      }
+    },
+    {
+      "node_name": "mul_44/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.895,
+        "mean": 1.9092000000000002,
+        "p50": 1.907,
+        "p95": 1.94715,
+        "p99": 1.94943,
+        "max": 1.95
+      },
+      "cpu_time_ms": {
+        "min": 1.895,
+        "mean": 1.9092000000000002,
+        "p50": 1.907,
+        "p95": 1.94715,
+        "p99": 1.94943,
+        "max": 1.95
+      }
+    },
+    {
+      "node_name": "mul_5/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.9,
+        "mean": 1.90685,
+        "p50": 1.9035000000000002,
+        "p95": 1.92605,
+        "p99": 1.92681,
+        "max": 1.9269999999999998
+      },
+      "cpu_time_ms": {
+        "min": 1.9,
+        "mean": 1.90685,
+        "p50": 1.9035000000000002,
+        "p95": 1.92605,
+        "p99": 1.92681,
+        "max": 1.9269999999999998
+      }
+    },
+    {
+      "node_name": "mul_8/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.871,
+        "mean": 1.8826999999999998,
+        "p50": 1.88,
+        "p95": 1.90005,
+        "p99": 1.9008099999999999,
+        "max": 1.9009999999999998
+      },
+      "cpu_time_ms": {
+        "min": 1.871,
+        "mean": 1.8826999999999998,
+        "p50": 1.88,
+        "p95": 1.90005,
+        "p99": 1.9008099999999999,
+        "max": 1.9009999999999998
+      }
+    },
+    {
+      "node_name": "mul_41/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.839,
+        "mean": 1.8593500000000003,
+        "p50": 1.8585,
+        "p95": 1.8743,
+        "p99": 1.87886,
+        "max": 1.88
+      },
+      "cpu_time_ms": {
+        "min": 1.839,
+        "mean": 1.8593500000000003,
+        "p50": 1.8585,
+        "p95": 1.8743,
+        "p99": 1.87886,
+        "max": 1.88
+      }
+    },
+    {
+      "node_name": "mul_29/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.835,
+        "mean": 1.8551500000000005,
+        "p50": 1.8575,
+        "p95": 1.8673,
+        "p99": 1.87186,
+        "max": 1.873
+      },
+      "cpu_time_ms": {
+        "min": 1.835,
+        "mean": 1.8551500000000005,
+        "p50": 1.8575,
+        "p95": 1.8673,
+        "p99": 1.87186,
+        "max": 1.873
+      }
+    },
+    {
+      "node_name": "mul_56/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.831,
+        "mean": 1.8439500000000002,
+        "p50": 1.843,
+        "p95": 1.85225,
+        "p99": 1.85605,
+        "max": 1.857
+      },
+      "cpu_time_ms": {
+        "min": 1.831,
+        "mean": 1.8439500000000002,
+        "p50": 1.843,
+        "p95": 1.85225,
+        "p99": 1.85605,
+        "max": 1.857
+      }
+    },
+    {
+      "node_name": "mul_59/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.825,
+        "mean": 1.8377000000000003,
+        "p50": 1.8355,
+        "p95": 1.8540999999999999,
+        "p99": 1.85562,
+        "max": 1.856
+      },
+      "cpu_time_ms": {
+        "min": 1.825,
+        "mean": 1.8377000000000003,
+        "p50": 1.8355,
+        "p95": 1.8540999999999999,
+        "p99": 1.85562,
+        "max": 1.856
+      }
+    },
+    {
+      "node_name": "mul_20/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.771,
+        "mean": 1.81535,
+        "p50": 1.818,
+        "p95": 1.8311,
+        "p99": 1.83262,
+        "max": 1.833
+      },
+      "cpu_time_ms": {
+        "min": 1.771,
+        "mean": 1.81535,
+        "p50": 1.818,
+        "p95": 1.8311,
+        "p99": 1.83262,
+        "max": 1.833
+      }
+    },
+    {
+      "node_name": "mul_26/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.795,
+        "mean": 1.81525,
+        "p50": 1.8165,
+        "p95": 1.8301500000000002,
+        "p99": 1.83243,
+        "max": 1.833
+      },
+      "cpu_time_ms": {
+        "min": 1.795,
+        "mean": 1.81525,
+        "p50": 1.8165,
+        "p95": 1.8301500000000002,
+        "p99": 1.83243,
+        "max": 1.833
+      }
+    },
+    {
+      "node_name": "mul_35/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.8,
+        "mean": 1.8145,
+        "p50": 1.812,
+        "p95": 1.8322500000000002,
+        "p99": 1.8360500000000002,
+        "max": 1.8370000000000002
+      },
+      "cpu_time_ms": {
+        "min": 1.8,
+        "mean": 1.8145,
+        "p50": 1.812,
+        "p95": 1.8322500000000002,
+        "p99": 1.8360500000000002,
+        "max": 1.8370000000000002
+      }
+    },
+    {
+      "node_name": "mul_50/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.7830000000000001,
+        "mean": 1.8032000000000004,
+        "p50": 1.797,
+        "p95": 1.8622999999999998,
+        "p99": 1.86686,
+        "max": 1.868
+      },
+      "cpu_time_ms": {
+        "min": 1.7830000000000001,
+        "mean": 1.8032000000000004,
+        "p50": 1.797,
+        "p95": 1.8622999999999998,
+        "p99": 1.86686,
+        "max": 1.868
+      }
+    },
+    {
+      "node_name": "linear_7/aten.linear.default/Add",
+      "node_type": "FullyConnected",
+      "exec_type": "gemm_mlas_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.425,
+        "mean": 1.4568499999999998,
+        "p50": 1.4575,
+        "p95": 1.4903,
+        "p99": 1.49486,
+        "max": 1.496
+      },
+      "cpu_time_ms": {
+        "min": 1.425,
+        "mean": 1.4568499999999998,
+        "p50": 1.4575,
+        "p95": 1.4903,
+        "p99": 1.49486,
+        "max": 1.496
+      }
+    },
+    {
+      "node_name": "linear_25/aten.linear.default/Add",
+      "node_type": "FullyConnected",
+      "exec_type": "gemm_mlas_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.4009999999999998,
+        "mean": 1.4164999999999996,
+        "p50": 1.4165,
+        "p95": 1.42915,
+        "p99": 1.43143,
+        "max": 1.432
+      },
+      "cpu_time_ms": {
+        "min": 1.4009999999999998,
+        "mean": 1.4164999999999996,
+        "p50": 1.4165,
+        "p95": 1.42915,
+        "p99": 1.43143,
+        "max": 1.432
+      }
+    },
+    {
+      "node_name": "linear_13/aten.linear.default/Add",
+      "node_type": "FullyConnected",
+      "exec_type": "gemm_mlas_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.381,
+        "mean": 1.3992,
+        "p50": 1.3940000000000001,
+        "p95": 1.4491500000000002,
+        "p99": 1.45143,
+        "max": 1.452
+      },
+      "cpu_time_ms": {
+        "min": 1.381,
+        "mean": 1.3992,
+        "p50": 1.3940000000000001,
+        "p95": 1.4491500000000002,
+        "p99": 1.45143,
+        "max": 1.452
+      }
+    },
+    {
+      "node_name": "linear_19/aten.linear.default/Add",
+      "node_type": "FullyConnected",
+      "exec_type": "gemm_mlas_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.373,
+        "mean": 1.3978,
+        "p50": 1.3900000000000001,
+        "p95": 1.4612,
+        "p99": 1.46424,
+        "max": 1.4649999999999999
+      },
+      "cpu_time_ms": {
+        "min": 1.373,
+        "mean": 1.3978,
+        "p50": 1.3900000000000001,
+        "p95": 1.4612,
+        "p99": 1.46424,
+        "max": 1.4649999999999999
+      }
+    },
+    {
+      "node_name": "linear_6/aten.linear.default/Add",
+      "node_type": "FullyConnected",
+      "exec_type": "brgemm_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.343,
+        "mean": 1.36805,
+        "p50": 1.365,
+        "p95": 1.4212500000000001,
+        "p99": 1.42505,
+        "max": 1.426
+      },
+      "cpu_time_ms": {
+        "min": 1.343,
+        "mean": 1.36805,
+        "p50": 1.365,
+        "p95": 1.4212500000000001,
+        "p99": 1.42505,
+        "max": 1.426
+      }
+    },
+    {
+      "node_name": "linear_18/aten.linear.default/Add",
+      "node_type": "FullyConnected",
+      "exec_type": "brgemm_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.325,
+        "mean": 1.34805,
+        "p50": 1.3384999999999998,
+        "p95": 1.4073,
+        "p99": 1.4118600000000001,
+        "max": 1.413
+      },
+      "cpu_time_ms": {
+        "min": 1.325,
+        "mean": 1.34805,
+        "p50": 1.3384999999999998,
+        "p95": 1.4073,
+        "p99": 1.4118600000000001,
+        "max": 1.413
+      }
+    },
+    {
+      "node_name": "linear_24/aten.linear.default/Add",
+      "node_type": "FullyConnected",
+      "exec_type": "brgemm_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.3190000000000002,
+        "mean": 1.32865,
+        "p50": 1.3259999999999998,
+        "p95": 1.33975,
+        "p99": 1.3511499999999999,
+        "max": 1.3539999999999999
+      },
+      "cpu_time_ms": {
+        "min": 1.3190000000000002,
+        "mean": 1.32865,
+        "p50": 1.3259999999999998,
+        "p95": 1.33975,
+        "p99": 1.3511499999999999,
+        "max": 1.3539999999999999
+      }
+    },
+    {
+      "node_name": "linear_12/aten.linear.default/Add",
+      "node_type": "FullyConnected",
+      "exec_type": "brgemm_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.271,
+        "mean": 1.2848000000000002,
+        "p50": 1.286,
+        "p95": 1.2910500000000003,
+        "p99": 1.2918100000000001,
+        "max": 1.292
+      },
+      "cpu_time_ms": {
+        "min": 1.271,
+        "mean": 1.2848000000000002,
+        "p50": 1.286,
+        "p95": 1.2910500000000003,
+        "p99": 1.2918100000000001,
+        "max": 1.292
+      }
+    },
+    {
+      "node_name": "mul_47/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.056,
+        "mean": 1.0792499999999996,
+        "p50": 1.0844999999999998,
+        "p95": 1.1039999999999999,
+        "p99": 1.1039999999999999,
+        "max": 1.1039999999999999
+      },
+      "cpu_time_ms": {
+        "min": 1.056,
+        "mean": 1.0792499999999996,
+        "p50": 1.0844999999999998,
+        "p95": 1.1039999999999999,
+        "p99": 1.1039999999999999,
+        "max": 1.1039999999999999
+      }
+    },
+    {
+      "node_name": "mul_17/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 1.046,
+        "mean": 1.0636499999999998,
+        "p50": 1.0594999999999999,
+        "p95": 1.087,
+        "p99": 1.087,
+        "max": 1.087
+      },
+      "cpu_time_ms": {
+        "min": 1.046,
+        "mean": 1.0636499999999998,
+        "p50": 1.0594999999999999,
+        "p95": 1.087,
+        "p99": 1.087,
+        "max": 1.087
+      }
+    },
+    {
+      "node_name": "mul_32/aten.mul.Tensor/Multiply",
+      "node_type": "Convolution",
+      "exec_type": "brgconv_avx2_f32",
+      "samples": 20,
+      "status_counts": {
+        "EXECUTED": 20
+      },
+      "real_time_ms": {
+        "min": 0.9909999999999999,
+        "mean": 1.0265,
+        "p50": 1.026,
+        "p95": 1.0622,
+        "p99": 1.06524,
+        "max": 1.066
+      },
+      "cpu_time_ms": {
+        "min": 0.9909999999999999,
+        "mean": 1.0265,
+        "p50": 1.026,
+        "p95": 1.0622,
+        "p99": 1.06524,
+        "max": 1.066
+      }
+    }
+  ],
+  "raw_profile_csv": "cpu_f32_profile_first_20260915_raw.csv",
+  "operation_summary_csv": "cpu_f32_profile_first_20260915_operations.csv"
+}

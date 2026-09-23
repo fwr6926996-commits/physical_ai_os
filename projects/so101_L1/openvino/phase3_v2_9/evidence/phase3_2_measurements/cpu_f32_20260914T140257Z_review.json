@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run_id": "cpu_f32_20260914T140257Z",
+  "review_status": "PASS",
+  "correctness": {
+    "status": "PASS",
+    "max_abs_error": 0.0000026226043701171875,
+    "mean_abs_error": 0.0000004817048875338514
+  },
+  "latency_p95_ms": {
+    "preprocessing": 0.20999845,
+    "inference": 55.3049982,
+    "postprocessing": 0.00803775,
+    "diagnostic_sum": 55.5230344
+  },
+  "bottleneck_localization": {
+    "dominant_stage": "OpenVINO CPU model inference",
+    "share_of_diagnostic_p95_sum_percent": 99.6073,
+    "conclusion": "The first real segmented capture localizes the runtime bottleneck to model inference, not saved LeRobot preprocessing or postprocessing."
+  },
+  "runtime_observations": {
+    "compile_ms": 329.025785,
+    "first_inference_ms": 60.13839,
+    "steady_inference_p50_ms": 52.2451755,
+    "steady_inference_p95_ms": 55.3049982,
+    "steady_inference_p99_ms": 56.64056782,
+    "process_rss_delta_bytes": 294912,
+    "cpu_package_temperature_before_c": 66.0,
+    "cpu_package_temperature_after_c": 69.0
+  },
+  "interpretation": [
+    "Compile and first-inference latency are cold-path values and are excluded from steady-state percentiles.",
+    "System available memory increased slightly during the short run, so it is treated as operating-system noise rather than negative memory use.",
+    "A three-degree CPU package rise is an observation from a short run, not thermal-stability evidence.",
+    "Independent stage percentile sums are diagnostic and are not a measured end-to-end distribution."
+  ],
+  "learning_step": "Human operator executed the first formal segmented benchmark; independent explanation check remains pending.",
+  "decision": "CPU FP32 measurement gate passes; repeated device measurements may move to agent-heavy execution."
+}

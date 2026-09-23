@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 3 255H Intel Pre-Deployment",
+  "status": "ARCHIVED_V2_8_DO_NOT_USE_FOR_DEPLOYMENT",
+  "superseded_by": "phase3_v2_9/phase3_final_gate.json",
+  "completed_at_utc": "2026-09-14T08:45:36.909556+00:00",
+  "execution_scope": "OpenVINO model inference only; no robot motion and no Phase 4 execution",
+  "hardware_truth": {
+    "CPU": "Intel Core Ultra 7 255H",
+    "GPU.0": "Intel Arc Graphics (iGPU)",
+    "GPU.1": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "NPU": "Intel AI Boost"
+  },
+  "software": {
+    "openvino": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39"
+  },
+  "policy_contract": {
+    "model": "policy_package_v1/act_cpu_reference.xml",
+    "state": "float32[1,6]",
+    "wrist_image": "float32[1,3,480,640]",
+    "action_chunk": "float32[1,100,6]",
+    "correctness_rtol": 0.0001,
+    "correctness_atol": 0.00001
+  },
+  "results": {
+    "CPU_f32": {
+      "status": "PASS",
+      "role": "fallback",
+      "compile_ms": 342.014642,
+      "first_inference_ms": 58.573515,
+      "max_abs_error": 0.0000026226043701171875,
+      "mean_abs_error": 0.0000004817048875338514,
+      "samples": 100,
+      "latency_ms": {
+        "min": 48.985554,
+        "mean": 57.148911670000004,
+        "p50": 57.1751795,
+        "p95": 61.9064975,
+        "p99": 64.92183029000003,
+        "max": 69.865127
+      },
+      "correctness_evidence": "policy_package_v1/correctness_cpu_f32.json",
+      "benchmark_evidence": "policy_package_v1/benchmark_cpu_f32.json",
+      "raw_samples": "policy_package_v1/benchmark_cpu_f32_latencies.csv"
+    },
+    "GPU_0_default": {
+      "status": "FAIL_CORRECTNESS",
+      "max_abs_error": 0.0013282299041748047,
+      "mean_abs_error": 0.0003825824533123523,
+      "benchmark_status": "SKIPPED_BY_CORRECTNESS_GATE",
+      "evidence": "policy_package_v1/correctness_gpu_0.json"
+    },
+    "GPU_0_f32": {
+      "status": "PASS",
+      "role": "primary",
+      "compile_ms": 2307.135494,
+      "first_inference_ms": 36.591822,
+      "max_abs_error": 0.000001430511474609375,
+      "mean_abs_error": 0.00000026454529233888024,
+      "samples": 100,
+      "latency_ms": {
+        "min": 16.86326,
+        "mean": 19.67741929,
+        "p50": 17.848271,
+        "p95": 27.29455195,
+        "p99": 35.48136629000002,
+        "max": 39.710081
+      },
+      "correctness_evidence": "policy_package_v1/correctness_gpu_0_f32.json",
+      "benchmark_evidence": "policy_package_v1/benchmark_gpu_0_f32.json",
+      "raw_samples": "policy_package_v1/benchmark_gpu_0_f32_latencies.csv"
+    },
+    "NPU_default": {
+      "compatibility_status": "PASS_COMPILE_AND_INFERENCE",
+      "strict_correctness_status": "FAIL",
+      "compile_ms": 1463.930753,
+      "first_inference_ms": 102.909773,
+      "max_abs_error": 0.002484560012817383,
+      "mean_abs_error": 0.0005053336499258876,
+      "benchmark_status": "SKIPPED_BY_CORRECTNESS_GATE",
+      "evidence": "policy_package_v1/correctness_npu.json"
+    },
+    "NPU_f32": {
+      "status": "UNSUPPORTED_AT_COMPILE_CONFIGURATION",
+      "plugin_reported_supported_values": ["f16", "i8"],
+      "evidence": "policy_package_v1/npu_compatibility_gate.json"
+    },
+    "GPU_1": {
+      "status": "EXCLUDED_NOT_TESTED",
+      "reason": "RTX 5060 is outside the Phase 3 Intel-only scope."
+    }
+  },
+  "derived_comparison": {
+    "GPU_0_f32_vs_CPU_f32_speedup": {
+      "mean": 2.904273931605038,
+      "p50": 3.203443449202379,
+      "p95": 2.268051641894177,
+      "p99": 1.829307061447152
+    }
+  },
+  "runtime_decision": {
+    "primary": "GPU.0 with LATENCY and f32",
+    "fallback": "CPU with LATENCY and f32",
+    "forbidden": ["GPU.1", "NPU", "AUTO", "HETERO"],
+    "config": "phase3_runtime_config.yaml"
+  },
+  "evidence_checks": {
+    "CPU_f32_raw_sample_count": 100,
+    "GPU_0_f32_raw_sample_count": 100,
+    "CPU_f32_summary_recomputed_from_csv": true,
+    "GPU_0_f32_summary_recomputed_from_csv": true,
+    "policy_checksums": "policy_package_v1/policy_package_v1.sha256"
+  },
+  "limitations": [
+    "Latency excludes model load, compilation, preprocessing, postprocessing, robot I/O, and control-loop timing.",
+    "Phase 3 proves 255H pre-deployment behavior; it does not prove DK-2500 edge behavior.",
+    "NPU is compatibility evidence only and is not admitted to the L1 Core execution path.",
+    "No AUTO or HETERO result is treated as single-device evidence."
+  ],
+  "phase_boundary": {
+    "phase_3_complete": true,
+    "phase_4_started": false
+  }
+}

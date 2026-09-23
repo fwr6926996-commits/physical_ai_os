@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 3.2 controlled Intel-device measurement",
+  "frozen_before_first_formal_run": true,
+  "first_run": {
+    "device": "CPU",
+    "device_identity_required": "Intel",
+    "inference_precision": "f32",
+    "performance_hint": "LATENCY",
+    "warmup_iterations": 10,
+    "measured_iterations": 100,
+    "correctness_gate": {"rtol": 0.0001, "atol": 0.00001},
+    "stages": ["saved LeRobot preprocessing", "OpenVINO synchronous inference", "saved LeRobot postprocessing"],
+    "raw_samples_required": true,
+    "resource_observation": ["process RSS before/after", "system available RAM before/after", "temperature before/after"]
+  },
+  "controls": {
+    "policy_package": "policy_package_v2_9",
+    "state_shape": [1, 6],
+    "wrist_image_shape": [1, 3, 480, 640],
+    "output_shape": [1, 100, 6],
+    "rtx_isolation": "CUDA_VISIBLE_DEVICES=-1 plus device allow-list excluding GPU.1",
+    "correctness_before_performance": true
+  },
+  "interpretation_limits": [
+    "Pre/post and inference are measured in two dependency-isolated processes.",
+    "The sum of independent percentile values is diagnostic and is not a measured end-to-end percentile distribution.",
+    "Before/after resource snapshots do not establish peak memory or long-duration thermal stability."
+  ],
+  "next_runs_after_review": [
+    "GPU.0 explicit f32",
+    "NPU supported-precision compatibility",
+    "controlled FP32/FP16 matrix"
+  ]
+}

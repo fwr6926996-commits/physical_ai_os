@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "checked_at_local_date": "2026-09-15",
+  "mode": "LEARN",
+  "overall_status": "NOT_YET_PASS",
+  "assessment": {
+    "q1_fp16_vs_int16": {
+      "status": "REMEDIATE",
+      "observed": "Response discussed storage/inference needs and quantization, but did not explain the different bit encodings."
+    },
+    "q2_fp32_ir_with_f16_hint": {
+      "status": "REMEDIATE",
+      "observed": "Response coupled model creation precision to execution precision and mixed file-size reasoning with FP16 overflow."
+    },
+    "q3_int8_calibration": {
+      "status": "PASS_CORE",
+      "observed": "Correctly identified representative calibration data and its effect on activation quantization parameters; clipping/coarse-step consequence still needs sharper wording."
+    },
+    "q4_i16_type_vs_hardware": {
+      "status": "PARTIAL",
+      "observed": "Correctly appealed to device capability, but did not yet distinguish type representation, plugin support, optimized kernels and measured acceleration."
+    },
+    "q5_fast_but_inaccurate_int8": {
+      "status": "PASS_WITH_TERMINOLOGY_FIX",
+      "observed": "Correctly prioritized accuracy and trade-off evaluation. Accuracy-aware PTQ does not retrain; QAT is the retraining route. A failed candidate remains rejected/negative evidence until revalidated."
+    }
+  },
+  "next_action": "Targeted remediation on encoding, storage-vs-execution, BF16, hardware support layers, clipping, and PTQ-vs-QAT; then short second verification.",
+  "phase_3_3_started": false
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "reviewed_at_local_date": "2026-09-16",
+  "run_id": "gpu_0_f32_guarded_5m_20260916",
+  "status": "PASS_BOUNDED_REPRODUCTION_NO_HANG_OBSERVED",
+  "acceptance_status": "NOT_A_30_MINUTE_STABILITY_PASS",
+  "iterations": 10211,
+  "correctness_failures": 0,
+  "latency_ms": {
+    "mean": 29.295395,
+    "p50": 32.063398,
+    "p95": 46.846185,
+    "p99": 49.946286,
+    "max": 80.901517
+  },
+  "interpretation": [
+    "The prior native hang did not reproduce during this five-minute guarded run.",
+    "The prior 135-second hang remains valid evidence and is not cancelled by one successful run.",
+    "The worker/supervisor process boundary changed the execution environment, so this result cannot distinguish an intermittent plugin/driver hang from an interaction specific to the original monolithic harness."
+  ],
+  "next_action": "Run the original stability worker path under an external file-heartbeat supervisor for 30 minutes, with telemetry streamed to disk.",
+  "evidence_sha256": {
+    "result_json": "ab4f85e32ababc0ac532196bf2e33363c938f7b1dd747b3edc0427f35642e4d4",
+    "heartbeats_csv": "3fcf01cf88ad34b5b7607444e2383e1b299a489be5d82421f179e936f524286c"
+  }
+}

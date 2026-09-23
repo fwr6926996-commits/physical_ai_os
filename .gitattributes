@@ -1,0 +1,4 @@
+# Preserve captured evidence byte-for-byte and suppress textual whitespace rewrites.
+projects/**/evidence/**/*.csv binary
+projects/**/policy_package*/**/*.csv binary
+*.docx binary

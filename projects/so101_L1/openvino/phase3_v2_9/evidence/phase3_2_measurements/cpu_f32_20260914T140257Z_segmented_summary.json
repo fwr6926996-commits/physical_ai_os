@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "run_id": "cpu_f32_20260914T140257Z",
+  "status": "PASS",
+  "device": "CPU",
+  "requested_inference_precision": "f32",
+  "warmup_iterations": 10,
+  "measured_iterations": 100,
+  "stages_ms": {
+    "preprocessing": {
+      "min": 0.134053,
+      "mean": 0.17759552,
+      "p50": 0.1443335,
+      "p95": 0.20999845,
+      "p99": 1.0983510100000016,
+      "max": 1.373869
+    },
+    "inference": {
+      "min": 45.903064,
+      "mean": 51.982420870000006,
+      "p50": 52.2451755,
+      "p95": 55.3049982,
+      "p99": 56.64056782000001,
+      "max": 57.495019
+    },
+    "postprocessing": {
+      "min": 0.00726,
+      "mean": 0.007807080000000001,
+      "p50": 0.0075715,
+      "p95": 0.008037749999999998,
+      "p99": 0.016225100000000006,
+      "max": 0.017225
+    }
+  },
+  "sum_of_independent_stage_percentiles_ms": {
+    "p50": 52.3970805,
+    "p95": 55.5230344,
+    "p99": 57.75514393000001
+  },
+  "interpretation_limit": "Stages run in two isolated environments. Percentile sums are diagnostic, not a measured same-process end-to-end latency distribution.",
+  "evidence": {
+    "prepost": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_prepost.json",
+    "inference": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/evidence/phase3_2_measurements/cpu_f32_20260914T140257Z_inference.json"
+  }
+}

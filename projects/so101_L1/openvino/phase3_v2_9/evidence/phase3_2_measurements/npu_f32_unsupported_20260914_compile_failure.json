@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-09-14T14:12:02.043499+00:00",
+  "run_id": "npu_f32_unsupported_20260914",
+  "status": "FAIL",
+  "failure_stage": "compile",
+  "logical_device": "NPU",
+  "runtime_device": "NPU",
+  "device_full_name": "Intel(R) AI Boost",
+  "available_devices": [
+    "CPU",
+    "GPU",
+    "NPU"
+  ],
+  "requested_inference_precision": "f32",
+  "exception_type": "RuntimeError",
+  "exception": "Exception from src/inference/src/cpp/core.cpp:117:\nException from src/inference/src/dev/plugin.cpp:54:\nException from src/plugins/intel_npu/src/al/include/intel_npu/config/config.hpp:404:\nFailed to parse 'INFERENCE_PRECISION_HINT' option : Exception from src/plugins/intel_npu/src/al/include/intel_npu/config/options.hpp:167:\nWrong value f32 for property key INFERENCE_PRECISION_HINT. Supported values: f16, i8\n\n\n\n",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/benchmark_device_v2_9.py\", line 95, in main\n    compiled = core.compile_model(model, runtime_device, config)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_ov_api.py\", line 646, in compile_model\n    super().compile_model(model, device_name, {} if config is None else config),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Exception from src/inference/src/cpp/core.cpp:117:\nException from src/inference/src/dev/plugin.cpp:54:\nException from src/plugins/intel_npu/src/al/include/intel_npu/config/config.hpp:404:\nFailed to parse 'INFERENCE_PRECISION_HINT' option : Exception from src/plugins/intel_npu/src/al/include/intel_npu/config/options.hpp:167:\nWrong value f32 for property key INFERENCE_PRECISION_HINT. Supported values: f16, i8\n\n\n\n\n"
+}

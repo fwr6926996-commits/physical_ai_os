@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source_snapshot": "baseline_20260914T115117Z.json",
+  "memory_topology_source": "memory_topology_dmidecode_20260914.txt",
+  "review_status": "PASS",
+  "confirmed_facts": {
+    "host": "LENOVO ThinkBook 16 G7+ IAH product 21TL",
+    "cpu": "Intel(R) Core(TM) Ultra 7 255H",
+    "installed_memory_human_confirmation_gb": 32,
+    "os_visible_memory_bytes": 33044353024,
+    "physical_memory_topology": "2 x 16 GB DDR5-5600; Controller0-ChannelA-DIMM0 and Controller1-ChannelA-DIMM0",
+    "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+    "available_devices": ["CPU", "GPU.0", "GPU.1", "NPU"],
+    "GPU.0": "Intel(R) Arc(TM) Graphics (iGPU)",
+    "GPU.1": "NVIDIA GeForce RTX 5060 Laptop GPU (dGPU)",
+    "NPU": "Intel(R) AI Boost",
+    "data_mount": "/dev/nvme0n1p6 ext4 rw at /data",
+    "data_available_bytes": 81030922240,
+    "temperature_sensor_status": "PASS",
+    "cpu_package_temperature_at_capture_c": 54.0,
+    "lerobot_tag_state": "v0.6.0-dirty",
+    "lerobot_commit": "30da8e687a6dfc617fcd94afc367ac7071c376ce",
+    "lerobot_user_change_preserved": "examples/notebooks/quickstart.ipynb"
+  },
+  "pending_fields": [],
+  "decision": "Phase 3.0 Hardware Truth is frozen; proceed to Phase 3.1 without starting Phase 4."
+}

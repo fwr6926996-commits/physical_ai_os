@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "frozen_at_local_date": "2026-09-16",
+  "decision_owner": "human",
+  "status": "APPROVED_FOR_FIRST_CPU_RUN",
+  "scope": "OpenVINO synchronous inference only; preprocessing, postprocessing, robot motion and system safety paths are excluded.",
+  "devices": [
+    {"device": "CPU", "precision": "f32", "duration_minutes": 30},
+    {"device": "GPU.0", "precision": "f32", "duration_minutes": 30}
+  ],
+  "excluded_candidates": [
+    {"candidate": "NPU f16", "reason": "strict correctness failed"},
+    {"candidate": "NPU f32", "reason": "unsupported by the current NPU plugin"},
+    {"candidate": "INT8 mixed PTQ", "reason": "current candidate was not admitted"}
+  ],
+  "human_rationale": "Thirty minutes per admitted device is close enough to a meaningful work interval while keeping the Phase 3 opportunity cost acceptable.",
+  "hard_gates": {
+    "completed_requested_duration": true,
+    "inference_exceptions": 0,
+    "nonfinite_outputs": 0,
+    "correctness_failures": 0,
+    "process_crashes": 0,
+    "evidence_files_complete": true
+  },
+  "diagnostic_not_prefrozen_as_pass_fail": [
+    "windowed P50/P95/P99 latency and drift",
+    "process RSS level and trend",
+    "system available memory",
+    "temperature level and trend",
+    "GPU.0 fast/slow latency-mode distribution"
+  ],
+  "sampling": {
+    "latency_and_correctness": "every inference",
+    "telemetry_interval_seconds": 5,
+    "latency_window_seconds": 60
+  },
+  "learning_acceptance": {
+    "concept_level": "PASS",
+    "duration_decision": "PASS",
+    "first_critical_run": "PENDING_HUMAN_CPU_EXECUTION"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 3.1 source reference and export",
+  "status": "PASS",
+  "python_executable": "/home/lucas/miniconda3/envs/lerobot/bin/python",
+  "python_version": "3.12.13",
+  "torch_version": "2.11.0+cu130",
+  "cuda_visible_to_torch": false,
+  "cuda_visible_devices": "-1",
+  "huggingface_home": "/tmp/so101_phase3_hf_cache",
+  "required_runtime_device": "cpu",
+  "timing_ms": {
+    "reference_creation": 1563.333972,
+    "strict_export": 5038.845666
+  },
+  "tensor_contract": {
+    "state": [
+      1,
+      6
+    ],
+    "wrist_image": [
+      1,
+      3,
+      480,
+      640
+    ],
+    "normalized_action_chunk": [
+      1,
+      100,
+      6
+    ]
+  },
+  "artifact_sha256": {
+    "act_tensor_wrapper.pt2": "ddc8ac394b2342205525bc0cd6e64463b6fd1b5173fa74ff1d51f3c6eb095ac4",
+    "manifest.json": "cd43e19690a1214ccbdfe875dedc2ee2a8b6c7c318ab20b07952a058de102e6a",
+    "reference_model_input.pt": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output_action_chunk.pt": "b1f021b8db0ad975dbfff45a9d8d2ec5bfe2434bd48371e97d75402d5b1590cb",
+    "reference_output_normalized.pt": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a",
+    "reference_raw_observation.pt": "3a8e3e905ba6d96d75f903f3ce96e9d855dd8e6d1e33549712d05a90e0c20c73"
+  }
+}

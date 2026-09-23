@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "closed_at_local_date": "2026-09-16",
+  "decision_owner": "human",
+  "decision_basis": "Precommitted isolated-worker sequence policy",
+  "status": "CLOSED_NOT_ADMITTED",
+  "backend": "GPU.0 Intel Arc Graphics iGPU",
+  "precision": "FP32",
+  "consecutive_results": [
+    {
+      "round": 1,
+      "verdict": "FAIL",
+      "last_completed_inference": 3270,
+      "last_worker_elapsed_seconds": 94.11761809201562,
+      "failure": "Inference heartbeat stall; watchdog recovered with SIGTERM"
+    },
+    {
+      "round": 2,
+      "verdict": "FAIL",
+      "last_completed_inference": 1794,
+      "last_worker_elapsed_seconds": 52.00013093999587,
+      "failure": "Inference heartbeat stall; watchdog recovered with SIGTERM"
+    }
+  ],
+  "conclusion": "GPU.0 FP32 passes frozen-input correctness but fails the required 30-minute stability gate in both monolithic and isolated-worker architectures. It is not admitted as an L1 Phase 3 deployment backend.",
+  "scope_boundary": [
+    "This closure does not claim that the OpenVINO GPU plugin or Intel driver is the proven root cause.",
+    "Pre-hang latency samples are diagnostic only and are not qualified deployment benchmark results.",
+    "RTX GPU.1 remains excluded from Intel pre-deployment evidence.",
+    "CPU FP32 remains the only backend that passed the Phase 3 correctness and 30-minute stability gates."
+  ],
+  "next_action": "Do not run Round 3. Proceed only to Phase 3 final evidence synthesis and human acceptance; do not start Phase 4."
+}

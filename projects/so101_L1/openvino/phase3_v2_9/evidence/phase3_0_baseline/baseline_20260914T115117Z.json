@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 3 V2.9 baseline",
+  "captured_at_utc": "2026-09-14T11:51:17.274104+00:00",
+  "hostname": "lucas-ThinkBook-16-G7-IAH",
+  "execution_context": {
+    "cwd": "/home/lucas",
+    "python_executable": "/home/lucas/intel_ws/openvino_env/bin/python",
+    "expected_context": "ordinary host terminal, not a device-isolated sandbox"
+  },
+  "dmi": {
+    "sys_vendor": "LENOVO",
+    "product_name": "21TL",
+    "product_version": "ThinkBook 16 G7+ IAH",
+    "board_name": "LNVNB161216",
+    "bios_version": "R5CN53WW",
+    "identity_sha256": null
+  },
+  "openvino": {
+    "version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "available_devices": [
+      "CPU",
+      "GPU.0",
+      "GPU.1",
+      "NPU"
+    ],
+    "devices": [
+      {
+        "device": "CPU",
+        "full_name": "Intel(R) Core(TM) Ultra 7 255H",
+        "architecture": "intel64",
+        "capabilities": [
+          "BF16",
+          "FP32",
+          "FP16",
+          "INT8",
+          "BIN",
+          "EXPORT_IMPORT"
+        ],
+        "type": "Type.INTEGRATED"
+      },
+      {
+        "device": "GPU.0",
+        "full_name": "Intel(R) Arc(TM) Graphics (iGPU)",
+        "architecture": "GPU: vendor=0x8086 arch=v12.74.0",
+        "capabilities": [
+          "FP32",
+          "BIN",
+          "FP16",
+          "INT8",
+          "GPU_HW_MATMUL",
+          "GPU_USM_MEMORY",
+          "EXPORT_IMPORT"
+        ],
+        "type": "Type.INTEGRATED"
+      },
+      {
+        "device": "GPU.1",
+        "full_name": "NVIDIA GeForce RTX 5060 Laptop GPU (dGPU)",
+        "architecture": "GPU: vendor=0x10de arch=v12.0.0",
+        "capabilities": [
+          "FP32",
+          "BIN",
+          "INT8",
+          "EXPORT_IMPORT"
+        ],
+        "type": "Type.DISCRETE"
+      },
+      {
+        "device": "NPU",
+        "full_name": "Intel(R) AI Boost",
+        "architecture": "3720",
+        "capabilities": [
+          "FP16",
+          "INT8",
+          "EXPORT_IMPORT"
+        ],
+        "type": "Type.INTEGRATED"
+      }
+    ]
+  },
+  "artifacts": {
+    "l1_v2_9_document": {
+      "path": "/home/lucas/physical_ai_os/docs/reference/l1/SO-101_PhysicalAI_Runtime_L1_最终执行书_V2.9_S1S2_EmploymentGate增强版.docx",
+      "exists": true,
+      "size_bytes": 1045431,
+      "sha256": "95cd404a72f0c03435b0728aa0bd169f78a6b782f9063a4b6659cbc953bec5ef"
+    },
+    "agent_policy": {
+      "path": "/home/lucas/physical_ai_os/AGENT.md",
+      "exists": true,
+      "size_bytes": 6458,
+      "sha256": "d6efebf556bb072c8800c57b5b685f32ba21c17edc7e0846f6efe73a7432b933"
+    },
+    "checkpoint_config": {
+      "path": "/data/checkpoints/act_so101_50ep_10k/checkpoints/last/pretrained_model/config.json",
+      "exists": true,
+      "size_bytes": 1563,
+      "sha256": "730dd2cd48dd6ddf345e84b05e21b6e74012f6d891e41012188716119f23b6ab"
+    },
+    "checkpoint_model": {
+      "path": "/data/checkpoints/act_so101_50ep_10k/checkpoints/last/pretrained_model/model.safetensors",
+      "exists": true,
+      "size_bytes": 206699736,
+      "sha256": "efba5cb64e5e22e0362ec19e293d378ae2cd4f6947f9e15823b505ce32eab4a1"
+    },
+    "checkpoint_preprocessor": {
+      "path": "/data/checkpoints/act_so101_50ep_10k/checkpoints/last/pretrained_model/policy_preprocessor.json",
+      "exists": true,
+      "size_bytes": 1154,
+      "sha256": "07ca6943c04ae1a10d8e2148b6f2c85f1a2b542b5c6cc4d435665911a5672dcb"
+    },
+    "checkpoint_postprocessor": {
+      "path": "/data/checkpoints/act_so101_50ep_10k/checkpoints/last/pretrained_model/policy_postprocessor.json",
+      "exists": true,
+      "size_bytes": 660,
+      "sha256": "648b415125a183dfd6cbc47c1dc04ab3f2d912654ef22a12ca5e8b93d7d85cdd"
+    },
+    "policy_ir_xml": {
+      "path": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/policy_package_v1/act_cpu_reference.xml",
+      "exists": true,
+      "size_bytes": 1020143,
+      "sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e"
+    },
+    "policy_ir_bin": {
+      "path": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/policy_package_v1/act_cpu_reference.bin",
+      "exists": true,
+      "size_bytes": 131800756,
+      "sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a"
+    },
+    "frozen_model_input": {
+      "path": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/policy_package_v1/reference_model_input.pt",
+      "exists": true,
+      "size_bytes": 3688405,
+      "sha256": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75"
+    },
+    "frozen_model_output": {
+      "path": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/policy_package_v1/reference_output_normalized.pt",
+      "exists": true,
+      "size_bytes": 4213,
+      "sha256": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a"
+    }
+  },
+  "dataset": {
+    "path": "/data/datasets/so101_pick_place_cube_v1_20260803_014054",
+    "exists": true
+  },
+  "checkpoint": {
+    "path": "/data/checkpoints/act_so101_50ep_10k/checkpoints/last/pretrained_model",
+    "exists": true
+  },
+  "commands": {
+    "os_release": {
+      "command": [
+        "cat",
+        "/etc/os-release"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "PRETTY_NAME=\"Ubuntu 24.04.4 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.4 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+      "stderr": ""
+    },
+    "kernel": {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "Linux lucas-ThinkBook-16-G7-IAH 7.0.0-31-generic #31~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Aug 10 09:38:02 UTC 2 x86_64 x86_64 x86_64 GNU/Linux\n",
+      "stderr": ""
+    },
+    "cpu": {
+      "command": [
+        "lscpu"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "架构：                                   x86_64\nCPU 运行模式：                           32-bit, 64-bit\nAddress sizes:                           42 bits physical, 48 bits virtual\n字节序：                                 Little Endian\nCPU:                                     16\n在线 CPU 列表：                          0-15\n厂商 ID：                                GenuineIntel\n型号名称：                               Intel(R) Core(TM) Ultra 7 255H\nCPU 系列：                               6\n型号：                                   197\n每个核的线程数：                         1\n每个座的核数：                           16\n座：                                     1\n步进：                                   2\nCPU(s) scaling MHz:                      77%\nCPU 最大 MHz：                           5100.0000\nCPU 最小 MHz：                           400.0000\nBogoMIPS：                               7372.80\n标记：                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni lam wbnoinvd dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid bus_lock_detect movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities\n虚拟化：                                 VT-x\nL1d 缓存：                               480 KiB (12 instances)\nL1i 缓存：                               768 KiB (12 instances)\nL2 缓存：                                28 MiB (9 instances)\nL3 缓存：                                24 MiB (1 instance)\nNUMA 节点：                              1\nNUMA 节点0 CPU：                         0-15\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS Not affected; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+      "stderr": ""
+    },
+    "memory": {
+      "command": [
+        "free",
+        "-b"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "               total        used        free      shared  buff/cache   available\n内存：   33044353024 16374075392  4897251328  3544915968 15397740544 16670277632\n交换：    2147479552           0  2147479552\n",
+      "stderr": ""
+    },
+    "memory_blocks": {
+      "command": [
+        "lsmem",
+        "--json"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "{\n   \"memory\": [\n      {\n         \"range\": \"0x0000000000000000-0x0000000067ffffff\",\n         \"size\": \"1.6G\",\n         \"state\": \"在线\",\n         \"removable\": true,\n         \"block\": \"0-12\"\n      },{\n         \"range\": \"0x0000000100000000-0x000000087fffffff\",\n         \"size\": \"30G\",\n         \"state\": \"在线\",\n         \"removable\": true,\n         \"block\": \"32-271\"\n      }\n   ]\n}\n",
+      "stderr": ""
+    },
+    "pci_drivers": {
+      "command": [
+        "lspci",
+        "-nnk"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "00:00.0 Host bridge [0600]: Intel Corporation Device [8086:7d06] (rev 05)\n\tSubsystem: Lenovo Device [17aa:384b]\n\tKernel driver in use: igen6_edac\n\tKernel modules: igen6_edac\n00:01.0 PCI bridge [0604]: Intel Corporation Device [8086:7ecc] (rev 10)\n\tSubsystem: COMPAL Electronics Inc Device [14c0:0148]\n\tKernel driver in use: pcieport\n\tKernel modules: shpchp\n00:02.0 VGA compatible controller [0300]: Intel Corporation Arrow Lake-P [Intel Graphics] [8086:7d51] (rev 03)\n\tSubsystem: Lenovo Device [17aa:3dcf]\n\tKernel driver in use: i915\n\tKernel modules: i915, xe\n00:04.0 Signal processing controller [1180]: Intel Corporation Device [8086:7d03] (rev 05)\n\tSubsystem: Lenovo Device [17aa:3817]\n\tKernel driver in use: proc_thermal_pci\n\tKernel modules: processor_thermal_device_pci\n00:06.0 PCI bridge [0604]: Intel Corporation Device [8086:774d]\n\tSubsystem: COMPAL Electronics Inc Device [14c0:0148]\n\tKernel driver in use: pcieport\n\tKernel modules: shpchp\n00:06.2 PCI bridge [0604]: Intel Corporation Device [8086:7ecb] (rev 10)\n\tSubsystem: COMPAL Electronics Inc Device [14c0:0148]\n\tKernel driver in use: pcieport\n\tKernel modules: shpchp\n00:07.0 PCI bridge [0604]: Intel Corporation Meteor Lake-P Thunderbolt 4 PCI Express Root Port #2 [8086:7ec6] (rev 10)\n\tSubsystem: COMPAL Electronics Inc Meteor Lake-P Thunderbolt 4 PCI Express Root Port [14c0:0148]\n\tKernel driver in use: pcieport\n\tKernel modules: shpchp\n00:0a.0 Signal processing controller [1180]: Intel Corporation Device [8086:7d0d] (rev 01)\n\tSubsystem: Lenovo Device [17aa:3811]\n\tKernel driver in use: intel_vsec\n\tKernel modules: intel_vsec\n00:0b.0 Processing accelerators [1200]: Intel Corporation Meteor Lake NPU [8086:7d1d] (rev 05)\n\tSubsystem: Lenovo Device [17aa:3807]\n\tKernel driver in use: intel_vpu\n\tKernel modules: intel_vpu\n00:0d.0 USB controller [0c03]: Intel Corporation Meteor Lake-P Thunderbolt 4 USB Controller [8086:7ec0] (rev 10)\n\tKernel driver in use: xhci_hcd\n\tKernel modules: xhci_pci\n00:0d.3 USB controller [0c03]: Intel Corporation Meteor Lake-P Thunderbolt 4 NHI #1 [8086:7ec3] (rev 10)\n\tSubsystem: COMPAL Electronics Inc Meteor Lake-P Thunderbolt 4 NHI [14c0:0148]\n\tKernel driver in use: thunderbolt\n\tKernel modules: thunderbolt\n00:12.0 Serial controller [0700]: Intel Corporation Device [8086:7745]\n\tSubsystem: Lenovo Device [17aa:3827]\n\tKernel driver in use: intel_ish_ipc\n\tKernel modules: intel_ish_ipc\n00:14.0 USB controller [0c03]: Intel Corporation Device [8086:777d]\n\tSubsystem: Lenovo Device [17aa:3808]\n\tKernel driver in use: xhci_hcd\n\tKernel modules: xhci_pci\n00:14.2 RAM memory [0500]: Intel Corporation Device [8086:777f]\n\tSubsystem: Lenovo Device [17aa:3821]\n\tKernel driver in use: intel_pmc_ssram_telemetry\n\tKernel modules: intel_pmc_ssram_telemetry\n00:14.3 Network controller [0280]: Intel Corporation Device [8086:7740]\n\tSubsystem: Intel Corporation Device [8086:00e4]\n\tKernel driver in use: iwlwifi\n\tKernel modules: iwlwifi\n00:15.0 Serial bus controller [0c80]: Intel Corporation Device [8086:7778]\n\tSubsystem: Lenovo Device [17aa:3833]\n\tKernel driver in use: intel-lpss\n\tKernel modules: intel_lpss_pci\n00:15.2 Serial bus controller [0c80]: Intel Corporation Device [8086:777a]\n\tSubsystem: Lenovo Device [17aa:3839]\n\tKernel driver in use: intel-lpss\n\tKernel modules: intel_lpss_pci\n00:15.3 Serial bus controller [0c80]: Intel Corporation Device [8086:777b]\n\tSubsystem: Lenovo Device [17aa:382b]\n\tKernel driver in use: intel-lpss\n\tKernel modules: intel_lpss_pci\n00:16.0 Communication controller [0780]: Intel Corporation Device [8086:7770]\n\tSubsystem: Lenovo Device [17aa:3835]\n\tKernel driver in use: mei_me\n\tKernel modules: mei_me\n00:1c.0 PCI bridge [0604]: Intel Corporation Device [8086:773e]\n\tSubsystem: COMPAL Electronics Inc Device [14c0:0148]\n\tKernel driver in use: pcieport\n\tKernel modules: shpchp\n00:1f.0 ISA bridge [0601]: Intel Corporation Device [8086:7702]\n\tSubsystem: Lenovo Device [17aa:3845]\n00:1f.3 Multimedia audio controller [0401]: Intel Corporation Device [8086:7728]\n\tSubsystem: Lenovo Device [17aa:3847]\n\tKernel driver in use: sof-audio-pci-intel-mtl\n\tKernel modules: snd_sof_pci_intel_mtl, snd_hda_intel\n00:1f.4 SMBus [0c05]: Intel Corporation Device [8086:7722]\n\tSubsystem: Lenovo Device [17aa:3842]\n\tKernel driver in use: i801_smbus\n\tKernel modules: i2c_i801\n00:1f.5 Serial bus controller [0c80]: Intel Corporation Device [8086:7723]\n\tSubsystem: Lenovo Device [17aa:3848]\n\tKernel driver in use: intel-spi\n\tKernel modules: spi_intel_pci\n00:1f.6 Ethernet controller [0200]: Intel Corporation Device [8086:57a1]\n\tSubsystem: Lenovo Device [17aa:382a]\n\tKernel driver in use: e1000e\n\tKernel modules: e1000e\n01:00.0 VGA compatible controller [0300]: NVIDIA Corporation Device [10de:2d19] (rev a1)\n\tSubsystem: Lenovo Device [17aa:3f96]\n\tKernel driver in use: nvidia\n\tKernel modules: nvidiafb, nouveau, nvidia_drm, nvidia\n01:00.1 Audio device [0403]: NVIDIA Corporation Device [10de:22eb] (rev a1)\n\tSubsystem: NVIDIA Corporation Device [10de:0000]\n\tKernel driver in use: snd_hda_intel\n\tKernel modules: snd_hda_intel\n06:00.0 Non-Volatile memory controller [0108]: Shenzhen Unionmemory Information System Ltd. Device [1cc4:5414]\n\tSubsystem: Shenzhen Unionmemory Information System Ltd. Device [1cc4:5414]\n\tKernel driver in use: nvme\n\tKernel modules: nvme\n36:00.0 SD Host controller [0805]: O2 Micro, Inc. SD/MMC Card Reader Controller [1217:8621] (rev 01)\n\tSubsystem: Lenovo SD/MMC Card Reader Controller [17aa:38f6]\n\tKernel driver in use: sdhci-pci\n\tKernel modules: sdhci_pci\n",
+      "stderr": ""
+    },
+    "identity": {
+      "command": [
+        "id"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "uid=1000(lucas) gid=1000(lucas) 组=1000(lucas),4(adm),20(dialout),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),117(lpadmin),125(sambashare),992(render)\n",
+      "stderr": ""
+    },
+    "device_nodes_dri": {
+      "command": [
+        "ls",
+        "-la",
+        "/dev/dri"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "总计 0\ndrwxr-xr-x   3 root root        140  9月 12 15:39 .\ndrwxr-xr-x  23 root root       5380  9月 14 15:17 ..\ndrwxr-xr-x   2 root root        120  9月 12 15:39 by-path\ncrw-rw----+  1 root video  226,   0  9月 12 15:39 card0\ncrw-rw----+  1 root video  226,   1  9月 12 15:39 card1\ncrw-rw----+  1 root render 226, 128  9月 12 15:39 renderD128\ncrw-rw----+  1 root render 226, 129  9月 12 15:39 renderD129\n",
+      "stderr": ""
+    },
+    "device_nodes_accel": {
+      "command": [
+        "ls",
+        "-la",
+        "/dev/accel"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "总计 0\ndrwxr-xr-x  2 root root       60  9月 12 15:39 .\ndrwxr-xr-x 23 root root     5380  9月 14 15:17 ..\ncrw-rw----  1 root render 261, 0  9月 12 15:39 accel0\n",
+      "stderr": ""
+    },
+    "kernel_modules": {
+      "command": [
+        "lsmod"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "Module                  Size  Used by\nudp_diag               12288  0\ntcp_diag               20480  0\ninet_diag              20480  2 tcp_diag,udp_diag\nrfcomm                102400  4\nsnd_seq_dummy          12288  0\nsnd_hrtimer            12288  1\nxt_connmark            12288  6\nxt_conntrack           12288  4\ncmac                   12288  3\nalgif_hash             20480  1\nalgif_skcipher         12288  1\nxt_MASQUERADE          16384  2\naf_alg                 32768  6 algif_hash,algif_skcipher\nxt_tcpudp              16384  0\nxt_mark                12288  2\nnft_compat             20480  14\nnft_chain_nat          12288  2\nnf_nat                 61440  2 nft_chain_nat,xt_MASQUERADE\nnf_conntrack          192512  4 xt_conntrack,nf_nat,xt_connmark,xt_MASQUERADE\nnf_defrag_ipv6         24576  1 nf_conntrack\nnf_defrag_ipv4         12288  1 nf_conntrack\nnf_tables             397312  109 nft_compat,nft_chain_nat\nnvidia_uvm           2056192  4\nsnd_soc_skl_hda_dsp    16384  4\nsnd_soc_intel_sof_board_helpers    28672  1 snd_soc_skl_hda_dsp\nsnd_sof_probes         28672  0\nsnd_soc_intel_hda_dsp_common    16384  1 snd_soc_intel_sof_board_helpers\nxe                   4333568  0\nsnd_hda_codec_intelhdmi    24576  1\nsnd_hda_codec_alc269   147456  1\nsnd_hda_codec_realtek_lib    65536  1 snd_hda_codec_alc269\nsnd_hda_scodec_component    20480  1 snd_hda_codec_alc269\nsnd_hda_codec_generic   122880  2 snd_hda_codec_realtek_lib,snd_hda_codec_alc269\ndrm_gpusvm_helper      57344  1 xe\nsnd_soc_dmic           12288  1\ngpu_sched              69632  1 xe\ndrm_gpuvm              53248  1 xe\ndrm_exec               12288  2 drm_gpuvm,xe\ndrm_suballoc_helper    24576  1 xe\nqrtr                   53248  2\nbnep                   32768  2\nbinfmt_misc            24576  1\nsnd_sof_pci_intel_mtl    36864  0\nsnd_sof_intel_hda_generic    40960  1 snd_sof_pci_intel_mtl\nsoundwire_intel        81920  1 snd_sof_intel_hda_generic\nsnd_sof_intel_hda_sdw_bpt    20480  1 soundwire_intel\nsnd_sof_intel_hda_common   196608  3 snd_sof_pci_intel_mtl,snd_sof_intel_hda_sdw_bpt,snd_sof_intel_hda_generic\nsnd_soc_hdac_hda       20480  1 snd_sof_intel_hda_common\nsnd_sof_intel_hda_mlink    45056  4 snd_sof_intel_hda_sdw_bpt,soundwire_intel,snd_sof_intel_hda_common,snd_sof_intel_hda_generic\nsnd_sof_intel_hda      24576  2 snd_sof_intel_hda_common,snd_sof_intel_hda_generic\nintel_uncore_frequency    12288  0\nintel_uncore_frequency_common    20480  1 intel_uncore_frequency\nsoundwire_cadence      53248  1 soundwire_intel\nsnd_sof_pci            24576  2 snd_sof_pci_intel_mtl,snd_sof_intel_hda_generic\nx86_pkg_temp_thermal    20480  0\nsnd_sof_xtensa_dsp     12288  1 snd_sof_intel_hda_generic\nintel_powerclamp       28672  0\ncmdlinepart            16384  0\nsnd_hda_codec_nvhdmi    16384  1\nsnd_sof               421888  7 snd_sof_pci_intel_mtl,snd_sof_intel_hda_sdw_bpt,snd_sof_pci,snd_sof_intel_hda_common,snd_sof_intel_hda_generic,snd_sof_probes,snd_sof_intel_hda\nspi_nor               172032  0\nsnd_hda_codec_hdmi     65536  2 snd_hda_codec_nvhdmi,snd_hda_codec_intelhdmi\nsnd_sof_utils          16384  1 snd_sof\nsnd_hda_ext_core       32768  5 snd_sof_intel_hda_sdw_bpt,snd_sof_intel_hda_common,snd_soc_hdac_hda,snd_sof_intel_hda_mlink,snd_sof_intel_hda\nmtd                   106496  3 spi_nor,cmdlinepart\nsnd_soc_acpi_intel_match   147456  3 snd_sof_pci_intel_mtl,snd_soc_intel_sof_board_helpers,snd_sof_intel_hda_generic\nmei_gsc_proxy          16384  0\ncoretemp               24576  0\nsnd_soc_acpi_intel_sdca_quirks    12288  1 snd_soc_acpi_intel_match\nsoundwire_generic_allocation    24576  1 soundwire_intel\nsnd_soc_sdw_utils     126976  1 snd_sof_intel_hda_generic\nsnd_soc_acpi           16384  2 snd_soc_acpi_intel_match,snd_sof_intel_hda_generic\nsnd_hda_intel          61440  1\nsoundwire_bus        1179648  4 soundwire_intel,snd_soc_sdw_utils,soundwire_generic_allocation,soundwire_cadence\nsnd_hda_codec         204800  11 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_nvhdmi,snd_soc_intel_hda_dsp_common,snd_hda_codec_realtek_lib,snd_soc_hdac_hda,snd_hda_codec_alc269,snd_sof_intel_hda,snd_soc_skl_hda_dsp,snd_hda_codec_intelhdmi\nsnd_soc_sdca          118784  2 snd_soc_acpi_intel_sdca_quirks,soundwire_bus\nuvcvideo              143360  0\niwlmld                442368  0\nintel_rapl_msr         20480  0\nkvm_intel             540672  0\nsnd_hda_core          151552  12 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_ext_core,snd_hda_codec,snd_soc_intel_hda_dsp_common,snd_sof_intel_hda_common,snd_hda_codec_realtek_lib,snd_soc_hdac_hda,snd_hda_codec_alc269,snd_sof_intel_hda,snd_hda_codec_intelhdmi\nvideobuf2_vmalloc      20480  1 uvcvideo\nnvidia_drm            143360  5\nsnd_intel_dspcfg       45056  4 snd_hda_intel,snd_sof,snd_sof_intel_hda_common,snd_sof_intel_hda_generic\nuvc                    12288  1 uvcvideo\nsnd_soc_core          425984  10 soundwire_intel,snd_sof,snd_soc_intel_sof_board_helpers,snd_soc_sdca,snd_sof_intel_hda_common,snd_soc_sdw_utils,snd_soc_hdac_hda,snd_sof_probes,snd_soc_dmic,snd_soc_skl_hda_dsp\nmac80211             1892352  1 iwlmld\nsnd_intel_sdw_acpi     16384  2 snd_intel_dspcfg,snd_sof_intel_hda_generic\nkvm                  1507328  1 kvm_intel\nvideobuf2_memops       16384  1 videobuf2_vmalloc\nsnd_hwdep              24576  1 snd_hda_codec\nbtusb                  81920  0\nsnd_compress           40960  2 snd_soc_core,snd_sof_probes\nvideobuf2_v4l2         36864  1 uvcvideo\nvideobuf2_common       86016  4 videobuf2_vmalloc,videobuf2_v4l2,uvcvideo,videobuf2_memops\nbtmtk                  36864  1 btusb\nlenovo_wmi_gamezone    12288  0\nsnd_seq_midi           24576  0\nac97_bus               12288  1 snd_soc_core\nirqbypass              16384  1 kvm\nsnd_seq_midi_event     16384  1 snd_seq_midi\nnvidia_modeset       1789952  5 nvidia_drm\nsnd_pcm_dmaengine      20480  1 snd_soc_core\nlibarc4                12288  1 mac80211\nhid_sensor_als         16384  0\nlenovo_wmi_other       36864  1 lenovo_wmi_gamezone\nghash_clmulni_intel    12288  0\nbtrtl                  32768  1 btusb\nhid_sensor_trigger     20480  2 hid_sensor_als\nlenovo_wmi_helpers     12288  2 lenovo_wmi_other,lenovo_wmi_gamezone\nlenovo_wmi_events      12288  1 lenovo_wmi_gamezone\naesni_intel            98304  1\nthink_lmi              45056  0\nsnd_rawmidi            57344  1 snd_seq_midi\ni2c_i801               36864  0\nkfifo_buf              12288  1 hid_sensor_trigger\nvideodev              368640  2 videobuf2_v4l2,uvcvideo\nsnd_pcm               204800  13 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,soundwire_intel,snd_sof,snd_soc_sdca,snd_sof_intel_hda_common,snd_compress,snd_sof_intel_hda_generic,snd_soc_core,snd_sof_utils,snd_hda_core,snd_pcm_dmaengine\nbtbcm                  24576  1 btusb\nbtintel                69632  1 btusb\nhid_sensor_iio_common    24576  2 hid_sensor_trigger,hid_sensor_als\nrapl                   20480  0\ni2c_smbus              20480  1 i2c_i801\nspi_intel_pci          12288  0\niwlwifi               647168  1 iwlmld\nsnd_ctl_led            24576  0\nintel_cstate           20480  0\nnvidia              15101952  111 nvidia_uvm,nvidia_modeset\nnls_iso8859_1          12288  1\nbluetooth            1077248  34 btrtl,btmtk,btintel,btbcm,bnep,btusb,rfcomm\nsnd_seq               126976  9 snd_seq_midi,snd_seq_midi_event,snd_seq_dummy\nmei_me                 57344  1\nlenovo_wmi_hotkey_utilities    12288  0\nfirmware_attributes_class    12288  2 lenovo_wmi_other,think_lmi\nlenovo_wmi_capdata     20480  1 lenovo_wmi_other\nwmi_bmof               12288  0\ncrc8                   12288  1 soundwire_cadence\ncdc_acm                49152  0\nnvidia_wmi_ec_backlight    12288  0\nmc                     90112  4 videodev,videobuf2_v4l2,uvcvideo,videobuf2_common\ni2c_mux                20480  1 i2c_i801\nspi_intel              36864  1 spi_intel_pci\nindustrialio          139264  3 hid_sensor_trigger,kfifo_buf,hid_sensor_als\ncfg80211             1519616  3 iwlmld,iwlwifi,mac80211\nmei                   176128  3 mei_gsc_proxy,mei_me\nsnd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi\ni915                 4997120  59\nsnd_timer              53248  3 snd_seq,snd_hrtimer,snd_pcm\nintel_vpu             315392  0\nsnd                   143360  30 snd_ctl_led,snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_sof,snd_soc_sdca,snd_timer,snd_hda_codec_realtek_lib,snd_compress,snd_soc_sdw_utils,snd_hda_codec_alc269,snd_soc_core,snd_pcm,snd_rawmidi\ndrm_ttm_helper         20480  2 nvidia_drm,xe\nsoundcore              16384  2 snd_ctl_led,snd\nprocessor_thermal_device_pci    16384  0\ndrm_buddy              28672  2 xe,i915\nprocessor_thermal_device    24576  1 processor_thermal_device_pci\nprocessor_thermal_wt_hint    16384  2 processor_thermal_device_pci,processor_thermal_device\nttm                   131072  3 drm_ttm_helper,xe,i915\nplatform_temperature_control    20480  1 processor_thermal_device\nintel_pmc_core        151552  0\nprocessor_thermal_soc_slider    16384  1 processor_thermal_device\nprocessor_thermal_rfim    40960  1 processor_thermal_device\ndrm_display_helper    299008  2 xe,i915\nideapad_laptop         53248  0\nprocessor_thermal_rapl    16384  1 processor_thermal_device\nintel_rapl_common      57344  2 intel_rapl_msr,processor_thermal_rapl\nint3403_thermal        16384  0\ncec                    98304  3 drm_display_helper,xe,i915\nprocessor_thermal_wt_req    12288  1 processor_thermal_device\npmt_telemetry          16384  1 intel_pmc_core\nprocessor_thermal_power_floor    12288  2 processor_thermal_device_pci,processor_thermal_device\nrc_core                73728  1 cec\nprocessor_thermal_mbox    12288  4 processor_thermal_power_floor,processor_thermal_wt_req,processor_thermal_rfim,processor_thermal_wt_hint\npmt_discovery          24576  1 pmt_telemetry\nint340x_thermal_zone    16384  2 int3403_thermal,processor_thermal_device\ni2c_algo_bit           16384  2 xe,i915\npmt_class              20480  2 pmt_telemetry,pmt_discovery\nigen6_edac             28672  0\nplatform_profile       20480  3 lenovo_wmi_gamezone,ideapad_laptop,processor_thermal_soc_slider\nintel_pmc_ssram_telemetry    16384  1 intel_pmc_core\nint3400_thermal        24576  0\nintel_hid              32768  0\nintel_vsec             24576  3 intel_pmc_ssram_telemetry,pmt_telemetry,xe\nacpi_thermal_rel       24576  1 int3400_thermal\nsparse_keymap          12288  2 intel_hid,ideapad_laptop\nacpi_pad              184320  0\njoydev                 32768  0\ninput_leds             12288  0\nmac_hid                12288  0\nserio_raw              20480  0\nsch_fq_codel           28672  5\nmsr                    12288  0\nparport_pc             53248  0\nppdev                  24576  0\nlp                     32768  0\nparport                73728  3 parport_pc,lp,ppdev\nefi_pstore             12288  0\nnfnetlink              20480  3 nft_compat,nf_tables\ndmi_sysfs              24576  0\nip_tables              32768  0\nx_tables               65536  7 xt_conntrack,nft_compat,xt_tcpudp,xt_connmark,ip_tables,xt_MASQUERADE,xt_mark\nautofs4                57344  2\nhid_logitech_hidpp     69632  0\nhid_logitech_dj        36864  0\nhid_sensor_custom      28672  0\nusbhid                 77824  2 hid_logitech_dj,hid_logitech_hidpp\ncdc_ether              28672  0\nusbnet                 61440  1 cdc_ether\nhid_sensor_hub         28672  4 hid_sensor_trigger,hid_sensor_iio_common,hid_sensor_als,hid_sensor_custom\nintel_ishtp_hid        32768  0\nr8152                 143360  0\nmii                    20480  2 usbnet,r8152\nhid_multitouch         36864  0\nnvme                   65536  3\nucsi_acpi              12288  0\ntypec_ucsi             77824  1 ucsi_acpi\nhid_generic            12288  0\ntypec                 126976  1 typec_ucsi\nnvme_core             237568  4 nvme\nsdhci_pci             102400  0\nvideo                  77824  5 nvidia_wmi_ec_backlight,ideapad_laptop,xe,i915,nvidia_modeset\nnvme_keyring           20480  1 nvme_core\nsdhci_uhs2             40960  1 sdhci_pci\nsdhci                  94208  2 sdhci_uhs2,sdhci_pci\nnvme_auth              28672  1 nvme_core\nintel_lpss_pci         28672  0\ni2c_hid_acpi           12288  0\nintel_ish_ipc          36864  0\ne1000e                364544  0\nintel_lpss             12288  1 intel_lpss_pci\ncqhci                  45056  1 sdhci_pci\nhkdf                   12288  1 nvme_auth\ni2c_hid                40960  1 i2c_hid_acpi\nthunderbolt           552960  1 typec\nidma64                 20480  0\nintel_ishtp            77824  2 intel_ishtp_hid,intel_ish_ipc\nhid                   282624  9 i2c_hid,usbhid,hid_multitouch,hid_sensor_hub,snd_soc_sdca,intel_ishtp_hid,hid_generic,hid_logitech_dj,hid_logitech_hidpp\npinctrl_meteorlake     28672  1\nwmi                    36864  11 lenovo_wmi_events,video,nvidia_wmi_ec_backlight,lenovo_wmi_capdata,lenovo_wmi_hotkey_utilities,lenovo_wmi_other,wmi_bmof,lenovo_wmi_gamezone,ideapad_laptop,think_lmi,lenovo_wmi_helpers\n",
+      "stderr": ""
+    },
+    "data_mount": {
+      "command": [
+        "findmnt",
+        "-J",
+        "/data"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/data\",\n         \"source\": \"/dev/nvme0n1p6\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,nosuid,nodev,relatime\"\n      }\n   ]\n}\n",
+      "stderr": ""
+    },
+    "disk_space": {
+      "command": [
+        "df",
+        "-B1",
+        "/",
+        "/data"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "文件系统             1B的块        已用        可用 已用% 挂载点\n/dev/nvme0n1p5 198647181312 98133078016 90348789760   53% /\n/dev/nvme0n1p6 105089261568 18672852992 81030922240   19% /data\n",
+      "stderr": ""
+    },
+    "block_devices": {
+      "command": [
+        "lsblk",
+        "-J",
+        "-o",
+        "NAME,PATH,SIZE,TYPE,FSTYPE,LABEL,UUID,MOUNTPOINTS,ROTA,RO"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"nvme0n1\",\n         \"path\": \"/dev/nvme0n1\",\n         \"size\": \"953.9G\",\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"label\": null,\n         \"uuid\": null,\n         \"mountpoints\": [\n             null\n         ],\n         \"rota\": false,\n         \"ro\": false,\n         \"children\": [\n            {\n               \"name\": \"nvme0n1p1\",\n               \"path\": \"/dev/nvme0n1p1\",\n               \"size\": \"260M\",\n               \"type\": \"part\",\n               \"fstype\": \"vfat\",\n               \"label\": \"SYSTEM_DRV\",\n               \"uuid\": \"8483-E2A6\",\n               \"mountpoints\": [\n                   \"/boot/efi\"\n               ],\n               \"rota\": false,\n               \"ro\": false\n            },{\n               \"name\": \"nvme0n1p2\",\n               \"path\": \"/dev/nvme0n1p2\",\n               \"size\": \"16M\",\n               \"type\": \"part\",\n               \"fstype\": null,\n               \"label\": null,\n               \"uuid\": null,\n               \"mountpoints\": [\n                   null\n               ],\n               \"rota\": false,\n               \"ro\": false\n            },{\n               \"name\": \"nvme0n1p3\",\n               \"path\": \"/dev/nvme0n1p3\",\n               \"size\": \"400G\",\n               \"type\": \"part\",\n               \"fstype\": \"ntfs\",\n               \"label\": \"Windows-SSD\",\n               \"uuid\": \"FCCE8472CE84274C\",\n               \"mountpoints\": [\n                   null\n               ],\n               \"rota\": false,\n               \"ro\": false\n            },{\n               \"name\": \"nvme0n1p4\",\n               \"path\": \"/dev/nvme0n1p4\",\n               \"size\": \"264.6G\",\n               \"type\": \"part\",\n               \"fstype\": \"ntfs\",\n               \"label\": \"Data\",\n               \"uuid\": \"8A5450C35450B3A3\",\n               \"mountpoints\": [\n                   null\n               ],\n               \"rota\": false,\n               \"ro\": false\n            },{\n               \"name\": \"nvme0n1p5\",\n               \"path\": \"/dev/nvme0n1p5\",\n               \"size\": \"189G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"label\": null,\n               \"uuid\": \"dbf8ef68-e237-463a-a2f2-ffcbcb14f62c\",\n               \"mountpoints\": [\n                   \"/\"\n               ],\n               \"rota\": false,\n               \"ro\": false\n            },{\n               \"name\": \"nvme0n1p6\",\n               \"path\": \"/dev/nvme0n1p6\",\n               \"size\": \"100G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"label\": \"physical_ai_data\",\n               \"uuid\": \"cecd7f1a-add6-4ddf-9c25-f3c88260ce5f\",\n               \"mountpoints\": [\n                   \"/data\"\n               ],\n               \"rota\": false,\n               \"ro\": false\n            }\n         ]\n      }\n   ]\n}\n",
+      "stderr": ""
+    },
+    "opencl_devices": {
+      "command": [
+        "clinfo",
+        "-l"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "Platform #0: Intel(R) OpenCL Graphics\n `-- Device #0: Intel(R) Arc(TM) Graphics\nPlatform #1: NVIDIA CUDA\n `-- Device #0: NVIDIA GeForce RTX 5060 Laptop GPU\n",
+      "stderr": ""
+    },
+    "temperature_sensors": {
+      "command": [
+        "sensors",
+        "-j"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "{\n   \"iwlwifi_1-virtual-0\":{\n      \"Adapter\": \"Virtual device\",\n      \"temp1\":{\n         \"temp1_input\": 53.000\n      }\n   },\n   \"lenovo_wmi_other-virtual-0\":{\n      \"Adapter\": \"Virtual device\",\n      \"fan1\":{\n         \"fan1_input\": 2000.000,\n         \"fan1_min\": 1700.000,\n         \"fan1_max\": 4300.000,\n         \"fan1_div\": 100.000\n      },\n      \"fan2\":{\n         \"fan2_input\": 1700.000,\n         \"fan2_min\": 1200.000,\n         \"fan2_max\": 4600.000,\n         \"fan2_div\": 100.000\n      }\n   },\n   \"ucsi_source_psy_USBC000:001-isa-0000\":{\n      \"Adapter\": \"ISA adapter\",\n      \"in0\":{\n         \"in0_input\": 5.000,\n         \"in0_min\": 5.000,\n         \"in0_max\": 5.000\n      },\n      \"curr1\":{\n         \"curr1_input\": 0.100,\n         \"curr1_max\": 0.100\n      }\n   },\n   \"BAT1-acpi-0\":{\n      \"Adapter\": \"ACPI interface\",\n      \"in0\":{\n         \"in0_input\": 17.053\n      },\n      \"power1\":{\n         \"power1_input\": 0.000\n      }\n   },\n   \"coretemp-isa-0000\":{\n      \"Adapter\": \"ISA adapter\",\n      \"Package id 0\":{\n         \"temp1_input\": 54.000,\n         \"temp1_max\": 105.000,\n         \"temp1_crit\": 105.000,\n         \"temp1_crit_alarm\": 0.000\n      },\n      \"Core 0\":{\n         \"temp2_input\": 52.000,\n         \"temp2_max\": 105.000,\n         \"temp2_crit\": 105.000,\n         \"temp2_crit_alarm\": 0.000\n      },\n      \"Core 4\":{\n         \"temp6_input\": 50.000,\n         \"temp6_max\": 105.000,\n         \"temp6_crit\": 105.000,\n         \"temp6_crit_alarm\": 0.000\n      },\n      \"Core 8\":{\n         \"temp10_input\": 56.000,\n         \"temp10_max\": 105.000,\n         \"temp10_crit\": 105.000,\n         \"temp10_crit_alarm\": 0.000\n      },\n      \"Core 9\":{\n         \"temp11_input\": 56.000,\n         \"temp11_max\": 105.000,\n         \"temp11_crit\": 105.000,\n         \"temp11_crit_alarm\": 0.000\n      },\n      \"Core 10\":{\n         \"temp12_input\": 54.000,\n         \"temp12_max\": 105.000,\n         \"temp12_crit\": 105.000,\n         \"temp12_crit_alarm\": 0.000\n      },\n      \"Core 11\":{\n         \"temp13_input\": 54.000,\n         \"temp13_max\": 105.000,\n         \"temp13_crit\": 105.000,\n         \"temp13_crit_alarm\": 0.000\n      },\n      \"Core 12\":{\n         \"temp14_input\": 48.000,\n         \"temp14_max\": 105.000,\n         \"temp14_crit\": 105.000,\n         \"temp14_crit_alarm\": 0.000\n      },\n      \"Core 13\":{\n         \"temp15_input\": 48.000,\n         \"temp15_max\": 105.000,\n         \"temp15_crit\": 105.000,\n         \"temp15_crit_alarm\": 0.000\n      },\n      \"Core 14\":{\n         \"temp16_input\": 48.000,\n         \"temp16_max\": 105.000,\n         \"temp16_crit\": 105.000,\n         \"temp16_crit_alarm\": 0.000\n      },\n      \"Core 15\":{\n         \"temp17_input\": 48.000,\n         \"temp17_max\": 105.000,\n         \"temp17_crit\": 105.000,\n         \"temp17_crit_alarm\": 0.000\n      },\n      \"Core 16\":{\n         \"temp18_input\": 50.000,\n         \"temp18_max\": 105.000,\n         \"temp18_crit\": 105.000,\n         \"temp18_crit_alarm\": 0.000\n      },\n      \"Core 20\":{\n         \"temp22_input\": 50.000,\n         \"temp22_max\": 105.000,\n         \"temp22_crit\": 105.000,\n         \"temp22_crit_alarm\": 0.000\n      },\n      \"Core 24\":{\n         \"temp26_input\": 52.000,\n         \"temp26_max\": 105.000,\n         \"temp26_crit\": 105.000,\n         \"temp26_crit_alarm\": 0.000\n      },\n      \"Core 28\":{\n         \"temp30_input\": 52.000,\n         \"temp30_max\": 105.000,\n         \"temp30_crit\": 105.000,\n         \"temp30_crit_alarm\": 0.000\n      },\n      \"Core 32\":{\n         \"temp34_input\": 44.000,\n         \"temp34_max\": 105.000,\n         \"temp34_crit\": 105.000,\n         \"temp34_crit_alarm\": 0.000\n      },\n      \"Core 33\":{\n         \"temp35_input\": 44.000,\n         \"temp35_max\": 105.000,\n         \"temp35_crit\": 105.000,\n         \"temp35_crit_alarm\": 0.000\n      }\n   },\n   \"ucsi_source_psy_USBC000:002-isa-0000\":{\n      \"Adapter\": \"ISA adapter\",\n      \"in0\":{\n         \"in0_input\": 5.000,\n         \"in0_min\": 5.000,\n         \"in0_max\": 5.000\n      },\n      \"curr1\":{\n         \"curr1_input\": 0.100,\n         \"curr1_max\": 0.100\n      }\n   },\n   \"nvme-pci-0600\":{\n      \"Adapter\": \"PCI adapter\",\n      \"Composite\":{\n         \"temp1_input\": 36.850,\n         \"temp1_max\": 79.850,\n         \"temp1_min\": -0.150,\n         \"temp1_crit\": 83.850,\n         \"temp1_alarm\": 0.000\n      }\n   },\n   \"acpi_fan-isa-0000\":{\n      \"Adapter\": \"ISA adapter\",\n      \"fan1\":{\n         \"fan1_input\": 0.000\n      }\n   }\n}\n",
+      "stderr": ""
+    },
+    "nvidia_smi": {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,memory.total",
+        "--format=csv,noheader"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "NVIDIA GeForce RTX 5060 Laptop GPU, 595.84, 8151 MiB\n",
+      "stderr": ""
+    },
+    "project_git_head": {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "db4ef7b63b5b6f9916e4d618180431c75c929bdb\n",
+      "stderr": ""
+    },
+    "project_git_status": {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "?? AGENT.md\n?? docs/reference/\n?? experiments/EXP-2026-002_so101_inventory/\n?? projects/\n",
+      "stderr": ""
+    },
+    "lerobot_git_describe": {
+      "command": [
+        "git",
+        "describe",
+        "--tags",
+        "--always",
+        "--dirty"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "v0.6.0-dirty\n",
+      "stderr": ""
+    },
+    "lerobot_git_head": {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "30da8e687a6dfc617fcd94afc367ac7071c376ce\n",
+      "stderr": ""
+    },
+    "lerobot_git_status": {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": " M examples/notebooks/quickstart.ipynb\n",
+      "stderr": ""
+    },
+    "python_packages": {
+      "command": [
+        "/home/lucas/intel_ws/openvino_env/bin/python",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "stdout": "action-msgs==2.0.4\naction-tutorials-interfaces==0.33.11\naction-tutorials-py==0.33.11\nactionlib-msgs==5.3.8\nament-cmake-test==2.5.6\nament-copyright==0.17.5\nament-cppcheck==0.17.5\nament-cpplint==0.17.5\nament-flake8==0.17.5\nament-index-python==1.8.4\nament-lint==0.17.5\nament-lint-cmake==0.17.5\nament-package==0.16.5\nament-pep257==0.17.5\nament-uncrustify==0.17.5\nament-xmllint==0.17.5\nangles==1.16.1\nanyio==4.14.2\nargon2-cffi==25.1.0\nargon2-cffi-bindings==25.1.0\narrow==1.4.0\nasttokens==3.0.2\nasync-lru==2.3.0\nattrs==26.1.0\nbabel==2.18.0\nbeautifulsoup4==4.15.0\nbleach==6.4.0\nbuiltin-interfaces==2.0.4\ncertifi==2026.6.17\ncffi==2.1.0\ncharset-normalizer==3.4.9\ncomm==0.2.3\ncomposition-interfaces==2.0.4\ncontourpy==1.3.3\ncv-bridge==4.1.0\ncycler==0.12.1\ndebugpy==1.8.21\ndecorator==5.3.1\ndefusedxml==0.7.1\ndemo-nodes-py==0.33.11\ndiagnostic-msgs==5.3.8\ndomain-coordinator==0.12.1\nexample-interfaces==0.12.1\nexamples-rclpy-executors==0.19.7\nexamples-rclpy-minimal-action-client==0.19.7\nexamples-rclpy-minimal-action-server==0.19.7\nexamples-rclpy-minimal-client==0.19.7\nexamples-rclpy-minimal-publisher==0.19.7\nexamples-rclpy-minimal-service==0.19.7\nexamples-rclpy-minimal-subscriber==0.19.7\nexecuting==2.2.1\nfastjsonschema==2.21.2\nfilelock==3.32.0\nfonttools==4.63.0\nfqdn==1.5.1\nfsspec==2026.6.0\ngeometry-msgs==5.3.8\nh11==0.16.0\nhttpcore==1.0.9\nhttpx==0.28.1\nidna==3.18\nimage-geometry==4.1.0\ninteractive-markers==2.5.5\nipykernel==6.31.0\nipython==9.15.0\nipython_pygments_lexers==1.1.1\nipywidgets==8.1.8\nisoduration==20.11.0\njedi==0.20.0\nJinja2==3.1.6\njoblib==1.5.3\njson5==0.15.0\njsonpointer==3.1.1\njsonschema==4.26.0\njsonschema-specifications==2025.9.1\njupyter-events==0.12.1\njupyter-lsp==2.3.1\njupyter_builder==1.1.1\njupyter_client==8.9.1\njupyter_core==5.9.1\njupyter_server==2.20.0\njupyter_server_terminals==0.5.4\njupyterlab==4.6.2\njupyterlab_pygments==0.3.0\njupyterlab_server==2.28.0\njupyterlab_widgets==3.0.16\nkiwisolver==1.5.0\nlark==1.3.1\nlaser-geometry==2.7.2\nlaunch==3.4.11\nlaunch-ros==0.26.12\nlaunch-testing==3.4.11\nlaunch-testing-ros==0.26.12\nlaunch-xml==3.4.11\nlaunch-yaml==3.4.11\nlifecycle-msgs==2.0.4\nlogging-demo==0.33.11\nmap-msgs==2.4.1\nmarkdown-it-py==4.2.0\nMarkupSafe==3.0.3\nmatplotlib==3.11.1\nmatplotlib-inline==0.2.2\nmdurl==0.1.2\nmessage-filters==4.11.17\nmistune==3.3.3\nmpmath==1.3.0\nnarwhals==2.24.0\nnav-msgs==5.3.8\nnbclient==0.11.0\nnbconvert==7.17.1\nnbformat==5.10.4\nnest-asyncio==1.6.0\nnetworkx==3.4.2\nninja==1.13.0\nnncf==3.3.0\nnotebook_shim==0.2.4\nnumpy==2.4.6\nopencv-python==5.0.0.93\nopenvino==2026.3.1\nopenvino-telemetry==2025.2.0\nosrf-pycommon==2.1.7\npackaging==26.2\npandocfilters==1.5.1\nparso==0.8.7\npcl-msgs==1.0.0\npendulum-msgs==0.33.11\npexpect==4.9.0\npillow==12.3.0\nplatformdirs==4.11.0\npolars==1.43.0\npolars-runtime-32==1.43.0\nprometheus_client==0.25.0\nprompt_toolkit==3.0.52\npsutil==7.2.2\nptyprocess==0.7.0\npure_eval==0.2.3\npycparser==3.0\npydot==3.0.4\nPygments==2.20.0\npyparsing==3.3.2\npython-dateutil==2.9.0.post0\npython-json-logger==4.1.0\npython-qt-binding==2.2.2\nPyYAML==6.0.3\npyzmq==27.1.0\nqt-dotgraph==2.7.6\nqt-gui==2.7.6\nqt-gui-cpp==2.7.6\nqt-gui-py-common==2.7.6\nquality-of-service-demo-py==0.33.11\nrcl-interfaces==2.0.4\nrclpy==7.1.11\nrcutils==6.7.6\nreferencing==0.37.0\nrequests==2.34.2\nresource-retriever==3.4.4\nrfc3339-validator==0.1.4\nrfc3986-validator==0.1.1\nrfc3987-syntax==1.1.0\nrich==15.0.0\nrmw-dds-common==3.1.1\nros2action==0.32.10\nros2bag==0.26.11\nros2bag-mcap-cli==0.26.11\nros2bag-sqlite3-cli==0.26.11\nros2cli==0.32.10\nros2component==0.32.10\nros2doctor==0.32.10\nros2interface==0.32.10\nros2launch==0.26.12\nros2lifecycle==0.32.10\nros2multicast==0.32.10\nros2node==0.32.10\nros2param==0.32.10\nros2pkg==0.32.10\nros2plugin==5.4.5\nros2run==0.32.10\nros2service==0.32.10\nros2topic==0.32.10\nrosbag2-interfaces==0.26.11\nrosbag2-py==0.26.11\nrosgraph-msgs==2.0.4\nrosidl-adapter==4.6.9\nrosidl-cli==4.6.9\nrosidl-cmake==4.6.9\nrosidl-generator-c==4.6.9\nrosidl-generator-cpp==4.6.9\nrosidl-generator-dds-idl==0.11.1\nrosidl-generator-py==0.22.2\nrosidl-generator-type-description==4.6.9\nrosidl-parser==4.6.9\nrosidl-pycommon==4.6.9\nrosidl-runtime-py==0.13.2\nrosidl-typesupport-c==3.2.3\nrosidl-typesupport-cpp==3.2.3\nrosidl-typesupport-fastrtps-c==3.6.4\nrosidl-typesupport-fastrtps-cpp==3.6.4\nrosidl-typesupport-introspection-c==4.6.9\nrosidl-typesupport-introspection-cpp==4.6.9\nrpds-py==2026.6.3\nrpyutils==0.4.2\nrqt==1.6.4\nrqt-action==2.2.1\nrqt-bag==1.5.6\nrqt-bag-plugins==1.5.6\nrqt-console==2.2.2\nrqt-graph==1.5.6\nrqt-gui==1.6.4\nrqt-gui-py==1.6.4\nrqt-msg==1.5.2\nrqt-plot==1.4.5\nrqt-publisher==1.7.3\nrqt-py-common==1.6.4\nrqt-py-console==1.2.3\nrqt-reconfigure==1.6.4\nrqt-service-caller==1.2.2\nrqt-shell==1.2.3\nrqt-srv==1.2.3\nrqt-topic==1.7.5\nsafetensors==0.8.0\nscikit-learn==1.9.0\nscipy==1.18.0\nSend2Trash==2.1.0\nsensor-msgs==5.3.8\nsensor-msgs-py==5.3.8\nservice-msgs==2.0.4\nsetuptools==83.0.0\nshape-msgs==5.3.8\nsix==1.17.0\nsoupsieve==2.9\nsros2==0.13.6\nstack-data==0.6.3\nstatistics-msgs==2.0.4\nstd-msgs==5.3.8\nstd-srvs==5.3.8\nstereo-msgs==5.3.8\nsympy==1.14.0\ntabulate==0.10.0\nteleop-twist-keyboard==2.4.1\nterminado==0.18.1\ntf2-geometry-msgs==0.36.21\ntf2-kdl==0.36.21\ntf2-msgs==0.36.21\ntf2-py==0.36.21\ntf2-ros-py==0.36.21\ntf2-sensor-msgs==0.36.21\ntf2-tools==0.36.21\nthreadpoolctl==3.6.0\ntinycss2==1.5.1\ntopic-monitor==0.33.11\ntorch==2.10.0+cpu\ntorchvision==0.25.0+cpu\ntornado==6.5.7\ntqdm==4.69.0\ntraitlets==5.15.1\ntrajectory-msgs==5.3.8\nturtle-tf2-py==0.5.0\nturtlesim==1.8.4\ntype-description-interfaces==2.0.4\ntyping_extensions==4.16.0\ntzdata==2026.3\nultralytics==8.4.43\nultralytics-thop==2.0.20\nunique-identifier-msgs==2.5.1\nuri-template==1.3.0\nurllib3==2.7.0\nvisualization-msgs==5.3.8\nwcwidth==0.8.2\nwebcolors==25.10.0\nwebencodings==0.5.1\nwebsocket-client==1.9.0\nwidgetsnbextension==4.0.15\n",
+      "stderr": ""
+    }
+  }
+}

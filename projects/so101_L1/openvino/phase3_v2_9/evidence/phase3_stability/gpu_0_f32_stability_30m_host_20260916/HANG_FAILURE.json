@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "recorded_at_local_date": "2026-09-16",
+  "run_id": "gpu_0_f32_stability_30m_host_20260916",
+  "status": "FAIL_NATIVE_INFERENCE_HANG",
+  "device": "GPU.0",
+  "precision": "f32",
+  "requested_duration_minutes": 30,
+  "last_completed_inference": {
+    "iteration": 4961,
+    "elapsed_seconds": 135.02336759999162,
+    "latency_ms": 29.681409,
+    "finite": true,
+    "correct": true,
+    "max_abs_error": 0.000001430511474609375
+  },
+  "observed_failure": {
+    "symptom": "The next synchronous OpenVINO GPU inference did not return; progress and CSV writes stopped.",
+    "python_sigint_response": "NONE_AFTER_MORE_THAN_10_SECONDS",
+    "process_pid": 152967,
+    "process_state_at_diagnosis": "Rl+",
+    "process_cpu_percent_at_diagnosis": 99.5,
+    "recovery": "SIGTERM sent to the exact verified PID; process exited.",
+    "result_json_generated": false
+  },
+  "interpretation": {
+    "stability_gate": "FAIL",
+    "correctness_before_hang": "PASS",
+    "root_cause": "NOT_YET_LOCALIZED",
+    "scope": "This is evidence of a host GPU.0/OpenVINO native inference hang under the current long-run configuration; it is not a numerical correctness failure and does not establish the exact plugin, driver, kernel, scheduling or hardware cause."
+  },
+  "evidence": {
+    "latencies_csv_rows_including_header": 4962,
+    "latencies_csv_sha256": "94728b3535ae0867229668763c0095b38456b8911b61791bef7c9a50d62092d9"
+  },
+  "next_action": "Do not repeat the unguarded 30-minute run. Add an external per-inference watchdog and run a bounded reproduction/diagnostic before any new acceptance attempt."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "reviewed_at_local_date": "2026-09-16",
+  "status": "FAIL_HANG_REPRODUCED_AND_RECOVERED",
+  "test_intent": "A/B test whether in-process telemetry is required to reproduce the GPU.0 hang.",
+  "configuration_boundary": {
+    "worker_telemetry": "disabled",
+    "supervisor_telemetry": "enabled at 5-second intervals",
+    "watchdog_stall_seconds": 15.0
+  },
+  "last_completed_inference": {
+    "iteration": 122,
+    "elapsed_seconds": 3.5802072060178034,
+    "latency_ms": 32.159262,
+    "finite": true,
+    "correct": true,
+    "max_abs_error": 1.430511474609375e-06
+  },
+  "hang": {
+    "seconds_without_latency_file_growth": 15.062712462997297,
+    "worker_cpu_percent": 99.9,
+    "worker_status": "running",
+    "worker_rss_bytes": 631271424,
+    "worker_threads": 21,
+    "termination": "SIGTERM",
+    "watchdog_recovery": "PASS"
+  },
+  "hypothesis_result": {
+    "hypothesis": "In-process telemetry collection is required to trigger the GPU.0 hang.",
+    "verdict": "REJECTED",
+    "reason": "The hang reproduced while worker telemetry was disabled and telemetry was collected only by the parent supervisor."
+  },
+  "supported_conclusions": [
+    "GPU.0 FP32 produced correct finite outputs through the last completed inference.",
+    "The monolithic stability worker can hang even without in-process telemetry.",
+    "The external supervisor detected the stall and recovered control by terminating the exact child PID.",
+    "The prior in-process telemetry explanation is no longer supported."
+  ],
+  "unsupported_conclusions": [
+    "This experiment does not identify the exact root cause inside OpenVINO, the Intel GPU plugin, the driver, file I/O, or the Python harness.",
+    "This experiment does not prove that external telemetry causes or prevents the hang.",
+    "This five-minute failed diagnostic is not a stability acceptance run."
+  ],
+  "remaining_boundary": {
+    "failing_path": "The monolithic stability worker performs inference, correctness checks, latency bookkeeping, and per-inference CSV handling in one process.",
+    "previously_successful_path": "The guarded diagnostic used a minimal inference child and parent-side heartbeat logging for five minutes.",
+    "interpretation": "The trigger lies in one of the remaining path differences or is intermittent; further isolation or an explicit isolated-worker architecture decision is required."
+  },
+  "decision_state": "HUMAN_ARCHITECTURE_DECISION_REQUIRED",
+  "evidence_sha256": {
+    "supervisor_result_json": "e4cc789011767edf743a62787feee128f64158499f4f98190bfe72c956eb2994",
+    "latencies_csv": "fb4e73b4434b027875fe8415540a4392c2f06815b8f8d316c695bc1bd4b7ff6d",
+    "supervisor_telemetry_csv": "fcc72d2603467225f52fb4173f48c84b6dc8d6112f02b6bddad2d433f59295dd"
+  }
+}

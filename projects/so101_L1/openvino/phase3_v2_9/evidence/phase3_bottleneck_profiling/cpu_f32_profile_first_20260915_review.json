@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "reviewed_at_local_date": "2026-09-15",
+  "run_id": "cpu_f32_profile_first_20260915",
+  "technical_status": "PASS",
+  "learning_status": "PASS",
+  "correctness_gate": "PASS",
+  "profile_scope": "OpenVINO synchronous CPU FP32 inference only; preprocessing and postprocessing excluded.",
+  "wall_clock_latency_ms": {
+    "mean": 52.8401336,
+    "p50": 52.365245,
+    "p95": 60.05769295,
+    "p99": 63.20144739
+  },
+  "profiled_operation_count": 478,
+  "aggregate_mean_profiled_real_time_ms": {
+    "all_operations": 51.8077,
+    "convolution": 30.5604,
+    "convolution_share_percent": 58.99,
+    "fully_connected": 17.68685,
+    "fully_connected_share_percent": 34.14,
+    "top_25_operations": 40.4749,
+    "top_25_share_percent": 78.13
+  },
+  "dominant_compute_interpretation": {
+    "primary": "Vision-backbone convolution family, especially early high-spatial-resolution convolutions.",
+    "secondary": "Transformer fully-connected execution family over tensors including [302,1,512].",
+    "single_worst_node": "mul_2/aten.mul.Tensor/Multiply",
+    "single_worst_runtime_type": "Convolution",
+    "single_worst_mean_ms": 2.02025,
+    "single_worst_share_of_profiled_sum_percent": 3.9,
+    "conclusion": "The CPU bottleneck is distributed across repeated convolution and fully-connected compute rather than one pathological operation."
+  },
+  "static_graph_checks": [
+    {
+      "node": "mul_2/aten.mul.Tensor/Multiply",
+      "graph_type": "Convolution",
+      "inputs": ["[1,3,480,640]", "[64,3,7,7]"],
+      "output": "[1,64,240,320]"
+    },
+    {
+      "node": "mul_11/aten.mul.Tensor/Multiply",
+      "graph_type": "Convolution",
+      "inputs": ["[1,64,120,160]", "[64,64,3,3]"],
+      "output": "[1,64,120,160]"
+    },
+    {
+      "node": "linear_7/aten.linear.default/Add",
+      "graph_type_before_runtime_fusion": "Add",
+      "runtime_profile_type": "FullyConnected",
+      "output": "[302,1,512]"
+    }
+  ],
+  "interpretation_limits": [
+    "Profiling overhead means these latency percentiles do not replace the formal benchmark.",
+    "Operation times may overlap or execute in parallel, so their sum is not a general end-to-end formula.",
+    "Runtime fusion can make a reported node represent multiple graph operations.",
+    "This profile cannot localize preprocessing, postprocessing, robot I/O, queues or system safety paths because they are outside the measured scope.",
+    "The result applies to CPU FP32 on this frozen input and model; it is not automatically the GPU bottleneck ranking."
+  ],
+  "independent_verification": {
+    "verified_at_local_date": "2026-09-15",
+    "concept_level": "PASS",
+    "interface_level": "PASS",
+    "demonstrated_understanding": [
+      "The convolution family remains the primary cost even if the single slowest node is removed, because that node accounts for only about 3.9% of the profiled sum.",
+      "Profiling instrumentation adds observation overhead and therefore does not replace the formal latency benchmark.",
+      "Different devices require separate profiling because plugins, kernels, operator support, fusion, scheduling and memory behavior differ.",
+      "The observed CPU bottleneck is dispersed across many convolution and fully-connected nodes rather than caused by one unique node."
+    ]
+  },
+  "evidence_sha256": {
+    "profile_json": "136267eb3d414b023e921d3406064d2572431b70fa7f8789999e57ca737e785a",
+    "operation_summary_csv": "4605ae68ea6861f8da41702a192e7388296a2283282fdcb3fef449846fa9cde9",
+    "raw_profile_csv": "1cc430ec6331aac8ba2f5f464150b0cc0db1f91f41e49e6de4ac64da3466095e"
+  }
+}

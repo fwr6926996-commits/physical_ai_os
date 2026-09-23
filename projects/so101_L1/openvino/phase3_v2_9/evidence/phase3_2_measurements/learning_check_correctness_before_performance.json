@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "capability": "correctness-gated performance benchmarking",
+  "checked_at_local_date": "2026-09-14",
+  "question": "Why is NPU FP16 excluded from performance comparison even though compile and inference completed?",
+  "initial_human_response": "I do not know.",
+  "human_restatement": "NPU FP16 can compile and run, but its output is not consistent with the reference, so its speed cannot count as a qualified deployment-backend score.",
+  "restatement_assessment": "PASS",
+  "status": "PASS",
+  "remediation": "Treat FP32, FP16, INT8 and INT16 as First Encounter concepts; teach the minimum deployment mental model and perform independent verification before Phase 3.3.",
+  "engineering_evidence_unchanged": true,
+  "completed_by": "precision_mental_model_verification_round2.json"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "gpu_0_f32_20260914T140727Z",
+  "status": "PASS",
+  "logical_device": "GPU.0",
+  "runtime_device": "GPU",
+  "requested_inference_precision": "f32",
+  "warmup_iterations": 10,
+  "measured_iterations": 100,
+  "stages_ms": {
+    "preprocessing": {
+      "min": 14.005197,
+      "mean": 18.205587780000002,
+      "p50": 17.995343,
+      "p95": 21.255538899999998,
+      "p99": 26.05182941000002,
+      "max": 29.936729
+    },
+    "inference": {
+      "min": 17.14236,
+      "mean": 39.42285034,
+      "p50": 20.6623115,
+      "p95": 71.36959169999999,
+      "p99": 72.03915895,
+      "max": 72.194188
+    },
+    "postprocessing": {
+      "min": 0.012173,
+      "mean": 0.013169489999999997,
+      "p50": 0.012567,
+      "p95": 0.0142854,
+      "p99": 0.017303900000000174,
+      "max": 0.050459
+    }
+  },
+  "sum_of_independent_stage_percentiles_ms": {
+    "p50": 38.6702215,
+    "p95": 92.63941599999998,
+    "p99": 98.10829226000003
+  },
+  "interpretation_limit": "Stages run in two isolated environments; percentile sums are diagnostic, not a same-process end-to-end distribution.",
+  "evidence": {
+    "prepost": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_prepost.json",
+    "inference": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/evidence/phase3_2_measurements/gpu_0_f32_20260914T140727Z_inference.json"
+  }
+}

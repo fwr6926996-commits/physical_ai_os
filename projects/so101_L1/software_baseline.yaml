@@ -1,0 +1,52 @@
+schema_version: 1
+phase: "Phase 3.0 Software Baseline"
+frozen_at_utc: "2026-09-14T11:51:17Z"
+review_status: PASS
+
+source_policy_environment:
+  purpose: "Load the LeRobot ACT checkpoint and produce PyTorch/export reference artifacts."
+  python_executable: /home/lucas/miniconda3/envs/lerobot/bin/python
+  python_version: "3.12.13"
+  packages:
+    lerobot: "0.6.0"
+    torch: "2.11.0+cu130"
+    torchvision: "0.26.0+cu130"
+    numpy: "2.2.6"
+  lerobot_source:
+    path: /home/lucas/lerobot
+    version_state: v0.6.0-dirty
+    commit: 30da8e687a6dfc617fcd94afc367ac7071c376ce
+    preserved_user_change: examples/notebooks/quickstart.ipynb
+  cuda_policy: "CUDA packages may exist in this source environment, but Phase 3 inference evidence must explicitly isolate GPU.1/RTX."
+
+openvino_deployment_environment:
+  purpose: "Convert, compile, load, validate and benchmark the OpenVINO model."
+  python_executable: /home/lucas/intel_ws/openvino_env/bin/python
+  python_version: "3.12.3"
+  packages:
+    openvino: "2026.3.1-22476-759c5a6ab8c-releases/2026/3"
+    torch: "2.10.0+cpu"
+    torchvision: "0.25.0+cpu"
+    numpy: "2.4.6"
+    nncf: "3.3.0"
+    lerobot: NOT_INSTALLED
+
+frozen_inputs:
+  dataset: /data/datasets/so101_pick_place_cube_v1_20260803_014054
+  checkpoint: /data/checkpoints/act_so101_50ep_10k/checkpoints/last/pretrained_model
+  checkpoint_model_sha256: efba5cb64e5e22e0362ec19e293d378ae2cd4f6947f9e15823b505ce32eab4a1
+  checkpoint_config_sha256: 730dd2cd48dd6ddf345e84b05e21b6e74012f6d891e41012188716119f23b6ab
+  checkpoint_preprocessor_sha256: 07ca6943c04ae1a10d8e2148b6f2c85f1a2b542b5c6cc4d435665911a5672dcb
+  checkpoint_postprocessor_sha256: 648b415125a183dfd6cbc47c1dc04ab3f2d912654ef22a12ca5e8b93d7d85cdd
+
+governing_sources:
+  agent_policy:
+    path: /home/lucas/physical_ai_os/AGENT.md
+    sha256: d6efebf556bb072c8800c57b5b685f32ba21c17edc7e0846f6efe73a7432b933
+  execution_book:
+    path: /home/lucas/physical_ai_os/docs/reference/l1/SO-101_PhysicalAI_Runtime_L1_最终执行书_V2.9_S1S2_EmploymentGate增强版.docx
+    sha256: 95cd404a72f0c03435b0728aa0bd169f78a6b782f9063a4b6659cbc953bec5ef
+
+evidence:
+  machine_snapshot: "openvino/phase3_v2_9/evidence/phase3_0_baseline/baseline_20260914T115117Z.json"
+  human_review: "openvino/phase3_v2_9/evidence/phase3_0_baseline/baseline_review.json"

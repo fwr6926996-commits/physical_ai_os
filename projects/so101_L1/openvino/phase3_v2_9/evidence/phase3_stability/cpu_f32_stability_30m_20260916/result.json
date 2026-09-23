@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "run_id": "cpu_f32_stability_30m_20260916",
+  "started_at_utc": "2026-09-16T02:07:46.027552+00:00",
+  "ended_at_utc": "2026-09-16T02:37:47.078418+00:00",
+  "status": "HARD_GATES_PASS_DIAGNOSTIC_REVIEW_PENDING",
+  "scope": "OpenVINO synchronous FP32 inference only; preprocessing, postprocessing, profiling and robot/system paths excluded.",
+  "device": {
+    "logical": "CPU",
+    "runtime": "CPU",
+    "full_name": "Intel(R) Core(TM) Ultra 7 255H",
+    "available_devices": [
+      "CPU",
+      "GPU.0",
+      "GPU.1",
+      "NPU"
+    ]
+  },
+  "environment": {
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3"
+  },
+  "configuration": {
+    "performance_hint": "LATENCY",
+    "inference_precision": "f32",
+    "requested_duration_minutes": 30.0,
+    "warmup_iterations": 10,
+    "telemetry_interval_seconds": 5.0,
+    "latency_window_seconds": 60.0
+  },
+  "artifacts": {
+    "ir_xml_sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "ir_bin_sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+    "reference_input_sha256": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output_sha256": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a"
+  },
+  "compile_ms": 331.596305,
+  "initial_correctness": {
+    "rtol": 0.0001,
+    "atol": 1e-05,
+    "max_abs_error": 2.6226043701171875e-06,
+    "mean_abs_error": 4.817048875338514e-07,
+    "status": "PASS"
+  },
+  "execution": {
+    "actual_duration_seconds": 1800.0338681419962,
+    "iterations": 33596,
+    "maximum_abs_error": 2.6226043701171875e-06,
+    "hard_gates": {
+      "completed_requested_duration": true,
+      "inference_exceptions": 0,
+      "nonfinite_outputs": 0,
+      "correctness_failures": 0,
+      "process_crashes": 0,
+      "interrupted": false
+    },
+    "failure_message": null,
+    "failure_traceback": null
+  },
+  "latency_ms": {
+    "min": 45.51955,
+    "mean": 53.25352932643767,
+    "p50": 52.79327,
+    "p95": 59.883573999999996,
+    "p99": 62.52923100000002,
+    "max": 109.834441
+  },
+  "latency_histogram_ms": {
+    "<20": 0,
+    "20-40": 0,
+    "40-60": 32016,
+    "60-80": 1568,
+    "80-100": 11,
+    ">=100": 1
+  },
+  "window_summaries": [
+    {
+      "window_index": 0,
+      "start_s": 0.0,
+      "end_s": 60.0,
+      "iterations": 1127,
+      "latency_ms": {
+        "min": 45.902386,
+        "mean": 52.95583188287489,
+        "p50": 52.867393,
+        "p95": 58.0776071,
+        "p99": 61.87100892,
+        "max": 70.40038
+      }
+    },
+    {
+      "window_index": 1,
+      "start_s": 60.0,
+      "end_s": 120.0,
+      "iterations": 1134,
+      "latency_ms": {
+        "min": 45.841782,
+        "mean": 52.59543838977072,
+        "p50": 52.4695655,
+        "p95": 57.06358305,
+        "p99": 62.22691531000001,
+        "max": 75.549296
+      }
+    },
+    {
+      "window_index": 2,
+      "start_s": 120.0,
+      "end_s": 180.0,
+      "iterations": 1139,
+      "latency_ms": {
+        "min": 45.954073,
+        "mean": 52.38907134942932,
+        "p50": 52.350408,
+        "p95": 56.511784,
+        "p99": 60.482613759999985,
+        "max": 81.086548
+      }
+    },
+    {
+      "window_index": 3,
+      "start_s": 180.0,
+      "end_s": 240.0,
+      "iterations": 1130,
+      "latency_ms": {
+        "min": 46.086475,
+        "mean": 52.78356100088495,
+        "p50": 52.5035395,
+        "p95": 58.4834919,
+        "p99": 63.73209601000001,
+        "max": 71.706891
+      }
+    },
+    {
+      "window_index": 4,
+      "start_s": 240.0,
+      "end_s": 300.0,
+      "iterations": 1133,
+      "latency_ms": {
+        "min": 45.875136,
+        "mean": 52.60313624271845,
+        "p50": 52.513085,
+        "p95": 56.7804512,
+        "p99": 60.97270976000001,
+        "max": 66.984595
+      }
+    },
+    {
+      "window_index": 5,
+      "start_s": 300.0,
+      "end_s": 360.0,
+      "iterations": 1125,
+      "latency_ms": {
+        "min": 45.868848,
+        "mean": 53.029748026666674,
+        "p50": 52.548391,
+        "p95": 59.0161772,
+        "p99": 67.10944764,
+        "max": 109.834441
+      }
+    },
+    {
+      "window_index": 6,
+      "start_s": 360.0,
+      "end_s": 420.0,
+      "iterations": 1133,
+      "latency_ms": {
+        "min": 46.219654,
+        "mean": 52.64196877934687,
+        "p50": 52.441782,
+        "p95": 57.44501339999999,
+        "p99": 62.06778536000005,
+        "max": 86.522323
+      }
+    },
+    {
+      "window_index": 7,
+      "start_s": 420.0,
+      "end_s": 480.0,
+      "iterations": 1129,
+      "latency_ms": {
+        "min": 45.888304,
+        "mean": 52.79965071479185,
+        "p50": 52.57721,
+        "p95": 58.45497399999999,
+        "p99": 61.71070448000001,
+        "max": 73.991287
+      }
+    },
+    {
+      "window_index": 8,
+      "start_s": 480.0,
+      "end_s": 540.0,
+      "iterations": 1125,
+      "latency_ms": {
+        "min": 45.936848,
+        "mean": 53.04878921955555,
+        "p50": 52.735693,
+        "p95": 59.319399999999995,
+        "p99": 63.22880204,
+        "max": 68.086083
+      }
+    },
+    {
+      "window_index": 9,
+      "start_s": 540.0,
+      "end_s": 600.0,
+      "iterations": 1124,
+      "latency_ms": {
+        "min": 45.8727,
+        "mean": 53.06137817348755,
+        "p50": 52.653707,
+        "p95": 59.71328414999999,
+        "p99": 62.252170209999996,
+        "max": 71.556317
+      }
+    },
+    {
+      "window_index": 10,
+      "start_s": 600.0,
+      "end_s": 660.0,
+      "iterations": 1119,
+      "latency_ms": {
+        "min": 45.937828,
+        "mean": 53.27841563002681,
+        "p50": 52.797328,
+        "p95": 59.874585800000006,
+        "p99": 62.77731313999999,
+        "max": 72.571305
+      }
+    },
+    {
+      "window_index": 11,
+      "start_s": 660.0,
+      "end_s": 720.0,
+      "iterations": 1124,
+      "latency_ms": {
+        "min": 45.939619,
+        "mean": 53.05618967526691,
+        "p50": 52.6016425,
+        "p95": 59.610664899999996,
+        "p99": 61.71267095,
+        "max": 68.353059
+      }
+    },
+    {
+      "window_index": 12,
+      "start_s": 720.0,
+      "end_s": 780.0,
+      "iterations": 1121,
+      "latency_ms": {
+        "min": 46.11984,
+        "mean": 53.17111617573595,
+        "p50": 52.7561,
+        "p95": 59.770706,
+        "p99": 62.38622979999999,
+        "max": 72.332225
+      }
+    },
+    {
+      "window_index": 13,
+      "start_s": 780.0,
+      "end_s": 840.0,
+      "iterations": 1120,
+      "latency_ms": {
+        "min": 45.907061,
+        "mean": 53.20647601875,
+        "p50": 52.765697,
+        "p95": 59.560055,
+        "p99": 61.92004325999999,
+        "max": 70.81776
+      }
+    },
+    {
+      "window_index": 14,
+      "start_s": 840.0,
+      "end_s": 900.0,
+      "iterations": 1119,
+      "latency_ms": {
+        "min": 46.187473,
+        "mean": 53.318855005361925,
+        "p50": 52.604273,
+        "p95": 60.3732085,
+        "p99": 62.42740145999999,
+        "max": 73.260825
+      }
+    },
+    {
+      "window_index": 15,
+      "start_s": 900.0,
+      "end_s": 960.0,
+      "iterations": 1116,
+      "latency_ms": {
+        "min": 45.51955,
+        "mean": 53.478034887992834,
+        "p50": 52.8733235,
+        "p95": 60.0640245,
+        "p99": 62.338100299999994,
+        "max": 92.155411
+      }
+    },
+    {
+      "window_index": 16,
+      "start_s": 960.0,
+      "end_s": 1020.0,
+      "iterations": 1122,
+      "latency_ms": {
+        "min": 45.52578,
+        "mean": 53.13149754278074,
+        "p50": 52.7555185,
+        "p95": 59.783554650000006,
+        "p99": 62.058004679999996,
+        "max": 71.298207
+      }
+    },
+    {
+      "window_index": 17,
+      "start_s": 1020.0,
+      "end_s": 1080.0,
+      "iterations": 1117,
+      "latency_ms": {
+        "min": 46.317911,
+        "mean": 53.37516141539839,
+        "p50": 52.801652,
+        "p95": 60.2895916,
+        "p99": 62.06326144,
+        "max": 66.182465
+      }
+    },
+    {
+      "window_index": 18,
+      "start_s": 1080.0,
+      "end_s": 1140.0,
+      "iterations": 1114,
+      "latency_ms": {
+        "min": 45.906434,
+        "mean": 53.486555667863556,
+        "p50": 52.950301499999995,
+        "p95": 60.0699707,
+        "p99": 62.30891934999999,
+        "max": 73.229351
+      }
+    },
+    {
+      "window_index": 19,
+      "start_s": 1140.0,
+      "end_s": 1200.0,
+      "iterations": 1109,
+      "latency_ms": {
+        "min": 45.971503,
+        "mean": 53.746115865644725,
+        "p50": 53.103127,
+        "p95": 60.5635402,
+        "p99": 62.77858848000001,
+        "max": 75.015771
+      }
+    },
+    {
+      "window_index": 20,
+      "start_s": 1200.0,
+      "end_s": 1260.0,
+      "iterations": 1109,
+      "latency_ms": {
+        "min": 46.056301,
+        "mean": 53.81127379350767,
+        "p50": 53.110288,
+        "p95": 61.13821999999999,
+        "p99": 65.23567928000008,
+        "max": 75.243506
+      }
+    },
+    {
+      "window_index": 21,
+      "start_s": 1260.0,
+      "end_s": 1320.0,
+      "iterations": 1109,
+      "latency_ms": {
+        "min": 46.050499,
+        "mean": 53.730977823264205,
+        "p50": 53.24271,
+        "p95": 59.9536746,
+        "p99": 62.146452120000006,
+        "max": 68.685602
+      }
+    },
+    {
+      "window_index": 22,
+      "start_s": 1320.0,
+      "end_s": 1380.0,
+      "iterations": 1112,
+      "latency_ms": {
+        "min": 46.131348,
+        "mean": 53.66585268794964,
+        "p50": 52.994710999999995,
+        "p95": 60.59010515,
+        "p99": 62.37407652,
+        "max": 69.961293
+      }
+    },
+    {
+      "window_index": 23,
+      "start_s": 1380.0,
+      "end_s": 1440.0,
+      "iterations": 1114,
+      "latency_ms": {
+        "min": 46.34256,
+        "mean": 53.52724165798923,
+        "p50": 52.977509,
+        "p95": 60.1532067,
+        "p99": 62.319932299999984,
+        "max": 68.529293
+      }
+    },
+    {
+      "window_index": 24,
+      "start_s": 1440.0,
+      "end_s": 1500.0,
+      "iterations": 1111,
+      "latency_ms": {
+        "min": 45.651854,
+        "mean": 53.6400743690369,
+        "p50": 53.045083,
+        "p95": 60.4940385,
+        "p99": 62.19698520000001,
+        "max": 70.689878
+      }
+    },
+    {
+      "window_index": 25,
+      "start_s": 1500.0,
+      "end_s": 1560.0,
+      "iterations": 1108,
+      "latency_ms": {
+        "min": 45.680566,
+        "mean": 53.81717970938628,
+        "p50": 53.163585499999996,
+        "p95": 60.956852749999996,
+        "p99": 63.93604463000005,
+        "max": 90.447015
+      }
+    },
+    {
+      "window_index": 26,
+      "start_s": 1560.0,
+      "end_s": 1620.0,
+      "iterations": 1112,
+      "latency_ms": {
+        "min": 45.823177,
+        "mean": 53.64239347571943,
+        "p50": 53.05198,
+        "p95": 60.00719765,
+        "p99": 62.45157531000004,
+        "max": 69.550128
+      }
+    },
+    {
+      "window_index": 27,
+      "start_s": 1620.0,
+      "end_s": 1680.0,
+      "iterations": 1113,
+      "latency_ms": {
+        "min": 45.951725,
+        "mean": 53.621150324348605,
+        "p50": 53.03344,
+        "p95": 60.5040274,
+        "p99": 62.61854203999999,
+        "max": 70.799703
+      }
+    },
+    {
+      "window_index": 28,
+      "start_s": 1680.0,
+      "end_s": 1740.0,
+      "iterations": 1115,
+      "latency_ms": {
+        "min": 45.859522,
+        "mean": 53.46701311928251,
+        "p50": 52.929618,
+        "p95": 60.1291766,
+        "p99": 61.99987957999999,
+        "max": 65.887939
+      }
+    },
+    {
+      "window_index": 29,
+      "start_s": 1740.0,
+      "end_s": 1800.0,
+      "iterations": 1112,
+      "latency_ms": {
+        "min": 45.933203,
+        "mean": 53.61556751348921,
+        "p50": 53.067623,
+        "p95": 60.37094555,
+        "p99": 62.12393714000001,
+        "max": 76.83417
+      }
+    },
+    {
+      "window_index": 30,
+      "start_s": 1800.0,
+      "end_s": 1860.0,
+      "iterations": 1,
+      "latency_ms": {
+        "min": 53.964133,
+        "mean": 53.964133,
+        "p50": 53.964133,
+        "p95": 53.964133,
+        "p99": 53.964133,
+        "max": 53.964133
+      }
+    }
+  ],
+  "telemetry_summary": {
+    "samples": 362,
+    "process_rss_bytes": {
+      "first": 744062976,
+      "last": 757944320,
+      "min": 744062976,
+      "max": 757944320
+    },
+    "system_available_memory_bytes": {
+      "first": 12155191296,
+      "last": 12281286656
+    },
+    "package_temperature_c": {
+      "first": 64.0,
+      "last": 76.0,
+      "max": 91.0
+    },
+    "max_sensor_temperature_c": 91.0
+  },
+  "latency_csv": "latencies.csv",
+  "telemetry_csv": "telemetry.csv"
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-09-15",
+  "reason": "User reported that the initially surfaced V2.9 attachment appeared to be a V2.8 file.",
+  "initially_surfaced_v2_8": {
+    "path": "/home/lucas/下载/SO-101_PhysicalAI_Runtime_L1_最终执行书_V2.8_Employment_Research_CrossVendor增强版.docx",
+    "sha256": "8a1f6897bba2ce60cdbb698807b9143238a73880a315ec88a4185d297b597a37",
+    "document_title": "L1 最终执行书 V2.8 · Employment / Research Bridge / Cross-Vendor 增强版"
+  },
+  "user_confirmed_v2_9": {
+    "path": "/home/lucas/下载/SO-101_PhysicalAI_Runtime_L1_最终执行书_V2.9_S1S2_EmploymentGate增强版(1).docx",
+    "sha256": "95cd404a72f0c03435b0728aa0bd169f78a6b782f9063a4b6659cbc953bec5ef",
+    "document_title": "L1 最终执行书 V2.9 · S1/S2 Career Mapping / Employment Gate 增强版"
+  },
+  "project_local_reference": {
+    "path": "/home/lucas/physical_ai_os/docs/reference/l1/SO-101_PhysicalAI_Runtime_L1_最终执行书_V2.9_S1S2_EmploymentGate增强版.docx",
+    "sha256": "95cd404a72f0c03435b0728aa0bd169f78a6b782f9063a4b6659cbc953bec5ef"
+  },
+  "verification": {
+    "byte_identity_user_v2_9_to_local": "PASS",
+    "body_version_markers": "PASS",
+    "rendered_visual_review": "PASS",
+    "rendered_pages": 63,
+    "phase_3_gate_pages_reviewed": [28, 29, 30]
+  },
+  "conclusion": "The first attachment reference was V2.8, but the active Phase 3 V2.9 workspace already uses a byte-identical copy of the user-confirmed V2.9 document. Existing Phase 3 V2.9 evidence does not require invalidation or rerun solely because of this attachment-label correction."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "logical_device": "GPU.0",
+  "runtime_device_under_rtx_isolation": "GPU",
+  "device_full_name": "Intel(R) Arc(TM) Graphics (iGPU)",
+  "correctness_status": "PASS",
+  "performance_status": "PASS_WITH_TAIL_LATENCY_ANOMALY",
+  "formal_run": {
+    "run_id": "gpu_0_f32_20260914T140727Z",
+    "iterations": 100,
+    "p50_ms": 20.6623115,
+    "p95_ms": 71.3695917,
+    "p99_ms": 72.03915895
+  },
+  "diagnostic_rerun": {
+    "run_id": "gpu_0_f32_diagnostic_20260914",
+    "warmup_iterations": 30,
+    "iterations": 300,
+    "p50_ms": 20.2041515,
+    "p95_ms": 71.0734464,
+    "p99_ms": 72.14635392,
+    "samples_at_or_below_25_ms": 182,
+    "samples_at_or_above_60_ms": 118,
+    "distribution": "two clearly separated clusters with a recurring mostly one-high-followed-by-one-or-two-low pattern"
+  },
+  "confirmed_conclusion": "Extra warmup and a three-times-longer sample did not remove the bimodal tail latency. GPU.0 is faster than CPU at P50 but slower at P95 in the current interactive-host condition.",
+  "unconfirmed_hypotheses": [
+    "contention with display or desktop-compositor work on the integrated GPU",
+    "GPU scheduling or power-state transitions",
+    "another periodic system workload sharing the integrated GPU"
+  ],
+  "next_diagnostic": "Correlate an OpenVINO/device or system profile with the high-latency samples before claiming a root cause."
+}

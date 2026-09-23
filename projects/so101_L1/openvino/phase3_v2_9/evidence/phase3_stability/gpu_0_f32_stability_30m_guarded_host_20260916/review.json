@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "reviewed_at_local_date": "2026-09-16",
+  "status": "FAIL_HANG_REPRODUCED_AND_RECOVERED",
+  "last_completed_inference": {
+    "iteration": 171,
+    "elapsed_seconds": 5.020357436005725,
+    "latency_ms": 32.299212,
+    "correct": true
+  },
+  "hang": {
+    "seconds_without_csv_growth": 15.005675986001734,
+    "worker_cpu_percent": 99.9,
+    "worker_status": "running",
+    "termination": "SIGTERM",
+    "watchdog_recovery": "PASS"
+  },
+  "localization_evidence": [
+    "The last successful inference and second in-process telemetry sample share elapsed time 5.020357 seconds.",
+    "The earlier unguarded host hang stopped after 135.023 seconds, also near a five-second telemetry boundary.",
+    "A five-minute worker without in-worker telemetry completed 10,211 correct inferences."
+  ],
+  "current_hypothesis": "In-process telemetry collection, especially temperature sensor access, interacts with the Intel GPU/OpenVINO path; exact component causality is not yet proven.",
+  "next_test": "Run the original inference worker with in-worker telemetry disabled while an external supervisor collects the same resource signals for five minutes.",
+  "evidence_sha256": {
+    "supervisor_result_json": "83c8b7d77860d0ac17ed0c19a4e4886223e22886a87fb53c643c82cd5ba60baf",
+    "latencies_csv": "dbe908f3714b34850ed5e0051488913d9dda7eb861087c2f327f4942421c874a",
+    "telemetry_csv": "5839245d9eaf4a6a8c473aeb25f1cfea3e7e1674cd54c03da642ea58914ded66"
+  }
+}

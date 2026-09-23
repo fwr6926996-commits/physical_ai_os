@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "opened_at_local_date": "2026-09-15",
+  "mode": "LEARN_ASSIST",
+  "concept_learning": "PASS",
+  "architecture_decision_learning": "PASS",
+  "decision_owner": "human",
+  "decision": "OPTION_A_CLOSE_CURRENT_INT8_FEASIBILITY",
+  "candidate_options": [
+    "close current INT8 feasibility as reproducible negative evidence",
+    "continue with an accuracy-recovery experiment"
+  ],
+  "required_reasoning_chain": [
+    "experiment evidence",
+    "problem interpretation",
+    "optimization objective",
+    "option generation",
+    "benefit/cost/risk/effort comparison",
+    "missing evidence and uncertainty",
+    "phase-specific criteria",
+    "human choice and rationale"
+  ],
+  "human_reasoning": {
+    "primary_objective": "Complete correctness-gated OpenVINO pre-deployment evidence before advancing toward deployment.",
+    "hard_constraints": [
+      "task quality",
+      "no dangerous actions"
+    ],
+    "strategic_importance": "MEDIUM",
+    "accepted_loss": "The current opportunity to recover the INT8/NPU candidate is not pursued.",
+    "opportunity_cost_reasoning": "Time is released for remaining Phase 3 stability and related mandatory evidence.",
+    "safety_reasoning": "Offline correctness success grants eligibility for later validation but cannot establish robot safety; collision behavior, joint motion and E-stop effectiveness require subsequent physical/system validation.",
+    "current_recovery_rounds_authorized": 0,
+    "future_recovery_round_upper_bound_if_reopened": 2
+  },
+  "review": {
+    "reviewed_at_local_date": "2026-09-15",
+    "reasoning_chain": "PASS",
+    "independent_verification": "PASS",
+    "agent_constraint": "Preserve the negative evidence and do not execute accuracy recovery under this decision."
+  }
+}

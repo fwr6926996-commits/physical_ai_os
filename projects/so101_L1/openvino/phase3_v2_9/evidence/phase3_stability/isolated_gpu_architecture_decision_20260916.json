@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "recorded_at_local_date": "2026-09-16",
+  "owner": "human",
+  "decision": "OPTION_B_VALIDATE_ISOLATED_GPU_INFERENCE_WORKER",
+  "reasoning_review": "PASS",
+  "reasoning": {
+    "objective": "Preserve GPU.0 deployment capability without treating the known failing monolithic path as acceptable.",
+    "tradeoff": "Accept additional process isolation and watchdog complexity in exchange for bounded fault containment and a testable GPU path.",
+    "next_decision": "After isolated 30-minute evidence, decide whether to abandon GPU.0 or continue toward deployment.",
+    "balance_assessment": "The decision preserves optionality while requiring new evidence before GPU.0 admission."
+  },
+  "acceptance_boundary": {
+    "duration_minutes_per_run": 30,
+    "required_correctness_failures": 0,
+    "required_nonfinite_outputs": 0,
+    "required_watchdog_timeouts": 0,
+    "qualification_scope": "Isolated inference-worker architecture only",
+    "monolithic_path_status": "KNOWN_FAIL"
+  },
+  "sequence_policy": {
+    "status": "FROZEN_BY_HUMAN",
+    "maximum_total_runs": 4,
+    "success_stop": "Stop early after two consecutive PASS results; GPU.0 becomes eligible for a conditional isolated-architecture admission decision.",
+    "failure_stop": "Stop early after two consecutive FAIL results; abandon GPU.0 for this L1 Phase 3 deployment path.",
+    "mixed_results": "A PASS/FAIL pair may continue, but no more than two mixed pairs or four total runs are allowed.",
+    "maximum_reached_without_streak": "Record INCONCLUSIVE, do not run a fifth attempt, and return the evidence to the human owner for the final abandon-or-deploy decision.",
+    "root_cause_boundary": "Two consecutive PASS results qualify only the isolated-worker path and do not prove that the monolithic-path hang root cause was removed."
+  },
+  "observed_runs": [
+    {
+      "round": 1,
+      "run_id": "gpu_0_f32_isolated_30m_r1_20260916",
+      "verdict": "FAIL",
+      "reason": "Inference heartbeat stopped after 94.1176 seconds; the 15-second watchdog recovered the worker with SIGTERM.",
+      "review": "gpu_0_f32_isolated_30m_r1_20260916/review.json"
+    },
+    {
+      "round": 2,
+      "run_id": "gpu_0_f32_isolated_30m_r2_20260916",
+      "verdict": "FAIL",
+      "reason": "Inference heartbeat stopped after 52.0001 seconds; the 15-second watchdog recovered the worker with SIGTERM.",
+      "review": "gpu_0_f32_isolated_30m_r2_20260916/review.json"
+    }
+  ],
+  "sequence_state": "TWO_CONSECUTIVE_FAILS__STOP_RULE_TRIGGERED__GPU_0_CLOSED"
+}

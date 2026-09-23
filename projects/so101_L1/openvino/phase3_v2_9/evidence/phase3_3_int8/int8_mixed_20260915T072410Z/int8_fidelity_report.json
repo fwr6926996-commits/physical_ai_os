@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "run_id": "int8_mixed_20260915T072410Z",
+  "status": "CHARACTERIZATION_COMPLETE_NO_ADMISSION_DECISION",
+  "started_at_utc": "2026-09-15T07:24:10.479861+00:00",
+  "python": "3.12.3",
+  "openvino": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+  "nncf": "3.3.0",
+  "configuration": {
+    "preset": "mixed",
+    "target_device": "ANY",
+    "model_type": "TRANSFORMER",
+    "subset_size": 300,
+    "compress_remaining_fp_weights_to_fp16": false,
+    "validation_device": "CPU",
+    "validation_execution_mode": "ACCURACY",
+    "performance_ranking_performed": false
+  },
+  "index_manifest": {
+    "path": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/evidence/phase3_3_int8/index_manifest.json",
+    "content_sha256": "869697c9b02514380a50e8252ce667a16afb99652c76b2d30967993cc5545e90"
+  },
+  "timing_ms_not_benchmark_scores": {
+    "quantization": 66774.801055,
+    "paired_validation": 11950.385015
+  },
+  "artifact_bytes": {
+    "fp32_xml_plus_bin": 132820899,
+    "int8_xml_plus_bin": 34869683,
+    "int8_to_fp32_ratio": 0.26253159903698586
+  },
+  "artifact_sha256": {
+    "fp32": {
+      "xml": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+      "bin": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a"
+    },
+    "int8": {
+      "xml": "41ec686cb67a7f9e8c859e0382b843603b8047dbc868452ec12e7a43fd515b71",
+      "bin": "d03ed46f6b9301d644c80034dc4c472a2e48fa396eff14686e8fb8acaf0071aa"
+    }
+  },
+  "strict_reference_gate_for_information": {
+    "rtol": 0.0001,
+    "atol": 1e-05,
+    "pass": false
+  },
+  "normalized_action_chunk_error": {
+    "mae": 0.028464309871196747,
+    "rmse": 0.09499920904636383,
+    "p95_abs_error": 0.10717988014221191,
+    "max_abs_error": 2.45223331451416,
+    "per_action_dimension": [
+      {
+        "dimension": 0,
+        "mae": 0.013957253657281399,
+        "p95_abs_error": 0.054503604769706726,
+        "max_abs_error": 0.19375300407409668
+      },
+      {
+        "dimension": 1,
+        "mae": 0.016625357791781425,
+        "p95_abs_error": 0.06862745434045792,
+        "max_abs_error": 0.15142154693603516
+      },
+      {
+        "dimension": 2,
+        "mae": 0.06454382091760635,
+        "p95_abs_error": 0.3852159380912781,
+        "max_abs_error": 0.6417747735977173
+      },
+      {
+        "dimension": 3,
+        "mae": 0.018214648589491844,
+        "p95_abs_error": 0.05992178991436958,
+        "max_abs_error": 0.23199531435966492
+      },
+      {
+        "dimension": 4,
+        "mae": 0.025656316429376602,
+        "p95_abs_error": 0.09481844305992126,
+        "max_abs_error": 0.4168003499507904
+      },
+      {
+        "dimension": 5,
+        "mae": 0.03178846836090088,
+        "p95_abs_error": 0.07148787379264832,
+        "max_abs_error": 2.45223331451416
+      }
+    ]
+  },
+  "postprocessed_action_chunk_error": {
+    "mae": 0.8778473138809204,
+    "rmse": 2.7327804565429688,
+    "p95_abs_error": 3.4916229248046875,
+    "max_abs_error": 28.128536224365234,
+    "per_action_dimension": [
+      {
+        "dimension": 0,
+        "mae": 0.27096429467201233,
+        "p95_abs_error": 1.0581260919570923,
+        "max_abs_error": 3.761493682861328
+      },
+      {
+        "dimension": 1,
+        "mae": 0.49788326025009155,
+        "p95_abs_error": 2.055201768875122,
+        "max_abs_error": 4.53465461730957
+      },
+      {
+        "dimension": 2,
+        "mae": 2.8289105892181396,
+        "p95_abs_error": 16.883739471435547,
+        "max_abs_error": 28.128536224365234
+      },
+      {
+        "dimension": 3,
+        "mae": 1.1552315950393677,
+        "p95_abs_error": 3.8004393577575684,
+        "max_abs_error": 14.713890075683594
+      },
+      {
+        "dimension": 4,
+        "mae": 0.15714606642723083,
+        "p95_abs_error": 0.5807669162750244,
+        "max_abs_error": 2.552920341491699
+      },
+      {
+        "dimension": 5,
+        "mae": 0.35694846510887146,
+        "p95_abs_error": 0.8027281761169434,
+        "max_abs_error": 27.53580665588379
+      }
+    ]
+  },
+  "decision": "Human must review the error distribution and freeze a task-relevant admission threshold before any qualified latency ranking."
+}

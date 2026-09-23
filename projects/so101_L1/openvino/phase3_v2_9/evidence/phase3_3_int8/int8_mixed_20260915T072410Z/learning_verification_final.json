@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checked_at_local_date": "2026-09-15",
+  "overall_status": "PASS",
+  "final_check": {
+    "question_1": "Did the current INT8 candidate pass the correctness gate?",
+    "human_answer_1": "No",
+    "assessment_1": "PASS",
+    "question_2": "Is the current INT8 candidate authorized for deployment and qualified performance ranking?",
+    "human_answer_2": "No",
+    "assessment_2": "PASS"
+  },
+  "demonstrated_capabilities": [
+    "Distinguishes FP16 floating-point encoding from INT16 integer encoding.",
+    "Separates model storage precision from runtime inference precision.",
+    "Explains representative calibration and INT8 scale/zero-point mapping.",
+    "Calculates normalization and unnormalization error scaling.",
+    "Defines MAE and explains why aggregate averages can hide dangerous spikes.",
+    "Explains why the first action in one 100-action chunk requires separate inspection.",
+    "Separates successful PTQ execution and artifact generation from deployment admission."
+  ],
+  "candidate_verdict": {
+    "ptq_pipeline": "PASS",
+    "int8_candidate": "NOT_ADMITTED",
+    "qualified_performance_ranking": "NOT_ALLOWED"
+  },
+  "mystery_debt": "CLOSED_FOR_MINIMUM_PRECISION_AND_BASIC_PTQ_MENTAL_MODEL"
+}

@@ -25,6 +25,15 @@ artifacts/demo_videos/*
 datasets/*
 !datasets/README.md
 
+# Generated policy packages are content-addressed by committed manifests.
+# Keep metadata, scripts and evidence in Git; keep large model/tensor payloads out.
+projects/**/openvino/**/policy_package*/**/*.bin
+projects/**/openvino/**/policy_package*/**/*.xml
+projects/**/openvino/**/policy_package*/**/*.pt
+projects/**/openvino/**/policy_package*/**/*.pt2
+projects/**/openvino/**/policy_package*/**/*.npy
+projects/**/openvino/**/policy_package*/**/*.npz
+
 # IDE
 .vscode/
 .idea/

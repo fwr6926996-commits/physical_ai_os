@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "closed_at_local_date": "2026-09-15",
+  "phase": "Phase 3.3 INT8 PTQ feasibility",
+  "status": "CLOSED_AS_REPRODUCIBLE_NEGATIVE_EVIDENCE",
+  "human_architecture_decision": "OPTION_A_CLOSE_CURRENT_INT8_FEASIBILITY",
+  "candidate": {
+    "run_id": "int8_mixed_20260915T072410Z",
+    "preset": "mixed",
+    "target_device": "ANY",
+    "model_type": "TRANSFORMER",
+    "calibration_samples": 300,
+    "validation_samples": 100,
+    "calibration_validation_overlap": 0,
+    "episode_coverage": 50,
+    "validation_device": "CPU"
+  },
+  "artifact_result": {
+    "fp32_xml_plus_bin_bytes": 132820899,
+    "int8_xml_plus_bin_bytes": 34869683,
+    "int8_to_fp32_ratio": 0.26253159903698586,
+    "size_reduction_percent": 73.74684009630142,
+    "int8_xml_sha256": "41ec686cb67a7f9e8c859e0382b843603b8047dbc868452ec12e7a43fd515b71",
+    "int8_bin_sha256": "d03ed46f6b9301d644c80034dc4c472a2e48fa396eff14686e8fb8acaf0071aa"
+  },
+  "correctness_result": {
+    "strict_reference_gate": "FAIL",
+    "rtol": 0.0001,
+    "atol": 0.00001,
+    "postprocessed_full_chunk_mae": 0.8778473138809204,
+    "postprocessed_full_chunk_p95_abs_error": 3.4916229248046875,
+    "postprocessed_full_chunk_max_abs_error": 28.128536224365234,
+    "elbow_flex_p95_abs_error": 16.883739471435547,
+    "first_action_mae": 1.2641011476516724,
+    "first_action_p95_abs_error": 8.679591178894043,
+    "first_action_max_abs_error": 25.363121032714844,
+    "localized_risks": [
+      "persistent elbow_flex.pos deviation",
+      "rare large gripper.pos spikes",
+      "material first-action error"
+    ]
+  },
+  "admission": {
+    "current_candidate_admitted": false,
+    "qualified_latency_ranking_performed": false,
+    "robot_execution_authorized": false,
+    "accuracy_recovery_authorized_rounds": 0,
+    "reason": "The candidate failed correctness before the performance and robot-execution gates."
+  },
+  "scope_and_limitations": [
+    "This closes only the current candidate under the recorded task, dataset, PTQ configuration and validation conditions.",
+    "This is not evidence that INT8 or NPU is generally unusable.",
+    "Recorded position units are not declared as physical degrees or radians.",
+    "Offline correctness does not establish collision safety, safe joint motion or E-stop effectiveness.",
+    "The calibration and validation samples come from one task dataset and do not establish out-of-distribution generalization."
+  ],
+  "reopen_rule": {
+    "requires_new_human_architecture_decision": true,
+    "requires_task_relevant_admission_metric": true,
+    "future_accuracy_recovery_round_upper_bound": 2
+  },
+  "evidence": {
+    "index_manifest_path": "index_manifest.json",
+    "index_manifest_file_sha256": "ee8662f1fa8390880dda5529d44b0a39c5c0772fa670b99e007925e2290d8459",
+    "index_manifest_content_sha256": "869697c9b02514380a50e8252ce667a16afb99652c76b2d30967993cc5545e90",
+    "fidelity_report_path": "int8_mixed_20260915T072410Z/int8_fidelity_report.json",
+    "fidelity_report_sha256": "2b7f34c41f17917f583fc44bc2c3920463c6f17ae81546b923614532a71fdfa9",
+    "technical_review_path": "int8_mixed_20260915T072410Z/review.json",
+    "technical_review_sha256": "852da047986df78e56cb8703e0bb216c1f71e12084cebe1928fa920808cefcef",
+    "architecture_decision_path": "architecture_decision_learning.json",
+    "architecture_decision_sha256": "9fa88755fa76ef177c094da276d781fd0adbd2d3fd4eb550a259b5fb75707416"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 3.2 Intel device and precision matrix",
+  "review_status": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+  "strict_correctness_gate": {"rtol": 0.0001, "atol": 0.00001},
+  "results": [
+    {
+      "device": "CPU", "precision": "f32", "compile": "PASS", "inference": "PASS", "correctness": "PASS",
+      "max_abs_error": 0.0000026226043701171875, "p50_ms": 52.2451755, "p95_ms": 55.3049982, "p99_ms": 56.64056782
+    },
+    {
+      "device": "GPU.0", "runtime_device": "GPU", "precision": "f32", "compile": "PASS", "inference": "PASS", "correctness": "PASS_WITH_TAIL_LATENCY_ANOMALY",
+      "max_abs_error": 0.000001430511474609375, "p50_ms": 20.6623115, "p95_ms": 71.3695917, "p99_ms": 72.03915895
+    },
+    {
+      "device": "CPU", "precision": "f16", "compile": "PASS", "inference": "PASS", "correctness": "FAIL",
+      "max_abs_error": 0.0017390251159667969, "performance_skipped": true
+    },
+    {
+      "device": "GPU.0", "runtime_device": "GPU", "precision": "f16", "compile": "PASS", "inference": "PASS", "correctness": "FAIL",
+      "max_abs_error": 0.0013282299041748047, "performance_skipped": true
+    },
+    {
+      "device": "NPU", "precision": "f16", "compile": "PASS", "inference": "PASS", "correctness": "FAIL",
+      "max_abs_error": 0.002484560012817383, "performance_skipped": true
+    },
+    {
+      "device": "NPU", "precision": "f32", "compile": "UNSUPPORTED", "inference": "NOT_RUN", "correctness": "NOT_RUN",
+      "supported_precision_hints": ["f16", "i8"], "negative_evidence": "npu_f32_unsupported_20260914_compile_failure.json"
+    }
+  ],
+  "admission_decision": {
+    "CPU_f32": "admitted",
+    "GPU_0_f32": "conditionally admitted; tail-latency diagnosis remains open",
+    "CPU_f16": "not admitted under the frozen strict gate",
+    "GPU_0_f16": "not admitted under the frozen strict gate",
+    "NPU_f16": "not admitted under the frozen strict gate",
+    "NPU_f32": "unsupported by the plugin"
+  }
+}

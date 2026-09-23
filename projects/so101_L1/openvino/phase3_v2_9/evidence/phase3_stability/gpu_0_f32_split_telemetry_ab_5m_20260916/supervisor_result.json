@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-09-16T04:50:40.783234+00:00",
+  "started_at_utc": "2026-09-16T04:50:19.427206+00:00",
+  "run_id": "gpu_0_f32_split_telemetry_ab_5m_20260916",
+  "status": "HANG_REPRODUCED_SUPERVISOR_RECOVERED",
+  "configuration": {
+    "device": "GPU.0",
+    "precision": "f32",
+    "duration_minutes": 5.0,
+    "stall_seconds": 15.0,
+    "startup_seconds": 60.0,
+    "external_telemetry_seconds": 5.0,
+    "worker_telemetry_mode": "none",
+    "worker_path": "/home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/run_stability_v2_9.py"
+  },
+  "child_pid": 160576,
+  "child_returncode": -15,
+  "termination": "SIGTERM",
+  "hang_diagnostic": {
+    "pid": 160576,
+    "status": "running",
+    "cpu_percent": 99.9,
+    "memory_rss_bytes": 631271424,
+    "num_threads": 21,
+    "seconds_without_latency_file_growth": 15.062712462997297,
+    "last_latency_csv_row": "122,3.5802072060178034,0,32.159262,True,True,1.430511474609375e-06",
+    "latency_csv_bytes": 8225,
+    "worker_telemetry_csv_bytes": 0
+  },
+  "worker_result_status": null,
+  "worker_result_path": null,
+  "latencies_csv_last_row": "122,3.5802072060178034,0,32.159262,True,True,1.430511474609375e-06",
+  "worker_telemetry_csv_last_row": null,
+  "supervisor_telemetry_csv": "supervisor_telemetry.csv",
+  "supervisor_telemetry_last_row": "20.069244240992703,631271424,11406323712,54.0,54.0"
+}

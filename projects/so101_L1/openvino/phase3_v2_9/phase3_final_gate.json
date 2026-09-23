@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "reference_version": "L1 V2.9",
+  "phase": "Phase 3 255H Intel Pre-Deployment",
+  "experimental_work_status": "COMPLETE",
+  "engineering_gate": "PARTIAL_PASS_CPU_FP32_ONLY",
+  "engineering_closeout": "CONDITIONAL_ACCEPTANCE_RECORDED_2026_09_23",
+  "final_human_acceptance": "PENDING_INDEPENDENT_LEARNING_VERIFICATION",
+  "phase_4_started": false,
+  "workflow": {
+    "version": "0.1",
+    "application": "RETROSPECTIVE_ONLY_FOR_PHASE3",
+    "acceptance_record": "PHASE3_RETROSPECTIVE_AND_ACCEPTANCE.md"
+  },
+  "active_runtime_config": "active_runtime_config.yaml",
+  "phase_4_entry": {
+    "status": "ALLOWED_WITH_CPU_ONLY_WAIVER_AFTER_ENTRY_CONDITIONS",
+    "adr": "../../../../docs/decisions/ADR-0001-phase4-cpu-only-entry.md",
+    "phase_4_started": false
+  },
+  "admitted_runtime": {
+    "device": "CPU",
+    "precision": "f32",
+    "performance_hint": "LATENCY",
+    "identity": "Intel(R) Core(TM) Ultra 7 255H",
+    "correctness": "PASS",
+    "stability_30_minutes": "PASS"
+  },
+  "not_admitted": {
+    "GPU.0_f32": "Correctness PASS; stability FAIL; closed after two consecutive isolated-worker failures",
+    "CPU_f16": "Strict correctness FAIL",
+    "GPU.0_f16": "Strict correctness FAIL",
+    "NPU_f16": "Compile and inference PASS; strict correctness FAIL",
+    "NPU_f32": "Unsupported by current plugin",
+    "INT8_mixed_PTQ": "Artifact generation PASS; fidelity FAIL; human closed feasibility",
+    "GPU.1": "RTX 5060 excluded from Intel-only scope"
+  },
+  "qualified_cpu_stability": {
+    "duration_seconds": 1800.073535543008,
+    "iterations": 30654,
+    "inference_exceptions": 0,
+    "nonfinite_outputs": 0,
+    "correctness_failures": 0,
+    "latency_ms": {
+      "p50": 58.120643,
+      "p95": 64.2604304,
+      "p99": 67.79019179
+    },
+    "process_rss_delta_bytes": 430080,
+    "temperature_first_5m_mean_c": 75.95,
+    "temperature_last_5m_mean_c": 76.32,
+    "temperature_max_c": 91.0
+  },
+  "scope_limit": "Offline synchronous OpenVINO inference on the ThinkBook 255H only; no robot motion, system safety, control-loop, or DK-2500 claim.",
+  "final_acceptance_requirements": [
+    "Human explains why CPU is admitted and GPU.0 is not despite GPU.0 correctness passing.",
+    "Human identifies the frozen runtime interfaces and the evidence/debugging path.",
+    "Human distinguishes offline correctness and stability qualification from physical robot safety."
+  ],
+  "primary_report": "PHASE3_FINAL_REPORT.md"
+}

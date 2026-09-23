@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "reviewed_at_local_date": "2026-09-16",
+  "sequence_round": 2,
+  "verdict": "FAIL",
+  "status": "FAIL_HANG_REPRODUCED_WATCHDOG_RECOVERED",
+  "qualification_scope": "Isolated inference-worker GPU.0 FP32 architecture",
+  "last_completed_inference": {
+    "iteration": 1794,
+    "worker_elapsed_seconds": 52.00013093999587,
+    "latency_ms": 31.621641,
+    "finite": true,
+    "correct": true,
+    "max_abs_error": 1.430511474609375e-06
+  },
+  "hard_gate_review": {
+    "completed_30_minutes": false,
+    "worker_exitcode_zero": false,
+    "nonfinite_outputs": 0,
+    "correctness_failures": 0,
+    "watchdog_timeout": true,
+    "watchdog_seconds_without_heartbeat": 15.081066711019957,
+    "watchdog_recovery": "SIGTERM"
+  },
+  "pre_hang_observations": {
+    "latency_p50_ms": 31.651972,
+    "latency_p95_ms": 47.246981899999994,
+    "latency_p99_ms": 52.10335225999999,
+    "maximum_observed_sensor_temperature_c": 68.0
+  },
+  "interpretation": [
+    "All completed outputs were finite and passed strict correctness before the stall.",
+    "The inference worker stopped producing heartbeats while still reported as running with CPU activity, so the 30-minute stability hard gate failed.",
+    "Rounds 1 and 2 are consecutive FAIL results; the human-frozen stop rule therefore closes GPU.0 without a third run."
+  ],
+  "sequence_effect": "SECOND_CONSECUTIVE_FAIL__ABANDON_GPU_0_FOR_PHASE_3",
+  "evidence_sha256": {
+    "result_json": "aa133f8b66a01ccabab8f68097b432c184056e7576596f5baaca72fc2c5e278f",
+    "latencies_csv": "c63d04d054d646e57feec0ea07859d8bf937fdcfd727008316af2317c6b3149a",
+    "supervisor_telemetry_csv": "b9a830cef6639d18963fc296e9be05a0dad752b100cf9f8980fdaf81a39dfd6c"
+  }
+}
