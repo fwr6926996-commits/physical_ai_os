@@ -6,8 +6,8 @@
   "workflow_version": "0.1",
   "workflow_application": "PHASE3_RETROSPECTIVE__PHASE4_PROSPECTIVE",
   "phase": "Phase 3 255H Intel Pre-Deployment",
-  "state": "ENGINEERING_CLOSED_PARTIAL_PASS__LEARNING_VERIFICATION_PENDING",
-  "current_step": "PHASE4_ENTRY_PREPARATION: hardware/software truth and protocol freeze; no execution authorized",
+  "state": "FINAL_ACCEPTED__PARTIAL_PASS_CPU_FP32_ONLY",
+  "current_step": "PHASE3_CLOSED__PHASE4_NOT_STARTED",
   "completed_steps": {
     "reference_version_audit": "PASS__ACTIVE_LOCAL_COPY_BYTE_IDENTICAL_TO_USER_CONFIRMED_V2_9",
     "3.0_hardware_and_software_truth": "PASS",
@@ -33,9 +33,11 @@
     "phase3_final_evidence_synthesis": "COMPLETE__ENGINEERING_GATE_PARTIAL_PASS_CPU_FP32_ONLY",
     "phase3_retrospective": "COMPLETE__WORKFLOW_0_1_APPLIED_RETROSPECTIVELY",
     "phase3_active_runtime_config": "CPU_FP32_ONLY",
-    "phase4_cpu_only_entry_waiver": "ACCEPTED_WITH_ENTRY_CONDITIONS__PHASE4_NOT_STARTED"
+    "phase4_cpu_only_entry_waiver": "ACCEPTED_WITH_ENTRY_CONDITIONS__PHASE4_NOT_STARTED",
+    "phase3_independent_learning_verification": "PASS__HUMAN_ACCEPTED_2026_10_01",
+    "phase3_l1_addenda_applicability_review": "COMPLETE__BINDING_NON_RETROACTIVE"
   },
-  "learning_acceptance": "FINAL_INDEPENDENT_VERIFICATION_PENDING",
+  "learning_acceptance": "PASS__HUMAN_ACCEPTED_2026_10_01",
   "execution_mode": "LEARN_ASSIST",
   "phase_3_3_started": true,
   "previous_v2_8_evidence": "HISTORICAL_BASELINE_ONLY",

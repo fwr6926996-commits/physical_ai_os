@@ -5,12 +5,22 @@
   "experimental_work_status": "COMPLETE",
   "engineering_gate": "PARTIAL_PASS_CPU_FP32_ONLY",
   "engineering_closeout": "CONDITIONAL_ACCEPTANCE_RECORDED_2026_09_23",
-  "final_human_acceptance": "PENDING_INDEPENDENT_LEARNING_VERIFICATION",
+  "final_human_acceptance": "ACCEPTED_2026_10_01__PARTIAL_PASS_CPU_FP32_ONLY",
   "phase_4_started": false,
   "workflow": {
     "version": "0.1",
     "application": "RETROSPECTIVE_ONLY_FOR_PHASE3",
     "acceptance_record": "PHASE3_RETROSPECTIVE_AND_ACCEPTANCE.md"
+  },
+  "learning_verification": {
+    "status": "PASS__HUMAN_ACCEPTED_2026_10_01",
+    "record": "PHASE3_INDEPENDENT_LEARNING_VERIFICATION.md"
+  },
+  "governing_addenda": {
+    "applicability_review": "PHASE3_L1_ADDENDA_APPLICABILITY_REVIEW_20261001.md",
+    "addendum_01_sha256": "eb34eedec544d8f327a321b9e4188055ffcd54aee4a44b7672cb5955e95e8091",
+    "addendum_02_sha256": "e3b4aea1b8cdcf425762fa980d4bc6189e109f726d9238bea6f1c146dc7551b6",
+    "application": "BINDING_COMPANIONS__NON_RETROACTIVE_PHASE3"
   },
   "active_runtime_config": "active_runtime_config.yaml",
   "phase_4_entry": {

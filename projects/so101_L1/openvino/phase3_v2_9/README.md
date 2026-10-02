@@ -29,5 +29,9 @@ This workspace covers ThinkBook Core Ultra 7 255H pre-deployment only. DK-2500 d
 - Engineering result: `PARTIAL_PASS_CPU_FP32_ONLY`
 - Active runtime: `active_runtime_config.yaml`
 - Retrospective and acceptance: `PHASE3_RETROSPECTIVE_AND_ACCEPTANCE.md`
+- Post-closeout Review–Route–Feedback: `PHASE3_REVIEW_ROUTE_FEEDBACK_ADDENDUM_20261001.md`
+- L1 Addenda applicability review: `PHASE3_L1_ADDENDA_APPLICABILITY_REVIEW_20261001.md`
+- Independent learning verification: `PHASE3_INDEPENDENT_LEARNING_VERIFICATION.md`
+  (`ACCEPTED`)
 - CPU-only Phase 4 entry waiver: `../../../../docs/decisions/ADR-0001-phase4-cpu-only-entry.md`
 - Phase 4 has not started; the waiver permits bounded CPU-only qualification only after Phase 4 hardware/software truth and protocol freeze.

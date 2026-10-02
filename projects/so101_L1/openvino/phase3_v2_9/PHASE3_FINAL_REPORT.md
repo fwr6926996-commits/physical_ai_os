@@ -1,8 +1,12 @@
 # Phase 3 V2.9 Final Evidence Report
 
+Post-closeout evidence: see
+`PHASE3_REVIEW_ROUTE_FEEDBACK_ADDENDUM_20261001.md`. It extends the GPU.0 diagnosis without changing
+the `PARTIAL PASS — CPU FP32 ONLY` result.
+
 ## Outcome
 
-Phase 3 V2.9 experimental work is complete. The engineering gate is **PARTIAL PASS — CPU FP32 ONLY**. The engineering closeout and CPU-only Phase 4 planning waiver are recorded; final independent learning verification remains pending.
+Phase 3 V2.9 experimental work is complete. The engineering gate is **PARTIAL PASS — CPU FP32 ONLY**. The engineering closeout and CPU-only Phase 4 planning waiver are recorded. Final independent learning verification passed and received human acceptance on `2026-10-01`.
 
 CPU FP32 is the only backend that passed the frozen correctness gate and the human-selected 30-minute stability gate. GPU.0 FP32 passed frozen-input correctness and short benchmarks, but repeated native inference stalls occurred in both monolithic and isolated-worker paths; the precommitted two-consecutive-failure rule closed it as not admitted. NPU and reduced-precision candidates did not pass correctness or support gates. GPU.1 remains outside the Intel-only scope.
 
@@ -69,7 +73,7 @@ CPU profiling localized approximately `58.99%` of the profiled mean-time sum to 
 
 Completed independent learning checks cover correctness-gated benchmarking, FP32/FP16/INT8/INT16/BF16 concepts, INT8 architecture trade-offs, profiling concept/interface interpretation, stability purpose, and the GPU bounded-recovery architecture decision.
 
-Final Phase 3 acceptance remains human-owned. The final check must demonstrate that the operator can explain the admission decision, identify the critical interfaces and evidence, and reproduce the debugging path without confusing offline correctness or stability with robot safety.
+Final Phase 3 learning acceptance was completed on `2026-10-01`. The operator independently explained the admission decision, identified the critical interfaces and evidence, reasoned about a meaningful protocol change, reconstructed the bounded reproduction and debugging path, and distinguished offline inference qualification from real-time and physical-safety evidence. The record is `PHASE3_INDEPENDENT_LEARNING_VERIFICATION.md`.
 
 ## Phase boundary
 

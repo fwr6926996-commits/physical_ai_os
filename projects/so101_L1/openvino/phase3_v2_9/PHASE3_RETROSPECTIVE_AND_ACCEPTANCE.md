@@ -6,12 +6,16 @@ Workflow basis: retrospective review under Engineering Workflow `0.1`
 
 Decision date: `2026-09-23`
 
+Post-closeout evidence: see
+`PHASE3_REVIEW_ROUTE_FEEDBACK_ADDENDUM_20261001.md`. The addendum narrows the GPU.0 observed failure
+boundary but does not change this historical gate decision.
+
 ## Outcome
 
 - Experimental work: `COMPLETE`
 - Engineering gate: `PARTIAL_PASS_CPU_FP32_ONLY`
-- Learning verification: `PENDING_FINAL_INDEPENDENT_EXPLANATION`
-- Final human acceptance: `CONDITIONAL_ENGINEERING_CLOSEOUT`
+- Learning verification: `PASS — ACCEPTED 2026-10-01`
+- Final human acceptance: `ACCEPTED — PARTIAL PASS CPU FP32 ONLY`
 - Phase 4 entry: `ALLOWED_WITH_WAIVER_FOR_CPU_ONLY_QUALIFICATION`
 
 This review does not rewrite Phase 3 as if Workflow 0.1 had governed the original experiments. Original evidence remains unchanged. The review records which practices were present, which were introduced during the work and which become prospective requirements for Phase 4.
@@ -67,7 +71,8 @@ Historical V2.8 files are marked `ARCHIVED_DO_NOT_DEPLOY` and cannot define an a
 
 - GPU.0 root cause remains unlocalized. No Phase 3 Round 3 is permitted. A future investigation requires a new diagnostic protocol with native and kernel-level observability.
 - INT8 recovery remains unauthorized. Reopening requires precommitted task metrics and a new architecture decision.
-- Final independent learning verification remains pending.
+- Final independent learning verification passed and was accepted on `2026-10-01`; see
+  `PHASE3_INDEPENDENT_LEARNING_VERIFICATION.md`.
 
 ## Next-phase decision
 
