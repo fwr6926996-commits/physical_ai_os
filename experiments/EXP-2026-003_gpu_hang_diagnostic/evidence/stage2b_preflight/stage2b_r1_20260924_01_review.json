@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-09-24T10:45:28+00:00",
+  "protocol_id": "EXP-2026-003-STAGE2B-INFER-BOUNDARY-SHARED-STATE-V1",
+  "run_id": "stage2b_r1_20260924_01",
+  "verdict": "READY_WITH_RECORDED_DESKTOP_GPU_CONTEXT",
+  "checks": {
+    "frozen_stage2b_worker_hash_matches": true,
+    "baseline_and_model_hashes_match_reproducing_control": true,
+    "kernel_matches_reproducing_control": true,
+    "power_context_matches_reproducing_control": true,
+    "dri_user_context_matches_reproducing_control": true,
+    "unexpected_python_workload_observed": false,
+    "memory_available_kib": 8533532
+  },
+  "frozen_worker_sha256": "7093c14a6b6eeed5fb3aa234a6e05c96b89d1e1039c661872e028490377f5672",
+  "interpretation_limits": [
+    "Matching visible context does not prove identical instantaneous scheduling or GPU frequency.",
+    "Open DRM handles do not prove active GPU load.",
+    "This approval applies only to Stage 2B Round 1."
+  ],
+  "decision": "Allow frozen Stage 2B Round 1 without changing the captured desktop context."
+}

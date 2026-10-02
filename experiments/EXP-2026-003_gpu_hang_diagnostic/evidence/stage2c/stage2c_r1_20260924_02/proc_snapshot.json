@@ -1,0 +1,1059 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-09-24T11:57:53.282258+00:00",
+  "pid": 345279,
+  "status": "CAPTURED_PARTIAL",
+  "process": {
+    "status": {
+      "status": "READ",
+      "content": "Name:\tpython\nUmask:\t0002\nState:\tR (running)\nTgid:\t345279\nNgid:\t0\nPid:\t345279\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345279\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t189\nnonvoluntary_ctxt_switches:\t425\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+    },
+    "stat": {
+      "status": "READ",
+      "content": "345279 (python) R 345252 345252 320014 34816 345252 4194304 293829 3713 0 0 2919 185 6 0 20 0 37 0 105225899 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 0 0 0 17 0 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+    },
+    "wchan": {
+      "status": "READ",
+      "content": "0"
+    },
+    "syscall": {
+      "status": "UNAVAILABLE",
+      "error": "PermissionError: [Errno 1] Operation not permitted"
+    },
+    "sched": {
+      "status": "READ",
+      "content": "python (345279, #threads: 37)\n-------------------------------------------------------------------\nse.exec_start                                :    1052297100.752383\nse.vruntime                                  :      11021122.683359\nse.sum_exec_runtime                          :         29088.591344\nse.nr_migrations                             :                   50\nnr_switches                                  :                  614\nnr_voluntary_switches                        :                  189\nnr_involuntary_switches                      :                  425\nse.load.weight                               :              1048576\nse.avg.load_sum                              :                47442\nse.avg.runnable_sum                          :             48604113\nse.avg.util_sum                              :             48600820\nse.avg.load_avg                              :                 1023\nse.avg.runnable_avg                          :                 1024\nse.avg.util_avg                              :                 1024\nse.avg.last_update_time                      :     1051869640872960\nse.avg.util_est                              :                 1024\nuclamp.min                                   :                    0\nuclamp.max                                   :                 1024\neffective uclamp.min                         :                    0\neffective uclamp.max                         :                 1024\npolicy                                       :                    0\nprio                                         :                  120\nse.slice                                     :              2800000\next.enabled                                  :                    0\nclock-delta                                  :                   28\nmm->numa_scan_seq                            :                    0\nnuma_pages_migrated                          :                    0\nnuma_preferred_nid                           :                   -1\ntotal_numa_faults                            :                    0\ncurrent_node=0, numa_group_id=0\nnuma_faults node=0 task_private=0 task_shared=0 group_private=0 group_shared=0\n"
+    },
+    "maps_summary": {
+      "status": "READ",
+      "sha256": "90cdde115e3bc73098f629cba8b3c52cc5639ae7c992e3d41d7ba6d19572b42c",
+      "mapping_count": 798,
+      "file_backed_count": 386,
+      "anonymous_or_special_count": 412,
+      "permissions": {
+        "---p": 69,
+        "---s": 21,
+        "--xp": 1,
+        "-w-s": 2,
+        "r--p": 193,
+        "r--s": 3,
+        "r-xp": 72,
+        "rw-p": 196,
+        "rw-s": 241
+      }
+    }
+  },
+  "thread_count": 37,
+  "threads": [
+    {
+      "tid": 345279,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tR (running)\nTgid:\t345279\nNgid:\t0\nPid:\t345279\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345279\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t189\nnonvoluntary_ctxt_switches:\t425\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345279 (python) R 345252 345252 320014 34816 345252 4194304 114005 3713 0 0 2750 158 6 0 20 0 37 0 105225899 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 0 0 0 17 0 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "0"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345280,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345280\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345280\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t3\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345280 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 6 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345281,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345281\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345281\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t9\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345281 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 12 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345282,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345282\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345282\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t2\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345282 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 7 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345283,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345283\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345283\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345283 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 10 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345284,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345284\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345284\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345284 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 8 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345285,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345285\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345285\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t11\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345285 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 1 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345286,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345286\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345286\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t15\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345286 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 5 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345287,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345287\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345287\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t7\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345287 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 0 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345288,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345288\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345288\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t5\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345288 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 2 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345289,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345289\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345289\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t18\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345289 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 3 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345290,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345290\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345290\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345290 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 13 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345291,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345291\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345291\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t1\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345291 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 15 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345292,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345292\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345292\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345292 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 9 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345293,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345293\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345293\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345293 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 14 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345294,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345294\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345294\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345294 (python) S 345252 345252 320014 34816 345252 4194368 2 3713 0 0 7 0 6 0 20 0 37 0 105225902 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 11 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345295,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345295\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345295\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t17\nnonvoluntary_ctxt_switches:\t1\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345295 (python) S 345252 345252 320014 34816 345252 4194368 8 3713 0 0 0 0 6 0 20 0 37 0 105225910 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 6 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345298,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345298\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345298\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345298 (python) S 345252 345252 320014 34816 345252 4194368 0 3713 0 0 0 0 6 0 20 0 37 0 105225961 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 13 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345299,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345299\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345299\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t2637\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345299 (python) S 345252 345252 320014 34816 345252 4194368 3 3713 0 0 0 2 6 0 20 0 37 0 105225966 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 9 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345300,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345300\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345300\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345300 (python) S 345252 345252 320014 34816 345252 4194368 3 3713 0 0 0 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 10 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345301,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345301\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345301\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t2\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345301 (python) S 345252 345252 320014 34816 345252 4194368 3 3713 0 0 0 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 6 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345302,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345302\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345302\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t17\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345302 (python) S 345252 345252 320014 34816 345252 4194368 1441 3713 0 0 1 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 11 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345303,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345303\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345303\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t16\nnonvoluntary_ctxt_switches:\t2\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345303 (python) S 345252 345252 320014 34816 345252 4194368 14228 3713 0 0 6 2 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 0 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345304,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345304\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345304\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t18\nnonvoluntary_ctxt_switches:\t1\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345304 (python) S 345252 345252 320014 34816 345252 4194368 1691 3713 0 0 1 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 8 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345305,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345305\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345305\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t15\nnonvoluntary_ctxt_switches:\t2\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345305 (python) S 345252 345252 320014 34816 345252 4194368 4501 3713 0 0 1 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 10 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345306,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345306\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345306\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t14\nnonvoluntary_ctxt_switches:\t25\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345306 (python) S 345252 345252 320014 34816 345252 4194368 35543 3713 0 0 6 4 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 4 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345307,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345307\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345307\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t18\nnonvoluntary_ctxt_switches:\t2\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345307 (python) S 345252 345252 320014 34816 345252 4194368 1420 3713 0 0 1 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 6 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345308,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345308\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345308\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t17\nnonvoluntary_ctxt_switches:\t2\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345308 (python) S 345252 345252 320014 34816 345252 4194368 34770 3713 0 0 9 4 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 13 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345309,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345309\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345309\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t19\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345309 (python) S 345252 345252 320014 34816 345252 4194368 1447 3713 0 0 1 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 12 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345310,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345310\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345310\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t20\nnonvoluntary_ctxt_switches:\t2\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345310 (python) S 345252 345252 320014 34816 345252 4194368 1700 3713 0 0 1 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 1 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345311,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345311\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345311\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t18\nnonvoluntary_ctxt_switches:\t3\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345311 (python) S 345252 345252 320014 34816 345252 4194368 19756 3713 0 0 4 3 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 3 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345312,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345312\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345312\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t19\nnonvoluntary_ctxt_switches:\t1\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345312 (python) S 345252 345252 320014 34816 345252 4194368 1348 3713 0 0 1 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 5 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345313,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345313\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345313\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t22\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345313 (python) S 345252 345252 320014 34816 345252 4194368 1461 3713 0 0 0 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 9 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345314,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345314\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345314\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t21\nnonvoluntary_ctxt_switches:\t17\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345314 (python) S 345252 345252 320014 34816 345252 4194368 22014 3713 0 0 7 1 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 7 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345315,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345315\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345315\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t18\nnonvoluntary_ctxt_switches:\t2\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345315 (python) S 345252 345252 320014 34816 345252 4194368 38387 3713 0 0 11 4 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 2 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345316,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345316\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345316\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1\nnonvoluntary_ctxt_switches:\t0\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345316 (python) S 345252 345252 320014 34816 345252 4194368 3 3713 0 0 0 0 6 0 20 0 37 0 105225983 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 12 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    },
+    {
+      "tid": 345322,
+      "comm": {
+        "status": "READ",
+        "content": "python\n"
+      },
+      "status": {
+        "status": "READ",
+        "content": "Name:\tpython\nUmask:\t0002\nState:\tS (sleeping)\nTgid:\t345279\nNgid:\t0\nPid:\t345322\nPPid:\t345252\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 20 24 27 30 46 100 117 125 992 1000 \nNStgid:\t345279\nNSpid:\t345322\nNSpgid:\t345252\nNSsid:\t320014\nKthread:\t0\nVmPeak:\t16740484 kB\nVmSize:\t16730468 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  927648 kB\nVmRSS:\t  691904 kB\nRssAnon:\t  506052 kB\nRssFile:\t  185840 kB\nRssShmem:\t      12 kB\nVmData:\t 1838460 kB\nVmStk:\t     524 kB\nVmExe:\t    2956 kB\nVmLib:\t  663792 kB\nVmPTE:\t    3076 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t37\nSigQ:\t0/114442\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffff\nCpus_allowed_list:\t0-15\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t717\nnonvoluntary_ctxt_switches:\t1\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+      },
+      "stat": {
+        "status": "READ",
+        "content": "345322 (python) S 345252 345252 320014 34816 345252 4194368 7 3713 0 0 3 0 6 0 20 0 37 0 105226081 17131999232 172642 18446744073709551615 4325376 7352253 140730418790848 0 0 0 0 16781312 2 1 0 0 -1 13 0 0 0 0 0 10653128 12216448 41906176 140730418797794 140730418797952 140730418797952 140730418802635 0\n"
+      },
+      "wchan": {
+        "status": "READ",
+        "content": "futex_do_wait"
+      },
+      "syscall": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 1] Operation not permitted"
+      },
+      "stack": {
+        "status": "UNAVAILABLE",
+        "error": "PermissionError: [Errno 13] Permission denied"
+      }
+    }
+  ],
+  "task_enumeration_error": null,
+  "field_counts": {
+    "read": 153,
+    "unavailable": 75
+  },
+  "elapsed_seconds": 0.004596949031110853,
+  "interpretation_limits": [
+    "This is one OS-visible snapshot, not a causal diagnosis.",
+    "UNAVAILABLE fields must not be interpreted as absent state.",
+    "The maps content is not stored; only a hash and aggregate summary are retained."
+  ]
+}

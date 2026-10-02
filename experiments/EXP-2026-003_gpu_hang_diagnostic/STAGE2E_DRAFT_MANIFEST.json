@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "protocol_id": "EXP-2026-003-STAGE2E-A-MODULE-OFFSET-CAPTURE-V1",
+  "approved_at_local_date": "2026-10-01",
+  "approval_scope": "One Stage 2E-A exploratory GPU attempt started manually by the human owner.",
+  "execution_state": "CONSUMED_CLOSED_AFTER_ATTEMPT",
+  "artifacts_sha256": {
+    "baseline": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+    "worker": "87b7f46af3913297aa3eeab8a30940980a41e2278f806e60ed82fb12b34c9eef",
+    "runner": "d45cf3e405948db15539a3d8cdbf6e5144c89db81b8fa46dd67def5678b01b3e",
+    "offset_helper": "fe0ae2e2a4fa0e817a07b97ea2a31586fdf613684c4b06cecc4412c359a73095",
+    "preflight": "1ae567ce9208d947d2b7f870d456bf52103675726f975fdd0ef53fba94577edd",
+    "gdb": "3832cc070ae1716e322105d3b39fb398695e5f031c9d39224cf227a8c2b889f6",
+    "opencl_runtime": "d43af828e1acfcce4a2c042167ecacb270e9356fa55a3a557f18cd55b79540da"
+  },
+  "stop_rule": "No automatic retry. Close after this attempt regardless of reproduction outcome.",
+  "consumed_run_id": "stage2e_a1_20261001_01",
+  "consumed_result_sha256": "805902c2c651e7c3a1bbc60d074f049d934a80680fd5894143ad1caf18319b82",
+  "closure_reason": "Hang reproduced and complete main-thread/module-offset evidence captured."
+}

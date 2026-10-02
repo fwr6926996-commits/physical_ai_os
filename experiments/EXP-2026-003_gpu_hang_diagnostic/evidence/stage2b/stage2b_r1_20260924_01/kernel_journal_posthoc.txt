@@ -1,0 +1,8 @@
+Query executed after the run:
+journalctl -k --since '2026-09-24 18:45:45' --until '2026-09-24 18:47:30' --no-pager
+
+Result:
+-- No entries --
+
+Interpretation limit:
+No kernel journal entry was observed in the queried window. This does not prove that i915, the GPU, OpenVINO, or another native layer was fault-free.

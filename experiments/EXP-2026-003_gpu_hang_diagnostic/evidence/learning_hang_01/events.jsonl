@@ -1,0 +1,8 @@
+{"pid": 320713, "scenario": "hang", "supervisor_elapsed_s": 0.029561733012087643, "type": "worker_ready", "worker_monotonic_s": 358035.038233862}
+{"iteration": 1, "supervisor_elapsed_s": 0.02965357300126925, "type": "work_enter", "worker_monotonic_s": 358035.038524929}
+{"iteration": 1, "supervisor_elapsed_s": 0.1299983150092885, "type": "work_return", "worker_monotonic_s": 358035.13896152}
+{"iteration": 1, "supervisor_elapsed_s": 0.130086813995149, "type": "heartbeat", "worker_monotonic_s": 358035.138990542}
+{"iteration": 2, "supervisor_elapsed_s": 0.13010619400301948, "type": "work_enter", "worker_monotonic_s": 358035.138994616}
+{"iteration": 2, "supervisor_elapsed_s": 0.2301963610225357, "type": "work_return", "worker_monotonic_s": 358035.239177221}
+{"iteration": 2, "supervisor_elapsed_s": 0.23028045799583197, "type": "heartbeat", "worker_monotonic_s": 358035.239204203}
+{"iteration": 3, "supervisor_elapsed_s": 0.23029886704171076, "type": "work_enter", "worker_monotonic_s": 358035.239207533}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "protocol_id": "EXP-2026-003-STAGE2B-INFER-BOUNDARY-SHARED-STATE-V1",
+  "run_id": "stage2b_r1_20260924_01",
+  "captured_at_utc": "2026-09-24T10:45:03.288524+00:00",
+  "captured_at_local": "2026-09-24T18:45:03.288535+08:00",
+  "pid": 338432,
+  "scope": "Read-only preflight context; OpenVINO and GPU are intentionally not initialized here.",
+  "platform": {
+    "system": "Linux",
+    "node": "lucas-ThinkBook-16-G7-IAH",
+    "release": "7.0.0-31-generic",
+    "version": "#31~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Aug 10 09:38:02 UTC 2",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "uptime": {
+    "status": "READ",
+    "value": "1047918.43 5779087.17"
+  },
+  "memory": {
+    "status": "READ",
+    "value": "MemTotal:       32269876 kB\nMemFree:         2259740 kB\nMemAvailable:    8533532 kB\nBuffers:          377328 kB\nCached:          9724264 kB\nSwapCached:        84484 kB\nActive:         10199512 kB\nInactive:       16079548 kB\nActive(anon):    9033668 kB\nInactive(anon): 11396552 kB\nActive(file):    1165844 kB\nInactive(file):  4682996 kB\nUnevictable:      864344 kB\nMlocked:             924 kB\nSwapTotal:       2097148 kB\nSwapFree:        1001048 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             16580 kB\nWriteback:             0 kB\nAnonPages:      17022296 kB\nMapped:          2301104 kB\nShmem:           4252716 kB\nKReclaimable:    1188024 kB\nSlab:            1465192 kB\nSReclaimable:     976764 kB\nSUnreclaim:       488428 kB\nKernelStack:       78528 kB\nPageTables:       332116 kB\nSecPageTables:     14796 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    18232084 kB\nCommitted_AS:   72940104 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      183388 kB\nVmallocChunk:          0 kB\nPercpu:            22208 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:  2396160 kB\nShmemPmdMapped:        0 kB\nFileHugePages:    284672 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:          773588 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:     4265728 kB\nDirectMap2M:    25550848 kB\nDirectMap1G:     5242880 kB"
+  },
+  "artifacts_sha256": {
+    "baseline_script": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+    "stage2b_worker": "7093c14a6b6eeed5fb3aa234a6e05c96b89d1e1039c661872e028490377f5672",
+    "ir_xml": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "ir_bin": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+    "reference_input": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a"
+  },
+  "baseline_hash_matches_frozen_manifest": true,
+  "matching_process_names": [
+    {
+      "pid": 2537,
+      "ppid": 2,
+      "command_name": "UVM GPU1 BH"
+    },
+    {
+      "pid": 2538,
+      "ppid": 2,
+      "command_name": "UVM GPU1 KC"
+    },
+    {
+      "pid": 338432,
+      "ppid": 320014,
+      "command_name": "python"
+    }
+  ],
+  "dri_usage_best_effort": {
+    "status": "CAPTURED",
+    "devices": [
+      "/dev/dri/card0",
+      "/dev/dri/card1",
+      "/dev/dri/renderD128",
+      "/dev/dri/renderD129"
+    ],
+    "fuser": {
+      "status": "CAPTURED",
+      "command": [
+        "fuser",
+        "-v",
+        "/dev/dri/card0",
+        "/dev/dri/card1",
+        "/dev/dri/renderD128",
+        "/dev/dri/renderD129"
+      ],
+      "returncode": 0,
+      "output": "\u7528\u6237     \u8fdb\u7a0b\u53f7 \u6743\u9650   \u547d\u4ee4\n/dev/dri/card0:      lucas      2213 F.... Xorg\n/dev/dri/card1:      lucas      2213 F.... Xorg\n                     lucas      2462 F.... gnome-shell\n                     lucas      2483 F.... mutter-x11-fram\n                     lucas      2690 F.... gnome-software\n                     lucas      2970 F.... xdg-desktop-por\n                     lucas      5016 F.... ChatGPT\n                     lucas      6656 F.... msedge\n                     lucas     61965 F.... nautilus\n                     lucas     189396 F.... gnome-control-c\n                     lucas     189553 F.... iKuuuVPN\n                     lucas     258489 F.... feishu\n                     lucas     258546 F.... feishu\n/dev/dri/renderD128: lucas     258489 F.... feishu\n                     lucas     258546 F.... feishu\n/dev/dri/renderD129: lucas      2213 F.... Xorg\n                     lucas      2401 F.... gnome-remote-de"
+    },
+    "lsof": {
+      "status": "CAPTURED",
+      "command": [
+        "lsof",
+        "/dev/dri/card0",
+        "/dev/dri/card1",
+        "/dev/dri/renderD128",
+        "/dev/dri/renderD129"
+      ],
+      "returncode": 0,
+      "output": "COMMAND      PID  USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME\nXorg        2213 lucas   16u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   17u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   18u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   19u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   20u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   26u   CHR 226,129      0t0 1070 /dev/dri/renderD129\nXorg        2213 lucas   27u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   41u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   44u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   45u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   46u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   47u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   48u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   49u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   51u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   52u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   53u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   57u   CHR 226,129      0t0 1070 /dev/dri/renderD129\nXorg        2213 lucas   63u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   93u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas   94u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas  103u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas  104u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas  106u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas  107u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas  110u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas  115u   CHR   226,1      0t0 1024 /dev/dri/card1\nXorg        2213 lucas  118u   CHR   226,0      0t0 1071 /dev/dri/card0\ngnome-rem   2401 lucas   17u   CHR 226,129      0t0 1070 /dev/dri/renderD129\ngnome-rem   2401 lucas   25u   CHR 226,129      0t0 1070 /dev/dri/renderD129\ngnome-she   2462 lucas   11u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-she   2462 lucas   12u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-she   2462 lucas   13u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-she   2462 lucas   14u   CHR   226,1      0t0 1024 /dev/dri/card1\nmutter-x1   2483 lucas    3u   CHR   226,1      0t0 1024 /dev/dri/card1\nmutter-x1   2483 lucas    5u   CHR   226,1      0t0 1024 /dev/dri/card1\nmutter-x1   2483 lucas    6u   CHR   226,1      0t0 1024 /dev/dri/card1\nmutter-x1   2483 lucas    7u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-sof   2690 lucas    9u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-sof   2690 lucas   10u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-sof   2690 lucas   11u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-sof   2690 lucas   12u   CHR   226,1      0t0 1024 /dev/dri/card1\nxdg-deskt   2970 lucas    8u   CHR   226,1      0t0 1024 /dev/dri/card1\nxdg-deskt   2970 lucas    9u   CHR   226,1      0t0 1024 /dev/dri/card1\nxdg-deskt   2970 lucas   10u   CHR   226,1      0t0 1024 /dev/dri/card1\nxdg-deskt   2970 lucas   11u   CHR   226,1      0t0 1024 /dev/dri/card1\nChatGPT     5016 lucas   23u   CHR   226,1      0t0 1024 /dev/dri/card1\nChatGPT     5016 lucas   24u   CHR   226,1      0t0 1024 /dev/dri/card1\nChatGPT     5016 lucas   25u   CHR   226,1      0t0 1024 /dev/dri/card1\nChatGPT     5016 lucas   26u   CHR   226,1      0t0 1024 /dev/dri/card1\nChatGPT     5016 lucas   38u   CHR   226,1      0t0 1024 /dev/dri/card1\nChatGPT     5016 lucas   39u   CHR   226,1      0t0 1024 /dev/dri/card1\nChatGPT     5016 lucas   40u   CHR   226,1      0t0 1024 /dev/dri/card1\nmsedge      6656 lucas   23u   CHR   226,1      0t0 1024 /dev/dri/card1\nmsedge      6656 lucas   24u   CHR   226,1      0t0 1024 /dev/dri/card1\nmsedge      6656 lucas   25u   CHR   226,1      0t0 1024 /dev/dri/card1\nmsedge      6656 lucas   26u   CHR   226,1      0t0 1024 /dev/dri/card1\nmsedge      6656 lucas   38u   CHR   226,1      0t0 1024 /dev/dri/card1\nmsedge      6656 lucas   39u   CHR   226,1      0t0 1024 /dev/dri/card1\nmsedge      6656 lucas   40u   CHR   226,1      0t0 1024 /dev/dri/card1\nnautilus   61965 lucas   14u   CHR   226,1      0t0 1024 /dev/dri/card1\nnautilus   61965 lucas   16u   CHR   226,1      0t0 1024 /dev/dri/card1\nnautilus   61965 lucas   17u   CHR   226,1      0t0 1024 /dev/dri/card1\nnautilus   61965 lucas   18u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-con 189396 lucas    7u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-con 189396 lucas    9u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-con 189396 lucas   10u   CHR   226,1      0t0 1024 /dev/dri/card1\ngnome-con 189396 lucas   11u   CHR   226,1      0t0 1024 /dev/dri/card1\niKuuuVPN  189553 lucas   10u   CHR   226,1      0t0 1024 /dev/dri/card1\niKuuuVPN  189553 lucas   11u   CHR   226,1      0t0 1024 /dev/dri/card1\niKuuuVPN  189553 lucas   12u   CHR   226,1      0t0 1024 /dev/dri/card1\niKuuuVPN  189553 lucas   13u   CHR   226,1      0t0 1024 /dev/dri/card1\niKuuuVPN  189553 lucas   14u   CHR   226,1      0t0 1024 /dev/dri/card1\niKuuuVPN  189553 lucas   15u   CHR   226,1      0t0 1024 /dev/dri/card1\niKuuuVPN  189553 lucas   16u   CHR   226,1      0t0 1024 /dev/dri/card1\nfeishu    258489 lucas   19u   CHR 226,128      0t0 1023 /dev/dri/renderD128\nfeishu    258489 lucas   21u   CHR   226,1      0t0 1024 /dev/dri/card1\nfeishu    258489 lucas   22u   CHR   226,1      0t0 1024 /dev/dri/card1\nfeishu    258489 lucas   23u   CHR   226,1      0t0 1024 /dev/dri/card1\nfeishu    258489 lucas   24u   CHR   226,1      0t0 1024 /dev/dri/card1\nfeishu    258546 lucas   19u   CHR 226,128      0t0 1023 /dev/dri/renderD128\nfeishu    258546 lucas   21u   CHR   226,1      0t0 1024 /dev/dri/card1\nfeishu    258546 lucas   22u   CHR   226,1      0t0 1024 /dev/dri/card1\nfeishu    258546 lucas   23u   CHR   226,1      0t0 1024 /dev/dri/card1\nfeishu    258546 lucas   24u   CHR   226,1      0t0 1024 /dev/dri/card1"
+    }
+  },
+  "power_context_best_effort": {
+    "ac_online": {
+      "/sys/class/power_supply/ACAD/online": {
+        "status": "READ",
+        "value": "1"
+      },
+      "/sys/class/power_supply/hidpp_battery_0/online": {
+        "status": "READ",
+        "value": "1"
+      },
+      "/sys/class/power_supply/ucsi-source-psy-USBC000:001/online": {
+        "status": "READ",
+        "value": "0"
+      },
+      "/sys/class/power_supply/ucsi-source-psy-USBC000:002/online": {
+        "status": "READ",
+        "value": "0"
+      }
+    },
+    "platform_profile": {
+      "status": "READ",
+      "value": "performance"
+    }
+  },
+  "interpretation_limits": [
+    "A process-name filter cannot prove that no other GPU workload exists.",
+    "Open DRM handles do not prove active GPU load.",
+    "OpenVINO identity is captured by the worker result to avoid extra pre-run initialization."
+  ]
+}

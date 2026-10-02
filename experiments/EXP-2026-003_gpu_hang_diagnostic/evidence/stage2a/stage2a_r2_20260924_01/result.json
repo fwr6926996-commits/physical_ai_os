@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "run_id": "stage2a_r2_20260924_01",
+  "started_at_utc": "2026-09-24T09:09:26.867244+00:00",
+  "ended_at_utc": "2026-09-24T09:14:28.952672+00:00",
+  "status": "HARD_GATES_PASS_DIAGNOSTIC_REVIEW_PENDING",
+  "scope": "Isolated-worker OpenVINO synchronous GPU.0 FP32 inference; parent-side evidence, telemetry, and watchdog; robot/system paths excluded.",
+  "architecture": {
+    "inference_worker": "OpenVINO load/compile, inference, output correctness, queue heartbeat only",
+    "supervisor": "CSV evidence, telemetry, progress reporting, and watchdog recovery",
+    "known_limitation": "A pass qualifies only this isolated-worker architecture; the monolithic worker remains a known failing path."
+  },
+  "configuration": {
+    "device": "GPU.0",
+    "precision": "f32",
+    "duration_minutes": 5.0,
+    "warmup_iterations": 10,
+    "stall_seconds": 15.0,
+    "startup_seconds": 60.0,
+    "telemetry_seconds": 5.0,
+    "window_seconds": 60.0
+  },
+  "artifacts": {
+    "ir_xml_sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "ir_bin_sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+    "reference_input_sha256": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output_sha256": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a"
+  },
+  "worker_ready": {
+    "type": "ready",
+    "pid": 330724,
+    "available_devices": [
+      "CPU",
+      "GPU.0",
+      "GPU.1",
+      "NPU"
+    ],
+    "runtime_device": "GPU.0",
+    "device_full_name": "Intel(R) Arc(TM) Graphics (iGPU)",
+    "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "plugin_versions": {
+      "GPU": {
+        "build_number": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+        "description": "Intel GPU plugin"
+      }
+    },
+    "compile_ms": 951.243825,
+    "initial_correctness": {
+      "rtol": 0.0001,
+      "atol": 1e-05,
+      "max_abs_error": 1.430511474609375e-06,
+      "mean_abs_error": 2.6454529233888024e-07,
+      "status": "PASS"
+    }
+  },
+  "worker_exitcode": 0,
+  "recovery": null,
+  "final_event": {
+    "type": "completed",
+    "iteration": 15734,
+    "elapsed_s": 300.00190089899115
+  },
+  "last_completed_inference": {
+    "type": "heartbeat",
+    "iteration": 15734,
+    "elapsed_s": 300.00178416998824,
+    "latency_ms": 28.257055,
+    "finite": true,
+    "correct": true,
+    "max_abs_error": 1.430511474609375e-06
+  },
+  "execution": {
+    "iterations": 15734,
+    "maximum_abs_error": 1.430511474609375e-06,
+    "hard_gates": {
+      "completed_requested_duration": true,
+      "worker_exitcode_zero": true,
+      "nonfinite_outputs": 0,
+      "correctness_failures": 0,
+      "watchdog_timeout": false
+    }
+  },
+  "latency_ms": {
+    "min": 17.882768,
+    "mean": 19.00697921342316,
+    "p50": 18.314405,
+    "p95": 25.159234399999995,
+    "p99": 29.61957799,
+    "max": 89.489518
+  },
+  "latency_histogram_ms": {
+    "<20": 14123,
+    "20-40": 1601,
+    "40-60": 8,
+    "60-80": 1,
+    "80-100": 1,
+    ">=100": 0
+  },
+  "window_summaries": [
+    {
+      "window_index": 0,
+      "start_s": 0.0,
+      "end_s": 60.0,
+      "iterations": 3123,
+      "latency_ms": {
+        "min": 17.905702,
+        "mean": 19.151572724303552,
+        "p50": 18.325219,
+        "p95": 26.434590499999995,
+        "p99": 29.928744479999988,
+        "max": 89.489518
+      }
+    },
+    {
+      "window_index": 1,
+      "start_s": 60.0,
+      "end_s": 120.0,
+      "iterations": 3161,
+      "latency_ms": {
+        "min": 17.903183,
+        "mean": 18.925736814931984,
+        "p50": 18.260949,
+        "p95": 24.628488,
+        "p99": 29.6698568,
+        "max": 40.871183
+      }
+    },
+    {
+      "window_index": 2,
+      "start_s": 120.0,
+      "end_s": 180.0,
+      "iterations": 3154,
+      "latency_ms": {
+        "min": 17.887055,
+        "mean": 18.956865338934684,
+        "p50": 18.281309,
+        "p95": 25.123813999999996,
+        "p99": 28.967297419999976,
+        "max": 38.712192
+      }
+    },
+    {
+      "window_index": 3,
+      "start_s": 180.0,
+      "end_s": 240.0,
+      "iterations": 3148,
+      "latency_ms": {
+        "min": 17.882768,
+        "mean": 18.99638772808132,
+        "p50": 18.310251,
+        "p95": 25.06163899999998,
+        "p99": 29.388232909999985,
+        "max": 36.875227
+      }
+    },
+    {
+      "window_index": 4,
+      "start_s": 240.0,
+      "end_s": 300.0,
+      "iterations": 3147,
+      "latency_ms": {
+        "min": 17.903611,
+        "mean": 19.002973102001906,
+        "p50": 18.345032,
+        "p95": 25.098281699999994,
+        "p99": 29.776747759999996,
+        "max": 39.031183
+      }
+    },
+    {
+      "window_index": 5,
+      "start_s": 300.0,
+      "end_s": 360.0,
+      "iterations": 1,
+      "latency_ms": {
+        "min": 28.257055,
+        "mean": 28.257055,
+        "p50": 28.257055,
+        "p95": 28.257055,
+        "p99": 28.257055,
+        "max": 28.257055
+      }
+    }
+  ],
+  "telemetry_summary": {
+    "samples": 61,
+    "worker_rss_bytes": {
+      "first": 876544.0,
+      "last": 674619392.0,
+      "min": 876544.0,
+      "max": 674619392.0
+    },
+    "supervisor_rss_bytes": {
+      "first": 35573760.0,
+      "last": 36114432.0,
+      "min": 35573760.0,
+      "max": 36114432.0
+    },
+    "system_available_memory_bytes": {
+      "first": 8745046016.0,
+      "last": 8079712256.0,
+      "min": 7587864576.0,
+      "max": 8745046016.0
+    },
+    "package_temperature_c": {
+      "first": 62.0,
+      "last": 60.0,
+      "min": 54.0,
+      "max": 67.0
+    },
+    "max_sensor_temperature_c": {
+      "first": 62.0,
+      "last": 60.0,
+      "min": 54.0,
+      "max": 72.0
+    }
+  },
+  "evidence_files": {
+    "latencies_csv": "latencies.csv",
+    "supervisor_telemetry_csv": "supervisor_telemetry.csv"
+  }
+}

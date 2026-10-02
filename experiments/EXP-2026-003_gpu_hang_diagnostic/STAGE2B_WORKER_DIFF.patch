@@ -1,0 +1,49 @@
+--- historical_inference_worker
++++ stage2b_inference_worker
+@@ -1,9 +1,11 @@
+ def inference_worker(
++    enter_sequence: Any,
++    return_sequence: Any,
+     messages: mp.Queue,
+     duration_seconds: float,
+     warmup: int,
+ ) -> None:
+-    """Own OpenVINO objects and inference only; do no file or sensor I/O."""
++    """Historical worker plus two lock-free shared writes around each infer."""
+     try:
+         import openvino as ov
+         import torch
+@@ -42,7 +44,10 @@
+             "wrist_image": model_input["observation.images.wrist"].numpy(),
+         }
+ 
++        sequence = 1
++        enter_sequence.value = sequence
+         request.infer(inputs)
++        return_sequence.value = sequence
+         initial = request.get_output_tensor(0).data.copy()
+         initial_error = np.abs(initial.astype(np.float32) - expected.astype(np.float32))
+         initial_finite = bool(np.isfinite(initial).all())
+@@ -55,7 +60,10 @@
+                 f"max_abs_error={float(initial_error.max())}"
+             )
+         for _ in range(warmup):
++            sequence += 1
++            enter_sequence.value = sequence
+             request.infer(inputs)
++            return_sequence.value = sequence
+ 
+         versions = {
+             name: {
+@@ -86,8 +94,11 @@
+         started = time.monotonic()
+         iteration = 0
+         while time.monotonic() - started < duration_seconds:
++            sequence += 1
++            enter_sequence.value = sequence
+             inference_started = time.perf_counter_ns()
+             request.infer(inputs)
++            return_sequence.value = sequence
+             latency_ms = (time.perf_counter_ns() - inference_started) / 1_000_000.0
+             iteration += 1
+             elapsed_s = time.monotonic() - started

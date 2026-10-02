@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-09-24T07:52:52.105447+00:00",
+  "protocol_id": "EXP-2026-003-STAGE0-MOCK-HARNESS-V1",
+  "run_id": "learning_hang_01",
+  "status": "PASS_HANG_DETECTED_AND_RECOVERED",
+  "scope": "Mock parent/worker diagnostic only; no OpenVINO or GPU access.",
+  "configuration": {
+    "scenario": "hang",
+    "duration_seconds": 4.0,
+    "work_seconds": 0.1,
+    "hang_after": 3,
+    "watchdog_seconds": 1.0,
+    "startup_seconds": 5.0
+  },
+  "event_count": 8,
+  "last_confirmed": {
+    "work_enter": {
+      "type": "work_enter",
+      "worker_monotonic_s": 358035.239207533,
+      "iteration": 3,
+      "supervisor_elapsed_s": 0.23029886704171076
+    },
+    "work_return": {
+      "type": "work_return",
+      "worker_monotonic_s": 358035.239177221,
+      "iteration": 2,
+      "supervisor_elapsed_s": 0.2301963610225357
+    },
+    "heartbeat": {
+      "type": "heartbeat",
+      "worker_monotonic_s": 358035.239204203,
+      "iteration": 2,
+      "supervisor_elapsed_s": 0.23028045799583197
+    }
+  },
+  "first_missing_event": {
+    "expected": "work_return",
+    "iteration": 3
+  },
+  "final_event": {
+    "type": "watchdog_timeout",
+    "stage": "work",
+    "seconds_without_message": 1.0055247329873964
+  },
+  "worker_exitcode": -15,
+  "recovery": "SIGTERM",
+  "interpretation_limits": [
+    "A detected mock hang validates bounded loss-of-progress detection only.",
+    "This result cannot identify or exclude a GPU, driver, plugin, runtime, or model fault."
+  ],
+  "evidence_files": {
+    "events": "events.jsonl"
+  }
+}

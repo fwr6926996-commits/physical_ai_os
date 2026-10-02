@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-09-24T09:18:36+00:00",
+  "protocol_id": "EXP-2026-003-STAGE2A-CURRENT-REPRODUCTION-BASELINE-V1",
+  "run_id": "stage2a_r3_20260924_01",
+  "verdict": "READY_FOR_FINAL_BOUNDED_ROUND_WITH_RECORDED_DESKTOP_GPU_CONTEXT",
+  "checks": {
+    "baseline_and_artifact_hashes_match": true,
+    "kernel_matches_rounds1_2": true,
+    "power_context_matches_rounds1_2": true,
+    "related_process_context_matches_rounds1_2": true,
+    "dri_user_context_matches_rounds1_2": true,
+    "unexpected_python_workload_observed": false,
+    "memory_available_kib": 8564284
+  },
+  "interpretation_limits": [
+    "Matching visible context does not prove identical instantaneous GPU scheduling or frequency state.",
+    "The memory and swap values are recorded and are not treated as causal.",
+    "This approval applies only to the final frozen Stage 2A Round 3."
+  ],
+  "decision": "Allow final Stage 2A Round 3. Round 4 remains prohibited regardless of outcome."
+}

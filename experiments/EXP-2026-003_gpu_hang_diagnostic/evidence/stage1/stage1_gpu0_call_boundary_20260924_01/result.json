@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-09-24T08:33:43.377630+00:00",
+  "protocol_id": "EXP-2026-003-STAGE1-GPU-CALL-BOUNDARY-V1",
+  "run_id": "stage1_gpu0_call_boundary_20260924_01",
+  "status": "NO_HANG_REPRODUCED_SINGLE_RUN_COMPLETE",
+  "scope": "One bounded exploratory GPU.0 call-boundary diagnostic; not qualification or admission evidence.",
+  "configuration": {
+    "duration_seconds": 180.0,
+    "warmup": 10,
+    "stall_seconds": 15.0,
+    "startup_seconds": 90.0,
+    "device": "GPU.0",
+    "precision": "f32",
+    "performance_hint": "LATENCY"
+  },
+  "artifacts": {
+    "ir_xml_sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "ir_bin_sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+    "reference_input_sha256": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output_sha256": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a"
+  },
+  "runtime_identity": {
+    "type": "runtime_identity",
+    "worker_monotonic_s": 360306.914425693,
+    "available_devices": [
+      "CPU",
+      "GPU.0",
+      "GPU.1",
+      "NPU"
+    ],
+    "runtime_device": "GPU.0",
+    "device_full_name": "Intel(R) Arc(TM) Graphics (iGPU)",
+    "openvino_version": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "plugin_versions": {
+      "GPU": {
+        "build_number": "2026.3.1-22476-759c5a6ab8c-releases/2026/3",
+        "description": "Intel GPU plugin"
+      }
+    },
+    "supervisor_elapsed_s": 1.6950151849887334
+  },
+  "last_confirmed": {
+    "infer_enter": {
+      "type": "infer_enter",
+      "worker_monotonic_s": 360487.275775869,
+      "sequence": 9229,
+      "phase": "measurement",
+      "phase_iteration": 9218,
+      "supervisor_elapsed_s": 182.05631130200345
+    },
+    "infer_return": {
+      "type": "infer_return",
+      "worker_monotonic_s": 360487.294218617,
+      "sequence": 9229,
+      "phase": "measurement",
+      "phase_iteration": 9218,
+      "latency_ms": 18.438071,
+      "supervisor_elapsed_s": 182.0747471890063
+    },
+    "heartbeat": {
+      "type": "heartbeat",
+      "worker_monotonic_s": 360487.294271268,
+      "sequence": 9229,
+      "iteration": 9218,
+      "elapsed_s": 180.0136681990116,
+      "latency_ms": 18.438071,
+      "correct": true,
+      "max_abs_error": 1.430511474609375e-06,
+      "supervisor_elapsed_s": 182.07479586603586
+    }
+  },
+  "first_missing_event": null,
+  "final_event": {
+    "type": "completed",
+    "worker_monotonic_s": 360487.294278145,
+    "sequence": 9229,
+    "iteration": 9218,
+    "elapsed_s": 180.01367504900554,
+    "supervisor_elapsed_s": 182.07481871603522
+  },
+  "worker_exitcode": 0,
+  "recovery": null,
+  "diagnostic_snapshot_captured": false,
+  "kernel_journal_capture": {
+    "returncode": 0,
+    "path": "kernel_journal.txt"
+  },
+  "interpretation_limits": [
+    "An entered inference without a return localizes loss of progress to that synchronous call only.",
+    "Python, proc, and kernel evidence may narrow the boundary but do not automatically prove a causal component.",
+    "A non-reproduced hang does not readmit GPU.0 or invalidate the prior failures."
+  ],
+  "evidence_files": {
+    "events": "events.jsonl",
+    "python_stack": "python_stack.txt",
+    "proc_snapshot": "proc_snapshot.json",
+    "kernel_journal": "kernel_journal.txt"
+  }
+}

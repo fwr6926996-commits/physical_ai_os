@@ -1,0 +1,8 @@
+Query executed after the run:
+journalctl -k --since '2026-09-24 17:19:25' --until '2026-09-24 17:21:20' --no-pager
+
+Result:
+-- No entries --
+
+Interpretation limit:
+This supports only that no kernel journal entry was observed in the queried window. It does not prove that i915, the GPU, or another native layer was fault-free.

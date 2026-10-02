@@ -1,0 +1,995 @@
+[New LWP 467997]
+[New LWP 467992]
+[New LWP 467991]
+[New LWP 467990]
+[New LWP 467989]
+[New LWP 467988]
+[New LWP 467987]
+[New LWP 467986]
+[New LWP 467985]
+[New LWP 467984]
+[New LWP 467983]
+[New LWP 467982]
+[New LWP 467981]
+[New LWP 467980]
+[New LWP 467979]
+[New LWP 467978]
+[New LWP 467977]
+[New LWP 467976]
+[New LWP 467975]
+[New LWP 467974]
+[New LWP 467971]
+[New LWP 467970]
+[New LWP 467969]
+[New LWP 467968]
+[New LWP 467967]
+[New LWP 467966]
+[New LWP 467965]
+[New LWP 467964]
+[New LWP 467963]
+[New LWP 467962]
+[New LWP 467961]
+[New LWP 467960]
+[New LWP 467959]
+[New LWP 467958]
+[New LWP 467957]
+[New LWP 467956]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x000074aeb8e008c6 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+From                To                  Syms Read   Shared Object Library
+0x000074af0b6ca420  0x000074af0b7483a6  Yes         /lib/x86_64-linux-gnu/libm.so.6
+0x000074af0b6a0260  0x000074af0b6b1c60  Yes (*)     /lib/x86_64-linux-gnu/libz.so.1
+0x000074af0b674210  0x000074af0b692473  Yes (*)     /lib/x86_64-linux-gnu/libexpat.so.1
+0x000074af0b428800  0x000074af0b5b0039  Yes         /lib/x86_64-linux-gnu/libc.so.6
+0x000074af0b7d7000  0x000074af0b801195  Yes         /lib64/ld-linux-x86-64.so.2
+0x000074af0b622560  0x000074af0b6237b1  Yes (*)     /usr/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+0x000074af0b61c240  0x000074af0b61c5d0  Yes (*)     /usr/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+0x000074af0b2f56a0  0x000074af0b2fb60d  Yes (*)     /usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+0x000074af0b2e6c80  0x000074af0b2ebf80  Yes (*)     /usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+0x000074af0a0b5000  0x000074af0a3e6202  Yes (*)     /lib/x86_64-linux-gnu/libcrypto.so.3
+0x000074af0b28e4c0  0x000074af0b29e575  Yes (*)     /usr/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+0x000074af0b27d460  0x000074af0b28307a  Yes (*)     /lib/x86_64-linux-gnu/libffi.so.8
+0x000074af0962d4c0  0x000074af09dbd821  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so
+0x000074af08089800  0x000074af093c1b3c  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+0x000074af07aa55c0  0x000074af07be4ce2  Yes (*)     /lib/x86_64-linux-gnu/libstdc++.so.6
+0x000074af0a5ad780  0x000074af0a5d0745  Yes (*)     /lib/x86_64-linux-gnu/libgcc_s.so.1
+0x000074af0b617040  0x000074af0b617105  Yes         /lib/x86_64-linux-gnu/libpthread.so.0
+0x000074af0741b870  0x000074af07646837  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+0x000074af070023e0  0x000074af07025d2b  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+0x000074af0b2de0a0  0x000074af0b2de1e9  Yes (*)     /usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+0x000074af0b2afa00  0x000074af0b2d2b10  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so
+0x000074af0a5fb480  0x000074af0a5fc316  Yes (*)     /usr/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+0x000074af0a5f5360  0x000074af0a5f5e59  Yes (*)     /usr/lib/python3.12/lib-dynload/resource.cpython-312-x86_64-linux-gnu.so
+0x000074af0a5ed570  0x000074af0a5efe16  Yes         /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/psutil/_psutil_linux.abi3.so
+0x000074af0a5e36e0  0x000074af0a5e5917  Yes (*)     /usr/lib/python3.12/lib-dynload/mmap.cpython-312-x86_64-linux-gnu.so
+0x000074af0a5da5c0  0x000074af0a5dc46f  Yes (*)     /usr/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+0x000074af09fee280  0x000074af09ffaff3  Yes (*)     /lib/x86_64-linux-gnu/libbz2.so.1.0
+0x000074af0a539940  0x000074af0a53d379  Yes (*)     /usr/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+0x000074af095d1400  0x000074af095f25ef  Yes (*)     /lib/x86_64-linux-gnu/liblzma.so.5
+0x000074aedf069340  0x000074aedf405280  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+0x000074aedde11640  0x000074aedeb519c0  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+0x000074af0a532040  0x000074af0a532105  Yes         /lib/x86_64-linux-gnu/libdl.so.2
+0x000074af0956aa10  0x000074af0959ebca  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libtbb.so.12
+0x000074af09faa380  0x000074af09fbf9e3  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libtbbmalloc.so.2
+0x000074af078dd850  0x000074af078e7803  Yes (*)     /usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+0x000074af07277ed0  0x000074af072d5702  Yes (*)     /lib/x86_64-linux-gnu/libssl.so.3
+0x000074aedf567080  0x000074aedf5c26cd  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/frontend/tensorflow/py_tensorflow_frontend.cpython-312-x86_64-linux-gnu.so
+0x000074aedd066080  0x000074aedd3d3660  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/frontend/tensorflow/../../../openvino/libs/libopenvino_tensorflow_frontend.so.2631
+0x000074af0a52a570  0x000074af0a52a629  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_global_deps.so
+0x000074aedc4092a0  0x000074aedc42d3a2  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libgomp.so.1
+0x000074af0a525050  0x000074af0a525115  Yes         /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/_C.cpython-312-x86_64-linux-gnu.so
+0x000074aed6bb0d10  0x000074aed7962810  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_python.so
+0x000074af0a5214e0  0x000074af0a521599  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch.so
+0x000074af0a51ad30  0x000074af0a51d930  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libshm.so
+0x000074aec2930e00  0x000074aed37d6a50  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so
+0x000074aedc7142a0  0x000074aedc7bc988  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libc10.so
+0x000074af09fa0080  0x000074af09fa02b1  Yes         /lib/x86_64-linux-gnu/librt.so.1
+0x000074af0a594a20  0x000074af0a59c8d0  Yes (*)     /usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+0x000074aedef81d40  0x000074aedefdc5a0  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_auto_plugin.so
+0x000074af0a55cb00  0x000074af0a57d1fd  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_auto_batch_plugin.so
+0x000074aebb711c80  0x000074aebe8e2de0  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_cpu_plugin.so
+0x000074af0a548330  0x000074af0a54a110  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libtbbbind_2_5.so.3
+0x000074aedc679bf0  0x000074aedc6cdd05  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libhwloc.so.15
+0x000074aeb17e31c0  0x000074aeb31835a2  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+0x000074aeba6026d0  0x000074aeba604a24  Yes (*)     /usr/local/cuda-13.1/targets/x86_64-linux/lib/libOpenCL.so.1
+0x000074aeb8a5a690  0x000074aeb90713cb  Yes (*)     /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+0x000074aed68412c0  0x000074aed68f4d9f  Yes (*)     /lib/x86_64-linux-gnu/libigdgmm.so.12
+0x000074aeb883fdc0  0x000074aeb8935f7e  Yes (*)     /lib/x86_64-linux-gnu/libigdfcl.so.2
+0x000074aeaac3e380  0x000074aeae73ae52  Yes (*)     /lib/x86_64-linux-gnu/libopencl-clang.so.15
+0x000074aea4ee8c00  0x000074aea7d78a35  Yes (*)     /lib/x86_64-linux-gnu/libigc.so.2
+0x000074aebf1c4f40  0x000074aebf2e0948  Yes (*)     /lib/x86_64-linux-gnu/libigdml.so.1
+0x000074aedef5c760  0x000074aedef677c1  Yes (*)     /lib/x86_64-linux-gnu/libdrm.so.2
+0x000074ae9f95adc0  0x000074aea0a8c6a1  Yes (*)     /lib/x86_64-linux-gnu/libnvidia-opencl.so.1
+0x000074ae9a164e00  0x000074ae9b260661  Yes (*)     /lib/x86_64-linux-gnu/libcuda.so.1
+0x000074aeba88cf80  0x000074aeba8e0150  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_hetero_plugin.so
+0x000074ac94492980  0x000074ac94bde190  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_npu_plugin.so
+0x000074aeb3eba1a0  0x000074aeb3fba54f  Yes (*)     /lib/x86_64-linux-gnu/libze_loader.so.1
+0x000074aeba450410  0x000074aeba4eb480  Yes (*)     /lib/x86_64-linux-gnu/libze_tracing_layer.so.1
+0x000074aeb8453260  0x000074aeb85267fe  Yes (*)     /lib/x86_64-linux-gnu/libze_intel_npu.so.1
+0x000074aeb80f1140  0x000074aeb8150310  Yes (*)     /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_ir_frontend.so.2631
+(*): Shared library is missing debugging information.
+process 467955
+Mapped address spaces:
+
+          Start Addr           End Addr       Size     Offset  Perms  objfile
+            0x400000           0x420000    0x20000        0x0  r--p   /usr/bin/python3.12
+            0x420000           0x703000   0x2e3000    0x20000  r-xp   /usr/bin/python3.12
+            0x703000           0xa28000   0x325000   0x303000  r--p   /usr/bin/python3.12
+            0xa28000           0xa29000     0x1000   0x627000  r--p   /usr/bin/python3.12
+            0xa29000           0xba7000   0x17e000   0x628000  rw-p   /usr/bin/python3.12
+            0xba7000           0xbab000     0x4000        0x0  rw-p   
+          0x187bf000         0x272e9000  0xeb2a000        0x0  rw-p   [heap]
+         0x200000000        0x300200000 0x100200000        0x0  ---p   
+      0x74ac10000000     0x74ac10021000    0x21000        0x0  rw-p   
+      0x74ac10021000     0x74ac14000000  0x3fdf000        0x0  ---p   
+      0x74ac18000000     0x74ac18021000    0x21000        0x0  rw-p   
+      0x74ac18021000     0x74ac1c000000  0x3fdf000        0x0  ---p   
+      0x74ac1c000000     0x74ac1f5f4000  0x35f4000        0x0  rw-p   
+      0x74ac1f5f4000     0x74ac20000000   0xa0c000        0x0  ---p   
+      0x74ac24000000     0x74ac27ffc000  0x3ffc000        0x0  rw-p   
+      0x74ac27ffc000     0x74ac28000000     0x4000        0x0  ---p   
+      0x74ac28000000     0x74ac2a679000  0x2679000        0x0  rw-p   
+      0x74ac2a679000     0x74ac2c000000  0x1987000        0x0  ---p   
+      0x74ac2c000000     0x74ac2e9d2000  0x29d2000        0x0  rw-p   
+      0x74ac2e9d2000     0x74ac30000000  0x162e000        0x0  ---p   
+      0x74ac33d77000     0x74ac33e00000    0x89000        0x0  ---s   /dev/zero (deleted)
+      0x74ac33e00000     0x74ac34000000   0x200000 0x1085f0000  rw-s   anon_inode:i915.gem
+      0x74ac34177000     0x74ac34200000    0x89000        0x0  ---s   /dev/zero (deleted)
+      0x74ac34200000     0x74ac34400000   0x200000 0x113086000  rw-s   anon_inode:i915.gem
+      0x74ac34577000     0x74ac34677000   0x100000 0x123746000  rw-s   anon_inode:i915.gem
+      0x74ac34678000     0x74ac34800000   0x188000        0x0  ---s   /dev/zero (deleted)
+      0x74ac34800000     0x74ac34a00000   0x200000 0x13ab06000  rw-s   anon_inode:i915.gem
+      0x74ac34a78000     0x74ac34a79000     0x1000        0x0  ---p   
+      0x74ac34a79000     0x74ac35279000   0x800000        0x0  rw-p   
+      0x74ac35279000     0x74ac35b79000   0x900000        0x0  rw-p   
+      0x74ac35b79000     0x74ac35c00000    0x87000        0x0  ---s   /dev/zero (deleted)
+      0x74ac35c00000     0x74ac36240000   0x640000 0x13a4c6000  rw-s   anon_inode:i915.gem
+      0x74ac362b9000     0x74ac363b9000   0x100000        0x0  rw-p   
+      0x74ac363b9000     0x74ac36400000    0x47000        0x0  ---s   /dev/zero (deleted)
+      0x74ac36400000     0x74ac36a40000   0x640000 0x139e86000  rw-s   anon_inode:i915.gem
+      0x74ac36af9000     0x74ac36bf9000   0x100000        0x0  rw-p   
+      0x74ac36bf9000     0x74ac36cf9000   0x100000 0x123646000  rw-s   anon_inode:i915.gem
+      0x74ac36cfa000     0x74ac36dfa000   0x100000 0x123546000  rw-s   anon_inode:i915.gem
+      0x74ac36dfb000     0x74ac36e00000     0x5000        0x0  ---s   /dev/zero (deleted)
+      0x74ac36e00000     0x74ac37440000   0x640000 0x139846000  rw-s   anon_inode:i915.gem
+      0x74ac3753a000     0x74ac3763a000   0x100000 0x123446000  rw-s   anon_inode:i915.gem
+      0x74ac3763b000     0x74ac37800000   0x1c5000        0x0  ---s   /dev/zero (deleted)
+      0x74ac37800000     0x74ac37e40000   0x640000 0x124086000  rw-s   anon_inode:i915.gem
+      0x74ac37e7b000     0x74ac37f7b000   0x100000 0x1106d6000  rw-s   anon_inode:i915.gem
+      0x74ac37f7c000     0x74ac3807c000   0x100000 0x1105d6000  rw-s   anon_inode:i915.gem
+      0x74ac3807d000     0x74ac3817d000   0x100000 0x1104d6000  rw-s   anon_inode:i915.gem
+      0x74ac3817e000     0x74ac3827e000   0x100000 0x120c56000  rw-s   anon_inode:i915.gem
+      0x74ac3827f000     0x74ac38400000   0x181000        0x0  ---s   /dev/zero (deleted)
+      0x74ac38400000     0x74ac38a40000   0x640000 0x123a46000  rw-s   anon_inode:i915.gem
+      0x74ac38abf000     0x74ac38c00000   0x141000        0x0  ---s   /dev/zero (deleted)
+      0x74ac38c00000     0x74ac39240000   0x640000 0x10fe96000  rw-s   anon_inode:i915.gem
+      0x74ac392ff000     0x74ac393ff000   0x100000 0x120b56000  rw-s   anon_inode:i915.gem
+      0x74ac39400000     0x74ac39a40000   0x640000 0x10f856000  rw-s   anon_inode:i915.gem
+      0x74ac39b3f000     0x74ac39c3f000   0x100000 0x104e65000  rw-s   anon_inode:i915.gem
+      0x74ac39c40000     0x74ac39e00000   0x1c0000        0x0  ---s   /dev/zero (deleted)
+      0x74ac39e00000     0x74ac3a440000   0x640000 0x1126c6000  rw-s   anon_inode:i915.gem
+      0x74ac3a480000     0x74ac3a600000   0x180000        0x0  ---s   /dev/zero (deleted)
+      0x74ac3a600000     0x74ac3ac40000   0x640000 0x112086000  rw-s   anon_inode:i915.gem
+      0x74ac3acc0000     0x74ac3ae00000   0x140000        0x0  ---s   /dev/zero (deleted)
+      0x74ac3ae00000     0x74ac3b440000   0x640000 0x111486000  rw-s   anon_inode:i915.gem
+      0x74ac3b500000     0x74ac3b600000   0x100000        0x0  ---s   /dev/zero (deleted)
+      0x74ac3b600000     0x74ac3bf00000   0x900000 0x11a3f6000  rw-s   anon_inode:i915.gem
+      0x74ac3bf00000     0x74ac3c6c8000   0x7c8000        0x0  rw-p   
+      0x74ac3c6c8000     0x74ac40000000  0x3938000        0x0  ---p   
+      0x74ac40000000     0x74ac40021000    0x21000        0x0  rw-p   
+      0x74ac40021000     0x74ac44000000  0x3fdf000        0x0  ---p   
+      0x74ac44000000     0x74ac44481000   0x481000        0x0  rw-p   
+      0x74ac44481000     0x74ac48000000  0x3b7f000        0x0  ---p   
+      0x74ac48000000     0x74ac4bfff000  0x3fff000        0x0  rw-p   
+      0x74ac4bfff000     0x74ac4c000000     0x1000        0x0  ---p   
+      0x74ac4c000000     0x74ac50000000  0x4000000        0x0  rw-p   
+      0x74ac50000000     0x74ac50603000   0x603000        0x0  rw-p   
+      0x74ac50603000     0x74ac54000000  0x39fd000        0x0  ---p   
+      0x74ac54000000     0x74ac54c11000   0xc11000        0x0  rw-p   
+      0x74ac54c11000     0x74ac58000000  0x33ef000        0x0  ---p   
+      0x74ac58000000     0x74ac584e0000   0x4e0000        0x0  rw-p   
+      0x74ac584e0000     0x74ac5c000000  0x3b20000        0x0  ---p   
+      0x74ac5c000000     0x74ac60000000  0x4000000        0x0  rw-p   
+      0x74ac60000000     0x74ac605ac000   0x5ac000        0x0  rw-p   
+      0x74ac605ac000     0x74ac64000000  0x3a54000        0x0  ---p   
+      0x74ac64000000     0x74ac64714000   0x714000        0x0  rw-p   
+      0x74ac64714000     0x74ac68000000  0x38ec000        0x0  ---p   
+      0x74ac68000000     0x74ac6bffc000  0x3ffc000        0x0  rw-p   
+      0x74ac6bffc000     0x74ac6c000000     0x4000        0x0  ---p   
+      0x74ac6c000000     0x74ac6cb5d000   0xb5d000        0x0  rw-p   
+      0x74ac6cb5d000     0x74ac70000000  0x34a3000        0x0  ---p   
+      0x74ac700fb000     0x74ac701fb000   0x100000 0x104d65000  rw-s   anon_inode:i915.gem
+      0x74ac701fc000     0x74ac702fc000   0x100000 0x112d06000  rw-s   anon_inode:i915.gem
+      0x74ac702fd000     0x74ac70400000   0x103000        0x0  ---s   /dev/zero (deleted)
+      0x74ac70400000     0x74ac70d00000   0x900000 0x132646000  rw-s   anon_inode:i915.gem
+      0x74ac70dfd000     0x74ac70e00000     0x3000        0x0  ---s   /dev/zero (deleted)
+      0x74ac70e00000     0x74ac71700000   0x900000 0x11c436000  rw-s   anon_inode:i915.gem
+      0x74ac717fc000     0x74ac718fc000   0x100000 0x130646000  rw-s   anon_inode:i915.gem
+      0x74ac718fd000     0x74ac71a00000   0x103000        0x0  ---s   /dev/zero (deleted)
+      0x74ac71a00000     0x74ac71e80000   0x480000 0x102a12000  rw-s   anon_inode:i915.gem
+      0x74ac71f7d000     0x74ac72000000    0x83000        0x0  ---s   /dev/zero (deleted)
+      0x74ac72000000     0x74ac72240000   0x240000 0x1181f6000  rw-s   anon_inode:i915.gem
+      0x74ac722bc000     0x74ac723bc000   0x100000 0x11fb16000  rw-s   anon_inode:i915.gem
+      0x74ac723bd000     0x74ac72400000    0x43000        0x0  ---s   /dev/zero (deleted)
+      0x74ac72400000     0x74ac72640000   0x240000 0x11f8d6000  rw-s   anon_inode:i915.gem
+      0x74ac726fc000     0x74ac727fc000   0x100000 0x118436000  rw-s   anon_inode:i915.gem
+      0x74ac727fd000     0x74ac727fe000     0x1000        0x0  ---p   
+      0x74ac727fe000     0x74ac72ffe000   0x800000        0x0  rw-p   
+      0x74ac72ffe000     0x74ac72fff000     0x1000        0x0  ---p   
+      0x74ac72fff000     0x74ac737ff000   0x800000        0x0  rw-p   
+      0x74ac737ff000     0x74ac73800000     0x1000        0x0  ---p   
+      0x74ac73800000     0x74ac74000000   0x800000        0x0  rw-p   
+      0x74ac74000000     0x74ac77ffc000  0x3ffc000        0x0  rw-p   
+      0x74ac77ffc000     0x74ac78000000     0x4000        0x0  ---p   
+      0x74ac780b6000     0x74ac781b6000   0x100000 0x111ac6000  rw-s   anon_inode:i915.gem
+      0x74ac781b7000     0x74ac782b7000   0x100000 0x102e92000  rw-s   anon_inode:i915.gem
+      0x74ac782b8000     0x74ac783b8000   0x100000 0x11b236000  rw-s   anon_inode:i915.gem
+      0x74ac783b9000     0x74ac78400000    0x47000        0x0  ---s   /dev/zero (deleted)
+      0x74ac78400000     0x74ac78640000   0x240000 0x115406000  rw-s   anon_inode:i915.gem
+      0x74ac786f8000     0x74ac787f8000   0x100000 0x115646000  rw-s   anon_inode:i915.gem
+      0x74ac787f9000     0x74ac787fa000     0x1000        0x0  ---p   
+      0x74ac787fa000     0x74ac78ffa000   0x800000        0x0  rw-p   
+      0x74ac78ffa000     0x74ac78ffb000     0x1000        0x0  ---p   
+      0x74ac78ffb000     0x74ac797fb000   0x800000        0x0  rw-p   
+      0x74ac797fb000     0x74ac797fc000     0x1000        0x0  ---p   
+      0x74ac797fc000     0x74ac79ffc000   0x800000        0x0  rw-p   
+      0x74ac79ffc000     0x74ac79ffd000     0x1000        0x0  ---p   
+      0x74ac79ffd000     0x74ac7a7fd000   0x800000        0x0  rw-p   
+      0x74ac7a7fd000     0x74ac7a7fe000     0x1000        0x0  ---p   
+      0x74ac7a7fe000     0x74ac7affe000   0x800000        0x0  rw-p   
+      0x74ac7affe000     0x74ac7afff000     0x1000        0x0  ---p   
+      0x74ac7afff000     0x74ac7b7ff000   0x800000        0x0  rw-p   
+      0x74ac7b7ff000     0x74ac7b800000     0x1000        0x0  ---p   
+      0x74ac7b800000     0x74ac7c000000   0x800000        0x0  rw-p   
+      0x74ac7c000000     0x74ac7c021000    0x21000        0x0  rw-p   
+      0x74ac7c021000     0x74ac80000000  0x3fdf000        0x0  ---p   
+      0x74ac80000000     0x74ac805dc000   0x5dc000        0x0  rw-p   
+      0x74ac805dc000     0x74ac84000000  0x3a24000        0x0  ---p   
+      0x74ac84000000     0x74ac84021000    0x21000        0x0  rw-p   
+      0x74ac84021000     0x74ac88000000  0x3fdf000        0x0  ---p   
+      0x74ac880f7000     0x74ac881f7000   0x100000 0x1134a6000  rw-s   anon_inode:i915.gem
+      0x74ac881f8000     0x74ac88200000     0x8000        0x0  ---s   /dev/zero (deleted)
+      0x74ac88200000     0x74ac88400000   0x200000 0x1089f0000  rw-s   anon_inode:i915.gem
+      0x74ac88425000     0x74ac88475000    0x50000 0x10f456000  rw-s   anon_inode:i915.gem
+      0x74ac88476000     0x74ac884f6000    0x80000 0x1107d6000  rw-s   anon_inode:i915.gem
+      0x74ac884f7000     0x74ac885f7000   0x100000 0x132f46000  rw-s   anon_inode:i915.gem
+      0x74ac885f8000     0x74ac885f9000     0x1000        0x0  ---p   
+      0x74ac885f9000     0x74ac88df9000   0x800000        0x0  rw-p   
+      0x74ac88df9000     0x74ac88dfa000     0x1000        0x0  ---p   
+      0x74ac88dfa000     0x74ac895fa000   0x800000        0x0  rw-p   
+      0x74ac895fa000     0x74ac895fb000     0x1000        0x0  ---p   
+      0x74ac895fb000     0x74ac89dfb000   0x800000        0x0  rw-p   
+      0x74ac89dfb000     0x74ac89dfc000     0x1000        0x0  ---p   
+      0x74ac89dfc000     0x74ac8a5fc000   0x800000        0x0  rw-p   
+      0x74ac8a5fc000     0x74ac8a5fd000     0x1000        0x0  ---p   
+      0x74ac8a5fd000     0x74ac8adfd000   0x800000        0x0  rw-p   
+      0x74ac8adfd000     0x74ac8adfe000     0x1000        0x0  ---p   
+      0x74ac8adfe000     0x74ac8b5fe000   0x800000        0x0  rw-p   
+      0x74ac8b5fe000     0x74ac8b5ff000     0x1000        0x0  ---p   
+      0x74ac8b5ff000     0x74ac8bdff000   0x800000        0x0  rw-p   
+      0x74ac8bdff000     0x74ac8be00000     0x1000        0x0  ---p   
+      0x74ac8be00000     0x74ac8c600000   0x800000        0x0  rw-p   
+      0x74ac8c600000     0x74ac943b2000  0x7db2000        0x0  r--s   /home/lucas/physical_ai_os/projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9/act_fp32.bin
+      0x74ac94400000     0x74ac9448f000    0x8f000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_npu_plugin.so
+      0x74ac9448f000     0x74ac94bdf000   0x750000    0x8f000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_npu_plugin.so
+      0x74ac94bdf000     0x74ac94d4b000   0x16c000   0x7df000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_npu_plugin.so
+      0x74ac94d4b000     0x74ac94d6b000    0x20000   0x94b000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_npu_plugin.so
+      0x74ac94d6b000     0x74ac94d6e000     0x3000   0x96b000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_npu_plugin.so
+      0x74ac94d6e000     0x74ac94d75000     0x7000        0x0  rw-p   
+      0x74ac94d75000     0x74ac94d9b000    0x26000   0x96f000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_npu_plugin.so
+      0x74ac94ddf000     0x74ae9a000000 0x205221000        0x0  ---p   
+      0x74ae9a000000     0x74ae9a164000   0x164000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libcuda.so.595.84
+      0x74ae9a164000     0x74ae9b261000  0x10fd000   0x164000  r-xp   /usr/lib/x86_64-linux-gnu/libcuda.so.595.84
+      0x74ae9b261000     0x74ae9f608000  0x43a7000  0x1261000  r--p   /usr/lib/x86_64-linux-gnu/libcuda.so.595.84
+      0x74ae9f608000     0x74ae9f740000   0x138000  0x5607000  r--p   /usr/lib/x86_64-linux-gnu/libcuda.so.595.84
+      0x74ae9f740000     0x74ae9f745000     0x5000  0x573f000  rw-p   /usr/lib/x86_64-linux-gnu/libcuda.so.595.84
+      0x74ae9f745000     0x74ae9f7ac000    0x67000        0x0  rw-p   
+      0x74ae9f7ef000     0x74ae9f7ff000    0x10000 0x11cee6000  rw-s   anon_inode:i915.gem
+      0x74ae9f800000     0x74ae9f95a000   0x15a000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.595.84
+      0x74ae9f95a000     0x74aea0a8d000  0x1133000   0x15a000  r-xp   /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.595.84
+      0x74aea0a8d000     0x74aea4a01000  0x3f74000  0x128d000  r--p   /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.595.84
+      0x74aea4a01000     0x74aea4a02000     0x1000  0x5201000  ---p   /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.595.84
+      0x74aea4a02000     0x74aea4b3a000   0x138000  0x5201000  r--p   /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.595.84
+      0x74aea4b3a000     0x74aea4b3f000     0x5000  0x5339000  rw-p   /usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.595.84
+      0x74aea4b3f000     0x74aea4b66000    0x27000        0x0  rw-p   
+      0x74aea4b68000     0x74aea4bff000    0x97000 0x11cd36000  rw-s   anon_inode:i915.gem
+      0x74aea4c00000     0x74aea4ee6000   0x2e6000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libigc.so.2.11.43+0
+      0x74aea4ee6000     0x74aea7d79000  0x2e93000   0x2e6000  r-xp   /usr/lib/x86_64-linux-gnu/libigc.so.2.11.43+0
+      0x74aea7d79000     0x74aea87a9000   0xa30000  0x3179000  r--p   /usr/lib/x86_64-linux-gnu/libigc.so.2.11.43+0
+      0x74aea87a9000     0x74aea89f2000   0x249000  0x3ba9000  r--p   /usr/lib/x86_64-linux-gnu/libigc.so.2.11.43+0
+      0x74aea89f2000     0x74aeaa2ca000  0x18d8000  0x3df2000  rw-p   /usr/lib/x86_64-linux-gnu/libigc.so.2.11.43+0
+      0x74aeaa2ca000     0x74aeaa448000   0x17e000        0x0  rw-p   
+      0x74aeaa44e000     0x74aeaa56e000   0x120000 0x120986000  rw-s   anon_inode:i915.gem
+      0x74aeaa56f000     0x74aeaa5ff000    0x90000 0x111c96000  rw-s   anon_inode:i915.gem
+      0x74aeaa600000     0x74aeaac3c000   0x63c000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libopencl-clang.so.15
+      0x74aeaac3c000     0x74aeae73b000  0x3aff000   0x63c000  r-xp   /usr/lib/x86_64-linux-gnu/libopencl-clang.so.15
+      0x74aeae73b000     0x74aeaf155000   0xa1a000  0x413b000  r--p   /usr/lib/x86_64-linux-gnu/libopencl-clang.so.15
+      0x74aeaf155000     0x74aeaf44f000   0x2fa000  0x4b55000  r--p   /usr/lib/x86_64-linux-gnu/libopencl-clang.so.15
+      0x74aeaf44f000     0x74aeb14e6000  0x2097000  0x4e4f000  rw-p   /usr/lib/x86_64-linux-gnu/libopencl-clang.so.15
+      0x74aeb14e6000     0x74aeb151e000    0x38000        0x0  rw-p   
+      0x74aeb152b000     0x74aeb153b000    0x10000 0x101ee3000  rw-s   anon_inode:i915.gem
+      0x74aeb153c000     0x74aeb154c000    0x10000 0x1014f0000  rw-s   anon_inode:i915.gem
+      0x74aeb154d000     0x74aeb155d000    0x10000 0x111e16000  rw-s   anon_inode:i915.gem
+      0x74aeb155e000     0x74aeb156e000    0x10000 0x1135f6000  rw-s   anon_inode:i915.gem
+      0x74aeb156f000     0x74aeb15ff000    0x90000 0x1111b6000  rw-s   anon_inode:i915.gem
+      0x74aeb1600000     0x74aeb17df000   0x1df000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_gpu_plugin.so
+      0x74aeb17df000     0x74aeb3184000  0x19a5000   0x1df000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_gpu_plugin.so
+      0x74aeb3184000     0x74aeb3c5c000   0xad8000  0x1b84000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_gpu_plugin.so
+      0x74aeb3c5c000     0x74aeb3cf6000    0x9a000  0x265b000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_gpu_plugin.so
+      0x74aeb3cf6000     0x74aeb3cfd000     0x7000  0x26f5000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_gpu_plugin.so
+      0x74aeb3cfd000     0x74aeb3e0b000   0x10e000        0x0  rw-p   
+      0x74aeb3e0b000     0x74aeb3e2b000    0x20000  0x26fd000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_gpu_plugin.so
+      0x74aeb3e31000     0x74aeb3e35000     0x4000        0x0  rw-p   
+      0x74aeb3e35000     0x74aeb3e36000     0x1000 0x10895a000  rw-s   anon_inode:i915.gem
+      0x74aeb3e37000     0x74aeb3e47000    0x10000 0x1212f6000  rw-s   anon_inode:i915.gem
+      0x74aeb3e48000     0x74aeb3e58000    0x10000 0x10c9a6000  rw-s   anon_inode:i915.gem
+      0x74aeb3e59000     0x74aeb3e69000    0x10000 0x10a290000  rw-s   anon_inode:i915.gem
+      0x74aeb3e6a000     0x74aeb3e7a000    0x10000 0x120d56000  rw-s   anon_inode:i915.gem
+      0x74aeb3e7b000     0x74aeb3eb9000    0x3e000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libze_loader.so.1.28.2
+      0x74aeb3eb9000     0x74aeb3fbb000   0x102000    0x3e000  r-xp   /usr/lib/x86_64-linux-gnu/libze_loader.so.1.28.2
+      0x74aeb3fbb000     0x74aeb3ff9000    0x3e000   0x140000  r--p   /usr/lib/x86_64-linux-gnu/libze_loader.so.1.28.2
+      0x74aeb3ff9000     0x74aeb3fff000     0x6000   0x17e000  r--p   /usr/lib/x86_64-linux-gnu/libze_loader.so.1.28.2
+      0x74aeb3fff000     0x74aeb4000000     0x1000   0x184000  rw-p   /usr/lib/x86_64-linux-gnu/libze_loader.so.1.28.2
+      0x74aeb4000000     0x74aeb4021000    0x21000        0x0  rw-p   
+      0x74aeb4021000     0x74aeb8000000  0x3fdf000        0x0  ---p   
+      0x74aeb8001000     0x74aeb8002000     0x1000 0x108959000  rw-s   anon_inode:i915.gem
+      0x74aeb8003000     0x74aeb8006000     0x3000 0x108956000  rw-s   anon_inode:i915.gem
+      0x74aeb8007000     0x74aeb8008000     0x1000 0x108955000  rw-s   anon_inode:i915.gem
+      0x74aeb8009000     0x74aeb800a000     0x1000 0x108954000  rw-s   anon_inode:i915.gem
+      0x74aeb800b000     0x74aeb808b000    0x80000 0x10a210000  rw-s   anon_inode:i915.gem
+      0x74aeb808c000     0x74aeb80dc000    0x50000 0x111d66000  rw-s   anon_inode:i915.gem
+      0x74aeb80dd000     0x74aeb80f0000    0x13000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_ir_frontend.so.2631
+      0x74aeb80f0000     0x74aeb8151000    0x61000    0x13000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_ir_frontend.so.2631
+      0x74aeb8151000     0x74aeb8165000    0x14000    0x74000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_ir_frontend.so.2631
+      0x74aeb8165000     0x74aeb8168000     0x3000    0x88000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_ir_frontend.so.2631
+      0x74aeb8168000     0x74aeb8170000     0x8000    0x8b000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_ir_frontend.so.2631
+      0x74aeb8170000     0x74aeb8200000    0x90000        0x0  ---s   /dev/zero (deleted)
+      0x74aeb8200000     0x74aeb8400000   0x200000 0x1095f0000  rw-s   anon_inode:i915.gem
+      0x74aeb8400000     0x74aeb8401000     0x1000 0x10045b000  rw-s   anon_inode:i915.gem
+      0x74aeb8402000     0x74aeb8403000     0x1000 0x10045a000  rw-s   anon_inode:i915.gem
+      0x74aeb8404000     0x74aeb8405000     0x1000 0x100459000  rw-s   anon_inode:i915.gem
+      0x74aeb8406000     0x74aeb8407000     0x1000 0x100458000  rw-s   anon_inode:i915.gem
+      0x74aeb8408000     0x74aeb840c000     0x4000 0x100454000  rw-s   anon_inode:i915.gem
+      0x74aeb840d000     0x74aeb840e000     0x1000 0x100453000  rw-s   anon_inode:i915.gem
+      0x74aeb840f000     0x74aeb8410000     0x1000 0x100452000  rw-s   anon_inode:i915.gem
+      0x74aeb8411000     0x74aeb8412000     0x1000 0x100451000  rw-s   anon_inode:i915.gem
+      0x74aeb8413000     0x74aeb8414000     0x1000 0x100450000  rw-s   anon_inode:i915.gem
+      0x74aeb8415000     0x74aeb8416000     0x1000 0x10c71f000  rw-s   anon_inode:i915.gem
+      0x74aeb8417000     0x74aeb8418000     0x1000 0x10c71e000  rw-s   anon_inode:i915.gem
+      0x74aeb8419000     0x74aeb841a000     0x1000 0x10c71d000  rw-s   anon_inode:i915.gem
+      0x74aeb841b000     0x74aeb841c000     0x1000 0x10c71c000  rw-s   anon_inode:i915.gem
+      0x74aeb841d000     0x74aeb841e000     0x1000 0x10c71b000  rw-s   anon_inode:i915.gem
+      0x74aeb841f000     0x74aeb8423000     0x4000 0x10c717000  rw-s   anon_inode:i915.gem
+      0x74aeb8424000     0x74aeb8425000     0x1000 0x10c716000  rw-s   anon_inode:i915.gem
+      0x74aeb8426000     0x74aeb8427000     0x1000 0x1016a9000  rw-s   anon_inode:i915.gem
+      0x74aeb8428000     0x74aeb8429000     0x1000 0x1016a8000  rw-s   anon_inode:i915.gem
+      0x74aeb842a000     0x74aeb842b000     0x1000 0x1016a7000  rw-s   anon_inode:i915.gem
+      0x74aeb842c000     0x74aeb842d000     0x1000 0x1016a6000  rw-s   anon_inode:i915.gem
+      0x74aeb842e000     0x74aeb842f000     0x1000 0x1016a5000  rw-s   anon_inode:i915.gem
+      0x74aeb8430000     0x74aeb8431000     0x1000 0x1016a4000  rw-s   anon_inode:i915.gem
+      0x74aeb8432000     0x74aeb8433000     0x1000 0x101868000  rw-s   anon_inode:i915.gem
+      0x74aeb8434000     0x74aeb8435000     0x1000 0x101867000  rw-s   anon_inode:i915.gem
+      0x74aeb8436000     0x74aeb843a000     0x4000 0x1016a0000  rw-s   anon_inode:i915.gem
+      0x74aeb843b000     0x74aeb843c000     0x1000 0x101866000  rw-s   anon_inode:i915.gem
+      0x74aeb843d000     0x74aeb843e000     0x1000 0x101865000  rw-s   anon_inode:i915.gem
+      0x74aeb843f000     0x74aeb8440000     0x1000 0x101864000  rw-s   anon_inode:i915.gem
+      0x74aeb8441000     0x74aeb8442000     0x1000 0x101863000  rw-s   anon_inode:i915.gem
+      0x74aeb8443000     0x74aeb8444000     0x1000 0x101862000  rw-s   anon_inode:i915.gem
+      0x74aeb8445000     0x74aeb8452000     0xd000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libze_intel_npu.so.1.35.0
+      0x74aeb8452000     0x74aeb8527000    0xd5000     0xd000  r-xp   /usr/lib/x86_64-linux-gnu/libze_intel_npu.so.1.35.0
+      0x74aeb8527000     0x74aeb856b000    0x44000    0xe2000  r--p   /usr/lib/x86_64-linux-gnu/libze_intel_npu.so.1.35.0
+      0x74aeb856b000     0x74aeb856e000     0x3000   0x126000  r--p   /usr/lib/x86_64-linux-gnu/libze_intel_npu.so.1.35.0
+      0x74aeb856e000     0x74aeb856f000     0x1000   0x129000  rw-p   /usr/lib/x86_64-linux-gnu/libze_intel_npu.so.1.35.0
+      0x74aeb856f000     0x74aeb8803000   0x294000        0x0  rw-p   
+      0x74aeb8803000     0x74aeb883e000    0x3b000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libigdfcl.so.2.11.43+0
+      0x74aeb883e000     0x74aeb8936000    0xf8000    0x3b000  r-xp   /usr/lib/x86_64-linux-gnu/libigdfcl.so.2.11.43+0
+      0x74aeb8936000     0x74aeb8967000    0x31000   0x133000  r--p   /usr/lib/x86_64-linux-gnu/libigdfcl.so.2.11.43+0
+      0x74aeb8967000     0x74aeb896e000     0x7000   0x164000  r--p   /usr/lib/x86_64-linux-gnu/libigdfcl.so.2.11.43+0
+      0x74aeb896e000     0x74aeb89fe000    0x90000   0x16b000  rw-p   /usr/lib/x86_64-linux-gnu/libigdfcl.so.2.11.43+0
+      0x74aeb89fe000     0x74aeb8a00000     0x2000        0x0  rw-p   
+      0x74aeb8a00000     0x74aeb914a000   0x74a000        0x0  r-xp   /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+      0x74aeb914a000     0x74aeb9169000    0x1f000   0x749000  r--p   /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+      0x74aeb9169000     0x74aeba33e000  0x11d5000   0x768000  rw-p   /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+      0x74aeba33e000     0x74aeba42b000    0xed000        0x0  rw-p   
+      0x74aeba42c000     0x74aeba42d000     0x1000 0x101861000  rw-s   anon_inode:i915.gem
+      0x74aeba42e000     0x74aeba42f000     0x1000 0x101860000  rw-s   anon_inode:i915.gem
+      0x74aeba430000     0x74aeba431000     0x1000 0x10516e000  rw-s   anon_inode:i915.gem
+      0x74aeba432000     0x74aeba433000     0x1000 0x10516d000  rw-s   anon_inode:i915.gem
+      0x74aeba434000     0x74aeba438000     0x4000 0x105169000  rw-s   anon_inode:i915.gem
+      0x74aeba439000     0x74aeba43a000     0x1000 0x105168000  rw-s   anon_inode:i915.gem
+      0x74aeba43b000     0x74aeba43c000     0x1000 0x105167000  rw-s   anon_inode:i915.gem
+      0x74aeba43d000     0x74aeba43e000     0x1000 0x10f565000  rw-s   anon_inode:i915.gem
+      0x74aeba43f000     0x74aeba440000     0x1000 0x10f564000  rw-s   anon_inode:i915.gem
+      0x74aeba441000     0x74aeba442000     0x1000 0x10f563000  rw-s   anon_inode:i915.gem
+      0x74aeba443000     0x74aeba444000     0x1000 0x10f562000  rw-s   anon_inode:i915.gem
+      0x74aeba445000     0x74aeba446000     0x1000 0x103fd7000  rw-s   anon_inode:i915.gem
+      0x74aeba447000     0x74aeba448000     0x1000 0x103fd6000  rw-s   anon_inode:i915.gem
+      0x74aeba449000     0x74aeba450000     0x7000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libze_tracing_layer.so.1.28.2
+      0x74aeba450000     0x74aeba4ec000    0x9c000     0x7000  r-xp   /usr/lib/x86_64-linux-gnu/libze_tracing_layer.so.1.28.2
+      0x74aeba4ec000     0x74aeba4fd000    0x11000    0xa3000  r--p   /usr/lib/x86_64-linux-gnu/libze_tracing_layer.so.1.28.2
+      0x74aeba4fd000     0x74aeba4fe000     0x1000    0xb3000  r--p   /usr/lib/x86_64-linux-gnu/libze_tracing_layer.so.1.28.2
+      0x74aeba4fe000     0x74aeba4ff000     0x1000    0xb4000  rw-p   /usr/lib/x86_64-linux-gnu/libze_tracing_layer.so.1.28.2
+      0x74aeba4ff000     0x74aeba600000   0x101000        0x0  rw-p   
+      0x74aeba600000     0x74aeba606000     0x6000        0x0  r-xp   /usr/local/cuda-13.1/targets/x86_64-linux/lib/libOpenCL.so.1.0.0
+      0x74aeba606000     0x74aeba805000   0x1ff000     0x6000  ---p   /usr/local/cuda-13.1/targets/x86_64-linux/lib/libOpenCL.so.1.0.0
+      0x74aeba805000     0x74aeba807000     0x2000     0x5000  r--p   /usr/local/cuda-13.1/targets/x86_64-linux/lib/libOpenCL.so.1.0.0
+      0x74aeba807000     0x74aeba808000     0x1000     0x7000  rw-p   /usr/local/cuda-13.1/targets/x86_64-linux/lib/libOpenCL.so.1.0.0
+      0x74aeba809000     0x74aeba80a000     0x1000 0x103fd5000  rw-s   anon_inode:i915.gem
+      0x74aeba80b000     0x74aeba80f000     0x4000 0x10f55e000  rw-s   anon_inode:i915.gem
+      0x74aeba810000     0x74aeba811000     0x1000 0x103fd4000  rw-s   anon_inode:i915.gem
+      0x74aeba812000     0x74aeba813000     0x1000 0x103fd3000  rw-s   anon_inode:i915.gem
+      0x74aeba814000     0x74aeba815000     0x1000 0x103fd2000  rw-s   anon_inode:i915.gem
+      0x74aeba816000     0x74aeba817000     0x1000 0x103fd1000  rw-s   anon_inode:i915.gem
+      0x74aeba818000     0x74aeba819000     0x1000 0x103fd0000  rw-s   anon_inode:i915.gem
+      0x74aeba81a000     0x74aeba81b000     0x1000 0x1022ca000  rw-s   anon_inode:i915.gem
+      0x74aeba81c000     0x74aeba81d000     0x1000 0x1022c9000  rw-s   anon_inode:i915.gem
+      0x74aeba81e000     0x74aeba81f000     0x1000 0x1022c8000  rw-s   anon_inode:i915.gem
+      0x74aeba820000     0x74aeba821000     0x1000 0x1022c7000  rw-s   anon_inode:i915.gem
+      0x74aeba822000     0x74aeba823000     0x1000 0x1022c6000  rw-s   anon_inode:i915.gem
+      0x74aeba824000     0x74aeba825000     0x1000 0x1022c5000  rw-s   anon_inode:i915.gem
+      0x74aeba826000     0x74aeba827000     0x1000 0x1022c4000  rw-s   anon_inode:i915.gem
+      0x74aeba828000     0x74aeba829000     0x1000 0x1022c3000  rw-s   anon_inode:i915.gem
+      0x74aeba82a000     0x74aeba82b000     0x1000 0x1022e5000  rw-s   anon_inode:i915.gem
+      0x74aeba82c000     0x74aeba87c000    0x50000 0x100a7d000  rw-s   anon_inode:i915.gem
+      0x74aeba87d000     0x74aeba88c000     0xf000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_hetero_plugin.so
+      0x74aeba88c000     0x74aeba8e1000    0x55000     0xf000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_hetero_plugin.so
+      0x74aeba8e1000     0x74aeba8f2000    0x11000    0x64000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_hetero_plugin.so
+      0x74aeba8f2000     0x74aeba8f5000     0x3000    0x74000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_hetero_plugin.so
+      0x74aeba8f5000     0x74aeba8fc000     0x7000    0x77000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_hetero_plugin.so
+      0x74aeba8fc000     0x74aebabff000   0x303000        0x0  rw-p   
+      0x74aebabff000     0x74aebac00000     0x1000        0x0  ---p   
+      0x74aebac00000     0x74aebb400000   0x800000        0x0  rw-p   
+      0x74aebb400000     0x74aebb70d000   0x30d000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_cpu_plugin.so
+      0x74aebb70d000     0x74aebe8e3000  0x31d6000   0x30d000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_cpu_plugin.so
+      0x74aebe8e3000     0x74aebf022000   0x73f000  0x34e3000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_cpu_plugin.so
+      0x74aebf022000     0x74aebf12b000   0x109000  0x3c22000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_cpu_plugin.so
+      0x74aebf12b000     0x74aebf12e000     0x3000  0x3d2b000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_cpu_plugin.so
+      0x74aebf12e000     0x74aebf168000    0x3a000        0x0  rw-p   
+      0x74aebf168000     0x74aebf187000    0x1f000  0x3d2e000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_intel_cpu_plugin.so
+      0x74aebf188000     0x74aebf189000     0x1000 0x1022e4000  rw-s   anon_inode:i915.gem
+      0x74aebf18a000     0x74aebf18b000     0x1000 0x1022e3000  rw-s   anon_inode:i915.gem
+      0x74aebf18c000     0x74aebf18d000     0x1000 0x1022e2000  rw-s   anon_inode:i915.gem
+      0x74aebf18e000     0x74aebf18f000     0x1000 0x1022e1000  rw-s   anon_inode:i915.gem
+      0x74aebf190000     0x74aebf191000     0x1000 0x1022e0000  rw-s   anon_inode:i915.gem
+      0x74aebf192000     0x74aebf193000     0x1000 0x1022df000  rw-s   anon_inode:i915.gem
+      0x74aebf194000     0x74aebf195000     0x1000 0x1022de000  rw-s   anon_inode:i915.gem
+      0x74aebf196000     0x74aebf197000     0x1000 0x101da7000  rw-s   anon_inode:i915.gem
+      0x74aebf198000     0x74aebf199000     0x1000 0x101da6000  rw-s   anon_inode:i915.gem
+      0x74aebf19a000     0x74aebf19b000     0x1000 0x101da5000  rw-s   anon_inode:i915.gem
+      0x74aebf19c000     0x74aebf19d000     0x1000 0x101da4000  rw-s   anon_inode:i915.gem
+      0x74aebf19e000     0x74aebf19f000     0x1000 0x101da3000  rw-s   anon_inode:i915.gem
+      0x74aebf1a0000     0x74aebf1a1000     0x1000 0x101da2000  rw-s   anon_inode:i915.gem
+      0x74aebf1a2000     0x74aebf1a3000     0x1000 0x101da1000  rw-s   anon_inode:i915.gem
+      0x74aebf1a4000     0x74aebf1a5000     0x1000 0x101da0000  rw-s   anon_inode:i915.gem
+      0x74aebf1a6000     0x74aebf1c4000    0x1e000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libigdml.so.1.0.196
+      0x74aebf1c4000     0x74aebf2e1000   0x11d000    0x1e000  r-xp   /usr/lib/x86_64-linux-gnu/libigdml.so.1.0.196
+      0x74aebf2e1000     0x74aebf31f000    0x3e000   0x13b000  r--p   /usr/lib/x86_64-linux-gnu/libigdml.so.1.0.196
+      0x74aebf31f000     0x74aebf329000     0xa000   0x178000  r--p   /usr/lib/x86_64-linux-gnu/libigdml.so.1.0.196
+      0x74aebf329000     0x74aebf32a000     0x1000   0x182000  rw-p   /usr/lib/x86_64-linux-gnu/libigdml.so.1.0.196
+      0x74aebf32a000     0x74aec1800000  0x24d6000        0x0  rw-p   
+      0x74aec1800000     0x74aed63b1000 0x14bb1000        0x0  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so
+      0x74aed63b1000     0x74aed6667000   0x2b6000 0x14bb0000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so
+      0x74aed6667000     0x74aed66f4000    0x8d000 0x14e66000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so
+      0x74aed66f4000     0x74aed6804000   0x110000        0x0  rw-p   
+      0x74aed6805000     0x74aed6806000     0x1000 0x12110d000  rw-s   anon_inode:i915.gem
+      0x74aed6807000     0x74aed6808000     0x1000 0x12110c000  rw-s   anon_inode:i915.gem
+      0x74aed6809000     0x74aed680a000     0x1000 0x12110b000  rw-s   anon_inode:i915.gem
+      0x74aed680b000     0x74aed680c000     0x1000 0x12110a000  rw-s   anon_inode:i915.gem
+      0x74aed680d000     0x74aed680e000     0x1000 0x121109000  rw-s   anon_inode:i915.gem
+      0x74aed680f000     0x74aed6810000     0x1000 0x121108000  rw-s   anon_inode:i915.gem
+      0x74aed6811000     0x74aed6812000     0x1000 0x121107000  rw-s   anon_inode:i915.gem
+      0x74aed6813000     0x74aed6814000     0x1000 0x121106000  rw-s   anon_inode:i915.gem
+      0x74aed6815000     0x74aed6816000     0x1000 0x1029e2000  rw-s   anon_inode:i915.gem
+      0x74aed6817000     0x74aed6818000     0x1000 0x1029e1000  rw-s   anon_inode:i915.gem
+      0x74aed6819000     0x74aed681a000     0x1000 0x1029e0000  rw-s   anon_inode:i915.gem
+      0x74aed681b000     0x74aed681c000     0x1000 0x1029df000  rw-s   anon_inode:i915.gem
+      0x74aed681d000     0x74aed681e000     0x1000 0x1029de000  rw-s   anon_inode:i915.gem
+      0x74aed681f000     0x74aed6820000     0x1000 0x1029dd000  rw-s   anon_inode:i915.gem
+      0x74aed6821000     0x74aed6822000     0x1000 0x1029dc000  rw-s   anon_inode:i915.gem
+      0x74aed6823000     0x74aed6824000     0x1000 0x101496000  rw-s   anon_inode:i915.gem
+      0x74aed6825000     0x74aed6826000     0x1000 0x101495000  rw-s   anon_inode:i915.gem
+      0x74aed6827000     0x74aed6828000     0x1000 0x101494000  rw-s   anon_inode:i915.gem
+      0x74aed6829000     0x74aed682a000     0x1000 0x101493000  rw-s   anon_inode:i915.gem
+      0x74aed682b000     0x74aed682c000     0x1000 0x101492000  rw-s   anon_inode:i915.gem
+      0x74aed682d000     0x74aed682e000     0x1000 0x101491000  rw-s   anon_inode:i915.gem
+      0x74aed682f000     0x74aed6830000     0x1000 0x101490000  rw-s   anon_inode:i915.gem
+      0x74aed6831000     0x74aed6832000     0x1000 0x1009bc000  rw-s   anon_inode:i915.gem
+      0x74aed6833000     0x74aed6834000     0x1000 0x1009bb000  rw-s   anon_inode:i915.gem
+      0x74aed6835000     0x74aed6836000     0x1000 0x1009ba000  rw-s   anon_inode:i915.gem
+      0x74aed6837000     0x74aed6838000     0x1000 0x1009b9000  rw-s   anon_inode:i915.gem
+      0x74aed6839000     0x74aed6841000     0x8000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libigdgmm.so.12.7.1094
+      0x74aed6841000     0x74aed68f5000    0xb4000     0x8000  r-xp   /usr/lib/x86_64-linux-gnu/libigdgmm.so.12.7.1094
+      0x74aed68f5000     0x74aed68fd000     0x8000    0xbc000  r--p   /usr/lib/x86_64-linux-gnu/libigdgmm.so.12.7.1094
+      0x74aed68fd000     0x74aed68ff000     0x2000    0xc4000  r--p   /usr/lib/x86_64-linux-gnu/libigdgmm.so.12.7.1094
+      0x74aed68ff000     0x74aed6900000     0x1000    0xc6000  rw-p   /usr/lib/x86_64-linux-gnu/libigdgmm.so.12.7.1094
+      0x74aed6900000     0x74aed6a00000   0x100000        0x0  rw-p   
+      0x74aed6a00000     0x74aed7df6000  0x13f6000        0x0  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_python.so
+      0x74aed7df6000     0x74aed7e1d000    0x27000  0x13f5000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_python.so
+      0x74aed7e1d000     0x74aed7e83000    0x66000  0x141c000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_python.so
+      0x74aed7e83000     0x74aed7ef7000    0x74000        0x0  rw-p   
+      0x74aed7ef8000     0x74aed7ef9000     0x1000 0x1009b8000  rw-s   anon_inode:i915.gem
+      0x74aed7efa000     0x74aed7efb000     0x1000 0x1009b7000  rw-s   anon_inode:i915.gem
+      0x74aed7efc000     0x74aed7efd000     0x1000 0x1009b6000  rw-s   anon_inode:i915.gem
+      0x74aed7efe000     0x74aed7eff000     0x1000 0x103132000  rw-s   anon_inode:i915.gem
+      0x74aed7f00000     0x74aed8021000   0x121000        0x0  rw-p   
+      0x74aed8021000     0x74aedc000000  0x3fdf000        0x0  ---p   
+      0x74aedc000000     0x74aedc001000     0x1000 0x103131000  rw-s   anon_inode:i915.gem
+      0x74aedc002000     0x74aedc003000     0x1000 0x103130000  rw-s   anon_inode:i915.gem
+      0x74aedc004000     0x74aedc005000     0x1000 0x10312f000  rw-s   anon_inode:i915.gem
+      0x74aedc006000     0x74aedc007000     0x1000 0x10312e000  rw-s   anon_inode:i915.gem
+      0x74aedc008000     0x74aedc009000     0x1000 0x10312d000  rw-s   anon_inode:i915.gem
+      0x74aedc00a000     0x74aedc00b000     0x1000 0x10312a000  rw-s   anon_inode:i915.gem
+      0x74aedc00c000     0x74aedc00d000     0x1000 0x103129000  rw-s   anon_inode:i915.gem
+      0x74aedc00e000     0x74aedc00f000     0x1000 0x103128000  rw-s   anon_inode:i915.gem
+      0x74aedc010000     0x74aedc011000     0x1000 0x103127000  rw-s   anon_inode:i915.gem
+      0x74aedc012000     0x74aedc013000     0x1000 0x103126000  rw-s   anon_inode:i915.gem
+      0x74aedc014000     0x74aedc015000     0x1000 0x103125000  rw-s   anon_inode:i915.gem
+      0x74aedc016000     0x74aedc017000     0x1000 0x100ba5000  rw-s   anon_inode:i915.gem
+      0x74aedc018000     0x74aedc019000     0x1000 0x100ba4000  rw-s   anon_inode:i915.gem
+      0x74aedc01a000     0x74aedc01b000     0x1000 0x100ba3000  rw-s   anon_inode:i915.gem
+      0x74aedc01c000     0x74aedc01d000     0x1000 0x100ba2000  rw-s   anon_inode:i915.gem
+      0x74aedc01e000     0x74aedc01f000     0x1000 0x100ba1000  rw-s   anon_inode:i915.gem
+      0x74aedc020000     0x74aedc021000     0x1000 0x100ba0000  rw-s   anon_inode:i915.gem
+      0x74aedc022000     0x74aedc023000     0x1000 0x10c0f5000  rw-s   anon_inode:i915.gem
+      0x74aedc024000     0x74aedc025000     0x1000 0x10c0f4000  rw-s   anon_inode:i915.gem
+      0x74aedc026000     0x74aedc027000     0x1000 0x10c0f3000  rw-s   anon_inode:i915.gem
+      0x74aedc028000     0x74aedc029000     0x1000 0x10c0f2000  rw-s   anon_inode:i915.gem
+      0x74aedc02a000     0x74aedc02b000     0x1000 0x10c0f1000  rw-s   anon_inode:i915.gem
+      0x74aedc02c000     0x74aedc02d000     0x1000 0x10c0f0000  rw-s   anon_inode:i915.gem
+      0x74aedc02e000     0x74aedc02f000     0x1000 0x10c5dc000  rw-s   anon_inode:i915.gem
+      0x74aedc030000     0x74aedc031000     0x1000 0x10c5db000  rw-s   anon_inode:i915.gem
+      0x74aedc032000     0x74aedc033000     0x1000 0x10c5da000  rw-s   anon_inode:i915.gem
+      0x74aedc034000     0x74aedc035000     0x1000 0x10c5d9000  rw-s   anon_inode:i915.gem
+      0x74aedc036000     0x74aedc037000     0x1000 0x10c5d8000  rw-s   anon_inode:i915.gem
+      0x74aedc038000     0x74aedc039000     0x1000 0x10c5d7000  rw-s   anon_inode:i915.gem
+      0x74aedc03a000     0x74aedc03b000     0x1000 0x10448e000  rw-s   anon_inode:i915.gem
+      0x74aedc03c000     0x74aedc03d000     0x1000 0x10448d000  rw-s   anon_inode:i915.gem
+      0x74aedc03e000     0x74aedc03f000     0x1000 0x10448c000  rw-s   anon_inode:i915.gem
+      0x74aedc040000     0x74aedc041000     0x1000 0x10448b000  rw-s   anon_inode:i915.gem
+      0x74aedc042000     0x74aedc400000   0x3be000        0x0  rw-p   
+      0x74aedc400000     0x74aedc437000    0x37000        0x0  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libgomp.so.1
+      0x74aedc437000     0x74aedc636000   0x1ff000    0x37000  ---p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libgomp.so.1
+      0x74aedc636000     0x74aedc637000     0x1000    0x36000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libgomp.so.1
+      0x74aedc637000     0x74aedc638000     0x1000    0x37000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libgomp.so.1
+      0x74aedc638000     0x74aedc63c000     0x4000    0x3a000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libgomp.so.1
+      0x74aedc63d000     0x74aedc63e000     0x1000 0x10448a000  rw-s   anon_inode:i915.gem
+      0x74aedc63f000     0x74aedc640000     0x1000 0x104489000  rw-s   anon_inode:i915.gem
+      0x74aedc641000     0x74aedc661000    0x20000 0x120aa6000  rw-s   anon_inode:i915.gem
+      0x74aedc662000     0x74aedc672000    0x10000 0x10c6c6000  rw-s   anon_inode:i915.gem
+      0x74aedc673000     0x74aedc679000     0x6000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libhwloc.so.15
+      0x74aedc679000     0x74aedc6ce000    0x55000     0x6000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libhwloc.so.15
+      0x74aedc6ce000     0x74aedc6e2000    0x14000    0x5b000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libhwloc.so.15
+      0x74aedc6e2000     0x74aedc6e3000     0x1000    0x6f000  ---p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libhwloc.so.15
+      0x74aedc6e3000     0x74aedc6e4000     0x1000    0x6f000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libhwloc.so.15
+      0x74aedc6e4000     0x74aedc6e8000     0x4000    0x70000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libhwloc.so.15
+      0x74aedc6e8000     0x74aedc7f2000   0x10a000        0x0  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libc10.so
+      0x74aedc7f2000     0x74aedc7f5000     0x3000   0x109000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libc10.so
+      0x74aedc7f5000     0x74aedc7fc000     0x7000   0x10c000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libc10.so
+      0x74aedc7fc000     0x74aedc7ff000     0x3000        0x0  rw-p   
+      0x74aedc7ff000     0x74aedc800000     0x1000        0x0  ---p   
+      0x74aedc800000     0x74aedd000000   0x800000        0x0  rw-p   
+      0x74aedd000000     0x74aedd064000    0x64000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_tensorflow_frontend.so.2631
+      0x74aedd064000     0x74aedd3d4000   0x370000    0x64000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_tensorflow_frontend.so.2631
+      0x74aedd3d4000     0x74aedd4a5000    0xd1000   0x3d4000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_tensorflow_frontend.so.2631
+      0x74aedd4a5000     0x74aedd4c0000    0x1b000   0x4a5000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_tensorflow_frontend.so.2631
+      0x74aedd4c0000     0x74aedd4c6000     0x6000   0x4c0000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_tensorflow_frontend.so.2631
+      0x74aedd4c6000     0x74aedd4c8000     0x2000        0x0  rw-p   
+      0x74aedd4c8000     0x74aedd4d6000     0xe000   0x4c7000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_tensorflow_frontend.so.2631
+      0x74aedd4d7000     0x74aedd4d8000     0x1000 0x10169a000  rw-s   anon_inode:i915.gem
+      0x74aedd4d9000     0x74aedd4da000     0x1000 0x101699000  rw-s   anon_inode:i915.gem
+      0x74aedd4db000     0x74aedd4dc000     0x1000 0x101698000  rw-s   anon_inode:i915.gem
+      0x74aedd4dd000     0x74aedd4de000     0x1000 0x101697000  rw-s   anon_inode:i915.gem
+      0x74aedd4df000     0x74aedd4ef000    0x10000 0x1088a0000  rw-s   anon_inode:i915.gem
+      0x74aedd4f0000     0x74aedd500000    0x10000        0x0  -w-s   /dev/nvidia0
+      0x74aedd500000     0x74aeddc00000   0x700000        0x0  rw-p   
+      0x74aeddc00000     0x74aedde06000   0x206000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino.so.2631
+      0x74aedde06000     0x74aedeb52000   0xd4c000   0x206000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino.so.2631
+      0x74aedeb52000     0x74aedee18000   0x2c6000   0xf52000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino.so.2631
+      0x74aedee18000     0x74aedee70000    0x58000  0x1217000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino.so.2631
+      0x74aedee70000     0x74aedee74000     0x4000  0x126f000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino.so.2631
+      0x74aedee74000     0x74aedee8f000    0x1b000        0x0  rw-p   
+      0x74aedee8f000     0x74aedef54000    0xc5000  0x1273000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino.so.2631
+      0x74aedef55000     0x74aedef56000     0x1000 0x101696000  rw-s   anon_inode:i915.gem
+      0x74aedef57000     0x74aedef5c000     0x5000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libdrm.so.2.125.0
+      0x74aedef5c000     0x74aedef68000     0xc000     0x5000  r-xp   /usr/lib/x86_64-linux-gnu/libdrm.so.2.125.0
+      0x74aedef68000     0x74aedef6c000     0x4000    0x11000  r--p   /usr/lib/x86_64-linux-gnu/libdrm.so.2.125.0
+      0x74aedef6c000     0x74aedef6d000     0x1000    0x15000  r--p   /usr/lib/x86_64-linux-gnu/libdrm.so.2.125.0
+      0x74aedef6d000     0x74aedef6e000     0x1000    0x16000  rw-p   /usr/lib/x86_64-linux-gnu/libdrm.so.2.125.0
+      0x74aedef6e000     0x74aedef81000    0x13000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_plugin.so
+      0x74aedef81000     0x74aedefdd000    0x5c000    0x13000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_plugin.so
+      0x74aedefdd000     0x74aedeff4000    0x17000    0x6f000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_plugin.so
+      0x74aedeff4000     0x74aedeff8000     0x4000    0x85000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_plugin.so
+      0x74aedeff8000     0x74aedf000000     0x8000    0x89000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_plugin.so
+      0x74aedf000000     0x74aedf066000    0x66000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+      0x74aedf066000     0x74aedf406000   0x3a0000    0x66000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+      0x74aedf406000     0x74aedf50b000   0x105000   0x406000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+      0x74aedf50b000     0x74aedf522000    0x17000   0x50a000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+      0x74aedf522000     0x74aedf523000     0x1000   0x521000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+      0x74aedf523000     0x74aedf526000     0x3000        0x0  rw-p   
+      0x74aedf526000     0x74aedf545000    0x1f000   0x523000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+      0x74aedf545000     0x74aedf546000     0x1000 0x106468000  rw-s   anon_inode:i915.gem
+      0x74aedf547000     0x74aedf548000     0x1000 0x106467000  rw-s   anon_inode:i915.gem
+      0x74aedf549000     0x74aedf54a000     0x1000 0x106466000  rw-s   anon_inode:i915.gem
+      0x74aedf54b000     0x74aedf566000    0x1b000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/frontend/tensorflow/py_tensorflow_frontend.cpython-312-x86_64-linux-gnu.so
+      0x74aedf566000     0x74aedf5c3000    0x5d000    0x1b000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/frontend/tensorflow/py_tensorflow_frontend.cpython-312-x86_64-linux-gnu.so
+      0x74aedf5c3000     0x74aedf5e1000    0x1e000    0x78000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/frontend/tensorflow/py_tensorflow_frontend.cpython-312-x86_64-linux-gnu.so
+      0x74aedf5e1000     0x74aedf5e6000     0x5000    0x96000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/frontend/tensorflow/py_tensorflow_frontend.cpython-312-x86_64-linux-gnu.so
+      0x74aedf5e6000     0x74aedf5e7000     0x1000    0x9b000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/frontend/tensorflow/py_tensorflow_frontend.cpython-312-x86_64-linux-gnu.so
+      0x74aedf5e7000     0x74aedf5e8000     0x1000        0x0  rw-p   
+      0x74aedf5e8000     0x74aedf5f1000     0x9000    0x9c000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/frontend/tensorflow/py_tensorflow_frontend.cpython-312-x86_64-linux-gnu.so
+      0x74aedf5f1000     0x74aedf7f1000   0x200000        0x0  rw-p   
+      0x74aedf7f1000     0x74aedf7f2000     0x1000        0x0  ---p   
+      0x74aedf7f2000     0x74aedfff2000   0x800000        0x0  rw-p   
+      0x74aedfff2000     0x74aedfff3000     0x1000        0x0  ---p   
+      0x74aedfff3000     0x74aee07f3000   0x800000        0x0  rw-p   
+      0x74aee07f3000     0x74aee07f4000     0x1000        0x0  ---p   
+      0x74aee07f4000     0x74aee0ff4000   0x800000        0x0  rw-p   
+      0x74aee0ff4000     0x74aee0ff5000     0x1000        0x0  ---p   
+      0x74aee0ff5000     0x74aee17f5000   0x800000        0x0  rw-p   
+      0x74aee17f5000     0x74aee17f6000     0x1000        0x0  ---p   
+      0x74aee17f6000     0x74aee1ff6000   0x800000        0x0  rw-p   
+      0x74aee1ff6000     0x74aee1ff7000     0x1000        0x0  ---p   
+      0x74aee1ff7000     0x74aee27f7000   0x800000        0x0  rw-p   
+      0x74aee27f7000     0x74aee27f8000     0x1000        0x0  ---p   
+      0x74aee27f8000     0x74aee2ff8000   0x800000        0x0  rw-p   
+      0x74aee2ff8000     0x74aee2ff9000     0x1000        0x0  ---p   
+      0x74aee2ff9000     0x74aee37f9000   0x800000        0x0  rw-p   
+      0x74aee37f9000     0x74aee37fa000     0x1000        0x0  ---p   
+      0x74aee37fa000     0x74aee3ffa000   0x800000        0x0  rw-p   
+      0x74aee3ffa000     0x74aee3ffb000     0x1000        0x0  ---p   
+      0x74aee3ffb000     0x74aee47fb000   0x800000        0x0  rw-p   
+      0x74aee47fb000     0x74aee47fc000     0x1000        0x0  ---p   
+      0x74aee47fc000     0x74aee4ffc000   0x800000        0x0  rw-p   
+      0x74aee4ffc000     0x74aee4ffd000     0x1000        0x0  ---p   
+      0x74aee4ffd000     0x74aee57fd000   0x800000        0x0  rw-p   
+      0x74aee57fd000     0x74aee57fe000     0x1000        0x0  ---p   
+      0x74aee57fe000     0x74aee5ffe000   0x800000        0x0  rw-p   
+      0x74aee5ffe000     0x74aee5fff000     0x1000        0x0  ---p   
+      0x74aee5fff000     0x74aee67ff000   0x800000        0x0  rw-p   
+      0x74aee67ff000     0x74aee6800000     0x1000        0x0  ---p   
+      0x74aee6800000     0x74aee7000000   0x800000        0x0  rw-p   
+      0x74aee7000000     0x74af07000000 0x20000000        0x0  rw-p   
+      0x74af07000000     0x74af0703b000    0x3b000        0x0  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+      0x74af0703b000     0x74af0723a000   0x1ff000    0x3b000  ---p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+      0x74af0723a000     0x74af0723b000     0x1000    0x3a000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+      0x74af0723b000     0x74af0723e000     0x3000    0x3b000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0
+      0x74af0723f000     0x74af07240000     0x1000 0x106465000  rw-s   anon_inode:i915.gem
+      0x74af07241000     0x74af07242000     0x1000 0x106464000  rw-s   anon_inode:i915.gem
+      0x74af07243000     0x74af07244000     0x1000 0x1044b3000  rw-s   anon_inode:i915.gem
+      0x74af07245000     0x74af07255000    0x10000 0x1211c6000  rw-s   anon_inode:i915.gem
+      0x74af07256000     0x74af07274000    0x1e000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libssl.so.3
+      0x74af07274000     0x74af072d6000    0x62000    0x1e000  r-xp   /usr/lib/x86_64-linux-gnu/libssl.so.3
+      0x74af072d6000     0x74af072f2000    0x1c000    0x80000  r--p   /usr/lib/x86_64-linux-gnu/libssl.so.3
+      0x74af072f2000     0x74af072fc000     0xa000    0x9c000  r--p   /usr/lib/x86_64-linux-gnu/libssl.so.3
+      0x74af072fc000     0x74af07300000     0x4000    0xa6000  rw-p   /usr/lib/x86_64-linux-gnu/libssl.so.3
+      0x74af07300000     0x74af07400000   0x100000        0x0  rw-p   
+      0x74af07400000     0x74af07676000   0x276000        0x0  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+      0x74af07676000     0x74af07875000   0x1ff000   0x276000  ---p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+      0x74af07875000     0x74af07876000     0x1000   0x275000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+      0x74af07876000     0x74af07878000     0x2000   0x276000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+      0x74af07878000     0x74af078b1000    0x39000   0x27b000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0
+      0x74af078b2000     0x74af078b3000     0x1000 0x1044b2000  rw-s   anon_inode:i915.gem
+      0x74af078b4000     0x74af078b5000     0x1000 0x1044b1000  rw-s   anon_inode:i915.gem
+      0x74af078b6000     0x74af078b7000     0x1000 0x1044b0000  rw-s   anon_inode:i915.gem
+      0x74af078b8000     0x74af078c8000    0x10000 0x10f5e6000  rw-s   anon_inode:i915.gem
+      0x74af078c9000     0x74af078db000    0x12000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+      0x74af078db000     0x74af078e8000     0xd000    0x12000  r-xp   /usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+      0x74af078e8000     0x74af078f6000     0xe000    0x1f000  r--p   /usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+      0x74af078f6000     0x74af078f7000     0x1000    0x2c000  r--p   /usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+      0x74af078f7000     0x74af07900000     0x9000    0x2d000  rw-p   /usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+      0x74af07900000     0x74af07a00000   0x100000        0x0  rw-p   
+      0x74af07a00000     0x74af07a9d000    0x9d000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+      0x74af07a9d000     0x74af07be5000   0x148000    0x9d000  r-xp   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+      0x74af07be5000     0x74af07c6c000    0x87000   0x1e5000  r--p   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+      0x74af07c6c000     0x74af07c77000     0xb000   0x26b000  r--p   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+      0x74af07c77000     0x74af07c7a000     0x3000   0x276000  rw-p   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+      0x74af07c7a000     0x74af07c7e000     0x4000        0x0  rw-p   
+      0x74af07c7e000     0x74af07c8e000    0x10000        0x0  -w-s   /dev/nvidia0
+      0x74af07c8e000     0x74af07c9e000    0x10000 0x116916000  rw-s   anon_inode:i915.gem
+      0x74af07c9f000     0x74af07caf000    0x10000 0x121b16000  rw-s   anon_inode:i915.gem
+      0x74af07cb0000     0x74af07e00000   0x150000        0x0  rw-p   
+      0x74af07e00000     0x74af08089000   0x289000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
+      0x74af08089000     0x74af093ca000  0x1341000   0x288000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
+      0x74af093ca000     0x74af093d2000     0x8000  0x15c8000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
+      0x74af093d2000     0x74af093e1000     0xf000  0x15cf000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
+      0x74af093e1000     0x74af093e8000     0x7000        0x0  rw-p   
+      0x74af093e8000     0x74af093ed000     0x5000  0x15e8000  ---p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
+      0x74af093ed000     0x74af09557000   0x16a000  0x16d2000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
+      0x74af09557000     0x74af09558000     0x1000 0x10252e000  rw-s   anon_inode:i915.gem
+      0x74af09559000     0x74af0955a000     0x1000 0x10252d000  rw-s   anon_inode:i915.gem
+      0x74af0955b000     0x74af0955c000     0x1000 0x10252c000  rw-s   anon_inode:i915.gem
+      0x74af0955d000     0x74af0956a000     0xd000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbb.so.12
+      0x74af0956a000     0x74af0959f000    0x35000     0xd000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbb.so.12
+      0x74af0959f000     0x74af095b0000    0x11000    0x42000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbb.so.12
+      0x74af095b0000     0x74af095b2000     0x2000    0x52000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbb.so.12
+      0x74af095b2000     0x74af095b5000     0x3000    0x54000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbb.so.12
+      0x74af095b5000     0x74af095cb000    0x16000        0x0  rw-p   
+      0x74af095cb000     0x74af095ce000     0x3000    0x57000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbb.so.12
+      0x74af095ce000     0x74af095d1000     0x3000        0x0  r--p   /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+      0x74af095d1000     0x74af095f3000    0x22000     0x3000  r-xp   /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+      0x74af095f3000     0x74af095fe000     0xb000    0x25000  r--p   /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+      0x74af095fe000     0x74af095ff000     0x1000    0x30000  r--p   /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+      0x74af095ff000     0x74af09600000     0x1000    0x31000  rw-p   /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+      0x74af09600000     0x74af0962b000    0x2b000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so
+      0x74af0962b000     0x74af09dbe000   0x793000    0x2b000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so
+      0x74af09dbe000     0x74af09f4d000   0x18f000   0x7be000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so
+      0x74af09f4d000     0x74af09f50000     0x3000   0x94c000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so
+      0x74af09f50000     0x74af09f73000    0x23000   0x94f000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so
+      0x74af09f73000     0x74af09f8a000    0x17000        0x0  rw-p   
+      0x74af09f8a000     0x74af09f95000     0xb000   0x9ee000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so
+      0x74af09f95000     0x74af09f96000     0x1000 0x1016bf000  rw-s   anon_inode:i915.gem
+      0x74af09f97000     0x74af09f98000     0x1000 0x1029ea000  rw-s   anon_inode:i915.gem
+      0x74af09f99000     0x74af09f9a000     0x1000 0x1029e9000  rw-s   anon_inode:i915.gem
+      0x74af09f9b000     0x74af09f9c000     0x1000 0x100ba9000  rw-s   anon_inode:i915.gem
+      0x74af09f9d000     0x74af09f9e000     0x1000 0x100ba8000  rw-s   anon_inode:i915.gem
+      0x74af09f9f000     0x74af09fa0000     0x1000        0x0  r--p   /usr/lib/x86_64-linux-gnu/librt.so.1
+      0x74af09fa0000     0x74af09fa1000     0x1000     0x1000  r-xp   /usr/lib/x86_64-linux-gnu/librt.so.1
+      0x74af09fa1000     0x74af09fa2000     0x1000     0x2000  r--p   /usr/lib/x86_64-linux-gnu/librt.so.1
+      0x74af09fa2000     0x74af09fa3000     0x1000     0x2000  r--p   /usr/lib/x86_64-linux-gnu/librt.so.1
+      0x74af09fa3000     0x74af09fa4000     0x1000     0x3000  rw-p   /usr/lib/x86_64-linux-gnu/librt.so.1
+      0x74af09fa4000     0x74af09faa000     0x6000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbmalloc.so.2
+      0x74af09faa000     0x74af09fc0000    0x16000     0x6000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbmalloc.so.2
+      0x74af09fc0000     0x74af09fc6000     0x6000    0x1c000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbmalloc.so.2
+      0x74af09fc6000     0x74af09fc7000     0x1000    0x22000  ---p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbmalloc.so.2
+      0x74af09fc7000     0x74af09fc8000     0x1000    0x22000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbmalloc.so.2
+      0x74af09fc8000     0x74af09fca000     0x2000    0x23000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbmalloc.so.2
+      0x74af09fca000     0x74af09feb000    0x21000        0x0  rw-p   
+      0x74af09feb000     0x74af09fec000     0x1000    0x26000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbmalloc.so.2
+      0x74af09fec000     0x74af09fee000     0x2000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+      0x74af09fee000     0x74af09ffc000     0xe000     0x2000  r-xp   /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+      0x74af09ffc000     0x74af09ffe000     0x2000    0x10000  r--p   /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+      0x74af09ffe000     0x74af09fff000     0x1000    0x11000  r--p   /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+      0x74af09fff000     0x74af0a000000     0x1000    0x12000  rw-p   /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+      0x74af0a000000     0x74af0a0b3000    0xb3000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+      0x74af0a0b3000     0x74af0a3e7000   0x334000    0xb3000  r-xp   /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+      0x74af0a3e7000     0x74af0a4b2000    0xcb000   0x3e7000  r--p   /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+      0x74af0a4b2000     0x74af0a50e000    0x5c000   0x4b1000  r--p   /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+      0x74af0a50e000     0x74af0a511000     0x3000   0x50d000  rw-p   /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+      0x74af0a511000     0x74af0a514000     0x3000        0x0  rw-p   
+      0x74af0a514000     0x74af0a515000     0x1000 0x105646000  rw-s   anon_inode:i915.gem
+      0x74af0a516000     0x74af0a517000     0x1000 0x105645000  rw-s   anon_inode:i915.gem
+      0x74af0a518000     0x74af0a51f000     0x7000        0x0  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libshm.so
+      0x74af0a51f000     0x74af0a520000     0x1000     0x6000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libshm.so
+      0x74af0a520000     0x74af0a521000     0x1000     0x7000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libshm.so
+      0x74af0a521000     0x74af0a522000     0x1000        0x0  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch.so
+      0x74af0a522000     0x74af0a523000     0x1000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch.so
+      0x74af0a523000     0x74af0a524000     0x1000     0x1000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch.so
+      0x74af0a524000     0x74af0a525000     0x1000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/_C.cpython-312-x86_64-linux-gnu.so
+      0x74af0a525000     0x74af0a526000     0x1000     0x1000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/_C.cpython-312-x86_64-linux-gnu.so
+      0x74af0a526000     0x74af0a527000     0x1000     0x2000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/_C.cpython-312-x86_64-linux-gnu.so
+      0x74af0a527000     0x74af0a528000     0x1000     0x2000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/_C.cpython-312-x86_64-linux-gnu.so
+      0x74af0a528000     0x74af0a529000     0x1000     0x3000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/_C.cpython-312-x86_64-linux-gnu.so
+      0x74af0a529000     0x74af0a52a000     0x1000     0x6000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/_C.cpython-312-x86_64-linux-gnu.so
+      0x74af0a52a000     0x74af0a52b000     0x1000        0x0  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_global_deps.so
+      0x74af0a52b000     0x74af0a52c000     0x1000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_global_deps.so
+      0x74af0a52c000     0x74af0a52d000     0x1000     0x1000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/torch/lib/libtorch_global_deps.so
+      0x74af0a52d000     0x74af0a531000     0x4000        0x0  rw-p   
+      0x74af0a531000     0x74af0a532000     0x1000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libdl.so.2
+      0x74af0a532000     0x74af0a533000     0x1000     0x1000  r-xp   /usr/lib/x86_64-linux-gnu/libdl.so.2
+      0x74af0a533000     0x74af0a534000     0x1000     0x2000  r--p   /usr/lib/x86_64-linux-gnu/libdl.so.2
+      0x74af0a534000     0x74af0a535000     0x1000     0x2000  r--p   /usr/lib/x86_64-linux-gnu/libdl.so.2
+      0x74af0a535000     0x74af0a536000     0x1000     0x3000  rw-p   /usr/lib/x86_64-linux-gnu/libdl.so.2
+      0x74af0a536000     0x74af0a539000     0x3000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+      0x74af0a539000     0x74af0a53e000     0x5000     0x3000  r-xp   /usr/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+      0x74af0a53e000     0x74af0a541000     0x3000     0x8000  r--p   /usr/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+      0x74af0a541000     0x74af0a542000     0x1000     0xa000  r--p   /usr/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+      0x74af0a542000     0x74af0a543000     0x1000     0xb000  rw-p   /usr/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+      0x74af0a544000     0x74af0a545000     0x1000 0x10c06f000  rw-s   anon_inode:i915.gem
+      0x74af0a546000     0x74af0a548000     0x2000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbbind_2_5.so.3
+      0x74af0a548000     0x74af0a54b000     0x3000     0x2000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbbind_2_5.so.3
+      0x74af0a54b000     0x74af0a54c000     0x1000     0x5000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbbind_2_5.so.3
+      0x74af0a54c000     0x74af0a54d000     0x1000     0x5000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbbind_2_5.so.3
+      0x74af0a54d000     0x74af0a54f000     0x2000     0x6000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libtbbbind_2_5.so.3
+      0x74af0a54f000     0x74af0a55c000     0xd000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_batch_plugin.so
+      0x74af0a55c000     0x74af0a57e000    0x22000     0xd000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_batch_plugin.so
+      0x74af0a57e000     0x74af0a587000     0x9000    0x2f000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_batch_plugin.so
+      0x74af0a587000     0x74af0a589000     0x2000    0x38000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_batch_plugin.so
+      0x74af0a589000     0x74af0a590000     0x7000    0x3a000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/libs/libopenvino_auto_batch_plugin.so
+      0x74af0a590000     0x74af0a594000     0x4000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+      0x74af0a594000     0x74af0a59d000     0x9000     0x4000  r-xp   /usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+      0x74af0a59d000     0x74af0a5a2000     0x5000     0xd000  r--p   /usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5a2000     0x74af0a5a3000     0x1000    0x11000  r--p   /usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5a3000     0x74af0a5a5000     0x2000    0x12000  rw-p   /usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5a6000     0x74af0a5a9000     0x3000        0x0  rw-p   
+      0x74af0a5a9000     0x74af0a5ad000     0x4000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+      0x74af0a5ad000     0x74af0a5d1000    0x24000     0x4000  r-xp   /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+      0x74af0a5d1000     0x74af0a5d5000     0x4000    0x28000  r--p   /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+      0x74af0a5d5000     0x74af0a5d6000     0x1000    0x2b000  r--p   /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+      0x74af0a5d6000     0x74af0a5d7000     0x1000    0x2c000  rw-p   /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+      0x74af0a5d8000     0x74af0a5da000     0x2000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5da000     0x74af0a5dd000     0x3000     0x2000  r-xp   /usr/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5dd000     0x74af0a5df000     0x2000     0x5000  r--p   /usr/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5df000     0x74af0a5e0000     0x1000     0x6000  r--p   /usr/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5e0000     0x74af0a5e1000     0x1000     0x7000  rw-p   /usr/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5e1000     0x74af0a5e3000     0x2000        0x0  r--p   /usr/lib/python3.12/lib-dynload/mmap.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5e3000     0x74af0a5e6000     0x3000     0x2000  r-xp   /usr/lib/python3.12/lib-dynload/mmap.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5e6000     0x74af0a5e8000     0x2000     0x5000  r--p   /usr/lib/python3.12/lib-dynload/mmap.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5e8000     0x74af0a5e9000     0x1000     0x6000  r--p   /usr/lib/python3.12/lib-dynload/mmap.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5e9000     0x74af0a5ea000     0x1000     0x7000  rw-p   /usr/lib/python3.12/lib-dynload/mmap.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5ea000     0x74af0a5ed000     0x3000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/psutil/_psutil_linux.abi3.so
+      0x74af0a5ed000     0x74af0a5f0000     0x3000     0x3000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/psutil/_psutil_linux.abi3.so
+      0x74af0a5f0000     0x74af0a5f1000     0x1000     0x6000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/psutil/_psutil_linux.abi3.so
+      0x74af0a5f1000     0x74af0a5f2000     0x1000     0x7000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/psutil/_psutil_linux.abi3.so
+      0x74af0a5f2000     0x74af0a5f3000     0x1000     0x8000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/psutil/_psutil_linux.abi3.so
+      0x74af0a5f3000     0x74af0a5f5000     0x2000        0x0  r--p   /usr/lib/python3.12/lib-dynload/resource.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5f5000     0x74af0a5f6000     0x1000     0x2000  r-xp   /usr/lib/python3.12/lib-dynload/resource.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5f6000     0x74af0a5f7000     0x1000     0x3000  r--p   /usr/lib/python3.12/lib-dynload/resource.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5f7000     0x74af0a5f8000     0x1000     0x3000  r--p   /usr/lib/python3.12/lib-dynload/resource.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5f8000     0x74af0a5f9000     0x1000     0x4000  rw-p   /usr/lib/python3.12/lib-dynload/resource.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5f9000     0x74af0a5fb000     0x2000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5fb000     0x74af0a5fd000     0x2000     0x2000  r-xp   /usr/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5fd000     0x74af0a5fe000     0x1000     0x4000  r--p   /usr/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5fe000     0x74af0a5ff000     0x1000     0x4000  r--p   /usr/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+      0x74af0a5ff000     0x74af0a600000     0x1000     0x5000  rw-p   /usr/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+      0x74af0a600000     0x74af0aa00000   0x400000        0x0  rw-p   
+      0x74af0aa00000     0x74af0b27b000   0x87b000        0x0  r--p   /usr/lib/locale/locale-archive
+      0x74af0b27b000     0x74af0b27d000     0x2000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+      0x74af0b27d000     0x74af0b284000     0x7000     0x2000  r-xp   /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+      0x74af0b284000     0x74af0b285000     0x1000     0x9000  r--p   /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+      0x74af0b285000     0x74af0b286000     0x1000     0xa000  r--p   /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+      0x74af0b286000     0x74af0b287000     0x1000     0xb000  rw-p   /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+      0x74af0b287000     0x74af0b28d000     0x6000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+      0x74af0b28d000     0x74af0b29f000    0x12000     0x6000  r-xp   /usr/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+      0x74af0b29f000     0x74af0b2a5000     0x6000    0x18000  r--p   /usr/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2a5000     0x74af0b2a6000     0x1000    0x1d000  r--p   /usr/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2a6000     0x74af0b2aa000     0x4000    0x1e000  rw-p   /usr/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2aa000     0x74af0b2ab000     0x1000        0x0  r--s   /dev/nvidiactl
+      0x74af0b2ab000     0x74af0b2af000     0x4000        0x0  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2af000     0x74af0b2d3000    0x24000     0x4000  r-xp   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2d3000     0x74af0b2d8000     0x5000    0x28000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2d8000     0x74af0b2d9000     0x1000    0x2d000  r--p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2d9000     0x74af0b2da000     0x1000    0x2e000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2da000     0x74af0b2dd000     0x3000    0x36000  rw-p   /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2dd000     0x74af0b2de000     0x1000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2de000     0x74af0b2df000     0x1000     0x1000  r-xp   /usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2df000     0x74af0b2e0000     0x1000     0x2000  r--p   /usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2e0000     0x74af0b2e1000     0x1000     0x2000  r--p   /usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2e1000     0x74af0b2e2000     0x1000     0x3000  rw-p   /usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2e2000     0x74af0b2e6000     0x4000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2e6000     0x74af0b2ec000     0x6000     0x4000  r-xp   /usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2ec000     0x74af0b2f0000     0x4000     0xa000  r--p   /usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2f0000     0x74af0b2f1000     0x1000     0xd000  r--p   /usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2f1000     0x74af0b2f3000     0x2000     0xe000  rw-p   /usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2f3000     0x74af0b2f5000     0x2000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2f5000     0x74af0b2fc000     0x7000     0x2000  r-xp   /usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2fc000     0x74af0b2fe000     0x2000     0x9000  r--p   /usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2fe000     0x74af0b2ff000     0x1000     0xa000  r--p   /usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+      0x74af0b2ff000     0x74af0b300000     0x1000     0xb000  rw-p   /usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+      0x74af0b300000     0x74af0b400000   0x100000        0x0  rw-p   
+      0x74af0b400000     0x74af0b428000    0x28000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x74af0b428000     0x74af0b5b1000   0x189000    0x28000  r-xp   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x74af0b5b1000     0x74af0b600000    0x4f000   0x1b1000  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x74af0b600000     0x74af0b604000     0x4000   0x1ff000  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x74af0b604000     0x74af0b606000     0x2000   0x203000  rw-p   /usr/lib/x86_64-linux-gnu/libc.so.6
+      0x74af0b606000     0x74af0b613000     0xd000        0x0  rw-p   
+      0x74af0b613000     0x74af0b614000     0x1000        0x0  rw-s   /dev/shm/sem.mp-9m5306hg
+      0x74af0b614000     0x74af0b615000     0x1000        0x0  rw-s   /dev/shm/sem.mp-orkx0r2x
+      0x74af0b615000     0x74af0b616000     0x1000        0x0  rw-s   /dev/shm/sem.mp-_llrs1eb
+      0x74af0b616000     0x74af0b617000     0x1000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+      0x74af0b617000     0x74af0b618000     0x1000     0x1000  r-xp   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+      0x74af0b618000     0x74af0b619000     0x1000     0x2000  r--p   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+      0x74af0b619000     0x74af0b61a000     0x1000     0x2000  r--p   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+      0x74af0b61a000     0x74af0b61b000     0x1000     0x3000  rw-p   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+      0x74af0b61b000     0x74af0b61c000     0x1000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+      0x74af0b61c000     0x74af0b61d000     0x1000     0x1000  r-xp   /usr/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+      0x74af0b61d000     0x74af0b61e000     0x1000     0x2000  r--p   /usr/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+      0x74af0b61e000     0x74af0b61f000     0x1000     0x2000  r--p   /usr/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+      0x74af0b61f000     0x74af0b620000     0x1000     0x3000  rw-p   /usr/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+      0x74af0b620000     0x74af0b622000     0x2000        0x0  r--p   /usr/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+      0x74af0b622000     0x74af0b624000     0x2000     0x2000  r-xp   /usr/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+      0x74af0b624000     0x74af0b625000     0x1000     0x4000  r--p   /usr/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+      0x74af0b625000     0x74af0b626000     0x1000     0x4000  r--p   /usr/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+      0x74af0b626000     0x74af0b627000     0x1000     0x5000  rw-p   /usr/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+      0x74af0b627000     0x74af0b670000    0x49000        0x0  rw-p   
+      0x74af0b670000     0x74af0b674000     0x4000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+      0x74af0b674000     0x74af0b693000    0x1f000     0x4000  r-xp   /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+      0x74af0b693000     0x74af0b69b000     0x8000    0x23000  r--p   /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+      0x74af0b69b000     0x74af0b69d000     0x2000    0x2b000  r--p   /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+      0x74af0b69d000     0x74af0b69e000     0x1000    0x2d000  rw-p   /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1
+      0x74af0b69e000     0x74af0b6a0000     0x2000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libz.so.1.3
+      0x74af0b6a0000     0x74af0b6b2000    0x12000     0x2000  r-xp   /usr/lib/x86_64-linux-gnu/libz.so.1.3
+      0x74af0b6b2000     0x74af0b6b8000     0x6000    0x14000  r--p   /usr/lib/x86_64-linux-gnu/libz.so.1.3
+      0x74af0b6b8000     0x74af0b6b9000     0x1000    0x1a000  r--p   /usr/lib/x86_64-linux-gnu/libz.so.1.3
+      0x74af0b6b9000     0x74af0b6ba000     0x1000    0x1b000  rw-p   /usr/lib/x86_64-linux-gnu/libz.so.1.3
+      0x74af0b6ba000     0x74af0b6ca000    0x10000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libm.so.6
+      0x74af0b6ca000     0x74af0b749000    0x7f000    0x10000  r-xp   /usr/lib/x86_64-linux-gnu/libm.so.6
+      0x74af0b749000     0x74af0b7a1000    0x58000    0x8f000  r--p   /usr/lib/x86_64-linux-gnu/libm.so.6
+      0x74af0b7a1000     0x74af0b7a2000     0x1000    0xe7000  r--p   /usr/lib/x86_64-linux-gnu/libm.so.6
+      0x74af0b7a2000     0x74af0b7a3000     0x1000    0xe8000  rw-p   /usr/lib/x86_64-linux-gnu/libm.so.6
+      0x74af0b7a3000     0x74af0b7a4000     0x1000        0x0  rw-s   /dev/shm/pym-467936-vfxq_zjn (deleted)
+      0x74af0b7a4000     0x74af0b7c5000    0x21000        0x0  rw-p   
+      0x74af0b7c5000     0x74af0b7cc000     0x7000        0x0  r--s   /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+      0x74af0b7cc000     0x74af0b7ce000     0x2000        0x0  rw-p   
+      0x74af0b7ce000     0x74af0b7d2000     0x4000        0x0  r--p   [vvar]
+      0x74af0b7d2000     0x74af0b7d4000     0x2000        0x0  r--p   [vvar_vclock]
+      0x74af0b7d4000     0x74af0b7d6000     0x2000        0x0  r-xp   [vdso]
+      0x74af0b7d6000     0x74af0b7d7000     0x1000        0x0  r--p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x74af0b7d7000     0x74af0b802000    0x2b000     0x1000  r-xp   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x74af0b802000     0x74af0b80c000     0xa000    0x2c000  r--p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x74af0b80c000     0x74af0b80e000     0x2000    0x36000  r--p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x74af0b80e000     0x74af0b810000     0x2000    0x38000  rw-p   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      0x7ffc45f75000     0x7ffc45ff9000    0x84000        0x0  rw-p   [stack]
+  0xffffffffff600000 0xffffffffff601000     0x1000        0x0  --xp   [vsyscall]
+  Id   Target Id                                   Frame 
+* 1    Thread 0x74af0b66f540 (LWP 467955) "python" 0x000074aeb8e008c6 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+  2    Thread 0x74ac352786c0 (LWP 467997) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74ac18000ba0) at ./nptl/futex-internal.c:57
+  3    Thread 0x74ac72ffd6c0 (LWP 467992) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f92c110) at ./nptl/futex-internal.c:57
+  4    Thread 0x74ac737fe6c0 (LWP 467991) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  5    Thread 0x74ac78ff96c0 (LWP 467990) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  6    Thread 0x74ac797fa6c0 (LWP 467989) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  7    Thread 0x74ac79ffb6c0 (LWP 467988) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  8    Thread 0x74ac7a7fc6c0 (LWP 467987) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  9    Thread 0x74ac7affd6c0 (LWP 467986) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  10   Thread 0x74ac7b7fe6c0 (LWP 467985) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  11   Thread 0x74ac7bfff6c0 (LWP 467984) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  12   Thread 0x74ac73fff6c0 (LWP 467983) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  13   Thread 0x74ac88df86c0 (LWP 467982) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  14   Thread 0x74ac895f96c0 (LWP 467981) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  15   Thread 0x74ac89dfa6c0 (LWP 467980) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  16   Thread 0x74ac8a5fb6c0 (LWP 467979) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  17   Thread 0x74ac8adfc6c0 (LWP 467978) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f99dcf0) at ./nptl/futex-internal.c:57
+  18   Thread 0x74ac8b5fd6c0 (LWP 467977) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=29868, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1f96df10) at ./nptl/futex-internal.c:57
+  19   Thread 0x74ac8bdfe6c0 (LWP 467976) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=29868, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x20ace670) at ./nptl/futex-internal.c:57
+  20   Thread 0x74ac8c5ff6c0 (LWP 467975) "python" futex_wait (private=0, expected=2, futex_word=0x1f485d20) at ../sysdeps/nptl/futex-internal.h:146
+  21   Thread 0x74aebb3ff6c0 (LWP 467974) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=1802993903, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x1dd4cd60) at ./nptl/futex-internal.c:57
+  22   Thread 0x74aedcfff6c0 (LWP 467971) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x18f20990) at ./nptl/futex-internal.c:57
+  23   Thread 0x74aedfff16c0 (LWP 467970) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e61e0 <thread_status+1888>) at ./nptl/futex-internal.c:57
+  24   Thread 0x74aee07f26c0 (LWP 467969) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e6160 <thread_status+1760>) at ./nptl/futex-internal.c:57
+  25   Thread 0x74aee0ff36c0 (LWP 467968) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e60e0 <thread_status+1632>) at ./nptl/futex-internal.c:57
+  26   Thread 0x74aee17f46c0 (LWP 467967) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e6060 <thread_status+1504>) at ./nptl/futex-internal.c:57
+  27   Thread 0x74aee1ff56c0 (LWP 467966) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5fe0 <thread_status+1376>) at ./nptl/futex-internal.c:57
+  28   Thread 0x74aee27f66c0 (LWP 467965) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5f60 <thread_status+1248>) at ./nptl/futex-internal.c:57
+  29   Thread 0x74aee2ff76c0 (LWP 467964) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5ee0 <thread_status+1120>) at ./nptl/futex-internal.c:57
+  30   Thread 0x74aee37f86c0 (LWP 467963) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5e60 <thread_status+992>) at ./nptl/futex-internal.c:57
+  31   Thread 0x74aee3ff96c0 (LWP 467962) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5de0 <thread_status+864>) at ./nptl/futex-internal.c:57
+  32   Thread 0x74aee47fa6c0 (LWP 467961) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5d60 <thread_status+736>) at ./nptl/futex-internal.c:57
+  33   Thread 0x74aee4ffb6c0 (LWP 467960) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5ce0 <thread_status+608>) at ./nptl/futex-internal.c:57
+  34   Thread 0x74aee57fc6c0 (LWP 467959) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5c60 <thread_status+480>) at ./nptl/futex-internal.c:57
+  35   Thread 0x74aee5ffd6c0 (LWP 467958) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5be0 <thread_status+352>) at ./nptl/futex-internal.c:57
+  36   Thread 0x74aee67fe6c0 (LWP 467957) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5b60 <thread_status+224>) at ./nptl/futex-internal.c:57
+  37   Thread 0x74aee6fff6c0 (LWP 467956) "python" 0x000074af0b498e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x74af093e5ae0 <thread_status+96>) at ./nptl/futex-internal.c:57
+STAGE2E_MAIN_LWP=467955
+#0  0x000074aeb8e008c6 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#1  0x000074aeb8dcd8b9 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#2  0x000074aeb8d3082e in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#3  0x000074aeb8ec5043 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#4  0x000074aeb8b581ee in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#5  0x000074aeb8bc4f6f in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#6  0x000074aeb8b3c6cd in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#7  0x000074aeb8b0b3dd in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#8  0x000074aeb8ad2c2b in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#9  0x000074aeb1a1af52 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#10 0x000074aeb1a1a068 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#11 0x000074aeb266c61f in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#12 0x000074aeb266c656 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#13 0x000074aeb1ed6426 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#14 0x000074aeb2908673 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#15 0x000074aeb283de09 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#16 0x000074aeb1c98c45 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#17 0x000074aeb1c75e3e in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#18 0x000074aeb1ae2b92 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#19 0x000074aeb1ae2d8f in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#20 0x000074aede490086 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#21 0x000074aede4b3239 in ov::threading::CPUStreamsExecutor::execute(std::function<void ()>) () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#22 0x000074aede47db37 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#23 0x000074aede48fe44 in ov::IAsyncInferRequest::run_first_stage(__gnu_cxx::__normal_iterator<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> >*, std::vector<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> >, std::allocator<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> > > > >, __gnu_cxx::__normal_iterator<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> >*, std::vector<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> >, std::allocator<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> > > > >, std::shared_ptr<ov::threading::ITaskExecutor>) () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#24 0x000074aede491cba in ov::IAsyncInferRequest::infer() () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#25 0x000074aede459f5c in ov::InferRequest::infer() () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#26 0x000074aedf157ee2 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+#27 0x000074aedf12147e in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+#28 0x0000000000581fed in ?? ()
+#29 0x00000000005499b5 in PyObject_Vectorcall ()
+#30 0x00000000005d710f in _PyEval_EvalFrameDefault ()
+#31 0x00000000006fa365 in ?? ()
+#32 0x000000000064f780 in ?? ()
+#33 0x00000000005db2ee in _PyEval_EvalFrameDefault ()
+#34 0x00000000005d55eb in PyEval_EvalCode ()
+#35 0x0000000000608733 in PyRun_StringFlags ()
+#36 0x00000000006b40de in PyRun_SimpleStringFlags ()
+#37 0x00000000006bcda1 in Py_RunMain ()
+#38 0x00000000006bc7bd in Py_BytesMain ()
+#39 0x000074af0b42a1ca in __libc_start_call_main (main=main@entry=0x5188c0, argc=argc@entry=4, argv=argv@entry=0x7ffc45ff5ba8) at ../sysdeps/nptl/libc_start_call_main.h:58
+STAGE2E_MAIN_PC=0x74aeb8e008c6
+=> 0x74aeb8e008c6:	jmp    0x74aeb8e0073d
+[Inferior 1 (process 467955) detached]

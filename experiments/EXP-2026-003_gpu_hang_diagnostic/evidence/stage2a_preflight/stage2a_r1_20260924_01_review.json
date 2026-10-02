@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-09-24T08:51:42+00:00",
+  "protocol_id": "EXP-2026-003-STAGE2A-CURRENT-REPRODUCTION-BASELINE-V1",
+  "run_id": "stage2a_r1_20260924_01",
+  "verdict": "READY_WITH_RECORDED_DESKTOP_GPU_CONTEXT",
+  "checks": {
+    "baseline_and_artifact_hashes_match": true,
+    "kernel_matches_historical_evidence": true,
+    "ac_power_online": true,
+    "platform_profile": "performance",
+    "memory_available_kib": 8415260,
+    "unexpected_python_workload_observed": false
+  },
+  "device_mapping": {
+    "card0_renderD129": "NVIDIA 10DE:2D19 using nvidia",
+    "card1_renderD128": "Intel 8086:7D51 using i915"
+  },
+  "observed_context": [
+    "The only matched python PID was the preflight process itself.",
+    "Normal desktop processes held Intel card1 device handles.",
+    "Feishu held Intel renderD128 handles at snapshot time."
+  ],
+  "interpretation_limits": [
+    "An open DRM device handle does not prove active GPU load.",
+    "The desktop GPU context is recorded, not treated as a fault cause.",
+    "Historical Phase 3 evidence did not preserve equivalent per-process DRM ownership, so exact workload equivalence cannot be claimed."
+  ],
+  "decision": "Allow the frozen Stage 2A Round 1 run without changing the captured desktop context."
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-24T11:57:53.447890+00:00",
+  "protocol_id": "EXP-2026-003-STAGE2C-PROC-THREAD-SNAPSHOT-V1",
+  "run_id": "stage2c_r1_20260924_02",
+  "infer_classification": "HANG_INFER_ENTERED_NOT_RETURNED",
+  "proc_snapshot_quality": "PROC_SNAPSHOT_PARTIAL_WITHIN_BUDGET",
+  "phase3_qualification_round": false,
+  "implementation_sha256": {
+    "baseline": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+    "worker": "7093c14a6b6eeed5fb3aa234a6e05c96b89d1e1039c661872e028490377f5672",
+    "helper": "679e2a1e174a9b395b977b82cbdd9f5a59c03e5cee0a79b1fc33ff3a4137f4a7",
+    "runner": "9fdf811afcc26216ede59c76dacdeaf0f30fabcd05c90f43df83a425f3667ee3",
+    "preflight": "0707efbfbdb754614a7819d53ae151362b8b5e4f092f505143616e643a03b932"
+  },
+  "frozen_arguments": {
+    "duration_minutes": 5.0,
+    "warmup": 10,
+    "stall_seconds": 15.0,
+    "startup_seconds": 60.0,
+    "telemetry_seconds": 5.0,
+    "window_seconds": 60.0
+  },
+  "snapshot_budget_seconds": 2.0,
+  "snapshot_control": {
+    "invoked": true,
+    "target_pid": 345279,
+    "command": [
+      "/home/lucas/intel_ws/openvino_env/bin/python",
+      "/home/lucas/physical_ai_os/experiments/EXP-2026-003_gpu_hang_diagnostic/stage2c_proc_snapshot_helper.py",
+      "--pid",
+      "345279",
+      "--output",
+      "/home/lucas/physical_ai_os/experiments/EXP-2026-003_gpu_hang_diagnostic/evidence/stage2c/stage2c_r1_20260924_02/proc_snapshot.json"
+    ],
+    "helper_returncode": 0,
+    "helper_output": "{\n  \"pid\": 345279,\n  \"status\": \"CAPTURED_PARTIAL\",\n  \"thread_count\": 37,\n  \"elapsed_seconds\": 0.004596949031110853\n}",
+    "snapshot_delay_seconds": 0.029116860998328775,
+    "recovery": "SIGTERM"
+  },
+  "shared_boundary_snapshot": {
+    "first": {
+      "enter_sequence": 654,
+      "return_sequence": 653
+    },
+    "second": {
+      "enter_sequence": 654,
+      "return_sequence": 653
+    },
+    "stable": true
+  },
+  "derived_boundary": {
+    "enter_sequence": 654,
+    "return_sequence": 653,
+    "heartbeat_infer_sequence": 653,
+    "enter_minus_return": 1
+  },
+  "preflight_evidence": "evidence/stage2c_preflight/stage2c_r1_20260924_02.json",
+  "preflight_sha256": "f6adc550fe9de3e719b005eb835daf6192f7cc94365eeb759195c451a1ed7b56",
+  "baseline_result": "result.json",
+  "proc_snapshot": "proc_snapshot.json",
+  "interpretation_limits": [
+    "A /proc snapshot describes one moment and does not prove causality.",
+    "UNAVAILABLE fields are missing evidence, not absent state.",
+    "No Stage 2C result is GPU admission evidence."
+  ]
+}

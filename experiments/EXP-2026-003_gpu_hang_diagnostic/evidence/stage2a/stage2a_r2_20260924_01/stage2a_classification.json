@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-24T09:14:28.997636+00:00",
+  "protocol_id": "EXP-2026-003-STAGE2A-CURRENT-REPRODUCTION-BASELINE-V1",
+  "run_id": "stage2a_r2_20260924_01",
+  "classification": "NO_HANG_REPRODUCED_5M_COMPLETE",
+  "phase3_qualification_round": false,
+  "baseline_script": "projects/so101_L1/openvino/phase3_v2_9/run_isolated_gpu_stability_v2_9.py",
+  "baseline_script_sha256": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+  "worker_function": "run_isolated_gpu_stability_v2_9.inference_worker",
+  "frozen_arguments": {
+    "duration_minutes": 5.0,
+    "warmup": 10,
+    "stall_seconds": 15.0,
+    "startup_seconds": 60.0,
+    "telemetry_seconds": 5.0,
+    "window_seconds": 60.0
+  },
+  "preflight_evidence": "evidence/stage2a_preflight/stage2a_r2_20260924_01.json",
+  "preflight_sha256": "87c47540219cec5c71ca2224607b5650a3e71fc8a191ceb4486f495decffae2e",
+  "baseline_result": "result.json",
+  "interpretation_limits": [
+    "This is a five-minute exploratory reproduction window, not a Phase 3 qualification run.",
+    "A completed window is NO_HANG_REPRODUCED, not PASS and not GPU readmission evidence.",
+    "A watchdog timeout reproduces the historical symptom class but does not identify an internal root cause."
+  ]
+}

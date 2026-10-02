@@ -1,0 +1,491 @@
+[New LWP 430851]
+[New LWP 430845]
+[New LWP 430844]
+[New LWP 430843]
+[New LWP 430842]
+[New LWP 430841]
+[New LWP 430840]
+[New LWP 430839]
+[New LWP 430838]
+[New LWP 430837]
+[New LWP 430836]
+[New LWP 430835]
+[New LWP 430834]
+[New LWP 430833]
+[New LWP 430832]
+[New LWP 430831]
+[New LWP 430830]
+[New LWP 430829]
+[New LWP 430828]
+[New LWP 430827]
+[New LWP 430824]
+[New LWP 430823]
+[New LWP 430822]
+[New LWP 430821]
+[New LWP 430820]
+[New LWP 430819]
+[New LWP 430818]
+[New LWP 430817]
+[New LWP 430816]
+[New LWP 430815]
+[New LWP 430814]
+[New LWP 430813]
+[New LWP 430812]
+[New LWP 430811]
+[New LWP 430810]
+[New LWP 430809]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007b4b606008c6 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+
+Thread 37 (Thread 0x7b4b8e9ff6c0 (LWP 430809) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5ae0 <thread_status+96>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5ae0 <thread_status+96>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5ae0 <thread_status+96>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5a90 <thread_status+16>, cond=0x7b4bb0de5ab8 <thread_status+56>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5ab8 <thread_status+56>, mutex=0x7b4bb0de5a90 <thread_status+16>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 36 (Thread 0x7b4b8e1fe6c0 (LWP 430810) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5b60 <thread_status+224>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5b60 <thread_status+224>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5b60 <thread_status+224>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5b10 <thread_status+144>, cond=0x7b4bb0de5b38 <thread_status+184>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5b38 <thread_status+184>, mutex=0x7b4bb0de5b10 <thread_status+144>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 35 (Thread 0x7b4b8d9fd6c0 (LWP 430811) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5be0 <thread_status+352>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5be0 <thread_status+352>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5be0 <thread_status+352>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5b90 <thread_status+272>, cond=0x7b4bb0de5bb8 <thread_status+312>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5bb8 <thread_status+312>, mutex=0x7b4bb0de5b90 <thread_status+272>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 34 (Thread 0x7b4b8d1fc6c0 (LWP 430812) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5c60 <thread_status+480>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5c60 <thread_status+480>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5c60 <thread_status+480>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5c10 <thread_status+400>, cond=0x7b4bb0de5c38 <thread_status+440>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5c38 <thread_status+440>, mutex=0x7b4bb0de5c10 <thread_status+400>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 33 (Thread 0x7b4b8c9fb6c0 (LWP 430813) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5ce0 <thread_status+608>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5ce0 <thread_status+608>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5ce0 <thread_status+608>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5c90 <thread_status+528>, cond=0x7b4bb0de5cb8 <thread_status+568>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5cb8 <thread_status+568>, mutex=0x7b4bb0de5c90 <thread_status+528>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 32 (Thread 0x7b4b8c1fa6c0 (LWP 430814) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5d60 <thread_status+736>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5d60 <thread_status+736>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5d60 <thread_status+736>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5d10 <thread_status+656>, cond=0x7b4bb0de5d38 <thread_status+696>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5d38 <thread_status+696>, mutex=0x7b4bb0de5d10 <thread_status+656>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 31 (Thread 0x7b4b8b9f96c0 (LWP 430815) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5de0 <thread_status+864>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5de0 <thread_status+864>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5de0 <thread_status+864>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5d90 <thread_status+784>, cond=0x7b4bb0de5db8 <thread_status+824>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5db8 <thread_status+824>, mutex=0x7b4bb0de5d90 <thread_status+784>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 30 (Thread 0x7b4b8b1f86c0 (LWP 430816) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5e60 <thread_status+992>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5e60 <thread_status+992>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5e60 <thread_status+992>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5e10 <thread_status+912>, cond=0x7b4bb0de5e38 <thread_status+952>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5e38 <thread_status+952>, mutex=0x7b4bb0de5e10 <thread_status+912>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 29 (Thread 0x7b4b8a9f76c0 (LWP 430817) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5ee0 <thread_status+1120>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5ee0 <thread_status+1120>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5ee0 <thread_status+1120>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5e90 <thread_status+1040>, cond=0x7b4bb0de5eb8 <thread_status+1080>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5eb8 <thread_status+1080>, mutex=0x7b4bb0de5e90 <thread_status+1040>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 28 (Thread 0x7b4b8a1f66c0 (LWP 430818) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5f60 <thread_status+1248>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5f60 <thread_status+1248>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5f60 <thread_status+1248>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5f10 <thread_status+1168>, cond=0x7b4bb0de5f38 <thread_status+1208>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5f38 <thread_status+1208>, mutex=0x7b4bb0de5f10 <thread_status+1168>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 27 (Thread 0x7b4b899f56c0 (LWP 430819) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de5fe0 <thread_status+1376>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de5fe0 <thread_status+1376>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de5fe0 <thread_status+1376>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de5f90 <thread_status+1296>, cond=0x7b4bb0de5fb8 <thread_status+1336>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de5fb8 <thread_status+1336>, mutex=0x7b4bb0de5f90 <thread_status+1296>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 26 (Thread 0x7b4b891f46c0 (LWP 430820) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de6060 <thread_status+1504>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de6060 <thread_status+1504>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de6060 <thread_status+1504>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de6010 <thread_status+1424>, cond=0x7b4bb0de6038 <thread_status+1464>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de6038 <thread_status+1464>, mutex=0x7b4bb0de6010 <thread_status+1424>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 25 (Thread 0x7b4b889f36c0 (LWP 430821) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de60e0 <thread_status+1632>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de60e0 <thread_status+1632>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de60e0 <thread_status+1632>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de6090 <thread_status+1552>, cond=0x7b4bb0de60b8 <thread_status+1592>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de60b8 <thread_status+1592>, mutex=0x7b4bb0de6090 <thread_status+1552>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 24 (Thread 0x7b4b881f26c0 (LWP 430822) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de6160 <thread_status+1760>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de6160 <thread_status+1760>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de6160 <thread_status+1760>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de6110 <thread_status+1680>, cond=0x7b4bb0de6138 <thread_status+1720>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de6138 <thread_status+1720>, mutex=0x7b4bb0de6110 <thread_status+1680>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 23 (Thread 0x7b4b879f16c0 (LWP 430823) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b4bb0de61e0 <thread_status+1888>) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x7b4bb0de61e0 <thread_status+1888>) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b4bb0de61e0 <thread_status+1888>, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x7b4bb0de6190 <thread_status+1808>, cond=0x7b4bb0de61b8 <thread_status+1848>) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x7b4bb0de61b8 <thread_status+1848>, mutex=0x7b4bb0de6190 <thread_status+1808>) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4bafdf812f in blas_thread_server () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/numpy/_core/../../numpy.libs/libscipy_openblas64_-32a4b2a6.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 22 (Thread 0x7b4b849ff6c0 (LWP 430824) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x3073de80) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x3073de80) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x3073de80, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2ea4fff in do_futex_wait (sem=sem@entry=0x3073de80, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+#4  0x00007b4bb2ea5098 in __new_sem_wait_slow64 (sem=0x3073de80, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:183
+#5  0x000000000061032d in PyThread_acquire_lock_timed ()
+#6  0x00007b4bb2ca0e11 in ?? () from /usr/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+#7  0x0000000000551fae in ?? ()
+#8  0x00000000005499b5 in PyObject_Vectorcall ()
+#9  0x00000000005d710f in _PyEval_EvalFrameDefault ()
+#10 0x000000000054cb52 in ?? ()
+#11 0x00000000006f899c in ?? ()
+#12 0x00000000006b93bc in ?? ()
+#13 0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#14 0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 21 (Thread 0x7b4b62bff6c0 (LWP 430827) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=1885680840, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x35597c60) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=1885680840, abstime=0x0, clockid=0, expected=0, futex_word=0x35597c60) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x35597c60, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x35597c10, cond=0x35597c38) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x35597c38, mutex=0x35597c10) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4b606bc36e in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#6  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#7  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 20 (Thread 0x7b4933dff6c0 (LWP 430828) "python"):
+#0  futex_wait (private=0, expected=2, futex_word=0x36cd0c20) at ../sysdeps/nptl/futex-internal.h:146
+#1  __GI___lll_lock_wait (futex=futex@entry=0x36cd0c20, private=0) at ./nptl/lowlevellock.c:49
+#2  0x00007b4bb2ea0237 in lll_mutex_lock_optimized (mutex=0x36cd0c20) at ./nptl/pthread_mutex_lock.c:48
+#3  ___pthread_mutex_lock (mutex=0x36cd0c20) at ./nptl/pthread_mutex_lock.c:128
+#4  0x00007b4b6061e743 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#5  0x00007b4b60645fce in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#6  0x00007b4b60646902 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#7  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#8  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 19 (Thread 0x7b49335fe6c0 (LWP 430829) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=31561, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x382f3ff0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=31561, abstime=0x0, clockid=0, expected=0, futex_word=0x382f3ff0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x382f3ff0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x382f3fa0, cond=0x382f3fc8) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x382f3fc8, mutex=0x382f3fa0) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 18 (Thread 0x7b4932dfd6c0 (LWP 430830) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=31561, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x387ada60) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=31561, abstime=0x0, clockid=0, expected=0, futex_word=0x387ada60) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x387ada60, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x387ada10, cond=0x387ada38) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x387ada38, mutex=0x387ada10) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 17 (Thread 0x7b49325fc6c0 (LWP 430831) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 16 (Thread 0x7b4931dfb6c0 (LWP 430832) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 15 (Thread 0x7b49315fa6c0 (LWP 430833) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 14 (Thread 0x7b4930df96c0 (LWP 430834) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 13 (Thread 0x7b4923fff6c0 (LWP 430835) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 12 (Thread 0x7b491b5ff6c0 (LWP 430836) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 11 (Thread 0x7b49237fe6c0 (LWP 430837) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 10 (Thread 0x7b4922ffd6c0 (LWP 430838) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 9 (Thread 0x7b49227fc6c0 (LWP 430839) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 8 (Thread 0x7b4921ffb6c0 (LWP 430840) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 7 (Thread 0x7b49217fa6c0 (LWP 430841) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 6 (Thread 0x7b4920ff96c0 (LWP 430842) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 5 (Thread 0x7b491bfff6c0 (LWP 430843) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 4 (Thread 0x7b491adfe6c0 (LWP 430844) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x370accc0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x370accc0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x370acc70, cond=0x370acc98) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x370acc98, mutex=0x370acc70) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 3 (Thread 0x7b491a5fd6c0 (LWP 430845) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=0, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x3876c470) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=0, abstime=0x0, clockid=0, expected=0, futex_word=0x3876c470) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x3876c470, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=private@entry=0) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2e9b8cd in __pthread_cond_wait_common (abstime=0x0, clockid=0, mutex=0x3876c420, cond=0x3876c448) at ./nptl/pthread_cond_wait.c:503
+#4  ___pthread_cond_wait (cond=0x3876c448, mutex=0x3876c420) at ./nptl/pthread_cond_wait.c:627
+#5  0x00007b4baf4b9047 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007b4b85eb9e43 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#7  0x00007b4baf4ecdb4 in ?? () from /lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#9  0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 2 (Thread 0x7b48dd6bf6c0 (LWP 430851) "python"):
+#0  0x00007b4bb2e98e51 in __futex_abstimed_wait_common64 (private=<optimized out>, cancel=true, abstime=0x0, op=393, expected=0, futex_word=0x7b48c0000ba0) at ./nptl/futex-internal.c:57
+#1  __futex_abstimed_wait_common (cancel=true, private=<optimized out>, abstime=0x0, clockid=0, expected=0, futex_word=0x7b48c0000ba0) at ./nptl/futex-internal.c:87
+#2  __GI___futex_abstimed_wait_cancelable64 (futex_word=futex_word@entry=0x7b48c0000ba0, expected=expected@entry=0, clockid=clockid@entry=0, abstime=abstime@entry=0x0, private=<optimized out>) at ./nptl/futex-internal.c:139
+#3  0x00007b4bb2ea4fff in do_futex_wait (sem=sem@entry=0x7b48c0000ba0, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:111
+#4  0x00007b4bb2ea5098 in __new_sem_wait_slow64 (sem=0x7b48c0000ba0, abstime=0x0, clockid=0) at ./nptl/sem_waitcommon.c:183
+#5  0x000000000061032d in PyThread_acquire_lock_timed ()
+#6  0x000000000064dafa in ?? ()
+#7  0x0000000000551418 in ?? ()
+#8  0x00000000005499b5 in PyObject_Vectorcall ()
+#9  0x00000000005d710f in _PyEval_EvalFrameDefault ()
+#10 0x000000000054cb52 in ?? ()
+#11 0x00000000006f899c in ?? ()
+#12 0x00000000006b93bc in ?? ()
+#13 0x00007b4bb2e9cb84 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:447
+#14 0x00007b4bb2f29ecc in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 1 (Thread 0x7b4bb3099540 (LWP 430808) "python"):
+#0  0x00007b4b606008c6 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#1  0x00007b4b605cd8b9 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#2  0x00007b4b6053082e in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#3  0x00007b4b606c5043 in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#4  0x00007b4b603581ee in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#5  0x00007b4b603c4f6f in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#6  0x00007b4b6033c6cd in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#7  0x00007b4b6030b3dd in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#8  0x00007b4b602d2c2b in ?? () from /usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so
+#9  0x00007b4b59a1af52 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#10 0x00007b4b59a1a068 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#11 0x00007b4b5a66c61f in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#12 0x00007b4b5a66c656 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#13 0x00007b4b59ed6426 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#14 0x00007b4b5a908673 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#15 0x00007b4b5a83de09 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#16 0x00007b4b59c98c45 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#17 0x00007b4b59c75e3e in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#18 0x00007b4b59ae2b92 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#19 0x00007b4b59ae2d8f in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino_intel_gpu_plugin.so
+#20 0x00007b4b85e90086 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#21 0x00007b4b85eb3239 in ov::threading::CPUStreamsExecutor::execute(std::function<void ()>) () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#22 0x00007b4b85e7db37 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#23 0x00007b4b85e8fe44 in ov::IAsyncInferRequest::run_first_stage(__gnu_cxx::__normal_iterator<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> >*, std::vector<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> >, std::allocator<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> > > > >, __gnu_cxx::__normal_iterator<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> >*, std::vector<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> >, std::allocator<std::pair<std::shared_ptr<ov::threading::ITaskExecutor>, std::function<void ()> > > > >, std::shared_ptr<ov::threading::ITaskExecutor>) () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#24 0x00007b4b85e91cba in ov::IAsyncInferRequest::infer() () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#25 0x00007b4b85e59f5c in ov::InferRequest::infer() () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/../openvino/libs/libopenvino.so.2631
+#26 0x00007b4b86b57ee2 in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+#27 0x00007b4b86b2147e in ?? () from /home/lucas/intel_ws/openvino_env/lib/python3.12/site-packages/openvino/_pyopenvino.cpython-312-x86_64-linux-gnu.so
+#28 0x0000000000581fed in ?? ()
+#29 0x00000000005499b5 in PyObject_Vectorcall ()
+#30 0x00000000005d710f in _PyEval_EvalFrameDefault ()
+#31 0x00000000006fa365 in ?? ()
+#32 0x000000000064f780 in ?? ()
+#33 0x00000000005db2ee in _PyEval_EvalFrameDefault ()
+#34 0x00000000005d55eb in PyEval_EvalCode ()
+#35 0x0000000000608733 in PyRun_StringFlags ()
+#36 0x00000000006b40de in PyRun_SimpleStringFlags ()
+#37 0x00000000006bcda1 in Py_RunMain ()
+#38 0x00000000006bc7bd in Py_BytesMain ()
+#39 0x00007b4bb2e2a1ca in __libc_start_call_main (main=main@entry=0x5188c0, argc=argc@entry=4, argv=argv@entry=0x7ffc455dbeb8) at ../sysdeps/nptl/libc_start_call_main.h:58
+[Inferior 1 (process 430808) detached]

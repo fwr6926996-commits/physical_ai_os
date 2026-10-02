@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-30T17:45:13.920163+00:00",
+  "protocol_id": "EXP-2026-003-STAGE2E-A-MODULE-OFFSET-CAPTURE-V1",
+  "run_id": "stage2e_a1_20261001_01",
+  "infer_classification": "HANG_INFER_ENTERED_NOT_RETURNED",
+  "offset_evidence_quality": "OFFSET_EVIDENCE_COMPLETE_MAIN_THREAD_AND_MAPPING_IDENTIFIED",
+  "offset_evidence": {
+    "valid": true,
+    "main_lwp": 467955,
+    "pc": "0x74aeb8e008c6",
+    "mapping_start": "0x74aeb8a00000",
+    "mapping_end": "0x74aeb914a000",
+    "mapping_file_offset": "0x0",
+    "mapping_permission": "r-xp",
+    "stable_module_offset": "0x4008c6",
+    "formula": "pc - mapping_start + mapping_file_offset",
+    "module_path": "/usr/lib/x86_64-linux-gnu/intel-opencl/libigdrcl.so"
+  },
+  "phase3_qualification_round": false,
+  "implementation_sha256": {
+    "baseline": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+    "worker": "87b7f46af3913297aa3eeab8a30940980a41e2278f806e60ed82fb12b34c9eef",
+    "runner": "d45cf3e405948db15539a3d8cdbf6e5144c89db81b8fa46dd67def5678b01b3e",
+    "offset_helper": "fe0ae2e2a4fa0e817a07b97ea2a31586fdf613684c4b06cecc4412c359a73095",
+    "preflight": "1ae567ce9208d947d2b7f870d456bf52103675726f975fdd0ef53fba94577edd",
+    "gdb": "3832cc070ae1716e322105d3b39fb398695e5f031c9d39224cf227a8c2b889f6",
+    "opencl_runtime": "d43af828e1acfcce4a2c042167ecacb270e9356fa55a3a557f18cd55b79540da"
+  },
+  "frozen_arguments": {
+    "duration_minutes": 5.0,
+    "warmup": 10,
+    "stall_seconds": 15.0,
+    "startup_seconds": 60.0,
+    "telemetry_seconds": 5.0,
+    "window_seconds": 60.0
+  },
+  "gdb_timeout_seconds": 2.0,
+  "ptrace_authorization": {
+    "mechanism": "PR_SET_PTRACER",
+    "authorized_supervisor_pid": 467936,
+    "returncode": 0,
+    "errno": 0,
+    "error": null,
+    "scope": "Supervisor and its descendants; target process lifetime only."
+  },
+  "ptrace_authorization_valid": true,
+  "gdb_control": {
+    "invoked": true,
+    "target_pid": 467955,
+    "command": [
+      "/usr/bin/gdb",
+      "--batch",
+      "--nx",
+      "--quiet",
+      "-ex",
+      "set pagination off",
+      "-ex",
+      "set confirm off",
+      "-ex",
+      "set debuginfod enabled off",
+      "-ex",
+      "attach 467955",
+      "-ex",
+      "info sharedlibrary",
+      "-ex",
+      "info proc mappings",
+      "-ex",
+      "info threads",
+      "-ex",
+      "python target=next((t for t in gdb.selected_inferior().threads() if t.ptid[1] == 467955), None); assert target is not None; target.switch(); print(\"STAGE2E_MAIN_LWP=467955\")",
+      "-ex",
+      "bt 40",
+      "-ex",
+      "printf \"STAGE2E_MAIN_PC=%p\\n\", $pc",
+      "-ex",
+      "x/i $pc",
+      "-ex",
+      "detach"
+    ],
+    "helper_returncode": 0,
+    "output_bytes": 111834,
+    "target_state_after_helper": "R (running)",
+    "snapshot_delay_seconds": 0.9206387739977799,
+    "recovery": "SIGTERM"
+  },
+  "shared_boundary_snapshot": {
+    "first": {
+      "enter_sequence": 6760,
+      "return_sequence": 6759
+    },
+    "second": {
+      "enter_sequence": 6760,
+      "return_sequence": 6759
+    },
+    "stable": true
+  },
+  "derived_boundary": {
+    "enter_sequence": 6760,
+    "return_sequence": 6759,
+    "heartbeat_infer_sequence": 6759,
+    "enter_minus_return": 1
+  },
+  "preflight_evidence": "evidence/stage2e_preflight/stage2e_a1_20261001_01.json",
+  "preflight_sha256": "1f74c02590342cfdb95cde11c30f3b7b54d3b015c041050c5531be002c4f1367",
+  "baseline_result": "result.json",
+  "gdb_raw_output": "gdb_offset_capture.txt",
+  "gdb_raw_output_sha256": "49088c360b5d76a76700eff97806a8f3fad5d622a319b3eebe8d31264c91b68d",
+  "interpretation_limits": [
+    "A stable module offset identifies a stopped-time location, not a causal component.",
+    "A source candidate cannot be assigned without matched symbols or a verified binary mapping.",
+    "GDB changes scheduling and delays recovery for a bounded interval.",
+    "No Stage 2E result is GPU admission evidence."
+  ]
+}

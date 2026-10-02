@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-24T10:47:23.638532+00:00",
+  "protocol_id": "EXP-2026-003-STAGE2B-INFER-BOUNDARY-SHARED-STATE-V1",
+  "run_id": "stage2b_r1_20260924_01",
+  "classification": "HANG_INFER_ENTERED_NOT_RETURNED",
+  "phase3_qualification_round": false,
+  "baseline_script_sha256": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+  "stage2b_worker_sha256": "7093c14a6b6eeed5fb3aa234a6e05c96b89d1e1039c661872e028490377f5672",
+  "frozen_arguments": {
+    "duration_minutes": 5.0,
+    "warmup": 10,
+    "stall_seconds": 15.0,
+    "startup_seconds": 60.0,
+    "telemetry_seconds": 5.0,
+    "window_seconds": 60.0
+  },
+  "shared_boundary_snapshot": {
+    "first": {
+      "enter_sequence": 3885,
+      "return_sequence": 3884
+    },
+    "second": {
+      "enter_sequence": 3885,
+      "return_sequence": 3884
+    },
+    "stable": true
+  },
+  "derived_boundary": {
+    "enter_sequence": 3885,
+    "return_sequence": 3884,
+    "heartbeat_infer_sequence": 3884,
+    "enter_minus_return": 1
+  },
+  "preflight_evidence": "evidence/stage2b_preflight/stage2b_r1_20260924_01.json",
+  "preflight_sha256": "1635769adae01f8207a56b4620eafff1317c2505bde37c844894233e30160bc9",
+  "baseline_result": "result.json",
+  "interpretation_limits": [
+    "Shared counter writes are low perturbation, not zero perturbation.",
+    "An entered inference without a return localizes the synchronous call boundary only.",
+    "No Stage 2B classification is GPU admission evidence."
+  ]
+}

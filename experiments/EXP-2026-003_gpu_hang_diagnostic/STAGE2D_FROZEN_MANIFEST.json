@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "protocol_id": "EXP-2026-003-STAGE2D-BOUNDED-NATIVE-STACK-V1",
+  "frozen_at_utc": "2026-09-30",
+  "artifacts_sha256": {
+    "baseline": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+    "worker": "87b7f46af3913297aa3eeab8a30940980a41e2278f806e60ed82fb12b34c9eef",
+    "runner": "62eeacf0c1b188045586a7e108da54c2ad29a1fc4e9ad9ccdfebae8d7ee2901f",
+    "preflight": "de79ef2bd66084a9192a8bb89ece5541e67b5cac8e0e68a4064d6c1cb33d6eb4",
+    "gdb": "3832cc070ae1716e322105d3b39fb398695e5f031c9d39224cf227a8c2b889f6"
+  },
+  "execution_state": "NOT_EXECUTED_ON_GPU"
+}

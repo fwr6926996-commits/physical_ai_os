@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-30T03:10:54.554272+00:00",
+  "protocol_id": "EXP-2026-003-STAGE2D-BOUNDED-NATIVE-STACK-V1",
+  "run_id": "stage2d_r1_20260930_01",
+  "infer_classification": "HANG_INFER_ENTERED_NOT_RETURNED",
+  "gdb_stack_quality": "GDB_STACK_COMPLETE_MAIN_THREAD_IDENTIFIED",
+  "phase3_qualification_round": false,
+  "implementation_sha256": {
+    "baseline": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+    "worker": "87b7f46af3913297aa3eeab8a30940980a41e2278f806e60ed82fb12b34c9eef",
+    "runner": "62eeacf0c1b188045586a7e108da54c2ad29a1fc4e9ad9ccdfebae8d7ee2901f",
+    "preflight": "de79ef2bd66084a9192a8bb89ece5541e67b5cac8e0e68a4064d6c1cb33d6eb4",
+    "gdb": "3832cc070ae1716e322105d3b39fb398695e5f031c9d39224cf227a8c2b889f6"
+  },
+  "frozen_arguments": {
+    "duration_minutes": 5.0,
+    "warmup": 10,
+    "stall_seconds": 15.0,
+    "startup_seconds": 60.0,
+    "telemetry_seconds": 5.0,
+    "window_seconds": 60.0
+  },
+  "gdb_timeout_seconds": 2.0,
+  "ptrace_authorization": {
+    "mechanism": "PR_SET_PTRACER",
+    "authorized_supervisor_pid": 430782,
+    "returncode": 0,
+    "errno": 0,
+    "error": null,
+    "scope": "Supervisor and its descendants; target process lifetime only."
+  },
+  "ptrace_authorization_valid": true,
+  "gdb_control": {
+    "invoked": true,
+    "target_pid": 430808,
+    "command": [
+      "/usr/bin/gdb",
+      "--batch",
+      "--nx",
+      "--quiet",
+      "-ex",
+      "set pagination off",
+      "-ex",
+      "set confirm off",
+      "-ex",
+      "set debuginfod enabled off",
+      "-ex",
+      "attach 430808",
+      "-ex",
+      "thread apply all bt 40",
+      "-ex",
+      "detach"
+    ],
+    "helper_returncode": 0,
+    "output_bytes": 54537,
+    "target_state_after_helper": "R (running)",
+    "snapshot_delay_seconds": 1.0474261459894478,
+    "recovery": "SIGTERM"
+  },
+  "shared_boundary_snapshot": {
+    "first": {
+      "enter_sequence": 12397,
+      "return_sequence": 12396
+    },
+    "second": {
+      "enter_sequence": 12397,
+      "return_sequence": 12396
+    },
+    "stable": true
+  },
+  "derived_boundary": {
+    "enter_sequence": 12397,
+    "return_sequence": 12396,
+    "heartbeat_infer_sequence": 12396,
+    "enter_minus_return": 1
+  },
+  "preflight_evidence": "evidence/stage2d_preflight/stage2d_r1_20260930_01.json",
+  "preflight_sha256": "98460061fcd96f94c0b80a9c1fed401144922d9782769ae6ff5b2b4d539f8ec4",
+  "baseline_result": "result.json",
+  "gdb_stack": "gdb_all_threads.txt",
+  "gdb_stack_sha256": "03f492adb1791f09ff31c95da745de3fce6cdd62840f123ba158965811531843",
+  "interpretation_limits": [
+    "A native stack is one stopped-time observation, not a causal diagnosis.",
+    "Stripped libraries may expose only module boundaries and addresses.",
+    "GDB changes scheduling and delays recovery for a bounded interval.",
+    "No Stage 2D result is GPU admission evidence."
+  ]
+}

@@ -1,0 +1,73 @@
+--- stage2b_worker.py
++++ stage2d_worker.py
+@@ -1,8 +1,10 @@
+-"""Historical Phase 3 GPU worker with only shared infer-boundary writes added."""
++"""Stage 2B worker plus one scoped startup ptrace authorization."""
+ 
+ from __future__ import annotations
+ 
++import ctypes
+ import multiprocessing as mp
++import os
+ import platform
+ import time
+ from typing import Any
+@@ -12,6 +14,29 @@
+ from run_isolated_gpu_stability_v2_9 import ATOL, IR_PATH, PACKAGE_DIR, RTOL
+ 
+ 
++PR_SET_PTRACER = 0x59616D61
++
++
++def authorize_supervisor_ptrace() -> dict[str, object]:
++    """Authorize only the supervisor and its descendants for this process lifetime."""
++    supervisor_pid = os.getppid()
++    libc = ctypes.CDLL(None, use_errno=True)
++    ctypes.set_errno(0)
++    returncode = int(libc.prctl(PR_SET_PTRACER, supervisor_pid, 0, 0, 0))
++    error_number = ctypes.get_errno()
++    evidence = {
++        "mechanism": "PR_SET_PTRACER",
++        "authorized_supervisor_pid": supervisor_pid,
++        "returncode": returncode,
++        "errno": error_number,
++        "error": os.strerror(error_number) if error_number else None,
++        "scope": "Supervisor and its descendants; target process lifetime only.",
++    }
++    if returncode != 0:
++        raise RuntimeError(f"Scoped ptrace authorization failed: {evidence}")
++    return evidence
++
++
+ def inference_worker(
+     enter_sequence: Any,
+     return_sequence: Any,
+@@ -19,8 +44,10 @@
+     duration_seconds: float,
+     warmup: int,
+ ) -> None:
+-    """Historical worker plus two lock-free shared writes around each infer."""
++    """Frozen Stage 2B path plus one authorization before OpenVINO initialization."""
+     try:
++        ptrace_authorization = authorize_supervisor_ptrace()
++
+         import openvino as ov
+         import torch
+ 
+@@ -88,7 +115,7 @@
+         }
+         messages.put({
+             "type": "ready",
+-            "pid": __import__("os").getpid(),
++            "pid": os.getpid(),
+             "available_devices": available,
+             "runtime_device": runtime_device,
+             "device_full_name": full_name,
+@@ -96,6 +123,7 @@
+             "platform": platform.platform(),
+             "plugin_versions": versions,
+             "compile_ms": compile_ms,
++            "ptrace_authorization": ptrace_authorization,
+             "initial_correctness": {
+                 "rtol": RTOL,
+                 "atol": ATOL,

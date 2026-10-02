@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "protocol_id": "EXP-2026-003-STAGE2C-PROC-THREAD-SNAPSHOT-V1",
+  "frozen_at_utc": "2026-09-24",
+  "artifacts_sha256": {
+    "baseline": "4fae4ce71896db4eafe01932b89076c46d11f401f6f64ad2fa3b78ae650cbab7",
+    "worker": "7093c14a6b6eeed5fb3aa234a6e05c96b89d1e1039c661872e028490377f5672",
+    "helper": "679e2a1e174a9b395b977b82cbdd9f5a59c03e5cee0a79b1fc33ff3a4137f4a7",
+    "runner": "9fdf811afcc26216ede59c76dacdeaf0f30fabcd05c90f43df83a425f3667ee3",
+    "preflight": "0707efbfbdb754614a7819d53ae151362b8b5e4f092f505143616e643a03b932"
+  },
+  "execution_state": "NOT_EXECUTED_ON_GPU"
+}

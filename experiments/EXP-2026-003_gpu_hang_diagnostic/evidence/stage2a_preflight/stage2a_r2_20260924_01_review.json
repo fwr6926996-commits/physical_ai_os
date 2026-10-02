@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-09-24T09:05:47+00:00",
+  "protocol_id": "EXP-2026-003-STAGE2A-CURRENT-REPRODUCTION-BASELINE-V1",
+  "run_id": "stage2a_r2_20260924_01",
+  "verdict": "READY_WITH_RECORDED_DESKTOP_GPU_CONTEXT",
+  "checks": {
+    "baseline_and_artifact_hashes_match": true,
+    "kernel_matches_round1": true,
+    "power_context_matches_round1": true,
+    "related_process_context_matches_round1": true,
+    "dri_user_context_matches_round1": true,
+    "unexpected_python_workload_observed": false,
+    "memory_available_kib": 8755884
+  },
+  "comparison_to_round1": {
+    "round1_memory_available_kib": 8415260,
+    "round2_memory_available_kib": 8755884,
+    "material_preflight_difference_observed": false
+  },
+  "interpretation_limits": [
+    "Matching process names and open DRM handles do not prove matching instantaneous GPU load.",
+    "The memory difference is recorded and is not treated as causal.",
+    "Historical Phase 3 runs lack equivalent preflight snapshots."
+  ],
+  "decision": "Allow frozen Stage 2A Round 2 without changing the captured desktop context."
+}

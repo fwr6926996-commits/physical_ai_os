@@ -1,0 +1,1 @@
+9月 24 16:33:31 lucas-ThinkBook-16-G7-IAH kernel: audit: type=1400 audit(1790238811.329:1428): apparmor="AUDIT" operation="exec" class="file" info="conflicting profile attachments" profile="unconfined" name="/opt/microsoft/msedge/msedge" pid=324582 comm="microsoft-edge-" requested_mask="x" fsuid=1000 ouid=0
