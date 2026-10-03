@@ -20,12 +20,13 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 
 ## Entry conditions
 
-- [ ] DK-2500 hardware manifest is complete. CPU, EDAC memory channel/size topology, storage and firmware/BIOS are captured in `DK2500_HARDWARE_SOFTWARE_TRUTH_20261003.md`; physical power/cooling and ambient state remain open. Memory vendor/part/speed are descriptive gaps.
+- [x] DK-2500 hardware manifest is complete for entry. CPU, EDAC memory channel/size topology, storage, firmware/BIOS, 120 W adapter, active fan/heatsink assembly, open-board placement and approximately 20°C unobstructed ambient setup are captured in `DK2500_HARDWARE_SOFTWARE_TRUTH_20261003.md`. Memory vendor/part/speed and fan RPM are descriptive or measurement gaps, not inferred facts.
 - [x] DK-2500 software baseline is captured, including OS, kernel, OpenVINO, CPU plugin and relevant driver versions.
 - [x] Available OpenVINO devices and full names are recorded: CPU and NPU are visible; GPU is not visible in the current userspace baseline.
 - [x] VM1 drift decision is accepted. Option A preserves the observed OpenVINO 2026.2.1 target baseline; no OpenVINO upgrade or GPU runtime installation is authorized.
 - [x] Policy Package was copied to the target and all eight selected files independently matched their source SHA-256 values. Evidence: `evidence/phase4_0_truth/policy_package_transfer_verification_20261003.json`.
 - [x] Selected artifact location `/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9` is writable and had approximately 60 GB free before the 338 MB transfer.
+- [ ] ESD handling control is established before any board handling or cable change: verified protective earth, dissipative mat and wrist strap with safety resistors, and a common-point ground. Do not directly ground the PCB or improvise a mains connection.
 - [ ] This protocol is reviewed, all TBD fields are resolved and status changes to `FROZEN_APPROVED` before execution.
 
 ## Frozen candidate
@@ -115,7 +116,9 @@ No command in this protocol is authorized while any `TBD` remains material or th
 - The CPU FP32 Policy Package was copied to the dedicated target artifact directory. All eight
   selected file hashes match; rejected INT8 candidates were intentionally excluded. No model was
   loaded or executed.
-- Physical power/cooling truth, stability duration, resource thresholds, input stream and retry
-  policy remain unresolved. EDAC channel/size topology is captured; memory vendor/part/speed remain
-  descriptive unknowns.
+- Hardware truth is sufficient for entry configuration. Stability duration, resource thresholds,
+  input stream and retry policy remain unresolved. Fan RPM and electrical power are unavailable;
+  thermal, frequency and throttle behavior must therefore be captured as runtime evidence.
+- ESD handling control is not established. Protocol design may continue, but board handling, cable
+  changes and qualification execution remain blocked until it is confirmed.
 - Protocol status remains `DRAFT_NOT_FROZEN_NOT_AUTHORIZED_FOR_EXECUTION`.

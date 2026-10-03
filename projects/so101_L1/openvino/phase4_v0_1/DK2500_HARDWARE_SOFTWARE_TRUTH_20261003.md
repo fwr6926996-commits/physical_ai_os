@@ -42,6 +42,32 @@ Machine-readable record:
 This is one entry observation, not a frozen thermal or power baseline. Physical power supply,
 cooling configuration, ambient conditions and steady-state idle duration remain to be recorded.
 
+## Physical setup observation
+
+Human report and user-provided photographs on 2026-10-03 establish the entry setup:
+
+- ambient room temperature: approximately `20°C`;
+- mounting: open development board on a transparent base, placed on a desk;
+- airflow: no cooling vent obstruction reported;
+- cooling assembly: processor heatsink with a dedicated active fan is visibly installed;
+- power adapter: Huntkey `HKA12024050-7B`, input `100–240 V AC, 50/60 Hz, 2.0 A`, output
+  `24.0 V DC, 5.0 A`, rated `120 W`.
+
+The adapter serial/barcode is intentionally excluded. This visual evidence defines the physical
+test configuration; it does not measure wall power, verify fan RPM or prove sustained thermal
+capacity. Temperature, frequency and throttle behavior must still be captured during qualification.
+
+### ESD handling gap
+
+The operator reported that a verified antistatic grounding procedure is not yet established. The
+transparent base should remain installed; the PCB, heatsink and connector shells must not be wired
+directly to mains earth. Before any board handling or cable changes, establish a dissipative ESD mat
+and wrist strap, each with its safety resistor, connected to a common point whose protective earth
+has been verified. Do not improvise a connection to live, neutral, plumbing or unverified metal.
+
+Protocol and documentation work may continue. Hardware handling, cable changes and qualification
+execution remain blocked until the ESD handling control is confirmed.
+
 ## Software truth
 
 | Layer | Observed state |
@@ -77,7 +103,9 @@ No GPU package installation is authorized by this record.
 
 - EDAC provided the channel/size topology without privilege. Module vendor, part number, validated
   technology and transfer rate remain unknown; they are descriptive gaps, not execution claims.
-- Physical power supply, cooling assembly and ambient state require human observation.
+- Physical power supply, cooling assembly and ambient state are recorded through human/visual
+  evidence. Fan RPM and electrical power remain unmeasured and must not be inferred.
+- ESD handling controls are not yet established.
 - The Phase 3 CPU FP32 Policy Package is present at
   `/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9`; all eight selected
   files passed independent target-side SHA-256 verification. This proves transfer identity only.

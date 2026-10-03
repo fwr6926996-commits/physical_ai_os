@@ -90,6 +90,36 @@
       "intel_pstate": "active",
       "turbo_disabled": false,
       "thermald": "active"
+    },
+    "physical_environment": {
+      "evidence_type": "human-reported ambient conditions plus visual inspection of user-provided photographs",
+      "recorded_date": "2026-10-03",
+      "ambient_temperature_c_approx": 20,
+      "airflow_obstruction_reported": false,
+      "mounting": "open development board on a transparent base, placed on a desk",
+      "esd_controls": {
+        "status": "NOT_ESTABLISHED",
+        "operator_report": "Operator does not yet have a confirmed ESD grounding procedure.",
+        "required_before_hardware_handling": [
+          "verified protective earth",
+          "ESD dissipative mat with a safety resistor",
+          "ESD wrist strap with a safety resistor",
+          "common-point ground"
+        ]
+      },
+      "cooling": {
+        "assembly_observed": "processor heatsink with dedicated active fan",
+        "fan_runtime_or_rpm_verified": false
+      },
+      "power_adapter": {
+        "brand": "Huntkey",
+        "model": "HKA12024050-7B",
+        "input": "100-240 V AC, 50/60 Hz, 2.0 A",
+        "output_voltage_v_dc": 24.0,
+        "output_current_a": 5.0,
+        "rated_output_w": 120.0,
+        "serial_or_barcode_excluded": true
+      }
     }
   },
   "software": {
@@ -138,7 +168,9 @@
   "evidence_limits": [
     "No model was loaded, compiled or inferred during this capture.",
     "EDAC exposes two 4 GiB channel entries, but module vendor, part number, validated technology and transfer rate remain unknown because dmidecode requires interactive sudo.",
-    "Physical power supply and cooling configuration were not independently verified.",
+    "Power, cooling and ambient facts are human/visual evidence, not electrical power measurement or proof of sustained thermal capacity.",
+    "The fan assembly is visible, but fan RPM or runtime state was not independently measured.",
+    "ESD handling controls are not yet established; no board handling or cable changes are authorized by this record.",
     "DMI vendor and product fields contain firmware-default placeholder strings.",
     "Policy Package transfer identity is recorded separately; it does not establish runtime compatibility.",
     "The GPU absence is explained by the missing Intel GPU userspace compute runtime boundary; no driver installation was performed."
