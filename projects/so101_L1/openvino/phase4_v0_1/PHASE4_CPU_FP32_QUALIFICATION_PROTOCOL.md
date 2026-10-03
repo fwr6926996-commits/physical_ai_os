@@ -30,7 +30,9 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - [x] Selected artifact location `/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9` is writable and had approximately 60 GB free before the 338 MB transfer.
 - [x] Physical-intervention rule: the human owner selected the strict no-touch SSH route. Current wiring and placement remain unchanged; any need for board handling, cable change or physical reset stops the run. Do not directly ground the PCB or improvise a mains connection.
 - [x] The freeze proposal was explicitly accepted and independently reviewed in `PHASE4_PRE_RUN_INDEPENDENT_REVIEW_20261003.md`.
-- [ ] Phase 4 worker/supervisor implementation, mock validation, target no-model preflight and final execution-readiness review are complete.
+- [x] Phase 4 CPU worker/supervisor implementation and seven-path mock validation are complete at Git commit `48d4987`.
+- [x] DK-2500 no-model preflight passed for identity, dependencies, artifact hashes, sensors, paths and deployed implementation hashes.
+- [x] Round 1 correctness-stage readiness review is recorded in `PHASE4_ROUND1_EXECUTION_READINESS_REVIEW_20261003.md`.
 - [ ] Human start authorization is issued separately after all remaining entry conditions pass.
 
 ## Frozen candidate
@@ -164,4 +166,12 @@ and separate human start authorization are still required.
 - The independent review found that the Phase 3 harness is not a valid Phase 4 runner because of
   hard-coded GPU and Phase 3 paths plus missing Phase 4 thermal/throttle controls.
 - Protocol status is `FROZEN_APPROVED_EXECUTION_NOT_AUTHORIZED`; harness implementation and
-  validation are the next gate.
+  validation have passed for the Round 1 correctness stage. No valid authorization file exists.
+
+## Stage readiness — 2026-10-03
+
+- `correctness`: `READY_FOR_HUMAN_AUTHORIZATION`; one attempt only.
+- `short`: `BLOCKED`; the frozen protocol requires segmented preprocess/inference/postprocess
+  measurement, while the current short worker measures inference only.
+- `stability`: `BLOCKED`; correctness and short-stage review must pass first, followed by separate
+  human authorization.

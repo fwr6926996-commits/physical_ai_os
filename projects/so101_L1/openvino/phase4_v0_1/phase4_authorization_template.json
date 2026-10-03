@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "run_id": "REPLACE_WITH_APPROVED_RUN_ID",
+  "stage": "REPLACE_WITH_APPROVED_STAGE",
+  "status": "NOT_AUTHORIZED_TEMPLATE",
+  "automatic_retry": false,
+  "authorized_at_utc": null,
+  "authorized_by": null,
+  "notes": "This template is deliberately rejected by the production supervisor. Create a run-specific file only after explicit human approval."
+}
