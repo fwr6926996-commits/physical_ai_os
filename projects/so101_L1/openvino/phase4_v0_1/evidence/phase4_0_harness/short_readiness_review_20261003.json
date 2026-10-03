@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "review_id": "P4-DK2500-SHORT-READINESS-20261003-01",
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "implementation_commit": "6af41fd",
+  "proposed_run_id": "phase4_r2_short_20261003_01",
+  "status": "SHORT_STAGE_READY_FOR_HUMAN_DECISION_EXECUTION_NOT_AUTHORIZED",
+  "checks": {
+    "round1_correctness_passed": true,
+    "portable_prepost_exact_equivalence": true,
+    "segmented_raw_samples_implemented": true,
+    "normalized_correctness_checked_every_inference": true,
+    "start_periodic_final_telemetry_implemented": true,
+    "final_thermal_hard_limit_enforced": true,
+    "watchdog_and_bounded_recovery_retained": true,
+    "local_tests_passed": true,
+    "target_no_model_preflight_passed": true,
+    "authorization_present": false
+  },
+  "frozen_attempt": {
+    "initial_correctness_iterations": 1,
+    "warmup_iterations": 10,
+    "measured_iterations": 100,
+    "periodic_telemetry_seconds": 5,
+    "infer_watchdog_seconds": 15,
+    "startup_timeout_seconds": 180,
+    "thermal_stop_c": 100,
+    "automatic_retry": false
+  },
+  "evidence": {
+    "local_validation": "short_harness_mock_validation_20261003.json",
+    "prepost_equivalence": "prepost_equivalence_20261003_01.json",
+    "target_preflight": "no_model_preflight_short_20261003_01.json"
+  },
+  "limits": [
+    "Readiness is not execution authorization or qualification evidence.",
+    "A short result cannot establish 30-minute stability, real-time behavior or robot safety.",
+    "Throttle-counter increments remain diagnostic and do not identify a cause."
+  ]
+}

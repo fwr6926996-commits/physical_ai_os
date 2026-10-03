@@ -6,7 +6,7 @@ Template version: `0.1`
 
 Workflow version: `0.1`
 
-Status: `CORRECTNESS_PASSED — SHORT_AND_STABILITY_BLOCKED`
+Status: `CORRECTNESS_PASSED — SHORT_READY_FOR_HUMAN_AUTHORIZATION — STABILITY_BLOCKED`
 
 Classification: `QUALIFICATION`
 
@@ -185,9 +185,9 @@ correctness authorization. It does not authorize `short`, `stability` or a corre
 
 - `correctness`: `PASS_CORRECTNESS_ONLY`; run `phase4_r1_correctness_20261003_01` passed independent
   review. See `PHASE4_ROUND1_CORRECTNESS_REVIEW_20261003.md`.
-- `short`: `BLOCKED`; the frozen protocol requires segmented preprocess/inference/postprocess
-  measurement, while the current short worker measures inference only. The short-stage review must
-  also resolve telemetry coverage for the observed throttle-counter increments before a separate
-  human authorization decision.
+- `short`: `READY_FOR_HUMAN_AUTHORIZATION`; implementation commit `6af41fd` provides exact-verified
+  portable preprocess/postprocess, per-iteration segmented timing and guaranteed final telemetry.
+  Local validation and target no-model preflight passed. See
+  `PHASE4_SHORT_EXECUTION_READINESS_REVIEW_20261003.md`. No authorization file exists.
 - `stability`: `BLOCKED`; the short-stage implementation, execution and review must pass first,
   followed by separate human authorization.
