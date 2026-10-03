@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "run_id": "phase4_r1_correctness_20261003_01",
+  "stage": "correctness",
+  "status": "AUTHORIZED_FOR_ONE_ATTEMPT",
+  "automatic_retry": false,
+  "authorized_at_utc": "2026-10-03T06:48:08Z",
+  "authorized_by": "human_owner",
+  "scope": "One explicit CPU FP32 compile/load and frozen-input correctness attempt only; no short or stability stage."
+}
