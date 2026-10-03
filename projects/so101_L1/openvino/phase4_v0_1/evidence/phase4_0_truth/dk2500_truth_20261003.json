@@ -170,7 +170,7 @@
     "EDAC exposes two 4 GiB channel entries, but module vendor, part number, validated technology and transfer rate remain unknown because dmidecode requires interactive sudo.",
     "Power, cooling and ambient facts are human/visual evidence, not electrical power measurement or proof of sustained thermal capacity.",
     "The fan assembly is visible, but fan RPM or runtime state was not independently measured.",
-    "ESD handling controls are not yet established; no board handling or cable changes are authorized by this record.",
+    "ESD handling controls are not yet established; no board handling or cable changes are authorized by this record. A separately frozen no-touch remote-execution contract remains possible.",
     "DMI vendor and product fields contain firmware-default placeholder strings.",
     "Policy Package transfer identity is recorded separately; it does not establish runtime compatibility.",
     "The GPU absence is explained by the missing Intel GPU userspace compute runtime boundary; no driver installation was performed."

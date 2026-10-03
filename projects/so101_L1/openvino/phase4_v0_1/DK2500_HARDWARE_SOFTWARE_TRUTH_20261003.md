@@ -65,8 +65,10 @@ directly to mains earth. Before any board handling or cable changes, establish a
 and wrist strap, each with its safety resistor, connected to a common point whose protective earth
 has been verified. Do not improvise a connection to live, neutral, plumbing or unverified metal.
 
-Protocol and documentation work may continue. Hardware handling, cable changes and qualification
-execution remain blocked until the ESD handling control is confirmed.
+Protocol and documentation work may continue. Hardware handling and cable changes remain blocked
+until the ESD handling control is confirmed. A hands-off SSH qualification route may instead be
+reviewed and frozen, provided the present wiring and placement remain unchanged and any need for
+physical intervention stops the run.
 
 ## Software truth
 

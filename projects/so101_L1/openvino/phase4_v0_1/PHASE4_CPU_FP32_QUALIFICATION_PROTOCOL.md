@@ -26,7 +26,7 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - [x] VM1 drift decision is accepted. Option A preserves the observed OpenVINO 2026.2.1 target baseline; no OpenVINO upgrade or GPU runtime installation is authorized.
 - [x] Policy Package was copied to the target and all eight selected files independently matched their source SHA-256 values. Evidence: `evidence/phase4_0_truth/policy_package_transfer_verification_20261003.json`.
 - [x] Selected artifact location `/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9` is writable and had approximately 60 GB free before the 338 MB transfer.
-- [ ] ESD handling control is established before any board handling or cable change: verified protective earth, dissipative mat and wrist strap with safety resistors, and a common-point ground. Do not directly ground the PCB or improvise a mains connection.
+- [ ] Physical-intervention rule is frozen before execution: either establish ESD handling control before any board handling/cable change, or use a strict no-touch SSH route in which the current wiring and placement remain unchanged and any need for physical intervention stops the run. Do not directly ground the PCB or improvise a mains connection.
 - [ ] This protocol is reviewed, all TBD fields are resolved and status changes to `FROZEN_APPROVED` before execution.
 
 ## Frozen candidate
@@ -119,6 +119,6 @@ No command in this protocol is authorized while any `TBD` remains material or th
 - Hardware truth is sufficient for entry configuration. Stability duration, resource thresholds,
   input stream and retry policy remain unresolved. Fan RPM and electrical power are unavailable;
   thermal, frequency and throttle behavior must therefore be captured as runtime evidence.
-- ESD handling control is not established. Protocol design may continue, but board handling, cable
-  changes and qualification execution remain blocked until it is confirmed.
+- ESD handling control is not established. Board handling and cable changes remain blocked. Before
+  qualification, select either a verified ESD handling route or a strict no-touch SSH route.
 - Protocol status remains `DRAFT_NOT_FROZEN_NOT_AUTHORIZED_FOR_EXECUTION`.
