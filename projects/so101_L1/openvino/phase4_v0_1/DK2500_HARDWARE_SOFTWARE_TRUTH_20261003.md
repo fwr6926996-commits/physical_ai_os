@@ -77,8 +77,11 @@ No GPU package installation is authorized by this record.
 
 - Memory module topology requires a separately authorized privileged capture.
 - Physical power supply, cooling assembly and ambient state require human observation.
-- The Phase 3 Policy Package is not yet present and hash-verified on this target.
-- The artifact destination and writability check are not frozen.
+- The Phase 3 CPU FP32 Policy Package is present at
+  `/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9`; all eight selected
+  files passed independent target-side SHA-256 verification. This proves transfer identity only.
+- The artifact destination is writable and recorded, but remains an entry path rather than an
+  execution authorization.
 - CPU frequency, utilization, temperature and power sampling synchronization are not yet designed.
 - Eleven pending OS updates were reported at login; they were not listed, installed or treated as
   part of the baseline.

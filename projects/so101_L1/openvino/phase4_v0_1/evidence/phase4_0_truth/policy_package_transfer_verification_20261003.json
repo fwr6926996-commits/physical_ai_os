@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "evidence_id": "P4-DK2500-POLICY-IDENTITY-20261003-01",
+  "timestamp_utc": "2026-10-03T05:49:22Z",
+  "scope": "File transfer and independent target-side SHA-256 verification only; no model load, compile or inference.",
+  "source": {
+    "host_role": "development_host",
+    "path": "projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9"
+  },
+  "target": {
+    "host": "hepintelpc",
+    "user": "hepintel",
+    "path": "/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9",
+    "filesystem_free_before_transfer": "60G",
+    "package_size_after_transfer": "338M"
+  },
+  "files": {
+    "act_fp32.bin": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+    "act_fp32.xml": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "act_tensor_wrapper.pt2": "ddc8ac394b2342205525bc0cd6e64463b6fd1b5173fa74ff1d51f3c6eb095ac4",
+    "manifest.json": "cd43e19690a1214ccbdfe875dedc2ee2a8b6c7c318ab20b07952a058de102e6a",
+    "reference_model_input.pt": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output_action_chunk.pt": "b1f021b8db0ad975dbfff45a9d8d2ec5bfe2434bd48371e97d75402d5b1590cb",
+    "reference_output_normalized.pt": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a",
+    "reference_raw_observation.pt": "3a8e3e905ba6d96d75f903f3ce96e9d855dd8e6d1e33549712d05a90e0c20c73"
+  },
+  "verification": {
+    "method": "sha256sum executed independently on the DK-2500 after transfer",
+    "expected_file_count": 8,
+    "observed_file_count": 8,
+    "all_hashes_match_source": true,
+    "phase3_frozen_ir_and_reference_hashes_match": true
+  },
+  "exclusions": [
+    "int8_candidates was intentionally excluded because Phase 4 entry is CPU FP32 only and the INT8 candidates were not admitted."
+  ],
+  "interpretation_limits": [
+    "Matching hashes prove artifact identity after transfer.",
+    "Matching hashes do not prove OpenVINO 2026.2.1 compatibility, correctness, performance, stability, real-time behavior or robot safety.",
+    "No Phase 4 model execution was authorized or performed by this step."
+  ],
+  "status": "PASS_POLICY_PACKAGE_TRANSFER_AND_IDENTITY"
+}

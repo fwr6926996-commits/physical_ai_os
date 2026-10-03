@@ -4,7 +4,7 @@ Review ID: `P4-VM1-20261003-01`
 
 Date: `2026-10-03`
 
-Status: `MATERIAL_DRIFT_FOUND — DECISION REQUIRED BEFORE PROTOCOL FREEZE`
+Status: `MATERIAL_DRIFT_FOUND — OPTION A ACCEPTED — PROTOCOL NOT YET FROZEN`
 
 ## Compared baselines
 
@@ -26,7 +26,7 @@ backend admission does not transfer to the new target.
 | OpenVINO | `2026.3.1-22476-759c5a6ab8c-releases/2026/3` | `2026.2.1-21919-ede283a88e3-releases/2026/2` | Material runtime/plugin drift |
 | Available devices | CPU, GPU.0, GPU.1, NPU | CPU, NPU | Capability drift; GPU userspace runtime absent |
 | CPU identity | Intel Core Ultra 7 255H | Intel Core Ultra 5 225U | Requires a new exact identity guard |
-| Policy Package | Frozen V2.9 hashes | Not yet copied or verified | Entry blocker |
+| Policy Package | Frozen V2.9 hashes | Eight selected CPU FP32 package files copied and target-side hashes matched | Identity gate passed |
 
 ## What the drift means
 
@@ -62,8 +62,25 @@ install GPU compute packages yet. First copy and hash-verify the Phase 3 Policy 
 a bounded CPU-only compatibility preflight design review. Select Option A or B through an explicit
 human-owned decision before the qualification protocol becomes `FROZEN_APPROVED`.
 
-This recommendation does not authorize model execution. It preserves rollback-free evidence while
-keeping both decisions open.
+This recommendation did not authorize model execution. It preserved rollback-free evidence while
+the human decision was still open.
+
+## Human decision — 2026-10-03
+
+The human owner accepted **Option A**. The DK-2500 OpenVINO
+`2026.2.1-21919-ede283a88e3-releases/2026/2` installation is the Phase 4 baseline candidate.
+
+Consequences:
+
+- do not upgrade or downgrade OpenVINO before the qualification protocol is frozen;
+- do not install the optional GPU compute runtime as part of CPU FP32 entry;
+- treat Phase 3 comparisons as platform-level historical comparisons rather than hardware-only
+  controlled comparisons;
+- if compatibility evidence later fails, review the evidence before proposing any package change.
+
+The Policy Package was subsequently copied to the target and all eight selected file hashes matched
+the source. See `evidence/phase4_0_truth/policy_package_transfer_verification_20261003.json`.
+This identity result does not itself prove runtime compatibility.
 
 ## GPU and NPU treatment
 
@@ -76,6 +93,6 @@ keeping both decisions open.
 
 - Drift detected: `YES`.
 - Architecture reset required: `NO`.
-- Protocol freeze blocked: `YES`, until the OpenVINO baseline option is selected and Policy Package
-  identity is verified.
+- Protocol freeze blocked: `YES`, but no longer by VM1 selection or Policy Package identity. The
+  remaining blockers are defined in the qualification protocol.
 - Phase 4 execution authorized: `NO`.
