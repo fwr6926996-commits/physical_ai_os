@@ -24,7 +24,7 @@ Machine-readable record:
 | Component | Observed identity or state | Evidence boundary |
 |---|---|---|
 | CPU | Intel Core Ultra 5 225U, 12 physical cores reported, 14 logical CPUs | `lscpu` |
-| Memory | `7,852,589,056` bytes available to the OS; 2 GiB swap | Module count, vendor and channel topology remain unknown |
+| Memory | `7,852,589,056` bytes available to the OS; 2 GiB swap; EDAC reports two 4 GiB entries on channel 0 and channel 1 | Module vendor, part number, validated technology and transfer rate remain unknown |
 | Storage | 119.2 GiB SATA SSD; root filesystem had about 60 GiB free | Device serial intentionally excluded from the tracked report |
 | Firmware | AMI BIOS `5.32`, dated `2026-04-01` | Board vendor/model DMI fields are `Default string` |
 | iGPU | PCI `8086:7d41`, Arrow Lake-U graphics, kernel driver `i915` | `/dev/dri/renderD128` exists; OpenVINO GPU is not visible |
@@ -75,7 +75,8 @@ No GPU package installation is authorized by this record.
 
 ## Explicit gaps
 
-- Memory module topology requires a separately authorized privileged capture.
+- EDAC provided the channel/size topology without privilege. Module vendor, part number, validated
+  technology and transfer rate remain unknown; they are descriptive gaps, not execution claims.
 - Physical power supply, cooling assembly and ambient state require human observation.
 - The Phase 3 CPU FP32 Policy Package is present at
   `/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9`; all eight selected

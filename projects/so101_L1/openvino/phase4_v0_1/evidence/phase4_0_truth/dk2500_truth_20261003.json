@@ -20,6 +20,36 @@
     "max_mhz_reported": 4800.0,
     "memory_bytes": 7852589056,
     "swap_bytes": 2147479552,
+    "memory_topology": {
+      "recorded_at_utc": "2026-10-03T05:58:38Z",
+      "source": "Linux EDAC sysfs; non-privileged read",
+      "controller": "Intel_client_SoC MC#0",
+      "controller_total_mb": 8192,
+      "entries": [
+        {
+          "label": "MC#0_Chan#0_DIMM#0",
+          "location": "channel 0 slot 0",
+          "size_mb": 4096,
+          "device_width": "x16",
+          "corrected_error_count": 0,
+          "uncorrected_error_count": 0
+        },
+        {
+          "label": "MC#0_Chan#1_DIMM#0",
+          "location": "channel 1 slot 0",
+          "size_mb": 4096,
+          "device_width": "x16",
+          "corrected_error_count": 0,
+          "uncorrected_error_count": 0
+        }
+      ],
+      "unknown_fields": [
+        "module vendor",
+        "module part number",
+        "validated memory technology",
+        "validated transfer rate"
+      ]
+    },
     "storage": {
       "device": "sda",
       "transport": "sata",
@@ -107,10 +137,10 @@
   },
   "evidence_limits": [
     "No model was loaded, compiled or inferred during this capture.",
-    "Memory module topology was not captured because dmidecode requires interactive sudo.",
+    "EDAC exposes two 4 GiB channel entries, but module vendor, part number, validated technology and transfer rate remain unknown because dmidecode requires interactive sudo.",
     "Physical power supply and cooling configuration were not independently verified.",
     "DMI vendor and product fields contain firmware-default placeholder strings.",
-    "Policy package files and hashes have not yet been verified on DK-2500.",
+    "Policy Package transfer identity is recorded separately; it does not establish runtime compatibility.",
     "The GPU absence is explained by the missing Intel GPU userspace compute runtime boundary; no driver installation was performed."
   ]
 }

@@ -20,7 +20,7 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 
 ## Entry conditions
 
-- [ ] DK-2500 hardware manifest is complete, including CPU, memory topology, storage, firmware/BIOS, power supply and cooling state. Initial truth is captured in `DK2500_HARDWARE_SOFTWARE_TRUTH_20261003.md`; memory topology and physical power/cooling state remain open.
+- [ ] DK-2500 hardware manifest is complete. CPU, EDAC memory channel/size topology, storage and firmware/BIOS are captured in `DK2500_HARDWARE_SOFTWARE_TRUTH_20261003.md`; physical power/cooling and ambient state remain open. Memory vendor/part/speed are descriptive gaps.
 - [x] DK-2500 software baseline is captured, including OS, kernel, OpenVINO, CPU plugin and relevant driver versions.
 - [x] Available OpenVINO devices and full names are recorded: CPU and NPU are visible; GPU is not visible in the current userspace baseline.
 - [x] VM1 drift decision is accepted. Option A preserves the observed OpenVINO 2026.2.1 target baseline; no OpenVINO upgrade or GPU runtime installation is authorized.
@@ -115,6 +115,7 @@ No command in this protocol is authorized while any `TBD` remains material or th
 - The CPU FP32 Policy Package was copied to the dedicated target artifact directory. All eight
   selected file hashes match; rejected INT8 candidates were intentionally excluded. No model was
   loaded or executed.
-- Full memory topology, physical power/cooling truth, stability duration, resource thresholds,
-  input stream and retry policy remain unresolved.
+- Physical power/cooling truth, stability duration, resource thresholds, input stream and retry
+  policy remain unresolved. EDAC channel/size topology is captured; memory vendor/part/speed remain
+  descriptive unknowns.
 - Protocol status remains `DRAFT_NOT_FROZEN_NOT_AUTHORIZED_FOR_EXECUTION`.
