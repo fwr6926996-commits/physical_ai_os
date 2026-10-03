@@ -20,9 +20,10 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 
 ## Entry conditions
 
-- [ ] DK-2500 hardware manifest is captured, including CPU, memory topology, storage, firmware/BIOS, power supply and cooling state.
-- [ ] DK-2500 software baseline is captured, including OS, kernel, OpenVINO, CPU plugin and relevant driver versions.
-- [ ] Available OpenVINO devices and full names are recorded.
+- [ ] DK-2500 hardware manifest is complete, including CPU, memory topology, storage, firmware/BIOS, power supply and cooling state. Initial truth is captured in `DK2500_HARDWARE_SOFTWARE_TRUTH_20261003.md`; memory topology and physical power/cooling state remain open.
+- [x] DK-2500 software baseline is captured, including OS, kernel, OpenVINO, CPU plugin and relevant driver versions.
+- [x] Available OpenVINO devices and full names are recorded: CPU and NPU are visible; GPU is not visible in the current userspace baseline.
+- [ ] VM1 drift decision is accepted. `VM1_VERSION_DRIFT_REVIEW_20261003.md` found material OpenVINO, kernel, memory-capacity and device-capability drift.
 - [ ] Policy package XML/BIN hashes match Phase 3 V2.9, or a changed package has its own reviewed conversion and reference evidence.
 - [ ] `/data` or the selected artifact location has sufficient space and is writable.
 - [ ] This protocol is reviewed, all TBD fields are resolved and status changes to `FROZEN_APPROVED` before execution.
@@ -37,8 +38,8 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - Correctness threshold: `rtol=1e-4`, `atol=1e-5`
 - Model XML SHA-256: `54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e`
 - Model BIN SHA-256: `96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a`
-- Exact DK-2500 CPU identity guard: `TBD_AFTER_HARDWARE_TRUTH`
-- OpenVINO version and plugin baseline: `TBD_AFTER_SOFTWARE_TRUTH`
+- Exact DK-2500 CPU identity guard candidate: `Intel(R) Core(TM) Ultra 5 225U`
+- Observed OpenVINO candidate baseline: `2026.2.1-21919-ede283a88e3-releases/2026/2`; not frozen until the VM1 decision is accepted
 
 ## Qualification sequence
 
@@ -86,7 +87,8 @@ Latency, RAM trend, temperature, frequency, utilization, power proxy and throttl
 
 ## Evidence contract
 
-- Hardware and software manifests.
+- Hardware and software manifests, beginning with
+  `evidence/phase4_0_truth/dk2500_truth_20261003.json`.
 - Command/configuration record and Git commit.
 - Policy and reference hashes.
 - Correctness JSON.
@@ -98,3 +100,15 @@ Latency, RAM trend, temperature, frequency, utilization, power proxy and throttl
 ## Pre-run decision
 
 No command in this protocol is authorized while any `TBD` remains material or the status is `DRAFT_NOT_FROZEN_NOT_AUTHORIZED_FOR_EXECUTION`.
+
+## Entry review update — 2026-10-03
+
+- Direct Ethernet SSH identity is established and independently verified.
+- Initial hardware/software truth is captured without model execution or system mutation.
+- CPU identity is known; OpenVINO CPU and NPU are visible.
+- GPU is not visible because the Intel GPU userspace compute runtime is not installed; this does not
+  block the CPU-only route and does not authorize a driver installation.
+- VM1 found material drift from the Phase 3 runtime baseline.
+- Policy Package target hashes, full memory topology, physical power/cooling truth, artifact path,
+  stability duration, resource thresholds, input stream and retry policy remain unresolved.
+- Protocol status remains `DRAFT_NOT_FROZEN_NOT_AUTHORIZED_FOR_EXECUTION`.

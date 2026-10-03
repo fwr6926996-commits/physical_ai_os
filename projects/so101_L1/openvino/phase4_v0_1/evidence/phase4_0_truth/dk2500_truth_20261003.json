@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "capture_id": "P4-DK2500-TRUTH-20261003-01",
+  "captured_at_utc": "2026-10-03T03:34:49+00:00",
+  "classification": "READ_ONLY_ENTRY_EVIDENCE",
+  "execution_authorized": false,
+  "connection": {
+    "transport": "direct_ethernet_ssh",
+    "local_address": "192.168.77.1/24",
+    "remote_interface": "enp1s0",
+    "remote_address": "192.168.77.2/24",
+    "remote_user": "hepintel",
+    "remote_hostname": "hepintelpc"
+  },
+  "hardware": {
+    "cpu_full_name": "Intel(R) Core(TM) Ultra 5 225U",
+    "architecture": "x86_64",
+    "logical_cpus": 14,
+    "physical_cores_reported": 12,
+    "max_mhz_reported": 4800.0,
+    "memory_bytes": 7852589056,
+    "swap_bytes": 2147479552,
+    "storage": {
+      "device": "sda",
+      "transport": "sata",
+      "model": "SATA SSD",
+      "reported_size": "119.2G",
+      "root_free_at_capture": "60G"
+    },
+    "firmware": {
+      "bios_vendor": "American Megatrends International, LLC.",
+      "bios_version": "5.32",
+      "bios_date": "2026-04-01",
+      "dmi_vendor_fields": "Default string"
+    },
+    "gpu": {
+      "pci_id": "8086:7d41",
+      "description": "Intel Arrow Lake-U integrated graphics",
+      "kernel_driver": "i915",
+      "render_node": "/dev/dri/renderD128",
+      "openvino_visible": false
+    },
+    "npu": {
+      "pci_id": "8086:7d1d",
+      "description": "Intel AI Boost / Meteor Lake NPU PCI identity",
+      "kernel_driver": "intel_vpu",
+      "device_node": "/dev/accel/accel0",
+      "openvino_visible": true
+    },
+    "ethernet": {
+      "controllers": 4,
+      "controller_model": "Intel I210 Gigabit Network Connection",
+      "pci_id": "8086:1533",
+      "kernel_driver": "igb"
+    },
+    "idle_observation": {
+      "cpu_package_temperature_c": 47.0,
+      "acpi_temperature_c": 27.8,
+      "power_profile": "performance",
+      "intel_pstate": "active",
+      "turbo_disabled": false,
+      "thermald": "active"
+    }
+  },
+  "software": {
+    "os": "Ubuntu 24.04.4 LTS",
+    "kernel": "6.17.0-35-generic",
+    "python": {
+      "executable": "/usr/bin/python3",
+      "version": "3.12.3",
+      "openvino_location": "/usr/lib/python3/dist-packages"
+    },
+    "openvino": {
+      "version": "2026.2.1-21919-ede283a88e3-releases/2026/2",
+      "available_devices": [
+        "CPU",
+        "NPU"
+      ],
+      "devices": {
+        "CPU": {
+          "full_name": "Intel(R) Core(TM) Ultra 5 225U",
+          "plugin": "openvino_intel_cpu_plugin",
+          "plugin_build": "2026.2.1-21919-ede283a88e3-releases/2026/2"
+        },
+        "NPU": {
+          "full_name": "Intel(R) AI Boost",
+          "plugin": "openvino_intel_npu_plugin",
+          "plugin_build": "2026.2.1-21919-ede283a88e3-releases/2026/2"
+        }
+      },
+      "gpu_plugin_package_installed": true,
+      "gpu_available": false
+    },
+    "npu_driver_packages": {
+      "intel_driver_compiler_npu": "1.33.0.20260529-26625960453~ubuntu24.04",
+      "intel_fw_npu": "1.33.0.20260529-26625960453~ubuntu24.04",
+      "intel_level_zero_npu": "1.33.0.20260529-26625960453~ubuntu24.04"
+    },
+    "gpu_compute_runtime": {
+      "opencl_loader": "ocl-icd-libopencl1 2.3.2-1build1",
+      "level_zero_loader": "libze1 1.27.0-1~24.04~ppa2",
+      "intel_opencl_icd_installed": false,
+      "intel_level_zero_gpu_installed": false,
+      "intel_opencl_vendor_icd_present": false,
+      "clinfo_installed": false
+    }
+  },
+  "evidence_limits": [
+    "No model was loaded, compiled or inferred during this capture.",
+    "Memory module topology was not captured because dmidecode requires interactive sudo.",
+    "Physical power supply and cooling configuration were not independently verified.",
+    "DMI vendor and product fields contain firmware-default placeholder strings.",
+    "Policy package files and hashes have not yet been verified on DK-2500.",
+    "The GPU absence is explained by the missing Intel GPU userspace compute runtime boundary; no driver installation was performed."
+  ]
+}
