@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "device": "CPU",
+  "precision": "f32",
+  "performance_hint": "LATENCY",
+  "cpu_full_name": "Intel(R) Core(TM) Ultra 5 225U",
+  "openvino_version": "2026.2.1-21919-ede283a88e3-releases/2026/2",
+  "correctness": {
+    "rtol": 0.0001,
+    "atol": 0.00001
+  },
+  "artifacts": {
+    "act_fp32.xml": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "act_fp32.bin": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+    "reference_model_input.pt": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output_normalized.pt": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a"
+  },
+  "stages": {
+    "correctness": {
+      "warmup_iterations": 0,
+      "measured_iterations": 1
+    },
+    "short": {
+      "warmup_iterations": 10,
+      "measured_iterations": 100
+    },
+    "stability": {
+      "warmup_iterations": 10,
+      "duration_seconds": 1800,
+      "latency_window_seconds": 60
+    }
+  },
+  "supervisor": {
+    "infer_watchdog_seconds": 15,
+    "startup_timeout_seconds": 180,
+    "telemetry_interval_seconds": 5,
+    "thermal_stop_c": 100,
+    "sigterm_grace_seconds": 5
+  },
+  "physical_route": "STRICT_NO_TOUCH_SSH",
+  "automatic_retry": false
+}

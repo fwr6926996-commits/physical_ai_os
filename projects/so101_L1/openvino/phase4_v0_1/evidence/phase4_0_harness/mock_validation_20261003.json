@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-10-03T06:39:12Z",
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "classification": "MOCK_CONTROL_FLOW_ONLY",
+  "command": "python3 -m unittest -v projects/so101_L1/openvino/phase4_v0_1/test_phase4_harness.py",
+  "tests": {
+    "production_rejects_mock_worker": "PASS",
+    "production_requires_authorization": "PASS",
+    "startup_timeout_recovery": "PASS",
+    "success": "PASS",
+    "thermal_recovery": "PASS",
+    "infer_watchdog_recovery": "PASS",
+    "worker_failure": "PASS"
+  },
+  "summary": {
+    "tests_run": 7,
+    "failures": 0,
+    "errors": 0,
+    "status": "PASS_MOCK_HARNESS_CONTROL_FLOW"
+  },
+  "implementation_sha256": {
+    "phase4_frozen_config.json": "1ebbd5dbc74d610e92ebc453d7a6e629c1a1a8645db00afec0af9e5c546d8151",
+    "phase4_no_model_preflight.py": "08d96258228dca2066dc34f9e7702e27435d992aaec9e6710e45511ab856ec82",
+    "phase4_cpu_worker.py": "65aa225fe5146b3f9148a4e99bd742d5394f45c09759a68f77e9d4cc43653ea7",
+    "phase4_cpu_supervisor.py": "c0bb17c31e9617dd0472535a707168a346efd428020d432dccc52c42f7b5fc05",
+    "phase4_mock_worker.py": "01d7bd9455cacf6ea82ee14cf7f323300d8f508edf07c7b3372ead4a3cc45c25",
+    "test_phase4_harness.py": "4d9f2c1f5d737d651895c0433d52090596e01789c652b3f127034470e76db053"
+  },
+  "interpretation_limits": [
+    "The mock did not import OpenVINO, read the Policy Package, compile a model or run inference.",
+    "This result validates supervisor control flow and safety classifications only.",
+    "This result is not DK-2500 correctness, performance, stability, real-time or safety evidence.",
+    "Production execution remains impossible without a separately created, run-specific authorization file."
+  ]
+}
