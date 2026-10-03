@@ -6,7 +6,7 @@ Template version: `0.1`
 
 Workflow version: `0.1`
 
-Status: `DRAFT_FREEZE_PROPOSAL_NOT_AUTHORIZED_FOR_EXECUTION`
+Status: `FROZEN_APPROVED_EXECUTION_NOT_AUTHORIZED`
 
 Classification: `QUALIFICATION`
 
@@ -27,7 +27,9 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - [x] Policy Package was copied to the target and all eight selected files independently matched their source SHA-256 values. Evidence: `evidence/phase4_0_truth/policy_package_transfer_verification_20261003.json`.
 - [x] Selected artifact location `/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9` is writable and had approximately 60 GB free before the 338 MB transfer.
 - [x] Physical-intervention rule: the human owner selected the strict no-touch SSH route. Current wiring and placement remain unchanged; any need for board handling, cable change or physical reset stops the run. Do not directly ground the PCB or improvise a mains connection.
-- [ ] This protocol is independently reviewed, the freeze proposal is explicitly accepted and status changes to `FROZEN_APPROVED` before execution.
+- [x] The freeze proposal was explicitly accepted and independently reviewed in `PHASE4_PRE_RUN_INDEPENDENT_REVIEW_20261003.md`.
+- [ ] Phase 4 worker/supervisor implementation, mock validation, target no-model preflight and final execution-readiness review are complete.
+- [ ] Human start authorization is issued separately after all remaining entry conditions pass.
 
 ## Frozen candidate
 
@@ -42,7 +44,7 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - Exact DK-2500 CPU identity guard candidate: `Intel(R) Core(TM) Ultra 5 225U`
 - Accepted OpenVINO baseline candidate: `2026.2.1-21919-ede283a88e3-releases/2026/2`; Option A was accepted by the human owner on 2026-10-03 and will become frozen only with the complete protocol
 
-## Freeze proposal — human acceptance pending
+## Frozen protocol — accepted 2026-10-03
 
 - OpenVINO baseline: exact observed `2026.2.1-21919-ede283a88e3-releases/2026/2`
 - Device/precision/hint: explicit `CPU` / `f32` / `LATENCY`; no fallback
@@ -134,8 +136,9 @@ separate performance or thermal decision. Temperature `>=100°C` is a hard stop,
 ## Pre-run decision
 
 No qualification command is authorized while the status is
-`DRAFT_FREEZE_PROPOSAL_NOT_AUTHORIZED_FOR_EXECUTION`. The freeze proposal requires explicit human
-acceptance and an independent pre-run review before the status may become `FROZEN_APPROVED`.
+`FROZEN_APPROVED_EXECUTION_NOT_AUTHORIZED`. Protocol freeze prevents silent rule changes; it is not
+execution approval. A validated Phase 4 harness, target no-model preflight, final readiness review
+and separate human start authorization are still required.
 
 ## Entry review update — 2026-10-03
 
@@ -154,6 +157,9 @@ acceptance and an independent pre-run review before the status may become `FROZE
   evidence.
 - The human owner selected the strict no-touch SSH route. Board handling, cable changes and physical
   reset stop the run.
-- Duration, diagnostic-only resource treatment, frozen-input scope, attempt limit and recovery are
-  now proposed for human acceptance above.
-- Protocol status remains `DRAFT_FREEZE_PROPOSAL_NOT_AUTHORIZED_FOR_EXECUTION`.
+- Duration, diagnostic-only resource treatment, frozen-input scope, attempt limit and recovery were
+  accepted by the human owner and passed independent protocol review.
+- The independent review found that the Phase 3 harness is not a valid Phase 4 runner because of
+  hard-coded GPU and Phase 3 paths plus missing Phase 4 thermal/throttle controls.
+- Protocol status is `FROZEN_APPROVED_EXECUTION_NOT_AUTHORIZED`; harness implementation and
+  validation are the next gate.
