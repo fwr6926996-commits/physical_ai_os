@@ -24,6 +24,8 @@ import numpy as np
 import openvino as ov
 import torch
 
+from phase4_prepost import postprocess_action, preprocess_observation
+
 
 HERE = Path(__file__).resolve().parent
 CONFIG_PATH = HERE / "phase4_frozen_config.json"
@@ -111,12 +113,20 @@ def main() -> int:
     events = EventWriter(run_dir / "events.jsonl")
     started_at = datetime.now(timezone.utc)
     latencies: list[float] = []
+    segmented_latencies: dict[str, list[float]] = {
+        "preprocess": [],
+        "inference": [],
+        "postprocess": [],
+        "total": [],
+    }
     maximum_abs_error = 0.0
+    maximum_postprocessed_abs_error = 0.0
     measured_iterations = 0
     failure: dict[str, Any] | None = None
     artifacts: dict[str, str] = {}
     runtime_identity: dict[str, Any] = {}
     compile_ms: float | None = None
+    prepost_equivalence: dict[str, Any] | None = None
     latency_stream = None
     try:
         events.emit("worker_started", run_id=args.run_id, stage=args.stage)
@@ -165,10 +175,37 @@ def main() -> int:
         expected = torch.load(
             package_dir / "reference_output_normalized.pt", weights_only=False
         )["action_chunk"].numpy()
-        inputs = {
+        fixed_inputs = {
             "state": model_input["observation.state"].numpy(),
             "wrist_image": model_input["observation.images.wrist"].numpy(),
         }
+        raw_observation: dict[str, np.ndarray] | None = None
+        expected_action: np.ndarray | None = None
+        if args.stage == "short":
+            raw_loaded = torch.load(
+                package_dir / "reference_raw_observation.pt", weights_only=False
+            )
+            raw_observation = {
+                "observation.state": raw_loaded["observation.state"].numpy(),
+                "observation.images.wrist": raw_loaded["observation.images.wrist"].numpy(),
+            }
+            expected_action = torch.load(
+                package_dir / "reference_output_action_chunk.pt", weights_only=False
+            )["action_chunk"].numpy()
+            portable_inputs = preprocess_observation(raw_observation, config["prepost"])
+            portable_action = postprocess_action(expected, config["prepost"])
+            prepost_equivalence = {
+                "state_exact": bool(np.array_equal(portable_inputs["state"], fixed_inputs["state"])),
+                "wrist_image_exact": bool(
+                    np.array_equal(portable_inputs["wrist_image"], fixed_inputs["wrist_image"])
+                ),
+                "action_exact": bool(np.array_equal(portable_action, expected_action)),
+            }
+            if not all(prepost_equivalence.values()):
+                raise RuntimeError(
+                    f"Portable pre/post transform differs from frozen references: {prepost_equivalence}"
+                )
+            events.emit("prepost_equivalence_verified", **prepost_equivalence)
         request = compiled.create_infer_request()
         stage_config = config["stages"][args.stage]
         latency_path = run_dir / "latencies.csv"
@@ -180,9 +217,15 @@ def main() -> int:
                 "iteration",
                 "elapsed_s",
                 "latency_ms",
+                "preprocess_ms",
+                "inference_ms",
+                "postprocess_ms",
+                "total_ms",
                 "finite",
                 "correct",
                 "max_abs_error",
+                "postprocessed_correct",
+                "postprocessed_max_abs_error",
             ),
         )
         writer.writeheader()
@@ -190,13 +233,36 @@ def main() -> int:
         sequence = 0
 
         def infer_once(phase: str, iteration: int, elapsed_s: float) -> None:
-            nonlocal sequence, maximum_abs_error, measured_iterations
+            nonlocal sequence, maximum_abs_error, maximum_postprocessed_abs_error
+            nonlocal measured_iterations
             sequence += 1
             events.emit("infer_enter", sequence=sequence, phase=phase, iteration=iteration)
+            pipeline_started_ns = time.perf_counter_ns()
+            preprocess_ms = None
+            postprocess_ms = None
+            postprocessed_correct = None
+            postprocessed_max_abs_error = None
+            actual_action = None
+            if args.stage == "short":
+                if raw_observation is None or expected_action is None:
+                    raise RuntimeError("Short stage portable pre/post references are unavailable")
+                preprocess_started_ns = time.perf_counter_ns()
+                current_inputs = preprocess_observation(raw_observation, config["prepost"])
+                preprocess_ms = (time.perf_counter_ns() - preprocess_started_ns) / 1_000_000.0
+            else:
+                current_inputs = fixed_inputs
             started_ns = time.perf_counter_ns()
-            request.infer(inputs)
-            latency_ms = (time.perf_counter_ns() - started_ns) / 1_000_000.0
-            actual = request.get_output_tensor(0).data.copy()
+            request.infer(current_inputs)
+            inference_ms = (time.perf_counter_ns() - started_ns) / 1_000_000.0
+            if args.stage == "short":
+                postprocess_started_ns = time.perf_counter_ns()
+                actual = request.get_output_tensor(0).data.copy()
+                actual_action = postprocess_action(actual, config["prepost"])
+                postprocess_ms = (time.perf_counter_ns() - postprocess_started_ns) / 1_000_000.0
+                total_ms = (time.perf_counter_ns() - pipeline_started_ns) / 1_000_000.0
+            else:
+                actual = request.get_output_tensor(0).data.copy()
+                total_ms = inference_ms
             if actual.shape != expected.shape:
                 raise RuntimeError(
                     f"Output shape mismatch: {actual.shape} != {expected.shape}"
@@ -220,16 +286,52 @@ def main() -> int:
             else:
                 max_abs_error = float("inf")
                 correct = False
+            if actual_action is not None and expected_action is not None:
+                if actual_action.shape != expected_action.shape:
+                    raise RuntimeError(
+                        f"Postprocessed shape mismatch: {actual_action.shape} != {expected_action.shape}"
+                    )
+                if actual_action.dtype != expected_action.dtype or actual_action.dtype != np.dtype(
+                    "float32"
+                ):
+                    raise RuntimeError(
+                        "Postprocessed dtype mismatch: "
+                        f"actual={actual_action.dtype} expected={expected_action.dtype}"
+                    )
+                action_finite = bool(np.isfinite(actual_action).all())
+                if not action_finite:
+                    raise RuntimeError("Postprocessed action contains non-finite values")
+                action_error = np.abs(
+                    actual_action.astype(np.float32) - expected_action.astype(np.float32)
+                )
+                postprocessed_max_abs_error = float(action_error.max())
+                postprocessed_correct = bool(
+                    np.allclose(
+                        actual_action,
+                        expected_action,
+                        rtol=config["correctness"]["rtol"],
+                        atol=config["correctness"]["atol"],
+                    )
+                )
+                maximum_postprocessed_abs_error = max(
+                    maximum_postprocessed_abs_error, postprocessed_max_abs_error
+                )
             maximum_abs_error = max(maximum_abs_error, max_abs_error)
             writer.writerow(
                 {
                     "phase": phase,
                     "iteration": iteration,
                     "elapsed_s": elapsed_s,
-                    "latency_ms": latency_ms,
+                    "latency_ms": inference_ms,
+                    "preprocess_ms": preprocess_ms,
+                    "inference_ms": inference_ms,
+                    "postprocess_ms": postprocess_ms,
+                    "total_ms": total_ms,
                     "finite": finite,
                     "correct": correct,
                     "max_abs_error": max_abs_error,
+                    "postprocessed_correct": postprocessed_correct,
+                    "postprocessed_max_abs_error": postprocessed_max_abs_error,
                 }
             )
             latency_stream.flush()
@@ -238,10 +340,16 @@ def main() -> int:
                 sequence=sequence,
                 phase=phase,
                 iteration=iteration,
-                latency_ms=latency_ms,
+                latency_ms=inference_ms,
+                preprocess_ms=preprocess_ms,
+                inference_ms=inference_ms,
+                postprocess_ms=postprocess_ms,
+                total_ms=total_ms,
                 finite=finite,
                 correct=correct,
                 max_abs_error=max_abs_error,
+                postprocessed_correct=postprocessed_correct,
+                postprocessed_max_abs_error=postprocessed_max_abs_error,
             )
             if not finite or not correct:
                 raise RuntimeError(
@@ -249,7 +357,14 @@ def main() -> int:
                     f"finite={finite} max_abs_error={max_abs_error}"
                 )
             if phase == "measurement":
-                latencies.append(latency_ms)
+                latencies.append(inference_ms)
+                if args.stage == "short":
+                    if preprocess_ms is None or postprocess_ms is None:
+                        raise RuntimeError("Short-stage segmented timing is incomplete")
+                    segmented_latencies["preprocess"].append(preprocess_ms)
+                    segmented_latencies["inference"].append(inference_ms)
+                    segmented_latencies["postprocess"].append(postprocess_ms)
+                    segmented_latencies["total"].append(total_ms)
                 measured_iterations += 1
 
         infer_once("correctness", 0, 0.0)
@@ -294,8 +409,17 @@ def main() -> int:
                 "measured_iterations": measured_iterations,
                 "measurement_elapsed_s": elapsed_s,
                 "maximum_abs_error": maximum_abs_error,
+                "maximum_postprocessed_abs_error": maximum_postprocessed_abs_error
+                if args.stage == "short"
+                else None,
             },
             "latency_ms": stats(latencies),
+            "segmented_latency_ms": {
+                name: stats(values) for name, values in segmented_latencies.items()
+            }
+            if args.stage == "short"
+            else None,
+            "prepost_equivalence": prepost_equivalence,
             "evidence_files": {"events": "events.jsonl", "latencies": "latencies.csv"},
         }
         atomic_json(run_dir / "worker_result.json", result)

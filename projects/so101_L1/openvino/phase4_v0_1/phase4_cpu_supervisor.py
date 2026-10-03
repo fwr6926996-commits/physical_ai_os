@@ -117,7 +117,7 @@ def temperatures(fixture_c: float | None) -> dict[str, float | None]:
 
 
 def telemetry_snapshot(
-    elapsed_s: float, pid: int, thermal_fixture_c: float | None
+    elapsed_s: float, pid: int, thermal_fixture_c: float | None, sample_kind: str
 ) -> dict[str, Any]:
     memory = psutil.virtual_memory()
     temperature = temperatures(thermal_fixture_c)
@@ -127,6 +127,7 @@ def telemetry_snapshot(
             "worker_rss_bytes": process.memory_info().rss,
             "worker_status": process.status(),
             "worker_threads": process.num_threads(),
+            "worker_snapshot_error": None,
         }
     except psutil.Error as exc:
         worker = {
@@ -136,6 +137,7 @@ def telemetry_snapshot(
             "worker_snapshot_error": f"{type(exc).__name__}: {exc}",
         }
     return {
+        "sample_kind": sample_kind,
         "elapsed_s": elapsed_s,
         **worker,
         "system_available_memory_bytes": memory.available,
@@ -143,6 +145,13 @@ def telemetry_snapshot(
         **temperature,
         **frequency_summary(),
     }
+
+
+def numeric_summary(rows: list[dict[str, Any]], key: str) -> dict[str, float] | None:
+    values = [float(row[key]) for row in rows if row.get(key) is not None]
+    if not values:
+        return None
+    return {"first": values[0], "last": values[-1], "min": min(values), "max": max(values)}
 
 
 def process_snapshot(pid: int) -> dict[str, Any]:
@@ -272,7 +281,10 @@ def main() -> int:
                     runtime_started = True
         if elapsed_s >= next_telemetry:
             snapshot = telemetry_snapshot(
-                elapsed_s, child.pid, args.test_thermal_fixture_c if args.test_mode else None
+                elapsed_s,
+                child.pid,
+                args.test_thermal_fixture_c if args.test_mode else None,
+                "start" if not telemetry_rows else "periodic",
             )
             telemetry_rows.append(snapshot)
             next_telemetry += telemetry_s
@@ -293,6 +305,21 @@ def main() -> int:
             break
         time.sleep(min(0.1, telemetry_s))
 
+    final_elapsed_s = time.monotonic() - supervisor_started
+    final_snapshot = telemetry_snapshot(
+        final_elapsed_s,
+        child.pid,
+        args.test_thermal_fixture_c if args.test_mode else None,
+        "final",
+    )
+    telemetry_rows.append(final_snapshot)
+    final_max_sensor = final_snapshot.get("max_sensor_c")
+    final_thermal_limit = bool(
+        stop_reason is None
+        and final_max_sensor is not None
+        and float(final_max_sensor) >= thermal_stop_c
+    )
+
     stdout_stream.close()
     stderr_stream.close()
     throttle_after = throttle_counts()
@@ -311,6 +338,9 @@ def main() -> int:
 
     if stop_reason is not None:
         status = f"{stop_reason}_RECOVERED"
+        exit_code = 1
+    elif final_thermal_limit:
+        status = "THERMAL_LIMIT_OBSERVED_AT_FINAL_SNAPSHOT"
         exit_code = 1
     elif child.returncode == 0 and worker_result and str(worker_result.get("status", "")).endswith(
         "SUPERVISOR_REVIEW_PENDING"
@@ -346,6 +376,7 @@ def main() -> int:
             "supervisor_sha256": sha256(Path(__file__).resolve()),
             "worker_sha256": sha256(worker_path),
             "config_sha256": sha256(CONFIG_PATH),
+            "prepost_sha256": sha256(HERE / "phase4_prepost.py"),
             "authorization_sha256": None
             if args.test_mode
             else sha256(args.authorization_file.resolve()),
@@ -357,6 +388,18 @@ def main() -> int:
         "last_event": read_last_event(events_path),
         "worker_result_status": worker_result.get("status") if worker_result else None,
         "throttle_counter_delta": throttle_delta,
+        "throttle_counter_increment_paths": sum(1 for value in throttle_delta.values() if value > 0),
+        "telemetry_summary": {
+            "samples": len(telemetry_rows),
+            "sample_kinds": [row["sample_kind"] for row in telemetry_rows],
+            "package_c": numeric_summary(telemetry_rows, "package_c"),
+            "max_sensor_c": numeric_summary(telemetry_rows, "max_sensor_c"),
+            "worker_rss_bytes": numeric_summary(telemetry_rows, "worker_rss_bytes"),
+            "system_available_memory_bytes": numeric_summary(
+                telemetry_rows, "system_available_memory_bytes"
+            ),
+            "mean_mhz": numeric_summary(telemetry_rows, "mean_mhz"),
+        },
         "evidence_files": {
             "events": "events.jsonl" if events_path.exists() else None,
             "worker_result": "worker_result.json" if worker_result else None,

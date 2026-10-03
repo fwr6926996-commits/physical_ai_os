@@ -24,6 +24,7 @@ CONFIG_PATH = HERE / "phase4_frozen_config.json"
 IMPLEMENTATION_FILES = (
     "phase4_frozen_config.json",
     "phase4_no_model_preflight.py",
+    "phase4_prepost.py",
     "phase4_cpu_worker.py",
     "phase4_cpu_supervisor.py",
 )

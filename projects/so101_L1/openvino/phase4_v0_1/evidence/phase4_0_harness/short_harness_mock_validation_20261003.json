@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "evidence_id": "P4-DK2500-SHORT-HARNESS-MOCK-20261003-01",
+  "timestamp_utc": "2026-10-03T07:31:02Z",
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "status": "PASS_SHORT_HARNESS_LOCAL_VALIDATION",
+  "command": "python3 -m unittest -v test_phase4_prepost.py test_phase4_harness.py",
+  "tests_run": 10,
+  "tests_passed": 10,
+  "checks": [
+    "portable preprocessing batches and mean/std normalizes without mutating the raw source",
+    "portable postprocessing unnormalizes without mutating normalized output",
+    "portable preprocessing rejects dtype drift",
+    "production rejects a mock worker",
+    "production requires a run-specific authorization",
+    "startup timeout preserves bounded recovery behavior",
+    "success captures both start and final telemetry snapshots",
+    "thermal stop preserves bounded recovery behavior",
+    "infer watchdog preserves bounded recovery behavior",
+    "worker correctness failure remains a non-retried failure"
+  ],
+  "implementation_sha256": {
+    "phase4_frozen_config.json": "7783080f556da2008d52a2bf21b403b5f9d6e4df58bcba416658758afea3df09",
+    "phase4_prepost.py": "d7b702f3d7bb5d4ee78268278fb5e685a743c71716c90108098d60882e44a2eb",
+    "phase4_cpu_worker.py": "8795710589a5474387fc181162e4fc6fe6e8614ff5ce1042ef5f834cd403f47e",
+    "phase4_cpu_supervisor.py": "56957ca0c86d9c766644f2b2b9540f2b2aa5d618408da63ca697e8fb83ced231",
+    "phase4_no_model_preflight.py": "1a9f440c1f4da93e280ff6a7aa1526a294f3c972dfc7b169dcc2591e9bc86d05",
+    "test_phase4_prepost.py": "f462bab0d25a0447975f7f77b1f3f226becdb9f76f5cc0ae8088426e8330fa01",
+    "test_phase4_harness.py": "0fca67beb8fc737b0c3f3988966f2ee21413e5b6f8c86075025117d1ccf8db29"
+  },
+  "interpretation_limits": [
+    "Unit and mock checks validate math, evidence shape and supervisor control flow only.",
+    "They do not authorize or qualify DK-2500 short inference, performance, stability, real-time behavior or robot safety."
+  ]
+}

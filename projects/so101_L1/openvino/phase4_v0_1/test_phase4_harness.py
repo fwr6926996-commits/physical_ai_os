@@ -58,6 +58,9 @@ class Phase4HarnessTests(unittest.TestCase):
     def test_success(self) -> None:
         result = self.run_case("success", "MOCK_STAGE_PASS_REVIEW_PENDING", 0)
         self.assertIsNone(result["recovery"])
+        self.assertGreaterEqual(result["telemetry_summary"]["samples"], 2)
+        self.assertEqual(result["telemetry_summary"]["sample_kinds"][0], "start")
+        self.assertEqual(result["telemetry_summary"]["sample_kinds"][-1], "final")
 
     def test_worker_failure(self) -> None:
         result = self.run_case(
