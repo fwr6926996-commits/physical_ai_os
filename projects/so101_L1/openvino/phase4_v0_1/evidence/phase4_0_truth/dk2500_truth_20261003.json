@@ -91,6 +91,14 @@
       "turbo_disabled": false,
       "thermald": "active"
     },
+    "thermal_control_interfaces": {
+      "coretemp_critical_c": 105.0,
+      "acpi_critical_c": 110.0,
+      "per_cpu_core_and_package_throttle_counters_readable": true,
+      "historical_throttle_counts_nonzero": true,
+      "required_measurement": "capture counter deltas from an immediate pre-run baseline; do not interpret absolute historical counts as run-local events",
+      "rapl_powercap_readable": false
+    },
     "physical_environment": {
       "evidence_type": "human-reported ambient conditions plus visual inspection of user-provided photographs",
       "recorded_date": "2026-10-03",
@@ -170,6 +178,7 @@
     "EDAC exposes two 4 GiB channel entries, but module vendor, part number, validated technology and transfer rate remain unknown because dmidecode requires interactive sudo.",
     "Power, cooling and ambient facts are human/visual evidence, not electrical power measurement or proof of sustained thermal capacity.",
     "The fan assembly is visible, but fan RPM or runtime state was not independently measured.",
+    "RAPL power telemetry is unavailable; the 120 W adapter rating is not a measurement of workload power.",
     "ESD handling controls are not yet established; no board handling or cable changes are authorized by this record. A separately frozen no-touch remote-execution contract remains possible.",
     "DMI vendor and product fields contain firmware-default placeholder strings.",
     "Policy Package transfer identity is recorded separately; it does not establish runtime compatibility.",

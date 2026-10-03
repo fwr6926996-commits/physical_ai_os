@@ -6,7 +6,7 @@ Template version: `0.1`
 
 Workflow version: `0.1`
 
-Status: `DRAFT_NOT_FROZEN_NOT_AUTHORIZED_FOR_EXECUTION`
+Status: `DRAFT_FREEZE_PROPOSAL_NOT_AUTHORIZED_FOR_EXECUTION`
 
 Classification: `QUALIFICATION`
 
@@ -26,8 +26,8 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - [x] VM1 drift decision is accepted. Option A preserves the observed OpenVINO 2026.2.1 target baseline; no OpenVINO upgrade or GPU runtime installation is authorized.
 - [x] Policy Package was copied to the target and all eight selected files independently matched their source SHA-256 values. Evidence: `evidence/phase4_0_truth/policy_package_transfer_verification_20261003.json`.
 - [x] Selected artifact location `/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9` is writable and had approximately 60 GB free before the 338 MB transfer.
-- [ ] Physical-intervention rule is frozen before execution: either establish ESD handling control before any board handling/cable change, or use a strict no-touch SSH route in which the current wiring and placement remain unchanged and any need for physical intervention stops the run. Do not directly ground the PCB or improvise a mains connection.
-- [ ] This protocol is reviewed, all TBD fields are resolved and status changes to `FROZEN_APPROVED` before execution.
+- [x] Physical-intervention rule: the human owner selected the strict no-touch SSH route. Current wiring and placement remain unchanged; any need for board handling, cable change or physical reset stops the run. Do not directly ground the PCB or improvise a mains connection.
+- [ ] This protocol is independently reviewed, the freeze proposal is explicitly accepted and status changes to `FROZEN_APPROVED` before execution.
 
 ## Frozen candidate
 
@@ -42,6 +42,27 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - Exact DK-2500 CPU identity guard candidate: `Intel(R) Core(TM) Ultra 5 225U`
 - Accepted OpenVINO baseline candidate: `2026.2.1-21919-ede283a88e3-releases/2026/2`; Option A was accepted by the human owner on 2026-10-03 and will become frozen only with the complete protocol
 
+## Freeze proposal — human acceptance pending
+
+- OpenVINO baseline: exact observed `2026.2.1-21919-ede283a88e3-releases/2026/2`
+- Device/precision/hint: explicit `CPU` / `f32` / `LATENCY`; no fallback
+- Warmup: `10` iterations
+- Short measurement: `100` iterations
+- Stability duration: `30 minutes`
+- Stability input: frozen `reference_model_input.pt` only
+- Correctness check: every inference, `rtol=1e-4`, `atol=1e-5`
+- Latency sample: every inference; summary window `60 seconds`
+- External telemetry interval: `5 seconds`
+- Infer loss-of-progress watchdog: `15 seconds` without evidence growth
+- Startup/compile evidence timeout: `180 seconds`
+- Software thermal stop: any observed core/package sensor `>=100°C`; the exposed core critical limit is `105°C`
+- Maximum attempts: one attempt per qualification stage per explicit human authorization; no automatic retry
+- Recovery: preserve partial evidence, send `SIGTERM`, wait `5 seconds`, then `SIGKILL` if still alive
+- Physical route: strict no-touch SSH; any required physical intervention stops the run
+
+The frozen reference input supports regression and repeated-call stability only. Representative
+changing-input behavior is a future experiment and is not an admission claim of this protocol.
+
 ## Qualification sequence
 
 1. Capture hardware/software truth and idle thermal/power baseline.
@@ -50,7 +71,7 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 4. Run frozen-input correctness before any performance ranking.
 5. Run a short segmented preprocess/inference/postprocess measurement with raw samples.
 6. Review the short run and confirm host state, resource capture and absence of correctness failures.
-7. Run the approved 30–60 minute stability qualification.
+7. Run the approved 30-minute stability qualification.
 8. Independently recompute summaries and write the admission review.
 
 ## Experimental design
@@ -59,9 +80,9 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - Single changed platform variable: DK-2500 hardware/software environment.
 - Warmup iterations: `10`, subject to pre-run review after device truth.
 - Short measured iterations: `100`.
-- Stability duration: `TBD_30_TO_60_MINUTES_BEFORE_FREEZE`.
+- Stability duration proposal: `30 minutes`.
 - Measurement boundary: offline synchronous inference; segmented pre/post measurements are diagnostic and separately measured.
-- Input policy: frozen reference input for regression plus `TBD` representative changing-input stream for Phase 4 stability if available.
+- Input policy proposal: frozen reference input only. Changing-input stability is explicitly out of scope.
 
 ## Hard gates
 
@@ -76,7 +97,11 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - Process crashes or watchdog timeouts: `0`.
 - Required evidence files are complete.
 
-Latency, RAM trend, temperature, frequency, utilization, power proxy and throttle observations must be reported. Their admission thresholds remain `TBD` and must be frozen or explicitly classified as diagnostic before execution.
+Latency, RSS/available-memory trend, frequency, utilization and throttle-counter deltas must be
+reported but are diagnostic-only because no end-to-end control budget or validated resource limit
+exists. The 120 W adapter rating is configuration evidence, not workload power; RAPL is unavailable.
+These observations cannot independently fail correctness/stability admission, but they may require a
+separate performance or thermal decision. Temperature `>=100°C` is a hard stop, not a pass threshold.
 
 ## Stop and recovery
 
@@ -84,7 +109,13 @@ Latency, RAM trend, temperature, frequency, utilization, power proxy and throttl
 - Do not switch automatically to GPU, NPU, AUTO or HETERO.
 - Do not continue to performance ranking after correctness failure.
 - Preserve partial evidence before recovery.
-- Maximum qualification attempts and retry policy: `TBD_BEFORE_FREEZE`.
+- One attempt per stage (`compile/correctness`, short measurement, 30-minute stability) per explicit
+  human authorization. No automatic retry. Infrastructure failure, watchdog timeout or incomplete
+  evidence stops the stage; any rerun requires preserved prior evidence, a new run ID, a written
+  classification and new human authorization.
+- Infer loss-of-progress watchdog: `15 seconds`. Startup/compile evidence timeout: `180 seconds`.
+- Supervisor recovery: preserve available evidence, send `SIGTERM`, wait `5 seconds`, then send
+  `SIGKILL` if the Worker has not exited.
 
 ## Evidence contract
 
@@ -102,7 +133,9 @@ Latency, RAM trend, temperature, frequency, utilization, power proxy and throttl
 
 ## Pre-run decision
 
-No command in this protocol is authorized while any `TBD` remains material or the status is `DRAFT_NOT_FROZEN_NOT_AUTHORIZED_FOR_EXECUTION`.
+No qualification command is authorized while the status is
+`DRAFT_FREEZE_PROPOSAL_NOT_AUTHORIZED_FOR_EXECUTION`. The freeze proposal requires explicit human
+acceptance and an independent pre-run review before the status may become `FROZEN_APPROVED`.
 
 ## Entry review update — 2026-10-03
 
@@ -116,9 +149,11 @@ No command in this protocol is authorized while any `TBD` remains material or th
 - The CPU FP32 Policy Package was copied to the dedicated target artifact directory. All eight
   selected file hashes match; rejected INT8 candidates were intentionally excluded. No model was
   loaded or executed.
-- Hardware truth is sufficient for entry configuration. Stability duration, resource thresholds,
-  input stream and retry policy remain unresolved. Fan RPM and electrical power are unavailable;
-  thermal, frequency and throttle behavior must therefore be captured as runtime evidence.
-- ESD handling control is not established. Board handling and cable changes remain blocked. Before
-  qualification, select either a verified ESD handling route or a strict no-touch SSH route.
-- Protocol status remains `DRAFT_NOT_FROZEN_NOT_AUTHORIZED_FOR_EXECUTION`.
+- Hardware truth is sufficient for entry configuration. Fan RPM and electrical power are
+  unavailable; thermal, frequency and throttle behavior must therefore be captured as runtime
+  evidence.
+- The human owner selected the strict no-touch SSH route. Board handling, cable changes and physical
+  reset stop the run.
+- Duration, diagnostic-only resource treatment, frozen-input scope, attempt limit and recovery are
+  now proposed for human acceptance above.
+- Protocol status remains `DRAFT_FREEZE_PROPOSAL_NOT_AUTHORIZED_FOR_EXECUTION`.
