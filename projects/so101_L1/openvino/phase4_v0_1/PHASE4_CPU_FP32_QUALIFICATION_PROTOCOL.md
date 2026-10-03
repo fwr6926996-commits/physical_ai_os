@@ -12,6 +12,8 @@ Classification: `QUALIFICATION`
 
 Owner: human
 
+Frozen parameter snapshot: Git commit `fb18053`
+
 ## Question and decision
 
 This protocol will determine whether the frozen V2.9 policy package can compile, load, produce correct outputs and run stably on an explicitly selected DK-2500 CPU backend under recorded edge power and thermal conditions.

@@ -6,6 +6,8 @@ Date: `2026-10-03`
 
 Reviewed protocol: `P4-DK2500-CPU-FP32-001`
 
+Accepted freeze snapshot: Git commit `fb18053`
+
 Result: `PROTOCOL_FREEZE_ACCEPTABLE — EXECUTION NOT AUTHORIZED`
 
 ## Review question
