@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "run_id": "phase4_r1_correctness_20261003_01",
+  "stage": "correctness",
+  "classification": "QUALIFICATION",
+  "status": "STAGE_PASS_REVIEW_PENDING",
+  "started_at_utc": "2026-10-03T06:56:39.971035+00:00",
+  "ended_at_utc": "2026-10-03T06:56:42.082097+00:00",
+  "configuration": {
+    "watchdog_seconds": 15.0,
+    "startup_seconds": 180.0,
+    "telemetry_seconds": 5.0,
+    "thermal_stop_c": 100.0,
+    "sigterm_grace_seconds": 5.0,
+    "worker_path": "/home/hepintel/physical_ai_os_artifacts/phase4_entry/harness_48d4987/phase4_cpu_worker.py",
+    "package_dir": "/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9",
+    "automatic_retry": false
+  },
+  "implementation": {
+    "supervisor_sha256": "c0bb17c31e9617dd0472535a707168a346efd428020d432dccc52c42f7b5fc05",
+    "worker_sha256": "65aa225fe5146b3f9148a4e99bd742d5394f45c09759a68f77e9d4cc43653ea7",
+    "config_sha256": "1ebbd5dbc74d610e92ebc453d7a6e629c1a1a8645db00afec0af9e5c546d8151",
+    "authorization_sha256": "8d5e26fff0bec1d2a4cf5be6b760a4020b6751bafa8a3c6cbb868f72f30ec832"
+  },
+  "worker_pid": 10079,
+  "worker_exitcode": 0,
+  "recovery": null,
+  "diagnostic": null,
+  "last_event": {
+    "type": "worker_completed",
+    "timestamp_utc": "2026-10-03T06:56:41.748901+00:00",
+    "worker_monotonic_s": 17386.996710434,
+    "measured_iterations": 1,
+    "measurement_elapsed_s": 0.09522376199674909
+  },
+  "worker_result_status": "WORKER_PASS_SUPERVISOR_REVIEW_PENDING",
+  "throttle_counter_delta": {
+    "/sys/devices/system/cpu/cpu0/thermal_throttle/core_throttle_count": 59,
+    "/sys/devices/system/cpu/cpu0/thermal_throttle/package_throttle_count": 84,
+    "/sys/devices/system/cpu/cpu1/thermal_throttle/core_throttle_count": 59,
+    "/sys/devices/system/cpu/cpu1/thermal_throttle/package_throttle_count": 82,
+    "/sys/devices/system/cpu/cpu10/thermal_throttle/core_throttle_count": 50,
+    "/sys/devices/system/cpu/cpu10/thermal_throttle/package_throttle_count": 48,
+    "/sys/devices/system/cpu/cpu11/thermal_throttle/core_throttle_count": 50,
+    "/sys/devices/system/cpu/cpu11/thermal_throttle/package_throttle_count": 48,
+    "/sys/devices/system/cpu/cpu12/thermal_throttle/core_throttle_count": 0,
+    "/sys/devices/system/cpu/cpu12/thermal_throttle/package_throttle_count": 21,
+    "/sys/devices/system/cpu/cpu13/thermal_throttle/core_throttle_count": 0,
+    "/sys/devices/system/cpu/cpu13/thermal_throttle/package_throttle_count": 21,
+    "/sys/devices/system/cpu/cpu2/thermal_throttle/core_throttle_count": 36,
+    "/sys/devices/system/cpu/cpu2/thermal_throttle/package_throttle_count": 69,
+    "/sys/devices/system/cpu/cpu3/thermal_throttle/core_throttle_count": 36,
+    "/sys/devices/system/cpu/cpu3/thermal_throttle/package_throttle_count": 67,
+    "/sys/devices/system/cpu/cpu4/thermal_throttle/core_throttle_count": 41,
+    "/sys/devices/system/cpu/cpu4/thermal_throttle/package_throttle_count": 63,
+    "/sys/devices/system/cpu/cpu5/thermal_throttle/core_throttle_count": 41,
+    "/sys/devices/system/cpu/cpu5/thermal_throttle/package_throttle_count": 63,
+    "/sys/devices/system/cpu/cpu6/thermal_throttle/core_throttle_count": 41,
+    "/sys/devices/system/cpu/cpu6/thermal_throttle/package_throttle_count": 63,
+    "/sys/devices/system/cpu/cpu7/thermal_throttle/core_throttle_count": 41,
+    "/sys/devices/system/cpu/cpu7/thermal_throttle/package_throttle_count": 63,
+    "/sys/devices/system/cpu/cpu8/thermal_throttle/core_throttle_count": 50,
+    "/sys/devices/system/cpu/cpu8/thermal_throttle/package_throttle_count": 48,
+    "/sys/devices/system/cpu/cpu9/thermal_throttle/core_throttle_count": 50,
+    "/sys/devices/system/cpu/cpu9/thermal_throttle/package_throttle_count": 48
+  },
+  "evidence_files": {
+    "events": "events.jsonl",
+    "worker_result": "worker_result.json",
+    "supervisor_telemetry": "supervisor_telemetry.csv",
+    "worker_stdout": "worker_stdout.txt",
+    "worker_stderr": "worker_stderr.txt"
+  },
+  "interpretation_limits": [
+    "Diagnostic-only latency/resource observations are not real-time or safety evidence.",
+    "This stage remains review-pending until evidence is independently checked."
+  ]
+}

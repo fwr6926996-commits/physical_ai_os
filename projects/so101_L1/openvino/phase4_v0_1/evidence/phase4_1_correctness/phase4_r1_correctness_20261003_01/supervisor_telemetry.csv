@@ -1,0 +1,2 @@
+elapsed_s,worker_rss_bytes,worker_status,worker_threads,system_available_memory_bytes,system_cpu_percent,package_c,max_sensor_c,min_mhz,mean_mhz,max_mhz
+2.082299761241302e-05,8630272,running,1,5843431424,15.4,45.0,46.0,400.0,1199.9171428571428,4800.0

@@ -6,7 +6,7 @@ Template version: `0.1`
 
 Workflow version: `0.1`
 
-Status: `FROZEN_APPROVED_EXECUTION_NOT_AUTHORIZED`
+Status: `CORRECTNESS_PASSED — SHORT_AND_STABILITY_BLOCKED`
 
 Classification: `QUALIFICATION`
 
@@ -33,7 +33,8 @@ A passing result may admit only the recorded DK-2500 CPU FP32 offline inference 
 - [x] Phase 4 CPU worker/supervisor implementation and seven-path mock validation are complete at Git commit `48d4987`.
 - [x] DK-2500 no-model preflight passed for identity, dependencies, artifact hashes, sensors, paths and deployed implementation hashes.
 - [x] Round 1 correctness-stage readiness review is recorded in `PHASE4_ROUND1_EXECUTION_READINESS_REVIEW_20261003.md`.
-- [ ] Human start authorization is issued separately after all remaining entry conditions pass.
+- [x] A run-specific, one-attempt human authorization was issued for Round 1 correctness and
+  consumed by run `phase4_r1_correctness_20261003_01`. It did not authorize later stages.
 
 ## Frozen candidate
 
@@ -137,14 +138,17 @@ separate performance or thermal decision. Temperature `>=100°C` is a hard stop,
 - Stability result and review.
 - Phase 4 admission decision referencing this protocol.
 
-## Pre-run decision
+## Pre-run decision — historical Round 1 gate
 
 No qualification command is authorized while the status is
 `FROZEN_APPROVED_EXECUTION_NOT_AUTHORIZED`. Protocol freeze prevents silent rule changes; it is not
 execution approval. A validated Phase 4 harness, target no-model preflight, final readiness review
 and separate human start authorization are still required.
 
-## Entry review update — 2026-10-03
+That condition governed the pre-execution state. It was satisfied only for the consumed Round 1
+correctness authorization. It does not authorize `short`, `stability` or a correctness rerun.
+
+## Entry review update — 2026-10-03, pre-execution record
 
 - Direct Ethernet SSH identity is established and independently verified.
 - Initial hardware/software truth is captured without model execution or system mutation.
@@ -165,13 +169,25 @@ and separate human start authorization are still required.
   accepted by the human owner and passed independent protocol review.
 - The independent review found that the Phase 3 harness is not a valid Phase 4 runner because of
   hard-coded GPU and Phase 3 paths plus missing Phase 4 thermal/throttle controls.
-- Protocol status is `FROZEN_APPROVED_EXECUTION_NOT_AUTHORIZED`; harness implementation and
-  validation have passed for the Round 1 correctness stage. No valid authorization file exists.
+- At the time of this entry review, protocol status was
+  `FROZEN_APPROVED_EXECUTION_NOT_AUTHORIZED`; harness implementation and validation had passed for
+  the Round 1 correctness stage, and no valid authorization file existed.
+
+## Round 1 result update — 2026-10-03
+
+- The human owner issued authorization commit `ecfb32e` for exactly one correctness attempt.
+- Run `phase4_r1_correctness_20261003_01` completed without retry, watchdog or recovery.
+- Independent raw-evidence review passed the compile/load and frozen-input correctness stage only.
+- The consumed authorization cannot be reused. No authorization exists for a rerun, `short` or
+  `stability`.
 
 ## Stage readiness — 2026-10-03
 
-- `correctness`: `READY_FOR_HUMAN_AUTHORIZATION`; one attempt only.
+- `correctness`: `PASS_CORRECTNESS_ONLY`; run `phase4_r1_correctness_20261003_01` passed independent
+  review. See `PHASE4_ROUND1_CORRECTNESS_REVIEW_20261003.md`.
 - `short`: `BLOCKED`; the frozen protocol requires segmented preprocess/inference/postprocess
-  measurement, while the current short worker measures inference only.
-- `stability`: `BLOCKED`; correctness and short-stage review must pass first, followed by separate
-  human authorization.
+  measurement, while the current short worker measures inference only. The short-stage review must
+  also resolve telemetry coverage for the observed throttle-counter increments before a separate
+  human authorization decision.
+- `stability`: `BLOCKED`; the short-stage implementation, execution and review must pass first,
+  followed by separate human authorization.

@@ -1,0 +1,3 @@
+phase,iteration,elapsed_s,latency_ms,finite,correct,max_abs_error
+correctness,0,0.0,95.601567,True,True,2.86102294921875e-06
+measurement,0,9.239993232768029e-07,92.493105,True,True,2.86102294921875e-06

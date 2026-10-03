@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "review_id": "P4-DK2500-R1-CORRECTNESS-REVIEW-20261003-01",
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "run_id": "phase4_r1_correctness_20261003_01",
+  "review_status": "PASS_CORRECTNESS_ONLY",
+  "checks": {
+    "authorization_matched_one_attempt": true,
+    "runtime_identity_matched": true,
+    "artifact_hashes_matched": true,
+    "explicit_cpu_fp32_latency_path": true,
+    "output_shape_and_float32_contract_enforced": true,
+    "all_outputs_finite": true,
+    "all_outputs_correct": true,
+    "worker_exitcode_zero": true,
+    "watchdog_or_recovery_absent": true,
+    "required_correctness_evidence_present": true
+  },
+  "observed": {
+    "compile_ms": 539.173487,
+    "correctness_inference_latency_ms": 95.601567,
+    "measurement_inference_latency_ms": 92.493105,
+    "maximum_abs_error": 2.86102294921875e-06,
+    "maximum_observed_sensor_c": 46.0,
+    "supervisor_telemetry_rows": 1,
+    "throttle_counter_increments_observed": true
+  },
+  "evidence_sha256": {
+    "events.jsonl": "6055e48e23330303cee484e1c9f711cfb114e3e7244b691ee13b34e56108c0d1",
+    "latencies.csv": "f88013c0402e47bba743061e5ccad581be9461f800b7b8986cdd93d9a5784994",
+    "supervisor_result.json": "c701484bc260fd7c634f1aa04cdaa41fdc45f66e6da730c3a75a3ba1e9315e26",
+    "supervisor_telemetry.csv": "770680057e094262255e7cfe3e395d8f5cf653590249aa79f08eb7f798830cb6",
+    "throttle_before.json": "13689b2760766715b230bf9778a9340b62fac8c4d1a4259698559ecabdd017c1",
+    "worker_result.json": "c61534a22c853b9d233cc007133b919f2697095285408e556e737cb912527f51"
+  },
+  "diagnostic_follow_up": {
+    "required_before_short_authorization": true,
+    "reason": "Throttle counters increased during the approximately two-second stage, while the five-second telemetry interval produced only one pre-completion sample. This is not a correctness failure and is not proof of overheating, but short-run telemetry must be dense enough to characterize runtime thermal and frequency behavior."
+  },
+  "limits": [
+    "This result admits only the frozen-input correctness stage on the recorded DK-2500 CPU FP32 software and artifact identity.",
+    "It does not establish short-run performance, 30-minute stability, real-time behavior, robot task success, collision safety, E-stop effectiveness or accelerator compatibility.",
+    "The observed throttle-counter increments do not identify their cause and cannot be interpreted as a thermal failure from this run alone."
+  ]
+}
