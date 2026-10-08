@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "run_id": "phase4_r2_short_20261008_01",
+  "stage": "short",
+  "status": "AUTHORIZED_FOR_ONE_ATTEMPT",
+  "automatic_retry": false,
+  "authorized_at_utc": "2026-10-08T12:27:30Z",
+  "authorized_by": "human_owner",
+  "readiness_commit": "c5fc64a",
+  "learning_verification_commit": "27b3b21",
+  "scope": "One explicit DK-2500 CPU FP32 frozen-input short attempt only: initial correctness, 10 warmups, 100 measured full-pipeline iterations, segmented latency and host telemetry; no stability, deployment, real-time or physical-safety authorization."
+}
