@@ -56,3 +56,33 @@ and no stability execution would be authorized by a future short-stage decision.
 This review does not change the meaning of a successful short result: it would provide offline
 frozen-input correctness, segmented latency and bounded target telemetry evidence only. It would
 not establish 30-minute stability, real-time control performance or robot safety.
+
+## Collaboration and observability checkpoint
+
+Before short authorization, the project entered `LEARN` mode to correct a collaboration gap under
+`AGENT.md`. Engineering readiness and learning readiness are treated separately.
+
+The review established that `infer_enter` and `infer_return` bracket the complete measured
+iteration path rather than only the synchronous OpenVINO call. The 15-second watchdog therefore
+supports a bounded loss-of-progress conclusion at the iteration boundary, not an OpenVINO-internal
+hang conclusion.
+
+The human owner selected Option A: keep the current low-perturbation implementation and clarify the
+claim boundary. If a timeout is observed, preserve the qualification evidence and route the event
+to a separate diagnosis instead of adding instrumentation retroactively or guessing a root cause.
+
+No short authorization may be created until the remaining Phase 4 learning check is completed and
+the human owner makes a new run-specific decision.
+
+## Learning checkpoint completion
+
+The bounded pre-short learning check subsequently passed on 2026-10-08. The human owner can now
+identify the frozen parameters, explain the Supervisor/Worker boundary, distinguish completed
+inference timing from incomplete iteration progress, follow the evidence/debugging path and state
+why frozen-input offline short evidence cannot support stability, deployment or physical-safety
+claims.
+
+This removes only the learning-readiness blocker for a short authorization decision. The detailed
+result and remaining Mystery Debt are recorded in
+`PHASE4_PRE_SHORT_LEARNING_VERIFICATION_20261008.md`. No authorization was created and no model was
+executed by this learning checkpoint.

@@ -206,3 +206,32 @@ correctness authorization. It does not authorize `short`, `stability` or a corre
   `phase4_r2_short_20261008_01`.
 - `short` remains `READY_FOR_HUMAN_AUTHORIZATION`. No short authorization file exists and no model
   execution occurred during revalidation. See `PHASE4_SHORT_POSTMOVE_REVALIDATION_20261008.md`.
+
+## Pre-short observability clarification — 2026-10-08
+
+- A LEARN-mode review found that the current `infer_enter` event is emitted before preprocessing,
+  while `infer_return` is emitted only after inference, postprocessing, correctness checks and the
+  raw CSV row have completed.
+- The frozen 15-second timeout therefore acts as an iteration progress watchdog at the recorded
+  event boundary. A timeout proves that the complete iteration did not emit its return event within
+  the limit; it does not by itself localize the loss of progress to OpenVINO `request.infer()` or
+  identify an internal cause.
+- The human owner selected the bounded Option A: retain the current implementation and timing path,
+  clarify the supported claim, and create a separate low-perturbation diagnosis only if a loss of
+  progress is observed. Adding per-stage event writes before qualification was rejected because it
+  would alter the measured path and require a new implementation validation cycle.
+- This is a claim-boundary clarification, not a change to the timeout, stop behavior, frozen inputs,
+  metrics, thresholds or attempt policy. Short execution remains unauthorized pending completion of
+  the Phase 4 learning check and a separate run-specific decision.
+
+## Pre-short learning result — 2026-10-08
+
+- The scoped `LEARN`-mode check passed for the short authorization decision only. The human owner
+  demonstrated the required understanding of the frozen parameters, Supervisor/Worker boundary,
+  short-stage sequence, evidence path and offline/physical-system claim boundary.
+- Remaining Mystery Debt is preserved in
+  `PHASE4_PRE_SHORT_LEARNING_VERIFICATION_20261008.md`; it includes detailed Python fluency, future
+  throttle interpretation, actual short-evidence interpretation, stability and physical-system
+  testing.
+- Engineering readiness and learning readiness are now both sufficient to present the one-attempt
+  short decision. No authorization file exists and no short execution has occurred.

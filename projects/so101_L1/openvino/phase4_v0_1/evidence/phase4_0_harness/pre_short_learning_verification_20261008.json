@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "verification_id": "P4-DK2500-PRE-SHORT-LEARNING-20261008-01",
+  "date": "2026-10-08",
+  "policy_version": "0.2",
+  "workflow_version": "0.1",
+  "execution_mode": "LEARN",
+  "scope": "Human understanding required for an informed Phase 4 short-stage authorization decision.",
+  "status": "PASS_FOR_SHORT_AUTHORIZATION_DECISION_ONLY",
+  "verified": {
+    "supervisor_worker_config_prepost_roles": true,
+    "frozen_short_parameters_located": true,
+    "external_recovery_and_no_retry_explained": true,
+    "completed_timing_vs_incomplete_event_boundary_distinguished": true,
+    "iteration_watchdog_claim_limit_explained": true,
+    "observability_option_a_selected": true,
+    "short_sequence_explained": true,
+    "offline_frozen_input_vs_physical_world_distinguished": true,
+    "short_stability_safety_gates_distinguished": true
+  },
+  "remaining_mystery_debt": [
+    "Detailed Python implementation fluency in the Worker and Supervisor.",
+    "Interpretation of any future throttle-counter increments.",
+    "Independent interpretation of the actual short raw evidence.",
+    "Thirty-minute stability execution and review.",
+    "Changing-input, end-to-end real-time and physical-safety test design."
+  ],
+  "decision_boundary": {
+    "short_authorization_created": false,
+    "model_executed": false,
+    "engineering_gate_passed": false,
+    "permits": "A separate human decision on one short-stage attempt.",
+    "does_not_permit": [
+      "Automatic short execution or retry.",
+      "Stability execution.",
+      "Backend admission.",
+      "Deployment, real-time or physical-safety claims."
+    ]
+  }
+}
