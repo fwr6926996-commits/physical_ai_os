@@ -191,3 +191,18 @@ correctness authorization. It does not authorize `short`, `stability` or a corre
   `PHASE4_SHORT_EXECUTION_READINESS_REVIEW_20261003.md`. No authorization file exists.
 - `stability`: `BLOCKED`; the short-stage implementation, execution and review must pass first,
   followed by separate human authorization.
+
+## Post-move revalidation — 2026-10-08
+
+- The target was powered down, physically moved and reconnected after the original short-stage
+  readiness review.
+- Direct Ethernet SSH, target identity, the six Policy Package artifact hashes, five deployed
+  implementation hashes, dependencies and sensor interfaces were revalidated without model access
+  or inference.
+- A transient `68-69 C` point was followed by a 30-second idle package-temperature trend of
+  `43, 35, 34, 34, 34, 35, 35 C` at approximately `0.01` one-minute load. No sustained idle thermal
+  blocker was observed; this does not replace loaded runtime telemetry or the frozen `100 C` stop.
+- The unexecuted candidate ID `phase4_r2_short_20261003_01` is superseded before authorization by
+  `phase4_r2_short_20261008_01`.
+- `short` remains `READY_FOR_HUMAN_AUTHORIZATION`. No short authorization file exists and no model
+  execution occurred during revalidation. See `PHASE4_SHORT_POSTMOVE_REVALIDATION_20261008.md`.

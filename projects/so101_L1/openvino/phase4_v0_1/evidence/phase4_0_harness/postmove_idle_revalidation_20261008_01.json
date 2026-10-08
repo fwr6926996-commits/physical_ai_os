@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "timestamp_local_start": "2026-10-08T11:18:30+08:00",
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "status": "PASS_POSTMOVE_IDLE_REVALIDATION",
+  "scope": "Post-move connectivity, idle thermal trend and execution-state observation only; no model access or inference.",
+  "target": {
+    "hostname": "hepintelpc",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "boot_id": "e704e98f-7422-490b-ba14-0a778c4f0e15",
+    "network_interface": "enp1s0",
+    "network_ipv4": "192.168.77.2/24",
+    "ssh_reachable": true
+  },
+  "execution_state": {
+    "phase4_worker_or_supervisor_observed": false,
+    "short_authorization_present": false,
+    "short_run_directory_present": false,
+    "model_accessed": false,
+    "inference_executed": false
+  },
+  "idle_observations": {
+    "load_average_initial": [
+      0.06,
+      0.03,
+      0.0
+    ],
+    "single_point_transient_c": {
+      "package": 68.0,
+      "core_12": 69.0,
+      "cpu_percent_one_second": 0.0
+    },
+    "trend_interval_seconds": 5,
+    "trend_duration_seconds": 30,
+    "trend_load_one_minute": [
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01
+    ],
+    "trend_package_c": [
+      43.0,
+      35.0,
+      34.0,
+      34.0,
+      34.0,
+      35.0,
+      35.0
+    ],
+    "trend_core_12_c": [
+      42.0,
+      33.0,
+      33.0,
+      34.0,
+      34.0,
+      33.0,
+      34.0
+    ]
+  },
+  "interpretation": {
+    "sustained_idle_overtemperature_observed": false,
+    "transient_peak_excluded_from_record": false,
+    "postmove_idle_baseline_blocking_short_gate": false
+  },
+  "limits": [
+    "This idle observation does not qualify loaded thermal behavior.",
+    "The single 68-69 C point is preserved and interpreted only with the subsequent bounded trend.",
+    "Runtime thermal telemetry and the frozen 100 C hard stop remain mandatory.",
+    "This evidence does not authorize the short stage."
+  ]
+}

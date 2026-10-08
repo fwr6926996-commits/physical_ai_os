@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-10-08T03:24:07.748591+00:00",
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "status": "PASS_NO_MODEL_PREFLIGHT",
+  "scope": "Identity, dependency, artifact, sensor and path checks only; no model read, compile or inference.",
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "python_executable": "/usr/bin/python3",
+  "package_dir": "/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9",
+  "checks": {
+    "openvino_version": {
+      "expected": "2026.2.1-21919-ede283a88e3-releases/2026/2",
+      "actual": "2026.2.1-21919-ede283a88e3-releases/2026/2",
+      "pass": true
+    },
+    "device": {
+      "expected": "CPU",
+      "available": [
+        "CPU",
+        "NPU"
+      ],
+      "pass": true
+    },
+    "cpu_identity": {
+      "expected": "Intel(R) Core(TM) Ultra 5 225U",
+      "actual": "Intel(R) Core(TM) Ultra 5 225U",
+      "pass": true
+    },
+    "artifacts": {
+      "act_fp32.xml": {
+        "expected": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+        "actual": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+        "pass": true
+      },
+      "act_fp32.bin": {
+        "expected": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+        "actual": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+        "pass": true
+      },
+      "reference_model_input.pt": {
+        "expected": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+        "actual": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+        "pass": true
+      },
+      "reference_output_normalized.pt": {
+        "expected": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a",
+        "actual": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a",
+        "pass": true
+      },
+      "reference_raw_observation.pt": {
+        "expected": "3a8e3e905ba6d96d75f903f3ce96e9d855dd8e6d1e33549712d05a90e0c20c73",
+        "actual": "3a8e3e905ba6d96d75f903f3ce96e9d855dd8e6d1e33549712d05a90e0c20c73",
+        "pass": true
+      },
+      "reference_output_action_chunk.pt": {
+        "expected": "b1f021b8db0ad975dbfff45a9d8d2ec5bfe2434bd48371e97d75402d5b1590cb",
+        "actual": "b1f021b8db0ad975dbfff45a9d8d2ec5bfe2434bd48371e97d75402d5b1590cb",
+        "pass": true
+      }
+    },
+    "temperature_interface": {
+      "groups": [
+        "acpitz",
+        "coretemp"
+      ],
+      "labels": {
+        "acpitz": [
+          ""
+        ],
+        "coretemp": [
+          "Package id 0",
+          "Core 8",
+          "Core 12",
+          "Core 0",
+          "Core 1",
+          "Core 32",
+          "Core 33",
+          "Core 2",
+          "Core 3",
+          "Core 4",
+          "Core 5",
+          "Core 6",
+          "Core 7"
+        ]
+      },
+      "pass": true
+    },
+    "throttle_interface": {
+      "readable_file_count": 28,
+      "pass": true
+    },
+    "frequency_interface": {
+      "sample_count": 14,
+      "pass": true
+    },
+    "dependencies": {
+      "python": "3.12.3",
+      "openvino": "2026.2.1-21919-ede283a88e3-releases/2026/2",
+      "numpy": "1.26.4",
+      "psutil": "5.9.8",
+      "torch": "2.12.1+cu130",
+      "pass": true
+    },
+    "implementation_hashes": {
+      "phase4_frozen_config.json": "7783080f556da2008d52a2bf21b403b5f9d6e4df58bcba416658758afea3df09",
+      "phase4_no_model_preflight.py": "1a9f440c1f4da93e280ff6a7aa1526a294f3c972dfc7b169dcc2591e9bc86d05",
+      "phase4_prepost.py": "d7b702f3d7bb5d4ee78268278fb5e685a743c71716c90108098d60882e44a2eb",
+      "phase4_cpu_worker.py": "8795710589a5474387fc181162e4fc6fe6e8614ff5ce1042ef5f834cd403f47e",
+      "phase4_cpu_supervisor.py": "56957ca0c86d9c766644f2b2b9540f2b2aa5d618408da63ca697e8fb83ced231"
+    },
+    "output_parent_writable": {
+      "path": "/home/hepintel/physical_ai_os_artifacts/phase4_entry/evidence",
+      "pass": true
+    }
+  },
+  "execution_authorized": false,
+  "interpretation_limits": [
+    "A passing preflight does not prove model compatibility or correctness.",
+    "A passing preflight does not authorize a qualification stage."
+  ]
+}
