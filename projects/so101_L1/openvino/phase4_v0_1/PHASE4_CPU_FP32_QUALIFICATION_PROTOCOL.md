@@ -235,3 +235,18 @@ correctness authorization. It does not authorize `short`, `stability` or a corre
   testing.
 - Engineering readiness and learning readiness are now both sufficient to present the one-attempt
   short decision. No authorization file exists and no short execution has occurred.
+
+## Round 2 short result — reviewed 2026-10-09
+
+- The human owner authorized one short attempt at commit `307c1d5`. Run
+  `phase4_r2_short_20261008_01` consumed that authorization and completed without retry, watchdog,
+  recovery, correctness failure or the frozen `100 C` software stop.
+- Independent recomputation verified 1 correctness, 10 warmup and 100 measurement rows; 111/111
+  normalized and postprocessed outputs were finite and correct.
+- The short decision is `PASS — SHORT STAGE ONLY`; latency has no performance or real-time admission.
+- Thermal throttle counters increased during the load window while a post-run idle control showed
+  no growth. The human owner accepted routing this observation to
+  `PHASE4_THERMAL_THROTTLE_DIAGNOSIS_20261009.md` without retroactively failing Short or declaring a
+  hardware fault.
+- `stability` remains `BLOCKED_PENDING_DIAGNOSIS_PLAN_REVIEW`. It requires a new run ID, readiness
+  review and separate human authorization even after the diagnosis plan is resolved.

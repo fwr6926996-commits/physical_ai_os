@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "review_id": "P4-DK2500-R2-SHORT-REVIEW-20261009-01",
+  "run_id": "phase4_r2_short_20261008_01",
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "status": "PASS_SHORT_STAGE_ONLY_NO_PERFORMANCE_ADMISSION",
+  "human_decision": {
+    "short_stage_only_pass_accepted": true,
+    "thermal_throttle_routed_to_diagnosis": true,
+    "stability_authorized": false,
+    "deployment_authorized": false
+  },
+  "identity_checks": {
+    "authorization_sha256": "1b86e8295d9c8e3f5d2000dff6856cdb199c1104d629926a15b2bdd50412435d",
+    "supervisor_sha256": "56957ca0c86d9c766644f2b2b9540f2b2aa5d618408da63ca697e8fb83ced231",
+    "worker_sha256": "8795710589a5474387fc181162e4fc6fe6e8614ff5ce1042ef5f834cd403f47e",
+    "config_sha256": "7783080f556da2008d52a2bf21b403b5f9d6e4df58bcba416658758afea3df09",
+    "prepost_sha256": "d7b702f3d7bb5d4ee78268278fb5e685a743c71716c90108098d60882e44a2eb",
+    "runtime_device": "CPU",
+    "runtime_precision": "f32",
+    "runtime_cpu": "Intel(R) Core(TM) Ultra 5 225U",
+    "openvino": "2026.2.1-21919-ede283a88e3-releases/2026/2",
+    "pass": true
+  },
+  "execution_checks": {
+    "correctness_rows": 1,
+    "warmup_rows": 10,
+    "measurement_rows": 100,
+    "infer_enter_events": 111,
+    "infer_return_events": 111,
+    "all_event_pairs_match": true,
+    "all_outputs_finite": true,
+    "all_normalized_outputs_correct": true,
+    "all_postprocessed_outputs_correct": true,
+    "maximum_normalized_abs_error": 2.86102294921875e-06,
+    "maximum_postprocessed_abs_error": 0.0001373291015625,
+    "worker_exitcode": 0,
+    "watchdog_or_recovery": false,
+    "stderr_empty": true,
+    "stdout_empty": true,
+    "pass": true
+  },
+  "recomputed_measurement_latency_ms": {
+    "preprocess": {
+      "min": 2.324428,
+      "mean": 2.5077671599999998,
+      "p50": 2.4040805,
+      "p95": 3.3922215000000002,
+      "p99": 3.6507548600000055,
+      "max": 4.712021
+    },
+    "inference": {
+      "min": 100.156993,
+      "mean": 107.41231757,
+      "p50": 107.1261545,
+      "p95": 115.50539479999999,
+      "p99": 116.36887474,
+      "max": 116.774848
+    },
+    "postprocess": {
+      "min": 0.108847,
+      "mean": 0.12456049000000002,
+      "p50": 0.118444,
+      "p95": 0.12679635,
+      "p99": 0.14570653000000267,
+      "max": 0.6664
+    },
+    "total": {
+      "min": 102.791068,
+      "mean": 110.05261213000001,
+      "p50": 109.6437205,
+      "p95": 117.9948715,
+      "p99": 118.8312811,
+      "max": 119.226796
+    },
+    "max_total_minus_segment_sum_ms": 0.011087999999985526
+  },
+  "thermal_and_performance_observations": {
+    "frozen_software_stop_c": 100.0,
+    "observed_package_max_c": 91.0,
+    "observed_any_sensor_max_c": 92.0,
+    "thermal_hard_stop_triggered": false,
+    "throttle_counter_increment_paths": 26,
+    "postrun_idle_counter_increment_paths_over_5_seconds": 0,
+    "kernel_log_entries_in_run_window": 0,
+    "first_measurement_quartile_inference_mean_ms": 113.33821216,
+    "last_measurement_quartile_inference_mean_ms": 102.32311632000001,
+    "elapsed_inference_latency_correlation": -0.8977068806791813,
+    "steady_state_performance_established": false
+  },
+  "raw_evidence_sha256": {
+    "events.jsonl": "a76f6a42f89032a63102b6163cdb040f2d75018b6e4e8e6941ca8a56fec83061",
+    "latencies.csv": "fa6a045845708673a9a8bfede5983a8d9565c254434aba2cc3fc55517887d49b",
+    "supervisor_result.json": "ec3d79cafc0e2c5e13557b4e6f5036e26c9e3a2682b63212fa012fb988aefe55",
+    "supervisor_telemetry.csv": "62017195f0386d687d353fe90f9debb02ce45c646df78af8edd35463eac958a6",
+    "throttle_before.json": "5b1c505868f8f48b30c8fe78a99edcc19997048dc3cb57f43ac2df5e2aeae202",
+    "worker_result.json": "71c6ffa83e7d1b743b402e87104491587c352a86e58c4c7a765d40c52588b091",
+    "worker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "worker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "route": {
+    "thermal_throttling": "OPEN_DIAGNOSIS",
+    "diagnosis_record": "../../../PHASE4_THERMAL_THROTTLE_DIAGNOSIS_20261009.md",
+    "stability": "BLOCKED_PENDING_DIAGNOSIS_PLAN_REVIEW"
+  },
+  "interpretation_limits": [
+    "The short stage qualifies only bounded frozen-input CPU FP32 correctness and execution completeness.",
+    "Latency is diagnostic and does not establish a real-time or steady-state performance admission.",
+    "Thermal throttle counter increments support thermal limiting events during the load window but do not identify duration or root cause.",
+    "The result does not authorize stability, another backend, deployment or physical-safety claims."
+  ]
+}

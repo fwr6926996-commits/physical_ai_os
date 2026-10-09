@@ -1,0 +1,5 @@
+sample_kind,elapsed_s,worker_rss_bytes,worker_status,worker_threads,worker_snapshot_error,system_available_memory_bytes,system_cpu_percent,package_c,max_sensor_c,min_mhz,mean_mhz,max_mhz
+start,5.5960044846870005e-06,8216576,running,1,,6757605376,0.0,64.0,65.0,400.0,2060.0009999999997,4800.289
+periodic,5.0143694979997235,951046144,running,13,,6150766592,38.6,91.0,92.0,400.0,3327.2753571428575,4800.0
+periodic,10.030254837001849,951234560,running,17,,6173356032,52.3,89.0,89.0,937.417,3062.888428571429,4500.0
+final,14.144782287003181,,,,NoSuchProcess: process PID not found (pid=5299),6683844608,50.1,51.0,52.0,400.0,1028.5714285714287,4800.0

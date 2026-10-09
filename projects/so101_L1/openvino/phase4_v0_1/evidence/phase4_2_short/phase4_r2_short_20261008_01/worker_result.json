@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "run_id": "phase4_r2_short_20261008_01",
+  "stage": "short",
+  "status": "WORKER_PASS_SUPERVISOR_REVIEW_PENDING",
+  "started_at_utc": "2026-10-08T12:46:59.800510+00:00",
+  "ended_at_utc": "2026-10-08T12:47:12.774469+00:00",
+  "runtime_identity": {
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "openvino": "2026.2.1-21919-ede283a88e3-releases/2026/2",
+    "available_devices": [
+      "CPU",
+      "NPU"
+    ],
+    "runtime_device": "CPU",
+    "device_full_name": "Intel(R) Core(TM) Ultra 5 225U"
+  },
+  "artifacts": {
+    "act_fp32.xml": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+    "act_fp32.bin": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+    "reference_model_input.pt": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+    "reference_output_normalized.pt": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a",
+    "reference_raw_observation.pt": "3a8e3e905ba6d96d75f903f3ce96e9d855dd8e6d1e33549712d05a90e0c20c73",
+    "reference_output_action_chunk.pt": "b1f021b8db0ad975dbfff45a9d8d2ec5bfe2434bd48371e97d75402d5b1590cb"
+  },
+  "configuration": {
+    "warmup_iterations": 10,
+    "measured_iterations": 100
+  },
+  "compile_ms": 530.733441,
+  "execution": {
+    "measured_iterations": 100,
+    "measurement_elapsed_s": 11.055763240001397,
+    "maximum_abs_error": 2.86102294921875e-06,
+    "maximum_postprocessed_abs_error": 0.0001373291015625
+  },
+  "latency_ms": {
+    "min": 100.156993,
+    "mean": 107.41231757,
+    "p50": 107.1261545,
+    "p95": 115.50539479999999,
+    "p99": 116.36887474,
+    "max": 116.774848
+  },
+  "segmented_latency_ms": {
+    "preprocess": {
+      "min": 2.324428,
+      "mean": 2.5077671599999998,
+      "p50": 2.4040805,
+      "p95": 3.3922215000000002,
+      "p99": 3.6507548600000055,
+      "max": 4.712021
+    },
+    "inference": {
+      "min": 100.156993,
+      "mean": 107.41231757,
+      "p50": 107.1261545,
+      "p95": 115.50539479999999,
+      "p99": 116.36887474,
+      "max": 116.774848
+    },
+    "postprocess": {
+      "min": 0.108847,
+      "mean": 0.12456049000000002,
+      "p50": 0.118444,
+      "p95": 0.12679635,
+      "p99": 0.14570653000000267,
+      "max": 0.6664
+    },
+    "total": {
+      "min": 102.791068,
+      "mean": 110.05261213000001,
+      "p50": 109.6437205,
+      "p95": 117.9948715,
+      "p99": 118.8312811,
+      "max": 119.226796
+    }
+  },
+  "prepost_equivalence": {
+    "state_exact": true,
+    "wrist_image_exact": true,
+    "action_exact": true
+  },
+  "evidence_files": {
+    "events": "events.jsonl",
+    "latencies": "latencies.csv"
+  }
+}

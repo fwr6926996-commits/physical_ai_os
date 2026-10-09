@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "run_id_context": "phase4_r2_short_20261008_01",
+  "classification": "POSTRUN_READ_ONLY_IDLE_CONTROL",
+  "interval_seconds": 5,
+  "model_accessed": false,
+  "inference_executed": false,
+  "package_temperature_before_c": 68.0,
+  "package_temperature_after_c": 40.0,
+  "maximum_core_temperature_before_c": 70.0,
+  "maximum_core_temperature_after_c": 43.0,
+  "throttle_counter_paths_observed": 28,
+  "throttle_counter_increment_paths": 0,
+  "interpretation_limits": [
+    "This control shows no counter growth in one five-second post-run idle window.",
+    "It does not explain the load-window thermal events or qualify cooling under sustained load."
+  ]
+}

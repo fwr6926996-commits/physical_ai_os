@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "protocol_id": "P4-DK2500-CPU-FP32-001",
+  "protocol_snapshot": "fb18053",
+  "run_id": "phase4_r2_short_20261008_01",
+  "stage": "short",
+  "classification": "QUALIFICATION",
+  "status": "STAGE_PASS_REVIEW_PENDING",
+  "started_at_utc": "2026-10-08T12:46:58.987261+00:00",
+  "ended_at_utc": "2026-10-08T12:47:13.138411+00:00",
+  "configuration": {
+    "watchdog_seconds": 15.0,
+    "startup_seconds": 180.0,
+    "telemetry_seconds": 5.0,
+    "thermal_stop_c": 100.0,
+    "sigterm_grace_seconds": 5.0,
+    "worker_path": "/home/hepintel/physical_ai_os_artifacts/phase4_entry/harness_6af41fd/phase4_cpu_worker.py",
+    "package_dir": "/home/hepintel/physical_ai_os_artifacts/phase4_entry/policy_package_v2_9",
+    "automatic_retry": false
+  },
+  "implementation": {
+    "supervisor_sha256": "56957ca0c86d9c766644f2b2b9540f2b2aa5d618408da63ca697e8fb83ced231",
+    "worker_sha256": "8795710589a5474387fc181162e4fc6fe6e8614ff5ce1042ef5f834cd403f47e",
+    "config_sha256": "7783080f556da2008d52a2bf21b403b5f9d6e4df58bcba416658758afea3df09",
+    "prepost_sha256": "d7b702f3d7bb5d4ee78268278fb5e685a743c71716c90108098d60882e44a2eb",
+    "authorization_sha256": "1b86e8295d9c8e3f5d2000dff6856cdb199c1104d629926a15b2bdd50412435d"
+  },
+  "worker_pid": 5299,
+  "worker_exitcode": 0,
+  "recovery": null,
+  "diagnostic": null,
+  "last_event": {
+    "type": "worker_completed",
+    "timestamp_utc": "2026-10-08T12:47:12.774452+00:00",
+    "worker_monotonic_s": 35328.022172319,
+    "measured_iterations": 100,
+    "measurement_elapsed_s": 11.055763240001397
+  },
+  "worker_result_status": "WORKER_PASS_SUPERVISOR_REVIEW_PENDING",
+  "throttle_counter_delta": {
+    "/sys/devices/system/cpu/cpu0/thermal_throttle/core_throttle_count": 2721,
+    "/sys/devices/system/cpu/cpu0/thermal_throttle/package_throttle_count": 5052,
+    "/sys/devices/system/cpu/cpu1/thermal_throttle/core_throttle_count": 2624,
+    "/sys/devices/system/cpu/cpu1/thermal_throttle/package_throttle_count": 4772,
+    "/sys/devices/system/cpu/cpu10/thermal_throttle/core_throttle_count": 5041,
+    "/sys/devices/system/cpu/cpu10/thermal_throttle/package_throttle_count": 5865,
+    "/sys/devices/system/cpu/cpu11/thermal_throttle/core_throttle_count": 5042,
+    "/sys/devices/system/cpu/cpu11/thermal_throttle/package_throttle_count": 5868,
+    "/sys/devices/system/cpu/cpu12/thermal_throttle/core_throttle_count": 0,
+    "/sys/devices/system/cpu/cpu12/thermal_throttle/package_throttle_count": 1390,
+    "/sys/devices/system/cpu/cpu13/thermal_throttle/core_throttle_count": 0,
+    "/sys/devices/system/cpu/cpu13/thermal_throttle/package_throttle_count": 1390,
+    "/sys/devices/system/cpu/cpu2/thermal_throttle/core_throttle_count": 1252,
+    "/sys/devices/system/cpu/cpu2/thermal_throttle/package_throttle_count": 3396,
+    "/sys/devices/system/cpu/cpu3/thermal_throttle/core_throttle_count": 1196,
+    "/sys/devices/system/cpu/cpu3/thermal_throttle/package_throttle_count": 3111,
+    "/sys/devices/system/cpu/cpu4/thermal_throttle/core_throttle_count": 5456,
+    "/sys/devices/system/cpu/cpu4/thermal_throttle/package_throttle_count": 5773,
+    "/sys/devices/system/cpu/cpu5/thermal_throttle/core_throttle_count": 5461,
+    "/sys/devices/system/cpu/cpu5/thermal_throttle/package_throttle_count": 5783,
+    "/sys/devices/system/cpu/cpu6/thermal_throttle/core_throttle_count": 5460,
+    "/sys/devices/system/cpu/cpu6/thermal_throttle/package_throttle_count": 5784,
+    "/sys/devices/system/cpu/cpu7/thermal_throttle/core_throttle_count": 5458,
+    "/sys/devices/system/cpu/cpu7/thermal_throttle/package_throttle_count": 5779,
+    "/sys/devices/system/cpu/cpu8/thermal_throttle/core_throttle_count": 5041,
+    "/sys/devices/system/cpu/cpu8/thermal_throttle/package_throttle_count": 5871,
+    "/sys/devices/system/cpu/cpu9/thermal_throttle/core_throttle_count": 5041,
+    "/sys/devices/system/cpu/cpu9/thermal_throttle/package_throttle_count": 5871
+  },
+  "throttle_counter_increment_paths": 26,
+  "telemetry_summary": {
+    "samples": 4,
+    "sample_kinds": [
+      "start",
+      "periodic",
+      "periodic",
+      "final"
+    ],
+    "package_c": {
+      "first": 64.0,
+      "last": 51.0,
+      "min": 51.0,
+      "max": 91.0
+    },
+    "max_sensor_c": {
+      "first": 65.0,
+      "last": 52.0,
+      "min": 52.0,
+      "max": 92.0
+    },
+    "worker_rss_bytes": {
+      "first": 8216576.0,
+      "last": 951234560.0,
+      "min": 8216576.0,
+      "max": 951234560.0
+    },
+    "system_available_memory_bytes": {
+      "first": 6757605376.0,
+      "last": 6683844608.0,
+      "min": 6150766592.0,
+      "max": 6757605376.0
+    },
+    "mean_mhz": {
+      "first": 2060.0009999999997,
+      "last": 1028.5714285714287,
+      "min": 1028.5714285714287,
+      "max": 3327.2753571428575
+    }
+  },
+  "evidence_files": {
+    "events": "events.jsonl",
+    "worker_result": "worker_result.json",
+    "supervisor_telemetry": "supervisor_telemetry.csv",
+    "worker_stdout": "worker_stdout.txt",
+    "worker_stderr": "worker_stderr.txt"
+  },
+  "interpretation_limits": [
+    "Diagnostic-only latency/resource observations are not real-time or safety evidence.",
+    "This stage remains review-pending until evidence is independently checked."
+  ]
+}
