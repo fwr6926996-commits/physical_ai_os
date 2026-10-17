@@ -32,17 +32,45 @@ simulation, driver execution, hardware access, firmware changes or robot motion.
 
 ## Current limits and risks
 
-- The upstream dependency closure and manifests are not yet reviewed.
+- Fixed manifests and direct demo source pins are reviewed, but full transitive dependency closure
+  is incomplete. The LeRobot adapters install unpinned current Python packages in CI.
 - `RMW_IMPLEMENTATION` is not explicitly selected.
 - LeRobot is not installed in the active Python environment.
-- The policy-execution candidate has no root `LICENSE` file at the captured commit.
+- The policy-execution repository has no root `LICENSE`, but both ROS package directories contain
+  Apache-2.0 license files and their manifests declare Apache-2.0. The two LeRobot Rosetta adapter
+  repositories declare Apache-2.0 in package metadata and source headers but have no root LICENSE.
 - Field-level definitions for the five frozen contracts still require human review.
 - Upstream `HEAD` values are dated evidence only and must never be treated as floating pins.
 
+## Fixed-source review checkpoint
+
+Read-only source review is complete for the five recorded candidates and the direct Rosetta
+identities pinned by the captured demo manifest. Evidence and exact source links are recorded in
+`SOURCE_REVIEW_20261017.md`.
+
+Source review supports these conclusions:
+
+- the full demo remains `REFERENCE_ONLY` because its executable environment is Lyrical,
+  Python 3.14 and Zenoh rather than the L1 Jazzy baseline;
+- `ros2_so_arm` remains the only current candidate worth a later isolated Jazzy mock-only build;
+- the Feetech driver remains deferred because initialization can configure hardware and enable
+  torque, and it does not own the project safety boundary;
+- Rosetta remains deferred to a project-owned offline adapter because upstream `hold`, zero-fill,
+  direct publishing and queue semantics do not define L1 freshness or fail-closed behavior;
+- the policy-execution prototype is recommended as `REFERENCE_ONLY`, not a Core dependency,
+  because every stage is coupled to the ONNX Runtime value type and its executor does not implement
+  L1 action-age or safety ownership; and
+- no upstream adoption is needed to start the offline replay/FakePolicy Phase 5A Core path after
+  SIG-A0 receives its human architecture decision.
+
+No compatibility spike was executed or implicitly authorized by this checkpoint.
+
 ## Pass decision
 
-`PENDING`
+`PENDING_OWNER_ARCHITECTURE_REVIEW`
 
-The review can pass only after the interface matrix has no unmarked assumptions, dependency and
-Jazzy differences are explicit, each disposition is accepted by the human owner, and package,
-timing and safety ownership are unambiguous. Until then Phase 5A architecture must not be frozen.
+The review can pass only after the human Owner accepts the project field schemas, timing/buffer and
+safety ownership, selects an explicit Phase 5A RMW, and accepts the component dispositions. A
+mock-only compatibility spike is optional: source findings do not make upstream adoption a
+prerequisite for the offline Phase 5A Core path. Until the Owner decision, Phase 5A architecture
+must not be frozen.
