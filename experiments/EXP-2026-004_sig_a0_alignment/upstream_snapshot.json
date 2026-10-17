@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "review_id": "SIG-A0",
   "snapshot_time": "2026-10-17T19:32:36+08:00",
   "project_baseline": "bc95e2b9b2674f2e14d837fe2498b6b91637dfa2",
@@ -23,7 +23,7 @@
       "license": "Apache-2.0",
       "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
       "identity_method": "git ls-remote --symref over authenticated SSH",
-      "manifest_review": "PENDING"
+      "manifest_review": "SOURCE_REVIEWED_REFERENCE_ONLY_LYRICAL_PYTHON314_ZENOH"
     },
     {
       "name": "ros-physical-ai/ros2_so_arm",
@@ -33,7 +33,7 @@
       "license": "BSD-3-Clause",
       "license_blob_sha": "22ef916d18683683d661e5e4003c18a4588b3c8a",
       "identity_method": "git ls-remote --symref over authenticated SSH",
-      "manifest_review": "PENDING"
+      "manifest_review": "SOURCE_REVIEWED_JAZZY_CI_DECLARED_MOCK_BOUNDARY_PRESENT"
     },
     {
       "name": "ros-physical-ai/feetech_ros2_driver",
@@ -43,7 +43,7 @@
       "license": "BSD-3-Clause",
       "license_blob_sha": "85e355c0ea206abf55d54a75454394b03ad40a81",
       "identity_method": "git ls-remote --symref over authenticated SSH",
-      "manifest_review": "PENDING"
+      "manifest_review": "SOURCE_REVIEWED_JAZZY_CI_DECLARED_HARDWARE_SAFETY_GAPS"
     },
     {
       "name": "iblnkn/rosetta",
@@ -53,19 +53,61 @@
       "license": "Apache-2.0",
       "license_blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
       "identity_method": "git ls-remote --symref over authenticated SSH",
-      "manifest_review": "PENDING"
+      "manifest_review": "SOURCE_REVIEWED_JAZZY_CI_DECLARED_ADAPTER_REQUIRED"
     },
     {
       "name": "saikishor/ros2_policy_execution_pipeline",
       "url": "https://github.com/saikishor/ros2_policy_execution_pipeline",
       "default_branch": "master",
       "head_sha": "9e3478a948be4ea327d43e375a51e9b535c02b0c",
-      "license": "UNRESOLVED_NO_ROOT_LICENSE_FILE",
+      "license": "Apache-2.0_PACKAGE_SCOPED_NO_ROOT_LICENSE",
       "license_blob_sha": null,
       "identity_method": "git ls-remote --symref over authenticated SSH",
-      "manifest_review": "PENDING"
+      "license_evidence": [
+        "ros2_policy_execution_core/LICENSE",
+        "ros2_policy_execution_pipeline/LICENSE",
+        "ros2_policy_execution_core/package.xml",
+        "ros2_policy_execution_pipeline/package.xml"
+      ],
+      "manifest_review": "SOURCE_REVIEWED_NO_CI_WORKFLOW_REFERENCE_ONLY"
     }
   ],
+  "captured_demo_direct_pins": [
+    {
+      "name": "ros-physical-ai/ros2_so_arm",
+      "head_sha": "12fbcb8cf30da7c3d679db384c43765ea311eb18",
+      "note": "The demo pin differs from the standalone SIG-A0 candidate identity."
+    },
+    {
+      "name": "ros-physical-ai/feetech_ros2_driver",
+      "head_sha": "18aed7fb26d3e2b4c0b47762f39d8698b7032422"
+    },
+    {
+      "name": "iblnkn/rosetta",
+      "head_sha": "dfd07e40e1a20825e3a3f37cc897663fb3759285",
+      "note": "The demo pin differs from the standalone SIG-A0 candidate identity."
+    },
+    {
+      "name": "iblnkn/rosetta_interfaces",
+      "head_sha": "17d06b639960b8a4de0d1970b4c42d306951d567"
+    },
+    {
+      "name": "iblnkn/lerobot-robot-rosetta",
+      "head_sha": "cd9b4c140ee5b6b02f3e57f76dfeb1a737646d86"
+    },
+    {
+      "name": "iblnkn/lerobot-rosetta",
+      "head_sha": "1ea49d620fb344360e4982b9d59031c09efd4564"
+    }
+  ],
+  "source_review": {
+    "date": "2026-10-17",
+    "mode": "fixed_commit_read_only_no_clone_no_build",
+    "evidence": "SOURCE_REVIEW_20261017.md",
+    "dependency_closure_complete": false,
+    "remaining_dependency_gap": "LeRobot adapter CI installs unpinned current Python packages; full transitive closure is not reproducible.",
+    "compatibility_spike_executed": false
+  },
   "standards_watch": [
     {
       "id": "REP-0157",

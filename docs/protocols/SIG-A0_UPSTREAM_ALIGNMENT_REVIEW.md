@@ -4,7 +4,7 @@ Review ID: `SIG-A0`
 
 Version: `0.2`
 
-Status: `ACTIVE_SOURCE_REVIEW_ONLY`
+Status: `PASS_ARCHITECTURE_REVIEW_ONLY`
 
 Classification: `ARCHITECTURE_REVIEW`
 
@@ -45,8 +45,22 @@ The review must finish before the Phase 5A package and interface architecture is
 - Compatibility spike: `NOT_AUTHORIZED`
 - Dependency installation, build, simulation, hardware access and robot motion: `NOT_AUTHORIZED`
 
-Activation means the bounded architecture review may begin. It is not a `SIG-A0` pass decision and
-does not admit any upstream component into the Phase 5 runtime.
+At activation, the bounded architecture review was permitted to begin; activation itself was not a
+`SIG-A0` pass decision and admitted no upstream component into the Phase 5 runtime.
+
+## Closure record
+
+- Owner decision date: `2026-10-17`
+- Repository effectivity: pending merge of PR #5
+- Phase 5A RMW: explicit `rmw_fastrtps_cpp`
+- Timing/buffer owner: `physical_ai_runtime`
+- Linux-to-MCU permission boundary: `physical_ai_safety_bridge`
+- Optional compatibility spike: not required and not authorized
+- Upstream runtime admission: none; dispositions remain reference or defer
+
+This PASS closes the bounded architecture review only. It does not authorize dependency
+installation, Phase 5A implementation, build, simulation, hardware access, firmware change, robot
+motion, deployment, real-time qualification or physical-safety qualification.
 
 ## Time and execution bounds
 
@@ -65,14 +79,14 @@ Technical Core.
 
 ## Entry conditions
 
-- [ ] Phase 4 transition or explicit bounded waiver is recorded.
-- [ ] Active L1 execution book and both binding addenda match their recorded SHA-256 values.
-- [ ] Current repository commit and dirty-worktree state are captured.
-- [ ] Ubuntu, ROS distribution, RMW, compiler, Python and relevant LeRobot baselines are captured.
-- [ ] Phase 5 draft package boundaries and the five frozen L1 interfaces are available for review.
-- [ ] Upstream repositories, documents and REPs are refreshed from official sources.
-- [ ] Every source-code candidate has an exact commit or release identity before build or use.
-- [ ] Any compatibility spike has an output directory, cleanup plan and explicit stop rule.
+- [x] Phase 4 transition or explicit bounded waiver is recorded.
+- [x] Active L1 execution book and both binding addenda match their recorded SHA-256 values.
+- [x] Current repository commit and dirty-worktree state are captured.
+- [x] Ubuntu, ROS distribution, RMW, compiler, Python and relevant LeRobot baselines are captured.
+- [x] Phase 5 package boundaries and the five frozen L1 interfaces are available for review.
+- [x] Upstream repositories, documents and REPs are refreshed from official sources.
+- [x] Every source-code candidate has an exact commit or release identity before build or use.
+- [x] Compatibility-spike plan is not applicable because no spike was required or authorized.
 
 Recorded governing document identities at protocol creation:
 
@@ -177,15 +191,15 @@ adaptation, state the exact version, owner, adapter boundary, tests, rollback an
 
 `SIG-A0` passes only when:
 
-- [ ] all reviewed source candidates have exact identities;
-- [ ] Jazzy versus Lyrical and Python/dependency differences are explicit;
-- [ ] the interface and execution matrix contains no unmarked assumptions;
-- [ ] every candidate has exactly one disposition;
-- [ ] adopted or adapted candidates have reproducible evidence proportional to their role;
-- [ ] Phase 5 package ownership, timing ownership and safety ownership remain unambiguous;
-- [ ] no upstream component becomes a second source of truth for project interfaces or datasets;
-- [ ] deferred work has a trigger and cannot silently enter the Core backlog;
-- [ ] the human owner can explain the selected architecture and approve the Phase 5 handoff.
+- [x] all reviewed source candidates have exact identities;
+- [x] Jazzy versus Lyrical and Python/dependency differences are explicit;
+- [x] the interface and execution matrix contains no unmarked assumptions;
+- [x] every candidate has exactly one disposition;
+- [x] adopted or adapted candidate evidence is not applicable because none were admitted;
+- [x] Phase 5 package ownership, timing ownership and safety ownership remain unambiguous;
+- [x] no upstream component becomes a second source of truth for project interfaces or datasets;
+- [x] deferred work has a trigger and cannot silently enter the Core backlog;
+- [x] the human owner approved the selected architecture and Phase 5 handoff.
 
 ## Stop rules
 
