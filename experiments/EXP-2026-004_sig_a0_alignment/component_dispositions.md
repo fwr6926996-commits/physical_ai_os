@@ -1,9 +1,9 @@
 # SIG-A0 Initial Component Dispositions
 
-Status: `SOURCE_REVIEW_RECOMMENDATION_PENDING_OWNER`
+Status: `OWNER_ACCEPTED_PENDING_PR_5_MERGE`
 
-These are conservative source-review recommendations. The human Owner has not yet accepted the
-SIG-A0 handoff. No item is admitted as a runtime dependency.
+The human Owner accepted these conservative dispositions on `2026-10-17`. No item is admitted as a
+runtime dependency by this architecture review.
 
 | Candidate | Snapshot identity | Disposition | Evidence or trigger |
 |---|---|---|---|
@@ -18,7 +18,8 @@ SIG-A0 handoff. No item is admitted as a runtime dependency.
 | REP-0157/native buffers | dated official REP page | `DEFER` | Trigger only after a measured copy or serialization bottleneck exists |
 | REP-0158/OpenUSD conventions | official page observed as `DRAFT` | `DEFER` | Route to the later E3 simulation-asset review |
 
-No component is currently `ADOPT_AND_PIN` or `ADAPT_BEHIND_BOUNDARY`.
+No component is `ADOPT_AND_PIN` or `ADAPT_BEHIND_BOUNDARY`. The optional `ros2_so_arm` compatibility
+spike is not required now; its trigger is a separately authorized ros2_control/mock-hardware
+integration decision.
 
-Detailed fixed-source evidence and the remaining Owner decisions are in
-`SOURCE_REVIEW_20261017.md`.
+Detailed fixed-source evidence and the accepted Owner decision are in `SOURCE_REVIEW_20261017.md`.

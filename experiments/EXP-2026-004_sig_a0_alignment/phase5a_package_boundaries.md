@@ -1,9 +1,9 @@
-# Phase 5A Package Boundaries — Review Draft
+# Phase 5A Package Boundaries
 
-Status: `DRAFT_FOR_SIG_A0_REVIEW`
+Status: `OWNER_ACCEPTED_PENDING_PR_5_MERGE`
 
-This document supplies package boundaries for comparison during `SIG-A0`. It does not freeze the
-Phase 5A architecture and creates no runtime or hardware authorization.
+The human Owner accepted these package boundaries on `2026-10-17`. They become the Phase 5A
+architecture baseline when PR #5 is merged. This creates no runtime or hardware authorization.
 
 ## Proposed source root
 
@@ -35,13 +35,17 @@ hardware work. The activation package does not implement that path.
 - The queue is bounded and stale or expired actions must fail closed.
 - Phase 5A starts with offline replay and mock execution.
 - ROS 2 Jazzy remains the baseline; a distribution change requires a separate ADR.
-- Package names and directory layout remain reviewable until `SIG-A0` is accepted.
+- Phase 5A uses explicit `RMW_IMPLEMENTATION=rmw_fastrtps_cpp`; no global host setting is changed.
+- The initial bounded `ActionBuffer` has capacity one and latest-valid-value replacement semantics.
+- Package names and directory layout are accepted for the initial offline Phase 5A Core path.
 
-## Questions `SIG-A0` must close
+## Closed `SIG-A0` questions
 
-1. Can Rosetta map topics, timestamps, QoS and missing-frame behavior without redefining
-   `Observation` or `PolicyOutput`?
-2. Can `ros2_so_arm` and `feetech_ros2_driver` remain behind the execution/safety boundary?
-3. Which package owns clock selection and action-age computation?
-4. Which RMW is selected for reproducible Phase 5A tests?
-5. What exact field-level schemas implement the five already frozen contract names?
+1. Rosetta remains deferred and may later appear only behind a project-owned adapter.
+2. `ros2_so_arm` and `feetech_ros2_driver` remain deferred behind the execution/safety boundary.
+3. `physical_ai_runtime` owns clock selection, action age and the bounded buffer.
+4. Reproducible Phase 5A tests use explicit `rmw_fastrtps_cpp`.
+5. `interface_mapping.md` records the Owner-approved version 1 field baseline.
+
+The optional Jazzy, mock-only `ros2_so_arm` compatibility spike is not required for this handoff.
+Its trigger is a future, separately authorized ros2_control/mock-hardware integration decision.

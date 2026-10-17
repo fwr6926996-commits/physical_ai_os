@@ -1,6 +1,6 @@
 # SIG-A0 Fixed-Source Review — 2026-10-17
 
-Status: `SOURCE_REVIEW_COMPLETE_OWNER_DECISION_PENDING`
+Status: `OWNER_ACCEPTED_PENDING_PR_5_MERGE`
 
 Scope: read-only inspection of the exact commits recorded in `upstream_snapshot.json` and the
 direct Rosetta identities pinned by the captured demo manifest. No clone, installation, build,
@@ -102,18 +102,19 @@ license-hygiene gap before adoption or redistribution.
 | REP-0157/native buffers | keep `DEFER` | No measured transport bottleneck |
 | REP-0158/OpenUSD | keep `DEFER` | Belongs to E3 |
 
-## Remaining Gate decisions
+## Owner decision
 
-SIG-A0 remains `ACTIVE_NOT_YET_PASSED`. Before PASS, the human Owner must approve:
+On `2026-10-17`, the human Owner accepted:
 
-1. the project field-level definitions for `Observation`, `PolicyOutput`, `ControlCommand`,
-   `SafetyState` and `RuntimeMetrics`;
-2. `physical_ai_runtime` as owner of clock selection, action age and the bounded buffer;
+1. the version 1 field and validity baseline in `interface_mapping.md`;
+2. `physical_ai_runtime` as owner of the monotonic clock policy, action age and the capacity-one
+   bounded buffer;
 3. `physical_ai_safety_bridge` as the only Linux-to-MCU permission boundary;
-4. one explicit RMW for reproducible Phase 5A tests; and
-5. whether the only compatibility spike worth authorizing now is a Jazzy, mock-only,
-   no-LeRobot `ros2_so_arm` build.
+4. explicit `rmw_fastrtps_cpp` for reproducible Phase 5A tests; and
+5. no compatibility spike now, with `ros2_so_arm` remaining `DEFER` until a separately authorized
+   ros2_control/mock-hardware integration decision.
 
 No source finding requires the full SIG demo, Rosetta, the Feetech driver or the policy-execution
-prototype to enter Phase 5A. Therefore unresolved upstream adoption does not need to block the
-offline `ReplayObservation -> FakePolicy -> bounded ActionBuffer -> mock execution` Core path.
+prototype to enter Phase 5A. Therefore unresolved upstream adoption does not block the offline
+`ReplayObservation -> FakePolicy -> bounded ActionBuffer -> mock execution` Core path after PR #5
+is merged and Phase 5A implementation is separately started.

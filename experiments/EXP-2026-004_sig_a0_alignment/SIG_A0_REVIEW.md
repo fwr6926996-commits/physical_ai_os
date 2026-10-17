@@ -1,6 +1,6 @@
 # SIG-A0 Review Record
 
-Review status: `ACTIVE_NOT_YET_PASSED`
+Review status: `PASS_ARCHITECTURE_REVIEW_ONLY_PENDING_PR_5_MERGE`
 
 Activation date: `2026-10-17`
 
@@ -24,9 +24,9 @@ simulation, driver execution, hardware access, firmware changes or robot motion.
 | Governing document hashes match | PASS | `environment_snapshot.txt` |
 | Repository and worktree baseline captured | PASS | `environment_snapshot.txt` |
 | Host toolchain baseline captured | PASS | `environment_snapshot.txt` |
-| Draft Phase 5A package boundaries available | PASS FOR REVIEW | `phase5a_package_boundaries.md` |
-| Five protected interfaces available for comparison | PASS FOR REVIEW | `interface_mapping.md` |
-| Official upstream sources refreshed | PASS FOR ACTIVATION | `upstream_snapshot.json` |
+| Phase 5A package boundaries accepted | PASS | `phase5a_package_boundaries.md` |
+| Five protected interfaces and field baseline accepted | PASS | `interface_mapping.md` |
+| Official upstream sources refreshed and reviewed | PASS | `upstream_snapshot.json`, `SOURCE_REVIEW_20261017.md` |
 | Exact identities captured before build/use | PASS | five repository HEAD identities captured; no build/use occurred |
 | Compatibility-spike output and cleanup plan | NOT APPLICABLE | no spike is authorized |
 
@@ -34,12 +34,13 @@ simulation, driver execution, hardware access, firmware changes or robot motion.
 
 - Fixed manifests and direct demo source pins are reviewed, but full transitive dependency closure
   is incomplete. The LeRobot adapters install unpinned current Python packages in CI.
-- `RMW_IMPLEMENTATION` is not explicitly selected.
+- `rmw_fastrtps_cpp` is selected but has not been exercised by this source-only review.
 - LeRobot is not installed in the active Python environment.
 - The policy-execution repository has no root `LICENSE`, but both ROS package directories contain
   Apache-2.0 license files and their manifests declare Apache-2.0. The two LeRobot Rosetta adapter
   repositories declare Apache-2.0 in package metadata and source headers but have no root LICENSE.
-- Field-level definitions for the five frozen contracts still require human review.
+- Field-level definitions are accepted architecture inputs but have no implementation or runtime
+  evidence yet.
 - Upstream `HEAD` values are dated evidence only and must never be treated as floating pins.
 
 ## Fixed-source review checkpoint
@@ -65,12 +66,26 @@ Source review supports these conclusions:
 
 No compatibility spike was executed or implicitly authorized by this checkpoint.
 
+## Owner architecture decision
+
+On `2026-10-17`, the human Owner approved the following for the Phase 5A handoff:
+
+- the version 1 project field and validity baseline in `interface_mapping.md`;
+- `physical_ai_runtime` ownership of the host-local monotonic clock policy, action age and the
+  capacity-one bounded `ActionBuffer`;
+- `physical_ai_safety_bridge` as the sole Linux-to-MCU permission boundary;
+- explicit `RMW_IMPLEMENTATION=rmw_fastrtps_cpp` for future Phase 5A launch/test evidence; and
+- no compatibility spike now; `ros2_so_arm` remains `DEFER` until a separately authorized
+  ros2_control/mock-hardware integration decision.
+
+This decision does not authorize dependency installation, implementation, build, simulation,
+hardware access, firmware change or robot motion.
+
 ## Pass decision
 
-`PENDING_OWNER_ARCHITECTURE_REVIEW`
+`PASS — ARCHITECTURE REVIEW ONLY`
 
-The review can pass only after the human Owner accepts the project field schemas, timing/buffer and
-safety ownership, selects an explicit Phase 5A RMW, and accepts the component dispositions. A
-mock-only compatibility spike is optional: source findings do not make upstream adoption a
-prerequisite for the offline Phase 5A Core path. Until the Owner decision, Phase 5A architecture
-must not be frozen.
+All protocol acceptance criteria are satisfied by the fixed-source evidence, accepted component
+dispositions, explicit ownership and Owner decision. The decision becomes repository-effective
+only when PR #5 is merged. A mock-only compatibility spike is not required for the offline Phase 5A
+Core path and remains unauthorized. Phase 5A implementation requires a separate start decision.
