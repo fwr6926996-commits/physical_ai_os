@@ -1,0 +1,16 @@
+{
+  "status": "PASS_STABILITY_PRE_OBSERVATION",
+  "reasons": [],
+  "average_busy_percent": 0.021433675073323746,
+  "busy_windows": [
+    0.014283673760891302,
+    0.04286939125464419,
+    0.014289797084881395,
+    0.02857959416976279,
+    0.014289797084881395,
+    0.014289797084881395
+  ],
+  "throttle_increment_paths": [],
+  "entry_package_max_c": 48.0,
+  "entry_sensor_max_c": 49.0
+}

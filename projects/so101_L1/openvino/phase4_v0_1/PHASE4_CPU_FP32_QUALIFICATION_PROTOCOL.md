@@ -6,7 +6,7 @@ Template version: `0.1`
 
 Workflow version: `0.1`
 
-Status: `CORRECTNESS_PASSED — SHORT_READY_FOR_HUMAN_AUTHORIZATION — STABILITY_BLOCKED`
+Status: `CLOSED — PASS — CPU FP32 OFFLINE BACKEND ONLY`
 
 Classification: `QUALIFICATION`
 
@@ -250,3 +250,79 @@ correctness authorization. It does not authorize `short`, `stability` or a corre
   hardware fault.
 - `stability` remains `BLOCKED_PENDING_DIAGNOSIS_PLAN_REVIEW`. It requires a new run ID, readiness
   review and separate human authorization even after the diagnosis plan is resolved.
+
+## Stability readiness update — 2026-10-14
+
+- The bounded D2-IDLE and D3-LOAD investigation narrowed the Short thermal-counter observation
+  sufficiently to resume Stability design. It did not establish a thermal, firmware or hardware
+  root cause and did not produce throttle-duration evidence.
+- The human owner accepted Stability protocol `P4-DK2500-CPU-FP32-STABILITY-002` version `0.2` and
+  its claim boundary: a pass can qualify only the frozen-input offline repeated-inference path.
+- The external Supervisor, structured monitor, hash-bound authorization contract, no-model
+  preflight and artificial validator were implemented locally without changing the production
+  Worker inference path.
+- Artificial input validation passed nine pre-observation and authorization classification cases;
+  the existing Phase 4 regression suite passed `10/10`. These are no-target implementation
+  results, not DK-2500 or inference evidence.
+- Local implementation status is `PASS — NO-TARGET IMPLEMENTATION ONLY`. See
+  `PHASE4_STABILITY_IMPLEMENTATION_REVIEW_20261014.md`.
+- `stability` is now `BLOCKED_PENDING_TARGET_DEPLOYMENT_AND_NO_MODEL_PREFLIGHT`. No target transfer,
+  preflight, model access, inference or Stability execution is authorized by this update.
+
+## Stability target preflight result — 2026-10-14
+
+- The human owner authorized only deployment of the reviewed Stability files and one no-model
+  preflight. The files were placed in a new target harness directory; historical harnesses and the
+  frozen model package were not overwritten.
+- All eight deployed implementation/protocol hashes matched. Target hostname, OpenVINO/CPU
+  identity, six model/reference artifact hashes and required monitor interfaces passed.
+- The preflight result is `PASS — TARGET NO-MODEL PREFLIGHT ONLY`; evidence records
+  `execution_authorized=false`. See `PHASE4_STABILITY_TARGET_PREFLIGHT_REVIEW_20261014.md`.
+- The instantaneous maximum sensor value was `76 C`. This remains below the preflight's `100 C`
+  interface check but is not an entry pass: the separately authorized Stability Supervisor must
+  still enforce its 30-second `<=65 C` maximum-sensor and `<=60 C` package-temperature conditions
+  before Worker creation.
+- `stability` is now `BLOCKED_PENDING_EXECUTION_READINESS_REVIEW_AND_HUMAN_AUTHORIZATION`. No model
+  read/compile, inference, Stability attempt or retry is authorized by this result.
+
+## Stability execution readiness — 2026-10-14
+
+- The execution-readiness review binds proposed run ID `phase4_r3_stability_20261014_01` to the
+  frozen protocol, exact target paths, parameters and implementation hashes.
+- Engineering status is `READY_FOR_HUMAN_AUTHORIZATION — EXECUTION NOT AUTHORIZED`. See
+  `PHASE4_STABILITY_EXECUTION_READINESS_REVIEW_20261014.md`.
+- The owner must explicitly accept that a failed 30-second entry gate consumes the named attempt
+  before any Worker/model access and that no outcome permits an automatic retry.
+- `stability` is now `READY_FOR_HUMAN_AUTHORIZATION`. No valid authorization file exists and no
+  Stability process has started.
+
+## Round 3 Stability result — independently reviewed 2026-10-15
+
+- The human owner authorized exactly one attempt, run `phase4_r3_stability_20261014_01`; the
+  authorization is consumed and no retry occurred.
+- The 30-second entry gate passed, followed by one correctness call, ten warmups and `11,918`
+  measured calls across `1800.0845 s`.
+- Independent review found all `11,929` inference enters paired with returns, zero incorrect or
+  non-finite outputs, maximum absolute error `2.861e-6`, Worker exit `0`, no recovery, no monitor
+  failure and no observed `>=100 C` sample.
+- Maximum package / any-sensor temperatures were `91 / 93 C`. Throttle count increased on 26 exact
+  paths; 12 total-time and 10 max-time fields also increased early under load. These remain
+  diagnostic under the frozen protocol and do not prove a root cause.
+- Engineering result is `PASS — STABILITY STAGE ONLY`. See
+  `PHASE4_ROUND3_STABILITY_REVIEW_20261015.md`.
+- Backend admission and Phase 4 acceptance remain `PENDING HUMAN DECISION`. The result does not
+  create performance, real-time, changing-input, deployment or physical-safety admission.
+
+## Final admission and Phase 4 acceptance — 2026-10-15
+
+- Independent learning verification passed. The human owner demonstrated the supported offline
+  stability claim, the diagnostic-only throttle boundary and the separation between backend
+  qualification and physical-system safety.
+- The human owner admitted only the exact frozen DK-2500 CPU FP32 offline backend path and accepted
+  Phase 4 as `PASS — CPU FP32 OFFLINE BACKEND ONLY`.
+- Changing-input behavior, full control-chain integration, real-time behavior and physical safety
+  are routed to later phases. They are not silently admitted and their absence is not a Phase 4
+  hard-gate failure under this protocol.
+- GPU, NPU, reduced precision, performance, deployment and physical-safety admission remain absent.
+- The authoritative decision record is `PHASE4_ACCEPTANCE_AND_CLOSURE_20261015.md`.
+- This closeout does not authorize a new experiment, target execution or robot motion.

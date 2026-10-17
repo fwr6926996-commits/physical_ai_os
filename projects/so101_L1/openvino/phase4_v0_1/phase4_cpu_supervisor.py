@@ -8,6 +8,7 @@ import csv
 import hashlib
 import json
 import os
+import platform
 import signal
 import subprocess
 import sys
@@ -18,11 +19,17 @@ from typing import Any
 
 import psutil
 
+import phase4_stability_monitor as stability
+
 
 HERE = Path(__file__).resolve().parent
 CONFIG_PATH = HERE / "phase4_frozen_config.json"
 PRODUCTION_WORKER = (HERE / "phase4_cpu_worker.py").resolve()
 MOCK_WORKER = (HERE / "phase4_mock_worker.py").resolve()
+STABILITY_MONITOR = (HERE / "phase4_stability_monitor.py").resolve()
+THERMAL_SAMPLER = (HERE / "phase4_thermal_d2_idle_remote_sampler.py").resolve()
+STABILITY_PROTOCOL = (HERE / "PHASE4_STABILITY_PROTOCOL_V0_2_20261014.md").resolve()
+PREPOST_PATH = (HERE / "phase4_prepost.py").resolve()
 
 
 def arguments() -> argparse.Namespace:
@@ -184,6 +191,68 @@ def atomic_json(path: Path, payload: dict[str, Any]) -> None:
     os.replace(temporary, path)
 
 
+def stability_hashes(worker_path: Path) -> dict[str, str]:
+    return {
+        "stage_protocol_sha256": sha256(STABILITY_PROTOCOL),
+        "supervisor_sha256": sha256(Path(__file__).resolve()),
+        "worker_sha256": sha256(worker_path),
+        "monitor_sha256": sha256(STABILITY_MONITOR),
+        "thermal_sampler_sha256": sha256(THERMAL_SAMPLER),
+        "config_sha256": sha256(CONFIG_PATH),
+        "prepost_sha256": sha256(PREPOST_PATH),
+    }
+
+
+def precondition_result(
+    *,
+    args: argparse.Namespace,
+    config: dict[str, Any],
+    started_at: datetime,
+    decision: dict[str, Any],
+    worker_path: Path,
+    monitor_error: str | None,
+) -> dict[str, Any]:
+    stage_config = config["stages"]["stability"]
+    return {
+        "schema_version": 1,
+        "protocol_id": config["protocol_id"],
+        "protocol_snapshot": config["protocol_snapshot"],
+        "stage_protocol_id": stage_config["stage_protocol_id"],
+        "stage_protocol_version": stage_config["stage_protocol_version"],
+        "run_id": args.run_id,
+        "stage": args.stage,
+        "classification": "QUALIFICATION",
+        "status": decision["status"],
+        "started_at_utc": started_at.isoformat(),
+        "ended_at_utc": datetime.now(timezone.utc).isoformat(),
+        "configuration": {
+            "pre_observation_seconds": stage_config["pre_observation_seconds"],
+            "pre_busy_limit_percent": stage_config["pre_busy_limit_percent"],
+            "entry_package_max_c": stage_config["entry_package_max_c"],
+            "entry_sensor_max_c": stage_config["entry_sensor_max_c"],
+            "automatic_retry": False,
+        },
+        "implementation": {
+            **stability_hashes(worker_path),
+            "authorization_sha256": sha256(args.authorization_file.resolve()),
+        },
+        "precondition": decision,
+        "monitor_error": monitor_error,
+        "worker_started": False,
+        "worker_pid": None,
+        "worker_exitcode": None,
+        "recovery": None,
+        "evidence_files": {
+            "stability_monitor": "stability_monitor.jsonl",
+            "stability_precondition": "stability_precondition.json",
+        },
+        "interpretation_limits": [
+            "A rejected pre-observation consumes this named attempt but is not a Stability execution result.",
+            "No Worker, model read, compile or inference occurred after the failed precondition.",
+        ],
+    }
+
+
 def main() -> int:
     args = arguments()
     config = load_config()
@@ -214,6 +283,28 @@ def main() -> int:
                 raise RuntimeError(
                     f"Authorization mismatch for {key}: {authorization.get(key)!r} != {expected!r}"
                 )
+        if args.stage == "stability":
+            stage_config = config["stages"]["stability"]
+            if platform.node() != config["target_hostname"]:
+                raise RuntimeError(
+                    f"Stability target hostname mismatch: "
+                    f"{platform.node()!r} != {config['target_hostname']!r}"
+                )
+            stability.validate_authorization(
+                authorization,
+                {
+                    "stage_protocol_id": stage_config["stage_protocol_id"],
+                    "stage_protocol_version": stage_config["stage_protocol_version"],
+                    "target_hostname": config["target_hostname"],
+                    "package_dir": str(args.package_dir.resolve()),
+                    "pre_observation_seconds": stage_config["pre_observation_seconds"],
+                    "duration_seconds": stage_config["duration_seconds"],
+                    "watchdog_seconds": config["supervisor"]["infer_watchdog_seconds"],
+                    "telemetry_seconds": config["supervisor"]["telemetry_interval_seconds"],
+                    "overall_timeout_seconds": stage_config["overall_timeout_seconds"],
+                    **stability_hashes(worker_path),
+                },
+            )
 
     supervisor_config = config["supervisor"]
     watchdog_s = float(supervisor_config["infer_watchdog_seconds"])
@@ -230,13 +321,56 @@ def main() -> int:
     evidence_root.mkdir(parents=True, exist_ok=True)
     run_dir = evidence_root / args.run_id
     run_dir.mkdir(parents=False, exist_ok=False)
+    started_at = datetime.now(timezone.utc)
+    attempt_started = time.monotonic()
+    stability_mode = args.stage == "stability" and not args.test_mode
+    stability_session: stability.StabilityMonitor | None = None
+    stability_precondition: dict[str, Any] | None = None
+    stability_monitor_failure: str | None = None
+    if stability_mode:
+        stage_config = config["stages"]["stability"]
+        pre_samples: list[dict[str, Any]] = []
+        try:
+            stability_session = stability.StabilityMonitor(
+                run_dir / "stability_monitor.jsonl",
+                float(config["supervisor"]["telemetry_interval_seconds"]),
+            )
+            for _ in range(stability.EXPECTED_SAMPLE_COUNT):
+                sample, _failure = stability_session.capture_scheduled("pre_observation")
+                pre_samples.append(sample)
+            stability_precondition = stability.evaluate_pre_observation(
+                pre_samples,
+                busy_limit_percent=float(stage_config["pre_busy_limit_percent"]),
+                package_limit_c=float(stage_config["entry_package_max_c"]),
+                sensor_limit_c=float(stage_config["entry_sensor_max_c"]),
+            )
+        except Exception as exc:
+            stability_monitor_failure = f"{type(exc).__name__}: {exc}"
+            stability_precondition = {
+                "status": "INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+                "reasons": ["PRE_OBSERVATION_MONITOR_EXCEPTION"],
+            }
+        atomic_json(run_dir / "stability_precondition.json", stability_precondition)
+        if stability_precondition["status"] != "PASS_STABILITY_PRE_OBSERVATION":
+            if stability_session is not None:
+                stability_session.close()
+            result = precondition_result(
+                args=args,
+                config=config,
+                started_at=started_at,
+                decision=stability_precondition,
+                worker_path=worker_path,
+                monitor_error=stability_monitor_failure,
+            )
+            atomic_json(run_dir / "supervisor_result.json", result)
+            print(json.dumps(result, indent=2))
+            return 1
     events_path = run_dir / "events.jsonl"
     telemetry_path = run_dir / "supervisor_telemetry.csv"
     stdout_path = run_dir / "worker_stdout.txt"
     stderr_path = run_dir / "worker_stderr.txt"
     throttle_before = throttle_counts()
     atomic_json(run_dir / "throttle_before.json", throttle_before)
-    started_at = datetime.now(timezone.utc)
     command = [
         sys.executable,
         str(worker_path),
@@ -267,6 +401,23 @@ def main() -> int:
     while child.poll() is None:
         now = time.monotonic()
         elapsed_s = now - supervisor_started
+        if stability_session is not None:
+            try:
+                captured = stability_session.capture_if_due("worker_runtime")
+            except Exception as exc:
+                captured = None
+                stability_monitor_failure = f"{type(exc).__name__}: {exc}"
+                stop_reason = "THERMAL_EVIDENCE_FAILURE"
+            if captured is not None:
+                stability_sample, stability_monitor_failure = captured
+                if stability_monitor_failure is not None:
+                    stop_reason = "THERMAL_EVIDENCE_FAILURE"
+                stability_max_sensor = stability_sample["temperature"].get("max_sensor_c")
+                if (
+                    stability_max_sensor is not None
+                    and float(stability_max_sensor) >= thermal_stop_c
+                ):
+                    stop_reason = "THERMAL_STOP"
         if events_path.exists():
             size = events_path.stat().st_size
             if size != last_event_size:
@@ -292,6 +443,13 @@ def main() -> int:
             if max_sensor is not None and float(max_sensor) >= thermal_stop_c:
                 stop_reason = "THERMAL_STOP"
         timeout_s = watchdog_s if runtime_started else startup_s
+        if (
+            stop_reason is None
+            and stability_mode
+            and now - attempt_started
+            > float(config["stages"]["stability"]["overall_timeout_seconds"])
+        ):
+            stop_reason = "OVERALL_TIMEOUT"
         if stop_reason is None and now - last_progress > timeout_s:
             stop_reason = "INFER_WATCHDOG_TIMEOUT" if runtime_started else "STARTUP_TIMEOUT"
         if stop_reason is not None:
@@ -319,6 +477,22 @@ def main() -> int:
         and final_max_sensor is not None
         and float(final_max_sensor) >= thermal_stop_c
     )
+    stability_final_sample = None
+    if stability_session is not None:
+        try:
+            stability_final_sample, final_monitor_failure = stability_session.capture_final()
+            stability_monitor_failure = stability_monitor_failure or final_monitor_failure
+            stability_final_max = stability_final_sample["temperature"].get("max_sensor_c")
+            if (
+                stop_reason is None
+                and stability_final_max is not None
+                and float(stability_final_max) >= thermal_stop_c
+            ):
+                final_thermal_limit = True
+        except Exception as exc:
+            stability_monitor_failure = stability_monitor_failure or f"{type(exc).__name__}: {exc}"
+        finally:
+            stability_session.close()
 
     stdout_stream.close()
     stderr_stream.close()
@@ -342,6 +516,9 @@ def main() -> int:
     elif final_thermal_limit:
         status = "THERMAL_LIMIT_OBSERVED_AT_FINAL_SNAPSHOT"
         exit_code = 1
+    elif stability_monitor_failure is not None:
+        status = "THERMAL_EVIDENCE_FAILURE_REVIEW_REQUIRED"
+        exit_code = 1
     elif child.returncode == 0 and worker_result and str(worker_result.get("status", "")).endswith(
         "SUPERVISOR_REVIEW_PENDING"
     ):
@@ -356,6 +533,14 @@ def main() -> int:
         "schema_version": 1,
         "protocol_id": config["protocol_id"],
         "protocol_snapshot": config["protocol_snapshot"],
+        "stage_protocol_id": config["stages"]["stability"].get("stage_protocol_id")
+        if args.stage == "stability"
+        else None,
+        "stage_protocol_version": config["stages"]["stability"].get(
+            "stage_protocol_version"
+        )
+        if args.stage == "stability"
+        else None,
         "run_id": args.run_id,
         "stage": args.stage,
         "classification": "MOCK_CONTROL_FLOW_ONLY" if args.test_mode else "QUALIFICATION",
@@ -371,12 +556,26 @@ def main() -> int:
             "worker_path": str(worker_path),
             "package_dir": None if args.test_mode else str(args.package_dir.resolve()),
             "automatic_retry": False,
+            "overall_timeout_seconds": config["stages"]["stability"].get(
+                "overall_timeout_seconds"
+            )
+            if args.stage == "stability"
+            else None,
         },
         "implementation": {
             "supervisor_sha256": sha256(Path(__file__).resolve()),
             "worker_sha256": sha256(worker_path),
             "config_sha256": sha256(CONFIG_PATH),
-            "prepost_sha256": sha256(HERE / "phase4_prepost.py"),
+            "prepost_sha256": sha256(PREPOST_PATH),
+            "monitor_sha256": sha256(STABILITY_MONITOR)
+            if args.stage == "stability"
+            else None,
+            "thermal_sampler_sha256": sha256(THERMAL_SAMPLER)
+            if args.stage == "stability"
+            else None,
+            "stage_protocol_sha256": sha256(STABILITY_PROTOCOL)
+            if args.stage == "stability"
+            else None,
             "authorization_sha256": None
             if args.test_mode
             else sha256(args.authorization_file.resolve()),
@@ -385,6 +584,11 @@ def main() -> int:
         "worker_exitcode": child.returncode,
         "recovery": recovery,
         "diagnostic": diagnostic,
+        "stability_precondition": stability_precondition,
+        "stability_monitor_failure": stability_monitor_failure,
+        "stability_final_sample_sequence": stability_final_sample.get("sequence")
+        if stability_final_sample
+        else None,
         "last_event": read_last_event(events_path),
         "worker_result_status": worker_result.get("status") if worker_result else None,
         "throttle_counter_delta": throttle_delta,
@@ -406,6 +610,12 @@ def main() -> int:
             "supervisor_telemetry": "supervisor_telemetry.csv" if telemetry_rows else None,
             "worker_stdout": "worker_stdout.txt",
             "worker_stderr": "worker_stderr.txt",
+            "stability_monitor": "stability_monitor.jsonl"
+            if stability_mode
+            else None,
+            "stability_precondition": "stability_precondition.json"
+            if stability_mode
+            else None,
         },
         "interpretation_limits": [
             "Diagnostic-only latency/resource observations are not real-time or safety evidence.",

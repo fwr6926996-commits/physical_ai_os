@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-14T16:40:00Z",
+  "protocol_id": "P4-DK2500-CPU-FP32-STABILITY-002",
+  "protocol_version": "0.2",
+  "run_id": "phase4_r3_stability_20261014_01",
+  "status": "PASS_STABILITY_STAGE_ONLY",
+  "input_evidence_sha256": {
+    "events.jsonl": "a75dc2380fcba1980cd7841ef6ed40c5099c85c434a6702cf0bac5c9acc26f91",
+    "latencies.csv": "8d0c1c7cda9aae8aabf757c51a49d6715fb49f8154f1378f818dec5b2f353d5d",
+    "stability_monitor.jsonl": "8c744c40de4422c7f89c827846c9ab1be7f462a01a9480aa101913d4e3dcea72",
+    "stability_precondition.json": "3b692797028653fbc6d3e99f1a490ca8020ad2c14584abcb57d3f959e93e7ab3",
+    "supervisor_result.json": "81da6b6266ad00a76f42bc5b844fe7f8aa0590b7d0ccba71e77c932bcf933d1c",
+    "supervisor_telemetry.csv": "b58b7f4f079fcc9e1ce8f69882f11c6c4261dc88fa3cb0e62deb995f4dccc730",
+    "throttle_before.json": "6d41cddfa4286d6c4fa79a508d8bebd0bcdc4be56baf9c41c90f7e3c9c68eb8e",
+    "worker_result.json": "432070dea9463a42fce9cacecca98918facf427dde7b1059d1a7b8544a576ee2",
+    "worker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "worker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "authorization": {
+    "sha256": "3de4d013bbc686a3b564bc9d71da3d1f9d12c615d997aa64ac43fb21ffeb7804",
+    "automatic_retry": false,
+    "attempts_observed": 1
+  },
+  "pre_observation": {
+    "status": "PASS_STABILITY_PRE_OBSERVATION",
+    "average_busy_percent": 0.021433675073323746,
+    "throttle_increment_paths": 0,
+    "entry_package_max_c": 48.0,
+    "entry_sensor_max_c": 49.0
+  },
+  "event_recomputation": {
+    "correctness_calls": 1,
+    "warmup_calls": 10,
+    "measurement_calls": 11918,
+    "infer_enter_count": 11929,
+    "infer_return_count": 11929,
+    "missing_returns": 0,
+    "orphan_returns": 0,
+    "non_finite_returns": 0,
+    "incorrect_returns": 0,
+    "maximum_abs_error": 2.86102294921875e-06,
+    "measurement_elapsed_s": 1800.0845208700048
+  },
+  "latency_ms": {
+    "min": 96.196069,
+    "mean": 150.57845283562676,
+    "p50": 150.4293275,
+    "p95": 161.48695249999997,
+    "p99": 168.82581823,
+    "max": 223.469132,
+    "first_window_p50": 145.342569,
+    "last_window_p50": 151.44894,
+    "first_to_last_p50_percent": 4.2013644330175515,
+    "first_to_last_p95_percent": 2.5472060748978675,
+    "maximum_window_p95": 165.2340485,
+    "maximum_window_p99": 173.39118418,
+    "classification": "DIAGNOSTIC_ONLY_NO_PERFORMANCE_OR_REAL_TIME_ADMISSION"
+  },
+  "monitor_recomputation": {
+    "monitor_events": 369,
+    "samples": 368,
+    "pre_observation_samples": 7,
+    "worker_runtime_samples": 360,
+    "final_samples": 1,
+    "read_error_samples": 0,
+    "monitor_failure_samples": 0,
+    "boot_ids": 1,
+    "maximum_sensor_c": 93.0,
+    "maximum_package_c": 91.0,
+    "samples_at_or_above_100_c": 0,
+    "maximum_schedule_lag_ms": 105.40421099995001,
+    "maximum_read_duration_ms": 17.209039
+  },
+  "throttle_fields": {
+    "count": {
+      "paths_compared": 28,
+      "increment_paths": 26,
+      "decrement_paths": 0,
+      "changed_windows": 4,
+      "last_changed_scheduled_elapsed_s": 50.0,
+      "sum_intentionally_omitted": true
+    },
+    "total_time_ms": {
+      "paths_compared": 28,
+      "increment_paths": 12,
+      "decrement_paths": 0,
+      "maximum_path_delta": 47,
+      "changed_windows": 2,
+      "last_changed_scheduled_elapsed_s": 40.0,
+      "sum_intentionally_omitted": true
+    },
+    "max_time_ms": {
+      "paths_compared": 28,
+      "increment_paths": 10,
+      "decrement_paths": 0,
+      "maximum_path_delta": 5,
+      "changed_windows": 2,
+      "last_changed_scheduled_elapsed_s": 40.0,
+      "sum_intentionally_omitted": true
+    }
+  },
+  "resource_recomputation": {
+    "worker_rss_first_periodic_bytes": 937312256,
+    "worker_rss_last_periodic_bytes": 937963520,
+    "worker_rss_periodic_delta_bytes": 651264,
+    "worker_rss_periodic_min_bytes": 937312256,
+    "worker_rss_periodic_max_bytes": 937963520,
+    "system_available_memory_min_bytes": 6143725568,
+    "system_available_memory_first_periodic_bytes": 6154129408,
+    "system_available_memory_last_periodic_bytes": 6167875584,
+    "average_system_cpu_percent": 57.08555555555555,
+    "maximum_system_cpu_percent": 58.3
+  },
+  "hard_gate_failures": [],
+  "diagnostic_findings": [
+    "Throttle-count increments occurred on 26 exact paths only in the first four five-second loaded windows.",
+    "Twelve total-time fields and ten max-time fields increased in the first two loaded windows; duplicated package paths were not summed.",
+    "Latency and thermal/resource observations remain diagnostic and do not create performance, real-time or safety admission.",
+    "The approximately 938 MB RSS load occurred before the first periodic sample; first-to-last periodic RSS changed by only 651264 bytes, so this run does not support a continuing leak claim."
+  ],
+  "interpretation_limits": [
+    "A pass qualifies only the frozen-input offline repeated-inference boundary on the recorded DK-2500 identity.",
+    "The result does not establish changing-input behavior, the full host pipeline, robot task success, real-time control or physical safety.",
+    "Throttle counter and time-field changes do not by themselves identify a root cause, and duplicated package paths must not be summed."
+  ]
+}

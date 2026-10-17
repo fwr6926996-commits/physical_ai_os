@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-10-14T12:31:53.030225+00:00",
+  "protocol_id": "P4-DK2500-THERMAL-D3-LOAD-MOCK-001",
+  "protocol_version": "0.1",
+  "status": "PASS_D3_LOAD_NO_TARGET_MOCK_VALIDATION",
+  "scope": "Artificial classification and local child-process lifecycle only.",
+  "implementation": {
+    "remote_sampler_sha256": "923a82f754a137a58b973c39a915fd9a76fd5a30d3d8522299ece543e6d2c0fe",
+    "supervisor_sha256": "098142645256d454881599850343248525d5cf5ec74426b7f462c695c0367c11",
+    "validator_sha256": "da9394e429f5ac3d323430477b162d1be427ae15c837cede4a628759a7998fcc",
+    "protocol_sha256": "91b51c23ac2778102c0cd731bcf6df8ef91ffcbc07fc6a3939a6bdaecaa9ff1d",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "cases": {
+    "complete_valid_load": {
+      "returncode": 0,
+      "status": "MOCK_LOAD_OBSERVATION_COMPLETE_REVIEW_PENDING",
+      "sample_count": 127,
+      "detected_terminal": {
+        "type": "load_observation_completed",
+        "sequence": 126,
+        "reason": "COMPLETE"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 80.0,
+      "max_sensor_c": 40.0
+    },
+    "pre_busy_rejected": {
+      "returncode": 1,
+      "status": "MOCK_PRECONDITION_NOT_MET_REVIEW_REQUIRED",
+      "sample_count": 7,
+      "detected_terminal": {
+        "type": "precondition_not_met",
+        "sequence": 6,
+        "reason": "PRE_OBSERVATION_AVERAGE_BUSY_EXCEEDED"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 15.0,
+      "formal_average_busy_percent": null,
+      "max_sensor_c": 40.0
+    },
+    "pre_throttle_rejected": {
+      "returncode": 1,
+      "status": "MOCK_PRECONDITION_NOT_MET_REVIEW_REQUIRED",
+      "sample_count": 7,
+      "detected_terminal": {
+        "type": "precondition_not_met",
+        "sequence": 6,
+        "reason": "PRE_OBSERVATION_THROTTLE_INCREMENT"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": null,
+      "max_sensor_c": 40.0
+    },
+    "entry_package_hot": {
+      "returncode": 1,
+      "status": "MOCK_PRECONDITION_NOT_MET_REVIEW_REQUIRED",
+      "sample_count": 7,
+      "detected_terminal": {
+        "type": "precondition_not_met",
+        "sequence": 6,
+        "reason": "ENTRY_PACKAGE_TEMPERATURE_EXCEEDED"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": null,
+      "max_sensor_c": 61.0
+    },
+    "entry_sensor_hot": {
+      "returncode": 1,
+      "status": "MOCK_PRECONDITION_NOT_MET_REVIEW_REQUIRED",
+      "sample_count": 7,
+      "detected_terminal": {
+        "type": "precondition_not_met",
+        "sequence": 6,
+        "reason": "ENTRY_SENSOR_TEMPERATURE_EXCEEDED"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": null,
+      "max_sensor_c": 66.0
+    },
+    "sustained_under_delivery": {
+      "returncode": 1,
+      "status": "MOCK_LOAD_CONTROL_INVALID_REVIEW_REQUIRED",
+      "sample_count": 12,
+      "detected_terminal": {
+        "type": "load_control_invalid",
+        "sequence": 11,
+        "reason": "SUSTAINED_LOAD_BUSY_BELOW_MINIMUM"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 50.0,
+      "max_sensor_c": 40.0
+    },
+    "formal_average_under_delivery": {
+      "returncode": 1,
+      "status": "MOCK_LOAD_CONTROL_INVALID_REVIEW_REQUIRED",
+      "sample_count": 127,
+      "detected_terminal": {
+        "type": "load_control_invalid",
+        "sequence": 126,
+        "reason": "FORMAL_AVERAGE_BUSY_BELOW_MINIMUM"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 65.0,
+      "max_sensor_c": 40.0
+    },
+    "worker_exit": {
+      "returncode": 1,
+      "status": "MOCK_LOAD_CONTROL_INVALID_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "load_control_invalid",
+        "sequence": 10,
+        "reason": "LOAD_WORKER_EXITED"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 80.0,
+      "max_sensor_c": 40.0
+    },
+    "thermal_stop": {
+      "returncode": 1,
+      "status": "MOCK_THERMAL_STOP_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "thermal_stop",
+        "sequence": 10,
+        "reason": "THERMAL_STOP"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 80.0,
+      "max_sensor_c": 100.0
+    },
+    "worker_stop_evidence_invalid": {
+      "returncode": 1,
+      "status": "MOCK_LOAD_OBSERVATION_COMPLETE_REVIEW_PENDING",
+      "sample_count": 127,
+      "detected_terminal": {
+        "type": "load_observation_completed",
+        "sequence": 126,
+        "reason": "COMPLETE"
+      },
+      "classification_reasons": [
+        "LOAD_STOP_EVIDENCE_INVALID"
+      ],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 80.0,
+      "max_sensor_c": 40.0
+    },
+    "negative_counter": {
+      "returncode": 1,
+      "status": "MOCK_INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "interface_or_timebase_failure",
+        "sequence": 10,
+        "reason": "THROTTLE_INTERFACE_OR_COUNTER_INVALID"
+      },
+      "classification_reasons": [
+        "THROTTLE_INTERFACE_OR_COUNTER_INVALID:10"
+      ],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 80.0,
+      "max_sensor_c": 40.0
+    },
+    "target_guard": {
+      "returncode_nonzero": true,
+      "evidence_directory_created": false
+    },
+    "local_worker_lifecycle": {
+      "started": 12,
+      "alive_before_stop": 12,
+      "alive_after_stop": 0,
+      "worker_records": 12,
+      "survivors": [],
+      "recovery": "SIGTERM"
+    },
+    "parent_death_cleanup": {
+      "workers_reported": 12,
+      "survivors": []
+    }
+  },
+  "target_accessed": false,
+  "execution_authorized": false,
+  "interpretation_limits": [
+    "No DK-2500 interface, SSH, OpenVINO or model was used.",
+    "The short local lifecycle validates cleanup mechanics, not target load or thermal behavior.",
+    "Target execution remains disabled pending a separate protocol and authorization."
+  ]
+}

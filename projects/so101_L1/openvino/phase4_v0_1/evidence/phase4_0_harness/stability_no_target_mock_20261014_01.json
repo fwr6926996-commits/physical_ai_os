@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-10-14T13:23:13.255965+00:00",
+  "protocol_id": "P4-DK2500-CPU-FP32-STABILITY-MOCK-002",
+  "status": "PASS_STABILITY_NO_TARGET_MOCK",
+  "scope": "Artificial pre-observation and authorization classification only; no target, OpenVINO or model access.",
+  "implementation": {
+    "monitor_sha256": "1e0eceac3e0e3deacaa44ce344c73fe7367553c242ec934b6809d1415d811c4e",
+    "validator_sha256": "03410381c9b91cd49c0fa27f3d5a8fdafd6dbdffbd85b5b4245e1e94bdc05b36",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "checks": {
+    "valid_pre_observation": true,
+    "busy_rejected": true,
+    "throttle_increment_rejected": true,
+    "package_entry_rejected": true,
+    "sensor_entry_rejected": true,
+    "interface_failure": true,
+    "counter_decrease": true,
+    "authorization_match_accepted": true,
+    "authorization_mismatch_rejected": true
+  },
+  "cases": {
+    "valid_pre_observation": {
+      "status": "PASS_STABILITY_PRE_OBSERVATION",
+      "reasons": [],
+      "average_busy_percent": 5.0,
+      "busy_windows": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "throttle_increment_paths": [],
+      "entry_package_max_c": 50.0,
+      "entry_sensor_max_c": 50.0
+    },
+    "busy_rejected": {
+      "status": "PRECONDITION_NOT_MET_REVIEW_REQUIRED",
+      "reasons": [
+        "PRE_OBSERVATION_AVERAGE_BUSY_EXCEEDED"
+      ],
+      "average_busy_percent": 11.0,
+      "busy_windows": [
+        11.0,
+        11.0,
+        11.0,
+        11.0,
+        11.0,
+        11.0
+      ],
+      "throttle_increment_paths": [],
+      "entry_package_max_c": 50.0,
+      "entry_sensor_max_c": 50.0
+    },
+    "throttle_increment_rejected": {
+      "status": "PRECONDITION_NOT_MET_REVIEW_REQUIRED",
+      "reasons": [
+        "PRE_OBSERVATION_THROTTLE_INCREMENT"
+      ],
+      "average_busy_percent": 5.0,
+      "busy_windows": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "throttle_increment_paths": [
+        "/sys/devices/system/cpu/cpu0/thermal_throttle/core_throttle:throttle_count"
+      ],
+      "entry_package_max_c": 50.0,
+      "entry_sensor_max_c": 50.0
+    },
+    "package_entry_rejected": {
+      "status": "PRECONDITION_NOT_MET_REVIEW_REQUIRED",
+      "reasons": [
+        "ENTRY_PACKAGE_TEMPERATURE_EXCEEDED"
+      ],
+      "average_busy_percent": 5.0,
+      "busy_windows": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "throttle_increment_paths": [],
+      "entry_package_max_c": 61.0,
+      "entry_sensor_max_c": 61.0
+    },
+    "sensor_entry_rejected": {
+      "status": "PRECONDITION_NOT_MET_REVIEW_REQUIRED",
+      "reasons": [
+        "ENTRY_SENSOR_TEMPERATURE_EXCEEDED"
+      ],
+      "average_busy_percent": 5.0,
+      "busy_windows": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "throttle_increment_paths": [],
+      "entry_package_max_c": 50.0,
+      "entry_sensor_max_c": 66.0
+    },
+    "interface_failure": {
+      "status": "INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "reasons": [
+        "READ_OR_PARSE_ERROR:3"
+      ]
+    },
+    "counter_decrease": {
+      "status": "INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "reasons": [
+        "THROTTLE_COUNTER_DECREASED:4"
+      ]
+    }
+  },
+  "target_accessed": false,
+  "execution_authorized": false,
+  "interpretation_limits": [
+    "Artificial validation does not establish DK-2500 entry state or Stability behavior.",
+    "Supervisor process control remains covered by the separate Phase 4 harness tests."
+  ]
+}

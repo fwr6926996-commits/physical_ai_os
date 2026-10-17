@@ -1,0 +1,576 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-10-14T06:05:53.894066+00:00",
+  "protocol_id": "P4-DK2500-THERMAL-D2-IDLE-MOCK-001",
+  "protocol_version": "0.1",
+  "status": "PASS_D2_IDLE_NO_TARGET_MOCK_VALIDATION",
+  "scope": "Artificial JSONL timing, activity, counter and guard validation only.",
+  "implementation": {
+    "remote_sampler_sha256": "877b1a63df5e714ea7f6fb960b7e7b3bc103a72664da0a30a8ba677c1e484429",
+    "supervisor_sha256": "30784c656f2b61dfd864f6941cffd4c417e619d55dd08fe612a163b158b3c9c0",
+    "validator_sha256": "403e954878bd4ab91fc239c094b5f0a162e3c02f8e836fea892fb03c3d31dd92",
+    "protocol_sha256": "143599c2f6d3167be20429810a1f3693af90cfd697fa5bc42b473701b406734c",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "cases": {
+    "complete_quiet_sequence": {
+      "returncode": 0,
+      "status": "MOCK_IDLE_OBSERVATION_COMPLETE_REVIEW_PENDING",
+      "sample_count": 127,
+      "detected_terminal": {
+        "type": "completed",
+        "sequence": 126,
+        "reason": "COMPLETE"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 5.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "pre_observation_contaminated": {
+      "returncode": 1,
+      "status": "MOCK_IDLE_CONTROL_CONTAMINATED_REVIEW_REQUIRED",
+      "sample_count": 7,
+      "detected_terminal": {
+        "type": "idle_control_contaminated",
+        "sequence": 6,
+        "reason": "PRE_OBSERVATION_AVERAGE_BUSY_EXCEEDED"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 15.0,
+      "formal_average_busy_percent": null,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "sustained_formal_contamination": {
+      "returncode": 1,
+      "status": "MOCK_IDLE_CONTROL_CONTAMINATED_REVIEW_REQUIRED",
+      "sample_count": 10,
+      "detected_terminal": {
+        "type": "idle_control_contaminated",
+        "sequence": 9,
+        "reason": "SUSTAINED_FORMAL_BUSY_EXCEEDED"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 25.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "formal_average_contaminated": {
+      "returncode": 1,
+      "status": "MOCK_IDLE_CONTROL_CONTAMINATED_REVIEW_REQUIRED",
+      "sample_count": 127,
+      "detected_terminal": {
+        "type": "idle_control_contaminated",
+        "sequence": 126,
+        "reason": "FORMAL_AVERAGE_BUSY_EXCEEDED"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 15.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "thermal_stop": {
+      "returncode": 1,
+      "status": "MOCK_THERMAL_STOP_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "thermal_stop",
+        "sequence": 10,
+        "reason": "THERMAL_STOP"
+      },
+      "classification_reasons": [],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 5.0,
+      "max_sensor_c": 100.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "missing_path": {
+      "returncode": 1,
+      "status": "MOCK_INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "interface_or_timebase_failure",
+        "sequence": 10,
+        "reason": "INCOMPLETE_THROTTLE_GROUP"
+      },
+      "classification_reasons": [
+        "THROTTLE_FIELDS_INCOMPLETE:10"
+      ],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 5.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 2,
+          "increment_paths": 0,
+          "zero_delta_paths": 2,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 2,
+          "increment_paths": 0,
+          "zero_delta_paths": 2,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 2,
+          "increment_paths": 0,
+          "zero_delta_paths": 2,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "negative_counter": {
+      "returncode": 1,
+      "status": "MOCK_INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "interface_or_timebase_failure",
+        "sequence": 10,
+        "reason": "THROTTLE_COUNTER_DECREASED"
+      },
+      "classification_reasons": [
+        "THROTTLE_COUNTER_DECREASED:10:/mock/cpu0/core_throttle:throttle_count"
+      ],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 5.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 2,
+          "negative_delta_paths": 1,
+          "min_path_delta": -1,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "boot_change": {
+      "returncode": 1,
+      "status": "MOCK_INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "interface_or_timebase_failure",
+        "sequence": 10,
+        "reason": "BOOT_ID_CHANGED"
+      },
+      "classification_reasons": [
+        "BOOT_ID_CHANGED:10"
+      ],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 5.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "monotonic_reversal": {
+      "returncode": 1,
+      "status": "MOCK_INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "interface_or_timebase_failure",
+        "sequence": 10,
+        "reason": "MONOTONIC_TIME_REVERSED"
+      },
+      "classification_reasons": [
+        "MONOTONIC_TIME_REVERSED:10"
+      ],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 5.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "sample_read_consumed_interval": {
+      "returncode": 1,
+      "status": "MOCK_INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "interface_or_timebase_failure",
+        "sequence": 10,
+        "reason": "SAMPLE_READ_CONSUMED_INTERVAL"
+      },
+      "classification_reasons": [
+        "SAMPLE_READ_DURATION_INVALID:10"
+      ],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 5.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "sample_deadline_missed": {
+      "returncode": 1,
+      "status": "MOCK_INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "interface_or_timebase_failure",
+        "sequence": 10,
+        "reason": "SAMPLE_DEADLINE_MISSED"
+      },
+      "classification_reasons": [
+        "SAMPLE_DEADLINE_MISSED:10"
+      ],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 5.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "malformed_proc_stat": {
+      "returncode": 1,
+      "status": "MOCK_INTERFACE_OR_TIMEBASE_FAILURE_REVIEW_REQUIRED",
+      "sample_count": 11,
+      "detected_terminal": {
+        "type": "interface_or_timebase_failure",
+        "sequence": 10,
+        "reason": "CPU_BUSY_INVALID"
+      },
+      "classification_reasons": [
+        "CPU_BUSY_INVALID:10:'user'"
+      ],
+      "pre_average_busy_percent": 5.0,
+      "formal_average_busy_percent": 5.0,
+      "max_sensor_c": 40.0,
+      "throttle_change_summary": {
+        "throttle_count": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 3,
+          "increment_paths": 0,
+          "zero_delta_paths": 3,
+          "negative_delta_paths": 0,
+          "min_path_delta": 0,
+          "max_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      },
+      "target_accessed": false
+    },
+    "production_hard_disabled": {
+      "returncode_nonzero": true,
+      "disabled_error_present": true,
+      "evidence_directory_created": false
+    },
+    "fixture_rejects_target_arguments": {
+      "returncode_nonzero": true,
+      "guard_error_present": true,
+      "evidence_directory_created": false
+    }
+  },
+  "target_accessed": false,
+  "execution_authorized": false,
+  "interpretation_limits": [
+    "All samples were artificial and no DK-2500 interface was read.",
+    "The mock cannot establish actual idle, thermal, timing or throttle behavior.",
+    "Target mode remains hard-disabled pending a new protocol and explicit authorization."
+  ]
+}

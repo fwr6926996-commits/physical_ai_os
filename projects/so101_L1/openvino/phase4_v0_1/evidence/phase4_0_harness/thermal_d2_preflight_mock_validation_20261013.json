@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-10-13T15:56:14.413169+00:00",
+  "protocol_id": "P4-DK2500-THERMAL-D2-PREFLIGHT-001",
+  "protocol_version": "0.1",
+  "status": "PASS_D2_PREFLIGHT_NO_TARGET_MOCK",
+  "scope": "No-target runner gate and authorization controls only.",
+  "implementation": {
+    "runner_sha256": "eb976ad3dda9bd1d3c8adcea50d038af39b7cb2c8583e7d9d364476260a623d6",
+    "remote_probe_sha256": "9da45e6ef16a38a20206bc8e343b2c9052b156d155534a5548dbfefa756b4e6f",
+    "validator_sha256": "d7c8203a8fe3736a52bee7f6fd436e43063b2cb4588463f125aa1d89ada2bcd7",
+    "protocol_sha256": "0f1fe94e72c9a9d54bc54b5557356e57b75a725173045fc48f3dcc2c83d82fce",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "checks": {
+    "valid_payload": {
+      "returncode": 0,
+      "status": "MOCK_PREFLIGHT_PASS_REVIEW_PENDING",
+      "hard_fail_reasons": [],
+      "target_accessed": false
+    },
+    "identity_drift": {
+      "returncode": 1,
+      "status": "MOCK_PREFLIGHT_FAIL_REVIEW_REQUIRED",
+      "hard_fail_reasons": [
+        "IDENTITY_MISMATCH:kernel"
+      ],
+      "target_accessed": false
+    },
+    "incomplete_throttle_group": {
+      "returncode": 1,
+      "status": "MOCK_PREFLIGHT_FAIL_REVIEW_REQUIRED",
+      "hard_fail_reasons": [
+        "INCOMPLETE_THROTTLE_GROUP"
+      ],
+      "target_accessed": false
+    },
+    "missing_package_temperature": {
+      "returncode": 1,
+      "status": "MOCK_PREFLIGHT_FAIL_REVIEW_REQUIRED",
+      "hard_fail_reasons": [
+        "NO_CPU_PACKAGE_TEMPERATURE"
+      ],
+      "target_accessed": false
+    },
+    "thermal_abnormal_state": {
+      "returncode": 1,
+      "status": "MOCK_PREFLIGHT_FAIL_REVIEW_REQUIRED",
+      "hard_fail_reasons": [
+        "THERMAL_ABNORMAL_STATE"
+      ],
+      "target_accessed": false
+    },
+    "missing_frequency": {
+      "returncode": 1,
+      "status": "MOCK_PREFLIGHT_FAIL_REVIEW_REQUIRED",
+      "hard_fail_reasons": [
+        "NO_READABLE_CPU_FREQUENCY"
+      ],
+      "target_accessed": false
+    },
+    "production_requires_authorization": {
+      "returncode_nonzero": true,
+      "authorization_error_present": true,
+      "evidence_directory_created": false
+    }
+  },
+  "target_accessed": false,
+  "execution_authorized": false,
+  "interpretation_limits": [
+    "This validation used local artificial payloads and never invoked SSH.",
+    "It does not prove DK-2500 interface availability or authorize target access."
+  ]
+}

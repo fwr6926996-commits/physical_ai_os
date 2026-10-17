@@ -1,0 +1,891 @@
+{
+  "schema_version": 1,
+  "manifest_id": "phase4_freeze_20261017",
+  "phase": "Phase 4 CPU FP32 Offline Backend",
+  "source_commit": "f787d1fa657161ef72bff3ea419f9bcb65dee133",
+  "generated_on_local_date": "2026-10-17",
+  "root": "projects/so101_L1/openvino/phase4_v0_1",
+  "exclusions": [
+    "__pycache__/",
+    "PHASE4_FREEZE_MANIFEST_20261017.json"
+  ],
+  "canonicalization": {
+    "phase_snapshot": "For each included file, emit lowercase_sha256 + two spaces + repository_relative_path + LF; sort by repository-relative path using LC_ALL=C; SHA-256 the concatenated bytes.",
+    "frozen_payload": "Use the external_payloads array order; emit lowercase_sha256 + two spaces + repository_relative_path + LF; SHA-256 the concatenated bytes."
+  },
+  "phase_snapshot": {
+    "file_count": 134,
+    "size_bytes": 22967546,
+    "manifest_sha256": "40767eef47cc787ce8b32acf76ae39073c880efa0a98d86db4a8e9271337dcae"
+  },
+  "publication_policy": {
+    "selection": "A",
+    "repository_visibility": "PUBLIC",
+    "public_git_file_count": 120,
+    "public_git_size_bytes": 9020232,
+    "off_git_sensitive_evidence_count": 14,
+    "off_git_sensitive_evidence_size_bytes": 13947314,
+    "rule": "Do not alter frozen originals. Files marked OFF_GIT_SENSITIVE_EVIDENCE remain in the verified off-host backup and are represented in Git by path, size, and SHA-256 only.",
+    "frozen_whitespace_exceptions": [
+      "projects/so101_L1/openvino/phase4_v0_1/PHASE4_ROUND3_STABILITY_REVIEW_20261015.md: one blank line at EOF",
+      "projects/so101_L1/openvino/phase4_v0_1/PHASE4_STABILITY_EXECUTION_READINESS_REVIEW_20261014.md: one blank line at EOF",
+      "projects/so101_L1/openvino/phase4_v0_1/PHASE4_STABILITY_TARGET_PREFLIGHT_REVIEW_20261014.md: one blank line at EOF"
+    ],
+    "frozen_whitespace_policy": "Preserve these audited bytes and hashes; do not normalize the source documents during the freeze commit."
+  },
+  "off_host_backup": {
+    "backup_id": "phase4_gate_a1_1_20261017",
+    "gate": "A1.1",
+    "status": "PASS",
+    "protected_file_count": 140,
+    "protected_size_bytes": 163173791,
+    "per_file_sha256_verified": true,
+    "direct_read_verified": true,
+    "stream_restore_entry_count": 140
+  },
+  "files": [
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/DK2500_HARDWARE_SOFTWARE_TRUTH_20261003.md",
+      "size_bytes": 6469,
+      "sha256": "682f0e04be19a26899cb661e574a417c52596517b8d321b0f6c011b411e7f6b3",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_ACCEPTANCE_AND_CLOSURE_20261015.md",
+      "size_bytes": 11979,
+      "sha256": "c1805e95ed31df325d62f1bde25398c43c99ba7f90cb9fc9b0f42142e6fe6242",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_CPU_FP32_QUALIFICATION_PROTOCOL.md",
+      "size_bytes": 21171,
+      "sha256": "3d4fd9417966547369b34a0447f11b08fbe080fda3618880f34b10097c0f3246",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_PRE_RUN_INDEPENDENT_REVIEW_20261003.md",
+      "size_bytes": 4239,
+      "sha256": "5721808413945165510b76344673a9d0713bfd52a092968c24d73d02698bec69",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_PRE_SHORT_LEARNING_VERIFICATION_20261008.md",
+      "size_bytes": 3553,
+      "sha256": "a5de1dbf98929e851404ff451309e61c4a464bfe44b0ec440d19d8bb8f9ec8bf",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_ROUND1_CORRECTNESS_REVIEW_20261003.md",
+      "size_bytes": 3458,
+      "sha256": "cbfe3a077f9970b620c71f04c440583faa159681c394fa24067bf04ed7a44532",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_ROUND1_EXECUTION_READINESS_REVIEW_20261003.md",
+      "size_bytes": 3567,
+      "sha256": "809dea1f94bc59a67a54e9cb2aa58703e6df57c4dc30c0e3a39c3a67cf32aacc",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_ROUND2_SHORT_REVIEW_20261009.md",
+      "size_bytes": 4203,
+      "sha256": "69a7e0852b07583a2e2fb4c3255b4e7cc814d25041b0a45c9b46d042364b6b53",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_ROUND3_STABILITY_REVIEW_20261015.md",
+      "size_bytes": 6557,
+      "sha256": "ebc5f81eb68df2298f37956d4d578b590b0d5a378e8bc27a96f14f89b15d9389",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_SHORT_EXECUTION_READINESS_REVIEW_20261003.md",
+      "size_bytes": 4817,
+      "sha256": "92642c93133ce6a40d005ad06fc7f15f1a8635b095b476398507d1877d2adc88",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_SHORT_POSTMOVE_REVALIDATION_20261008.md",
+      "size_bytes": 4515,
+      "sha256": "a1a9701009c8328712fd2eea358ef65df0e6dec99df03e5c1f18c422e28575dc",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_STABILITY_DESIGN_PROPOSAL_20261014.md",
+      "size_bytes": 11110,
+      "sha256": "5ff2062486133c772f863683a686ff47b24663ae70a0a26b11245e06b08d5cd2",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_STABILITY_EXECUTION_READINESS_REVIEW_20261014.md",
+      "size_bytes": 6424,
+      "sha256": "d810fa96f2ea0babafe5b2d73808712110cefc6b03bd44b93e3d464838dd9c89",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_STABILITY_IMPLEMENTATION_REVIEW_20261014.md",
+      "size_bytes": 6474,
+      "sha256": "be24a70e31996b2d7ef5098eef9b6a841b2ec1736c18f47f9f795f67778cff66",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_STABILITY_PROTOCOL_V0_2_20261014.md",
+      "size_bytes": 6595,
+      "sha256": "0fd26e7056e19877291ff2bbac3ff23426401ef7cee9c0caec06d2164beba66f",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_STABILITY_TARGET_PREFLIGHT_REVIEW_20261014.md",
+      "size_bytes": 4546,
+      "sha256": "2cd687248959d42a2c0a8d48af4f8696e24e1030ab115eba943415a30d105047",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D1_MOCK_PROTOCOL_20261010.md",
+      "size_bytes": 4010,
+      "sha256": "272d7cb763adf8809d31a052ed2474d03cce59e592915257e075bc3cddaf796c",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D1_MOCK_REVIEW_20261013.md",
+      "size_bytes": 2816,
+      "sha256": "567595fa3f0341dd0eb4e1367309e3211b035bfb4b7594c742a67806bb10d81d",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_DESIGN_PROPOSAL_20261014.md",
+      "size_bytes": 9888,
+      "sha256": "c08775a2ddc78d8b39fb9b6472f7d109230055a37a715befd7271b07df52cf3b",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_DESIGN_REVIEW_20261014.md",
+      "size_bytes": 4305,
+      "sha256": "7337e3f96511932776e7430e0798f4bf73e8d53ded08d80bb7691406e225b505",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_IMPLEMENTATION_REVIEW_20261014.md",
+      "size_bytes": 7036,
+      "sha256": "8ac7fd362e407f23def8f5bb061e001981e2741f809f2f34c6da118e93ae4bb2",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_MOCK_PROTOCOL_20261014.md",
+      "size_bytes": 6237,
+      "sha256": "143599c2f6d3167be20429810a1f3693af90cfd697fa5bc42b473701b406734c",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_MOCK_PROTOCOL_V0_2_20261014.md",
+      "size_bytes": 3334,
+      "sha256": "b7e1cd2180245fdabe9fbd8f0b942b59d9b5512a69831515f33e778eb129d92a",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_MOCK_PROTOCOL_V0_3_20261014.md",
+      "size_bytes": 2795,
+      "sha256": "0f7b240f4b9da4a5e2aaf6c83d57397ef26eb1e001e93411276da8761036160a",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_MOCK_ROUND1_REVIEW_20261014.md",
+      "size_bytes": 1618,
+      "sha256": "70f2b5a979b659d22b39df4ba4fe3e43c309bdf2eb9a502001102fc0e63ae672",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_MOCK_ROUND2_REVIEW_20261014.md",
+      "size_bytes": 1859,
+      "sha256": "63cdc0483e9e887577e6db5af9196032ce76215bd13470fa730c0741d95f73bc",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_TARGET_PROTOCOL_20261014.md",
+      "size_bytes": 5866,
+      "sha256": "afab06716230f566c6823d50b53ad7315a54ca1cd676c64be3639c2740df77e7",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_TARGET_READINESS_REVIEW_20261014.md",
+      "size_bytes": 4476,
+      "sha256": "0b68695fa9f65005bdde105cbc8867ec9688848e43460ebe6d7cb1cb0c8eafc3",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_IDLE_TARGET_REVIEW_20261014.md",
+      "size_bytes": 6313,
+      "sha256": "d784b120c3baf9079722c53a1241fc2bc8fa723b1346135718d98e16c880b316",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_PREFLIGHT_IMPLEMENTATION_REVIEW_20261013.md",
+      "size_bytes": 3363,
+      "sha256": "6c33a296bd9451bf9e3cbeb2274d0ceb4ec440cab69b67eb7345f537c2c2d63f",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_PREFLIGHT_PROTOCOL_20261013.md",
+      "size_bytes": 9072,
+      "sha256": "670fc9e1276171a4ea8bac7f94da5adfaed230f43aea891acfb8655382a4101e",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_PREFLIGHT_READINESS_REVIEW_20261014.md",
+      "size_bytes": 5278,
+      "sha256": "4215be045bcb2c4c7ee237831a07e1f75eef7f088aaeaa24be1efb06d1688c20",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D2_PREFLIGHT_TARGET_REVIEW_20261014.md",
+      "size_bytes": 7064,
+      "sha256": "b62def6136c2c83280728675ece7df4ddcaa5cdb2d0220143cf485d331010f13",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D3_LOAD_DESIGN_PROPOSAL_20261014.md",
+      "size_bytes": 7778,
+      "sha256": "360c6ed3d49f3e93fcf170a2ed824a06bc2adbeb40908cd6672cbdbdc8b9f3cd",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D3_LOAD_IMPLEMENTATION_REVIEW_20261014.md",
+      "size_bytes": 3999,
+      "sha256": "cfcac744fce410a90e156aed63623e97b3df03a42ef5d249b12aa823861148cf",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D3_LOAD_MOCK_PROTOCOL_20261014.md",
+      "size_bytes": 2531,
+      "sha256": "91b51c23ac2778102c0cd731bcf6df8ef91ffcbc07fc6a3939a6bdaecaa9ff1d",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D3_LOAD_TARGET_PROTOCOL_20261014.md",
+      "size_bytes": 5586,
+      "sha256": "a3f5b60a84f8f1d67eb7daaf030d660663766cd8acd5fc012174014f78ca0763",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D3_LOAD_TARGET_READINESS_REVIEW_20261014.md",
+      "size_bytes": 4222,
+      "sha256": "fb14be298c52ac315badee714eb27f2bbb546e69c3533321cc563286448ce8b5",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_D3_LOAD_TARGET_REVIEW_20261014.md",
+      "size_bytes": 10493,
+      "sha256": "90d905e06f7b8e8ca72f3063e5f446a7ef3108b00f19704e20a96ef680cafd92",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/PHASE4_THERMAL_THROTTLE_DIAGNOSIS_20261009.md",
+      "size_bytes": 8587,
+      "sha256": "1fac65b8bb1da28abc2924888dae4a6c05d0ecb7e6a8cc7b8c6ed9ed3c4227e9",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/VM1_VERSION_DRIFT_REVIEW_20261003.md",
+      "size_bytes": 4965,
+      "sha256": "2f6234a4ea88a97d3b2423a1642949027533d05fbcab651b5dda89e8da06ee2a",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/phase4_r1_correctness_20261003_01.json",
+      "size_bytes": 450,
+      "sha256": "8d5e26fff0bec1d2a4cf5be6b760a4020b6751bafa8a3c6cbb868f72f30ec832",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/phase4_r2_short_20261008_01.json",
+      "size_bytes": 652,
+      "sha256": "1b86e8295d9c8e3f5d2000dff6856cdb199c1104d629926a15b2bdd50412435d",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/phase4_r3_stability_20261014_01.json",
+      "size_bytes": 1537,
+      "sha256": "3de4d013bbc686a3b564bc9d71da3d1f9d12c615d997aa64ac43fb21ffeb7804",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/thermal_d2_idle_20261014_01.json",
+      "size_bytes": 1138,
+      "sha256": "07ed1c54b3b8c70ad1d8e6f4b9ab2838bf77fc18e3f3a9b9b478eb289f596cce",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/thermal_d2_preflight_20261014_01.json",
+      "size_bytes": 1046,
+      "sha256": "3b198cb715d9fcee25e99208b28c2d3edae46097f1961953eaed382b70930a95",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/thermal_d3_load_20261014_01.json",
+      "size_bytes": 1181,
+      "sha256": "c9082cef198e307465509bffde17b910766823690be74449807a8f5a4982e221",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/mock_validation_20261003.json",
+      "size_bytes": 1751,
+      "sha256": "78a9cb71a73a60abf0e13f995ee43f242481cb1744d4900f7a84c2453c69f1f6",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/no_model_preflight_20261003_01.json",
+      "size_bytes": 3622,
+      "sha256": "aaecf6537bc9529be22939eff200d7f9759dd0f7a843bc3ad224fe2045d54c5c",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/no_model_preflight_short_20261003_01.json",
+      "size_bytes": 4209,
+      "sha256": "b03916a9d3b63b7edcc8aa93e4d1234b8b10c3df5ff7c03e8e995fe34d847a6e",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/no_model_preflight_short_postmove_20261008_01.json",
+      "size_bytes": 4209,
+      "sha256": "df5f22743f4981dd04e55cbd277b7f37c3701043e165c49d1e8b8f73d71b21e5",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/no_model_preflight_stability_20261014_01.json",
+      "size_bytes": 5021,
+      "sha256": "beeddcc10e4daa480026f5ca5ea59360fad88d3dafcbabdea435c6653cd95355",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/postmove_idle_revalidation_20261008_01.json",
+      "size_bytes": 1981,
+      "sha256": "38ebf6a06b89e93518ddac3430e6c5792e5ab94ebb2e41bdff53b7cadf240bac",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/pre_short_learning_verification_20261008.json",
+      "size_bytes": 1639,
+      "sha256": "773e3e9414110f90e4eaa244b31c29cb2cfcf1c84c7681ddb54083d0e48a1d6a",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/prepost_equivalence_20261003_01.json",
+      "size_bytes": 2169,
+      "sha256": "c090924c33b957698bb8c2da597ac13b4e21a3d787b99837497e88c3bb511a56",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/short_harness_mock_validation_20261003.json",
+      "size_bytes": 1996,
+      "sha256": "19714976669af6791732c0d26780ee9dd1b423eb931026c81298501b00ef2a84",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/short_readiness_review_20261003.json",
+      "size_bytes": 1597,
+      "sha256": "96e43e721c8f355d3617415debc3b15c788f384cf2d3ff6c26c860cefcad870e",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/stability_no_target_mock_20261014_01.json",
+      "size_bytes": 3661,
+      "sha256": "645e8658ec5f8a3b65be3bdc04514592ba05b5e5886893b40b330ddc1ad1433c",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/stability_no_target_mock_20261014_02.json",
+      "size_bytes": 3661,
+      "sha256": "898be592aa0a7ae94790c0469aa5567c9740c8221e4a3b3c0249409eabcd3f00",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d1_mock_validation_20261010_01.json",
+      "size_bytes": 4246,
+      "sha256": "0f94f8a02a7311e49b6dfa3178b76eb10b85621cca7a165f686e4e836310038b",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_20261014_01/command.json",
+      "size_bytes": 217,
+      "sha256": "17034b90de13030adb8d9cad68719ba3f44289250b72dac47532068bd6120a78",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_20261014_01/raw_events.jsonl",
+      "size_bytes": 2829452,
+      "sha256": "693718c670aa3d2e62794917d970eca125a03d36a0ab5f2a89389586ef4d2b02",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_20261014_01/result.json",
+      "size_bytes": 26038,
+      "sha256": "b0deab1e21f94a9416f9e3bb9b0ba64f0977013017c3a92b3b9d0733ef317cb9",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_20261014_01/stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_mock_validation_20261014_01.json",
+      "size_bytes": 18253,
+      "sha256": "84b6519ac040314be7ec618d40dcb771297259136c1d4623cf6fb3dfd46fa771",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_mock_validation_20261014_02.json",
+      "size_bytes": 22658,
+      "sha256": "d348c913aa6901309053515d98ef8ed9b657a78fc552d79db22ebabe3d5d6ea6",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_mock_validation_20261014_03.json",
+      "size_bytes": 23608,
+      "sha256": "82cdac98bae5d5060ab805062bc4809d45724af2571a7900c9a5184165fe14a9",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_target_readiness_mock_20261014_01.json",
+      "size_bytes": 23630,
+      "sha256": "9b13fcb851b780366b7e20dbf916088ff35138e5e4b4cc41a28b38f408d3caa1",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/command.json",
+      "size_bytes": 207,
+      "sha256": "261d303a7e2660324263b979217724ada1034147fa48792be6520fff2c4cf2f7",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/remote_stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/remote_stdout.txt",
+      "size_bytes": 19063,
+      "sha256": "09e64e448c90c6efedb188b9954d41433f6ca14ab38510ef7c20f417c187d564",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/result.json",
+      "size_bytes": 27816,
+      "sha256": "d61f181e905a29a281b4e16622ade165120ca3f103bd0da9adeb81596b8f6636",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_mock_validation_20261013.json",
+      "size_bytes": 2455,
+      "sha256": "fa10174da2ccde92b4c05ce681f7b7de5462bc63d758763e9ca2453d6155899b",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_20261014_01/command.json",
+      "size_bytes": 249,
+      "sha256": "c85551c9f3ef2352b988514e4bfc78672a7238e54a8604a4343cc5b5919dd2c3",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_20261014_01/raw_events.jsonl",
+      "size_bytes": 2837480,
+      "sha256": "772ea0f34451d9188f47047f9e30e05a16aca19b848d263772e73dfc393d7a22",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_20261014_01/result.json",
+      "size_bytes": 27788,
+      "sha256": "093ea7cce4a2d8ba6df8e761a95aa6f837c46c441167586d4a2b85cfac501324",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_20261014_01/stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_mock_validation_20261014_01.json",
+      "size_bytes": 6484,
+      "sha256": "38939434a92ee79a7b8ed47c157438fea4ee7e1e10e24fcf68837928a4d0d9c6",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_mock_validation_20261014_02.json",
+      "size_bytes": 6484,
+      "sha256": "ead89e595cc3e68fe61f146e10b62f395e518505e26218964a76818b1816d119",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_truth/dk2500_truth_20261003.json",
+      "size_bytes": 7043,
+      "sha256": "a7e45d7d0ad7beac5acc75cfbd1770aa51d9b3c80deab3e35de1186ac80acbb1",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_truth/policy_package_transfer_verification_20261003.json",
+      "size_bytes": 2202,
+      "sha256": "5285408fdaa9e369d7b57e9b851751dd31d47d8afbfab1219e2a6f0b2b04455d",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_1_correctness/phase4_r1_correctness_20261003_01/events.jsonl",
+      "size_bytes": 2472,
+      "sha256": "6055e48e23330303cee484e1c9f711cfb114e3e7244b691ee13b34e56108c0d1",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_1_correctness/phase4_r1_correctness_20261003_01/independent_review.json",
+      "size_bytes": 2499,
+      "sha256": "86848eb1e7dec1a329797131a8a9a852b7f0c6feccb0cf4815c33e97fc4fb85f",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_1_correctness/phase4_r1_correctness_20261003_01/latencies.csv",
+      "size_bytes": 205,
+      "sha256": "f88013c0402e47bba743061e5ccad581be9461f800b7b8986cdd93d9a5784994",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_1_correctness/phase4_r1_correctness_20261003_01/supervisor_result.json",
+      "size_bytes": 4247,
+      "sha256": "c701484bc260fd7c634f1aa04cdaa41fdc45f66e6da730c3a75a3ba1e9315e26",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_1_correctness/phase4_r1_correctness_20261003_01/supervisor_telemetry.csv",
+      "size_bytes": 253,
+      "sha256": "770680057e094262255e7cfe3e395d8f5cf653590249aa79f08eb7f798830cb6",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_1_correctness/phase4_r1_correctness_20261003_01/throttle_before.json",
+      "size_bytes": 2169,
+      "sha256": "13689b2760766715b230bf9778a9340b62fac8c4d1a4259698559ecabdd017c1",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_1_correctness/phase4_r1_correctness_20261003_01/worker_result.json",
+      "size_bytes": 1616,
+      "sha256": "c61534a22c853b9d233cc007133b919f2697095285408e556e737cb912527f51",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_1_correctness/phase4_r1_correctness_20261003_01/worker_stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_1_correctness/phase4_r1_correctness_20261003_01/worker_stdout.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/events.jsonl",
+      "size_bytes": 67514,
+      "sha256": "a76f6a42f89032a63102b6163cdb040f2d75018b6e4e8e6941ca8a56fec83061",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/independent_review.json",
+      "size_bytes": 4647,
+      "sha256": "42d874a06fa4f9a2e222e13771ff6109495872e56c83394b25f95051d85d50aa",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/latencies.csv",
+      "size_bytes": 15439,
+      "sha256": "fa6a045845708673a9a8bfede5983a8d9565c254434aba2cc3fc55517887d49b",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/postrun_idle_control.json",
+      "size_bytes": 681,
+      "sha256": "d8fa6639ba326420f7a41a50cccec68072706c9d8373501b7e134ca0ce0441f3",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/supervisor_result.json",
+      "size_bytes": 5221,
+      "sha256": "ec3d79cafc0e2c5e13557b4e6f5036e26c9e3a2682b63212fa012fb988aefe55",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/supervisor_telemetry.csv",
+      "size_bytes": 650,
+      "sha256": "62017195f0386d687d353fe90f9debb02ce45c646df78af8edd35463eac958a6",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/throttle_before.json",
+      "size_bytes": 2151,
+      "sha256": "5b1c505868f8f48b30c8fe78a99edcc19997048dc3cb57f43ac2df5e2aeae202",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/worker_result.json",
+      "size_bytes": 2799,
+      "sha256": "71c6ffa83e7d1b743b402e87104491587c352a86e58c4c7a765d40c52588b091",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/worker_stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_2_short/phase4_r2_short_20261008_01/worker_stdout.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/events.jsonl",
+      "size_bytes": 6917008,
+      "sha256": "a75dc2380fcba1980cd7841ef6ed40c5099c85c434a6702cf0bac5c9acc26f91",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/independent_review.json",
+      "size_bytes": 5350,
+      "sha256": "6f90489b10b248cf436334ab8d89738cb4d7d483c8c003b9f8fd76693d7a7efd",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/latencies.csv",
+      "size_bytes": 1242323,
+      "sha256": "8d0c1c7cda9aae8aabf757c51a49d6715fb49f8154f1378f818dec5b2f353d5d",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/stability_monitor.jsonl",
+      "size_bytes": 8210159,
+      "sha256": "8c744c40de4422c7f89c827846c9ab1be7f462a01a9480aa101913d4e3dcea72",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/stability_precondition.json",
+      "size_bytes": 387,
+      "sha256": "3b692797028653fbc6d3e99f1a490ca8020ad2c14584abcb57d3f959e93e7ab3",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/supervisor_result.json",
+      "size_bytes": 12748,
+      "sha256": "81da6b6266ad00a76f42bc5b844fe7f8aa0590b7d0ccba71e77c932bcf933d1c",
+      "storage_policy": "OFF_GIT_SENSITIVE_EVIDENCE"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/supervisor_telemetry.csv",
+      "size_bytes": 39748,
+      "sha256": "b58b7f4f079fcc9e1ce8f69882f11c6c4261dc88fa3cb0e62deb995f4dccc730",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/throttle_before.json",
+      "size_bytes": 2227,
+      "sha256": "6d41cddfa4286d6c4fa79a508d8bebd0bcdc4be56baf9c41c90f7e3c9c68eb8e",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/worker_result.json",
+      "size_bytes": 2259,
+      "sha256": "432070dea9463a42fce9cacecca98918facf427dde7b1059d1a7b8544a576ee2",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/worker_stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/worker_stdout.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_authorization_template.json",
+      "size_bytes": 456,
+      "sha256": "d61193265708a5c977c2b37cbb54665f92d8219c89eccf666c60f3f2ce4d1da8",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_cpu_supervisor.py",
+      "size_bytes": 25855,
+      "sha256": "3079a134aaba9e279889e10f72afd5b9ae92cead4504f0c24806180cb33b536b",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_cpu_worker.py",
+      "size_bytes": 19293,
+      "sha256": "8795710589a5474387fc181162e4fc6fe6e8614ff5ce1042ef5f834cd403f47e",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_frozen_config.json",
+      "size_bytes": 2832,
+      "sha256": "700cb888b3571a2cc4199939140692192dd4eaa18ca8f7966ee1aa3f54655c89",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_mock_worker.py",
+      "size_bytes": 2801,
+      "sha256": "01d7bd9455cacf6ea82ee14cf7f323300d8f508edf07c7b3372ead4a3cc45c25",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_no_model_preflight.py",
+      "size_bytes": 7848,
+      "sha256": "18677d9338aa9806794cc3b51bf40f6b7f675ba57ca5ca559cc32abe518f0a38",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_prepost.py",
+      "size_bytes": 2466,
+      "sha256": "d7b702f3d7bb5d4ee78268278fb5e685a743c71716c90108098d60882e44a2eb",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_stability_authorization_template.json",
+      "size_bytes": 1219,
+      "sha256": "344becfdf2b1964954bbffc76bf501975e330470d8f320568826fe0b980ff740",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_stability_monitor.py",
+      "size_bytes": 7587,
+      "sha256": "3f7ee1e22c3530cc3ff44fbb4f0e0d8cb4ede1450365db39a892059e5867ca26",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_thermal_d2_idle_remote_sampler.py",
+      "size_bytes": 29432,
+      "sha256": "923a82f754a137a58b973c39a915fd9a76fd5a30d3d8522299ece543e6d2c0fe",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_thermal_d2_idle_supervisor.py",
+      "size_bytes": 34792,
+      "sha256": "07f320776ee8382401909841cfa1e6adc3f39c369bde219304bb54835f463af3",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_thermal_d2_preflight.py",
+      "size_bytes": 11558,
+      "sha256": "eb976ad3dda9bd1d3c8adcea50d038af39b7cb2c8583e7d9d364476260a623d6",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_thermal_d2_remote_probe.py",
+      "size_bytes": 7842,
+      "sha256": "9da45e6ef16a38a20206bc8e343b2c9052b156d155534a5548dbfefa756b4e6f",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_thermal_d3_load_supervisor.py",
+      "size_bytes": 19146,
+      "sha256": "098142645256d454881599850343248525d5cf5ec74426b7f462c695c0367c11",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/phase4_thermal_sampler.py",
+      "size_bytes": 7990,
+      "sha256": "663825e677415750e75ed73bed00ebbbde9d8b13c45ce0a945749e8e6abc49c4",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/test_phase4_harness.py",
+      "size_bytes": 5336,
+      "sha256": "0fca67beb8fc737b0c3f3988966f2ee21413e5b6f8c86075025117d1ccf8db29",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/test_phase4_prepost.py",
+      "size_bytes": 2287,
+      "sha256": "f462bab0d25a0447975f7f77b1f3f226becdb9f76f5cc0ae8088426e8330fa01",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/validate_phase4_stability_mock.py",
+      "size_bytes": 7351,
+      "sha256": "03410381c9b91cd49c0fa27f3d5a8fdafd6dbdffbd85b5b4245e1e94bdc05b36",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/validate_phase4_thermal_d2_idle_mock.py",
+      "size_bytes": 22036,
+      "sha256": "a3763d1548260356f4c5686513cd013ecfbb946f7a7921b527372275cda652b4",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/validate_phase4_thermal_d2_preflight_mock.py",
+      "size_bytes": 9949,
+      "sha256": "d7c8203a8fe3736a52bee7f6fd436e43063b2cb4588463f125aa1d89ada2bcd7",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/validate_phase4_thermal_d3_load_mock.py",
+      "size_bytes": 12279,
+      "sha256": "da9394e429f5ac3d323430477b162d1be427ae15c837cede4a628759a7998fcc",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/validate_phase4_thermal_sampler_mock.py",
+      "size_bytes": 7055,
+      "sha256": "11f7258f11a6c27cb8099acc61b3e745965cc28c965d2a3034fe48f7ce9f5a26",
+      "storage_policy": "PUBLIC_GIT"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase4_v0_1/verify_phase4_prepost_equivalence.py",
+      "size_bytes": 5303,
+      "sha256": "3939e9c863623d0ada0cf37704f0ebc9e9d1f587fb469acd183a9c1e1b0273e4",
+      "storage_policy": "PUBLIC_GIT"
+    }
+  ],
+  "external_payloads": [
+    {
+      "path": "projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9/reference_raw_observation.pt",
+      "size_bytes": 3688501,
+      "sha256": "3a8e3e905ba6d96d75f903f3ce96e9d855dd8e6d1e33549712d05a90e0c20c73",
+      "storage_policy": "OFF_GIT_FROZEN_PAYLOAD"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9/act_fp32.xml",
+      "size_bytes": 1020143,
+      "sha256": "54615bff5874f134521353c8240ecff6f95277e51c094b543713bc1d6c60879e",
+      "storage_policy": "OFF_GIT_FROZEN_PAYLOAD"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9/act_fp32.bin",
+      "size_bytes": 131800756,
+      "sha256": "96c225f0676edcb44b641906e93222d0f52883a7ed6956725c904266c717848a",
+      "storage_policy": "OFF_GIT_FROZEN_PAYLOAD"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9/reference_output_action_chunk.pt",
+      "size_bytes": 4227,
+      "sha256": "b1f021b8db0ad975dbfff45a9d8d2ec5bfe2434bd48371e97d75402d5b1590cb",
+      "storage_policy": "OFF_GIT_FROZEN_PAYLOAD"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9/reference_output_normalized.pt",
+      "size_bytes": 4213,
+      "sha256": "b63021c20ede458096693431f620010d46f497b54c7c0b7b6ffd8713deda3d5a",
+      "storage_policy": "OFF_GIT_FROZEN_PAYLOAD"
+    },
+    {
+      "path": "projects/so101_L1/openvino/phase3_v2_9/policy_package_v2_9/reference_model_input.pt",
+      "size_bytes": 3688405,
+      "sha256": "cd2da1c65e4f5ec99d3d4189d186908b717e5eb74e9062638e3a646b2ed06b75",
+      "storage_policy": "OFF_GIT_FROZEN_PAYLOAD"
+    }
+  ],
+  "frozen_payload_manifest_sha256": "91187f2bce21afbd4d636392172dc4a1819eb7886be328ab7ef073a48acf9272"
+}

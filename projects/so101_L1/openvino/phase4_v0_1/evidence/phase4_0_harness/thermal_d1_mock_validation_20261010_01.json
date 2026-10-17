@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "timestamp_utc": "2026-10-13T13:46:37.930384+00:00",
+  "protocol_id": "P4-DK2500-THERMAL-D1-MOCK-001",
+  "protocol_version": "0.1",
+  "status": "PASS_THERMAL_D1_MOCK_VALIDATION",
+  "scope": "Artificial-input parser, evidence-boundary and target-mode guard only.",
+  "implementation": {
+    "sampler_sha256": "663825e677415750e75ed73bed00ebbbde9d8b13c45ce0a945749e8e6abc49c4",
+    "validator_sha256": "11f7258f11a6c27cb8099acc61b3e745965cc28c965d2a3034fe48f7ce9f5a26",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]"
+  },
+  "checks": {
+    "known_delta_and_duplicate_path_sequence": {
+      "returncode": 0,
+      "status": "PASS_MOCK_THERMAL_SAMPLER",
+      "sample_count": 2,
+      "target_accessed": false,
+      "interface_first": {
+        "group_count": 2,
+        "complete_group_count": 2,
+        "incomplete_groups": {},
+        "unknown_paths": [],
+        "temperature_present": true
+      },
+      "change_summary": {
+        "throttle_count": {
+          "paths_compared": 2,
+          "increment_paths": 2,
+          "max_path_delta": 2,
+          "min_path_delta": 2,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 2,
+          "increment_paths": 2,
+          "max_path_delta": 8,
+          "min_path_delta": 8,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 2,
+          "increment_paths": 2,
+          "max_path_delta": 1,
+          "min_path_delta": 1,
+          "sum_intentionally_omitted": true
+        }
+      }
+    },
+    "missing_field_rejected": {
+      "returncode": 1,
+      "status": "MOCK_INTERFACE_INCOMPLETE",
+      "sample_count": 1,
+      "target_accessed": false,
+      "interface_first": {
+        "group_count": 2,
+        "complete_group_count": 1,
+        "incomplete_groups": {
+          "/sys/devices/system/cpu/cpu0/thermal_throttle/package_throttle": [
+            "throttle_max_time_ms"
+          ]
+        },
+        "unknown_paths": [],
+        "temperature_present": true
+      },
+      "change_summary": {
+        "throttle_count": {
+          "paths_compared": 2,
+          "increment_paths": 0,
+          "max_path_delta": 0,
+          "min_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 2,
+          "increment_paths": 0,
+          "max_path_delta": 0,
+          "min_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 1,
+          "increment_paths": 0,
+          "max_path_delta": 0,
+          "min_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      }
+    },
+    "thermal_stop_classified": {
+      "returncode": 1,
+      "status": "MOCK_THERMAL_STOP",
+      "sample_count": 1,
+      "target_accessed": false,
+      "interface_first": {
+        "group_count": 2,
+        "complete_group_count": 2,
+        "incomplete_groups": {},
+        "unknown_paths": [],
+        "temperature_present": true
+      },
+      "change_summary": {
+        "throttle_count": {
+          "paths_compared": 2,
+          "increment_paths": 0,
+          "max_path_delta": 0,
+          "min_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_total_time_ms": {
+          "paths_compared": 2,
+          "increment_paths": 0,
+          "max_path_delta": 0,
+          "min_path_delta": 0,
+          "sum_intentionally_omitted": true
+        },
+        "throttle_max_time_ms": {
+          "paths_compared": 2,
+          "increment_paths": 0,
+          "max_path_delta": 0,
+          "min_path_delta": 0,
+          "sum_intentionally_omitted": true
+        }
+      }
+    },
+    "target_mode_unavailable": {
+      "returncode_nonzero": true,
+      "required_fixture_error_present": true,
+      "evidence_directory_created": false
+    }
+  },
+  "target_accessed": false,
+  "execution_authorized": false,
+  "interpretation_limits": [
+    "D1 used artificial data and did not access DK-2500, sysfs, OpenVINO or a model.",
+    "D1 does not authorize D2, Stability, deployment, real-time or safety claims."
+  ]
+}

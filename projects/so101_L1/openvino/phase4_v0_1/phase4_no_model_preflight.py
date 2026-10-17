@@ -9,6 +9,7 @@ import json
 import os
 import platform
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -17,6 +18,8 @@ import numpy as np
 import openvino as ov
 import psutil
 import torch
+
+import phase4_thermal_d2_idle_remote_sampler as thermal
 
 
 HERE = Path(__file__).resolve().parent
@@ -27,6 +30,9 @@ IMPLEMENTATION_FILES = (
     "phase4_prepost.py",
     "phase4_cpu_worker.py",
     "phase4_cpu_supervisor.py",
+    "phase4_stability_monitor.py",
+    "phase4_thermal_d2_idle_remote_sampler.py",
+    "PHASE4_STABILITY_PROTOCOL_V0_2_20261014.md",
 )
 
 
@@ -65,6 +71,12 @@ def main() -> int:
     output.parent.mkdir(parents=True, exist_ok=True)
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     checks: dict[str, Any] = {}
+
+    checks["target_hostname"] = {
+        "expected": config["target_hostname"],
+        "actual": platform.node(),
+        "pass": platform.node() == config["target_hostname"],
+    }
 
     checks["openvino_version"] = {
         "expected": config["openvino_version"],
@@ -118,6 +130,40 @@ def main() -> int:
     checks["frequency_interface"] = {
         "sample_count": len(psutil.cpu_freq(percpu=True) or []),
         "pass": bool(psutil.cpu_freq(percpu=True) or []),
+    }
+    stability_inventory, stability_discovery_errors = thermal.inventory()
+    stability_sample, _ = thermal.read_sample(
+        0,
+        time.monotonic_ns(),
+        stability_inventory,
+        None,
+    )
+    stability_signature = thermal.inventory_signature(stability_inventory)
+    checks["stability_monitor_interface"] = {
+        "discovery_errors": stability_discovery_errors,
+        "read_errors": stability_sample["read_errors"],
+        "throttle_group_count": len(stability_inventory["throttle_groups"]),
+        "frequency_path_count": len(stability_inventory["frequency_paths"]),
+        "temperature_path_count": len(stability_inventory["temperature_sensors"]),
+        "package_sensor_count": stability_sample["temperature"]["package_sensor_count"],
+        "max_sensor_c": stability_sample["temperature"]["max_sensor_c"],
+        "exact_throttle_bases": stability_signature["throttle_bases"]
+        == sorted(thermal.EXPECTED_THROTTLE_BASES),
+        "exact_frequency_paths": stability_signature["frequency_paths"]
+        == sorted(thermal.EXPECTED_FREQUENCY_PATHS),
+        "pass": not stability_discovery_errors
+        and not stability_sample["read_errors"]
+        and len(stability_inventory["throttle_groups"])
+        == len(thermal.EXPECTED_THROTTLE_BASES)
+        and len(stability_inventory["frequency_paths"])
+        == len(thermal.EXPECTED_FREQUENCY_PATHS)
+        and stability_sample["temperature"]["package_sensor_count"] >= 1
+        and stability_sample["temperature"]["max_sensor_c"] is not None
+        and stability_sample["temperature"]["max_sensor_c"] < config["supervisor"]["thermal_stop_c"]
+        and stability_signature["throttle_bases"]
+        == sorted(thermal.EXPECTED_THROTTLE_BASES)
+        and stability_signature["frequency_paths"]
+        == sorted(thermal.EXPECTED_FREQUENCY_PATHS),
     }
     checks["dependencies"] = {
         "python": platform.python_version(),

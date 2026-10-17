@@ -6,7 +6,11 @@ Owner: human
 
 Affected run: `phase4_r2_short_20261008_01`
 
-Status: `OPEN — FAULT BOUNDARY ESTABLISHED, ROOT CAUSE UNKNOWN`
+Status: `NARROWED — LOAD-ENTRY COUNT SIGNAL REPRODUCED; ROOT CAUSE UNKNOWN`
+
+Current disposition date: `2026-10-14`
+
+Current next gate: `STABILITY DESIGN AND READINESS REVIEW — EXECUTION NOT AUTHORIZED`
 
 ## Identity and impact
 
@@ -59,6 +63,37 @@ CPU FP32 short load -> package/core temperature and power state
 - Current evidence cannot prove event duration, precise trigger temperature, duty cycle, causal
   component or physical defect.
 
+## D2/D3 evidence addendum — 2026-10-14
+
+The bounded follow-up plan has now completed its artificial-interface gate, target preflight,
+idle control and one authorized CPU-only load control:
+
+- D2-IDLE completed 630 seconds without an increase in any of the 84 separately monitored
+  count/total-time/maximum-time fields.
+- D3-LOAD completed with 12 arithmetic workers and `85.772%` average aggregate CPU busy.
+- D3 reproduced positive `throttle_count` deltas on exactly the same 26 paths as Short without
+  using OpenVINO or the model.
+- The D3 count changes were confined to the first three five-second loaded windows. Approximately
+  585 seconds of continued load produced no later monitored counter increment.
+- D3 reached `91 C`, remained below the frozen `100 C` stop and recovered all 12 workers.
+- All 28 `throttle_total_time_ms` and all 28 `throttle_max_time_ms` fields remained unchanged.
+  This supplies no duration evidence; it does not establish zero duration.
+
+The new evidence establishes that CPU-only load is sufficient for the monitored count pattern and
+that OpenVINO/model execution is not necessary for it to occur. It does not prove a thermal,
+power, firmware, kernel, cooling or hardware root cause. The temperature/frequency/count sequence
+is consistent with a rapid platform operating-point transition after load entry, but the
+responsible controller and underlying condition remain unknown.
+
+The duration-field semantics and update behavior are routed to bounded source and official
+interface research. Repeating D3 is not justified. The diagnosis no longer blocks Stability
+**design and readiness review**, provided the existing external supervision, `100 C` hard stop,
+raw thermal/counter evidence, bounded recovery, named-run authorization and no-automatic-retry
+rules remain protected. Stability execution is not authorized by this disposition.
+
+Primary target review:
+`PHASE4_THERMAL_D3_LOAD_TARGET_REVIEW_20261014.md`.
+
 ## Hypothesis matrix
 
 | Hypothesis | Supporting evidence | Contradicting/insufficient evidence | Status | Next discriminating check |
@@ -81,13 +116,33 @@ CPU FP32 short load -> package/core temperature and power state
 6. Only then present the unchanged 30-minute Stability protocol for a new human decision, or amend
    it explicitly if the evidence requires different telemetry or stop rules.
 
+The first diagnostic mechanism gate is specified in
+`PHASE4_THERMAL_D1_MOCK_PROTOCOL_20261010.md`. D1 uses artificial input only and has no target
+reading mode. `D2-PREFLIGHT` interface feasibility, `D2-IDLE` observation and any later `D3-LOAD`
+control remain undesigned and unauthorized until their learning and protocol reviews are completed.
+
+The proposed one-shot target-interface gate is drafted in
+`PHASE4_THERMAL_D2_PREFLIGHT_PROTOCOL_20261013.md`. It is not frozen and does not authorize target
+access.
+
 No diagnostic command or experiment is authorized by this document.
 
-## Conclusion
+## Original conclusion before D2/D3 addendum
 
 Confirmed root cause: none.
 
 Current classification: `THERMAL_THROTTLING_EVENTS_OBSERVED_DURING_SHORT_LOAD`.
 
-Bounded disposition: Short passes its frozen hard gates; no performance admission; Stability remains
-blocked pending review and authorization of the diagnostic plan.
+Bounded disposition at that time: Short passed its frozen hard gates; no performance admission;
+Stability remained blocked pending review and authorization of the diagnostic plan.
+
+## Current conclusion after D2/D3 addendum
+
+Confirmed root cause: none.
+
+Current classification:
+`CPU_ONLY_LOAD_SUFFICIENT_FOR_TRANSIENT_THROTTLE_COUNT_PATTERN_DURATION_UNKNOWN`.
+
+Current bounded disposition: the exploratory thermal diagnosis is complete enough to unblock
+Stability design and readiness review. It does not authorize Stability execution, provide a
+steady-state performance admission, establish hardware health or change the `100 C` stop rule.

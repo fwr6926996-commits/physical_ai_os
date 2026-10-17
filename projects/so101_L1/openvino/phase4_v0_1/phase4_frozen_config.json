@@ -2,6 +2,7 @@
   "schema_version": 1,
   "protocol_id": "P4-DK2500-CPU-FP32-001",
   "protocol_snapshot": "fb18053",
+  "target_hostname": "hepintelpc",
   "device": "CPU",
   "precision": "f32",
   "performance_hint": "LATENCY",
@@ -50,7 +51,14 @@
     "stability": {
       "warmup_iterations": 10,
       "duration_seconds": 1800,
-      "latency_window_seconds": 60
+      "latency_window_seconds": 60,
+      "pre_observation_seconds": 30,
+      "pre_busy_limit_percent": 10,
+      "entry_package_max_c": 60,
+      "entry_sensor_max_c": 65,
+      "overall_timeout_seconds": 2100,
+      "stage_protocol_id": "P4-DK2500-CPU-FP32-STABILITY-002",
+      "stage_protocol_version": "0.2"
     }
   },
   "supervisor": {
