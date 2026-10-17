@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "review_id": "SIG-A0",
+  "snapshot_time": "2026-10-17T19:32:36+08:00",
+  "project_baseline": "bc95e2b9b2674f2e14d837fe2498b6b91637dfa2",
+  "capture_mode": "metadata_only_no_clone_no_build",
+  "dependency_closure_complete": false,
+  "official_sources": [
+    "https://physical-ai.ros.org/",
+    "https://physical-ai.ros.org/working-groups/",
+    "https://physical-ai.ros.org/working-groups/standardized-interfaces/",
+    "https://physical-ai.ros.org/working-groups/training-execution/",
+    "https://physical-ai.ros.org/working-groups/reference-platform/",
+    "https://reps.openrobotics.org/rep-0157-2026/",
+    "https://reps.openrobotics.org/rep-0158-2006/"
+  ],
+  "repositories": [
+    {
+      "name": "ros-physical-ai/demos",
+      "url": "https://github.com/ros-physical-ai/demos",
+      "default_branch": "main",
+      "head_sha": "ea931a9fc58de19d9c9bea0fc7dc99da1f30274b",
+      "license": "Apache-2.0",
+      "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "identity_method": "git ls-remote --symref over authenticated SSH",
+      "manifest_review": "PENDING"
+    },
+    {
+      "name": "ros-physical-ai/ros2_so_arm",
+      "url": "https://github.com/ros-physical-ai/ros2_so_arm",
+      "default_branch": "main",
+      "head_sha": "e166df9d51f43b24da9b99047c6c51c306bda74f",
+      "license": "BSD-3-Clause",
+      "license_blob_sha": "22ef916d18683683d661e5e4003c18a4588b3c8a",
+      "identity_method": "git ls-remote --symref over authenticated SSH",
+      "manifest_review": "PENDING"
+    },
+    {
+      "name": "ros-physical-ai/feetech_ros2_driver",
+      "url": "https://github.com/ros-physical-ai/feetech_ros2_driver",
+      "default_branch": "main",
+      "head_sha": "18aed7fb26d3e2b4c0b47762f39d8698b7032422",
+      "license": "BSD-3-Clause",
+      "license_blob_sha": "85e355c0ea206abf55d54a75454394b03ad40a81",
+      "identity_method": "git ls-remote --symref over authenticated SSH",
+      "manifest_review": "PENDING"
+    },
+    {
+      "name": "iblnkn/rosetta",
+      "url": "https://github.com/iblnkn/rosetta",
+      "default_branch": "main",
+      "head_sha": "294136dc435a040d608d9efd773d70ae0b421d00",
+      "license": "Apache-2.0",
+      "license_blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "identity_method": "git ls-remote --symref over authenticated SSH",
+      "manifest_review": "PENDING"
+    },
+    {
+      "name": "saikishor/ros2_policy_execution_pipeline",
+      "url": "https://github.com/saikishor/ros2_policy_execution_pipeline",
+      "default_branch": "master",
+      "head_sha": "9e3478a948be4ea327d43e375a51e9b535c02b0c",
+      "license": "UNRESOLVED_NO_ROOT_LICENSE_FILE",
+      "license_blob_sha": null,
+      "identity_method": "git ls-remote --symref over authenticated SSH",
+      "manifest_review": "PENDING"
+    }
+  ],
+  "standards_watch": [
+    {
+      "id": "REP-0157",
+      "url": "https://reps.openrobotics.org/rep-0157-2026/",
+      "observed_state": "proposal_with_TBD_reference_implementation",
+      "project_routing": "DEFER_UNTIL_MEASURED_TRANSPORT_BOTTLENECK"
+    },
+    {
+      "id": "REP-0158",
+      "url": "https://reps.openrobotics.org/rep-0158-2006/",
+      "observed_state": "DRAFT",
+      "project_routing": "DEFER_TO_E3_SIMULATION_ASSET_REVIEW"
+    }
+  ],
+  "limits": [
+    "HEAD identities are a dated source-review snapshot, not admitted dependencies.",
+    "Transitive dependencies and manifest pins remain to be reviewed before any build.",
+    "No clone, dependency installation, build, simulation, hardware access or robot motion occurred."
+  ]
+}

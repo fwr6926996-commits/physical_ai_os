@@ -2,9 +2,9 @@
 
 Review ID: `SIG-A0`
 
-Version: `0.1`
+Version: `0.2`
 
-Status: `PLANNED_INACTIVE_UNTIL_PHASE4_TRANSITION`
+Status: `ACTIVE_SOURCE_REVIEW_ONLY`
 
 Classification: `ARCHITECTURE_REVIEW`
 
@@ -33,6 +33,20 @@ Activation requires one of:
    preserving the Phase 4 main milestone.
 
 The review must finish before the Phase 5A package and interface architecture is frozen.
+
+## Activation record
+
+- Activation date: `2026-10-17`
+- Human authorization: minimal `SIG-A0` activation package approved
+- Repository baseline: `bc95e2b9b2674f2e14d837fe2498b6b91637dfa2`
+- Evidence root: `experiments/EXP-2026-004_sig_a0_alignment/`
+- Active scope: official-source refresh, exact upstream identity capture, interface mapping and
+  component disposition review
+- Compatibility spike: `NOT_AUTHORIZED`
+- Dependency installation, build, simulation, hardware access and robot motion: `NOT_AUTHORIZED`
+
+Activation means the bounded architecture review may begin. It is not a `SIG-A0` pass decision and
+does not admit any upstream component into the Phase 5 runtime.
 
 ## Time and execution bounds
 
