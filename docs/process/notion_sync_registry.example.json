@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "policy": "docs/process/NOTION_SYNC.md",
+  "destinations": [
+    {
+      "destination_id": "phase_execution_reviews",
+      "name": "Phase Execution & Stage Reviews",
+      "notion_page_id": "REPLACE_WITH_LOCAL_PAGE_ID",
+      "notion_url": "https://www.notion.so/REPLACE_WITH_LOCAL_PAGE_ID"
+    },
+    {
+      "destination_id": "current_priorities",
+      "name": "Current Priorities",
+      "notion_page_id": "REPLACE_WITH_LOCAL_PAGE_ID",
+      "notion_url": "https://www.notion.so/REPLACE_WITH_LOCAL_PAGE_ID"
+    }
+  ],
+  "sync_records": []
+}

@@ -34,6 +34,9 @@ projects/**/openvino/**/policy_package*/**/*.pt2
 projects/**/openvino/**/policy_package*/**/*.npy
 projects/**/openvino/**/policy_package*/**/*.npz
 
+# Local service mappings (may contain real Notion page IDs and URLs)
+/docs/process/notion_sync_registry.json
+
 # IDE
 .vscode/
 .idea/

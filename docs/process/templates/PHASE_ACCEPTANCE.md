@@ -1,10 +1,10 @@
 # Phase Acceptance Template
 
-Template version: `0.1`
+Template version: `0.2`
 
 Status: `TRIAL`
 
-Compatible workflow: `0.1`
+Compatible workflow: `0.3`
 
 ## Identity
 
@@ -75,3 +75,15 @@ Identify the only current configuration and explicitly mark historical configura
 ## Decision
 
 Record the human decision and reasoning. Experimental completion, gate result, waiver and learning acceptance must remain separate states.
+
+## Notion projection
+
+- Sync requirement: `REQUIRED` / `NOT_REQUIRED`
+- Sync state: `PENDING` / `SYNCED` / `STALE` / `FAILED` / `BLOCKED`
+- Notion page:
+- Source revision:
+- Registry sync ID:
+
+The projection is complete only after read-back verification and local registry update. Sync state
+does not change the engineering or acceptance decision. Do not copy real Notion page IDs or URLs
+into the public example registry.
