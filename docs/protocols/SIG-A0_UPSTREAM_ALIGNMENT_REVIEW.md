@@ -51,7 +51,7 @@ At activation, the bounded architecture review was permitted to begin; activatio
 ## Closure record
 
 - Owner decision date: `2026-10-17`
-- Repository effectivity: pending merge of PR #5
+- Repository effectivity: PR #5 merged as `bb5f8712a1e30b7df23608f8bd1794fc7043ad98`
 - Phase 5A RMW: explicit `rmw_fastrtps_cpp`
 - Timing/buffer owner: `physical_ai_runtime`
 - Linux-to-MCU permission boundary: `physical_ai_safety_bridge`
@@ -241,3 +241,10 @@ frozen protocol provides that authority.
 - Agentic question -> E5 ADR after Technical Core and Employment Gate.
 - Generalizable evidence or bug -> candidate upstream contribution, requiring human review before
   publication.
+
+## Post-closure field consistency correction
+
+A targeted V2.9 and Addendum review found non-intentional drift in the initial field draft. The
+correction is isolated in `experiments/EXP-2026-004_sig_a0_alignment/` and preserves this review's
+fixed-source research, component dispositions and ownership conclusions. Phase 5A interface freeze
+waits for Owner Review of that correction; no upstream research is reopened.

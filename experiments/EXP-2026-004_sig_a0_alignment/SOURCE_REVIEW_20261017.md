@@ -1,6 +1,6 @@
 # SIG-A0 Fixed-Source Review — 2026-10-17
 
-Status: `OWNER_ACCEPTED_PENDING_PR_5_MERGE`
+Status: `OWNER_ACCEPTED_PR_5_MERGED`
 
 Scope: read-only inspection of the exact commits recorded in `upstream_snapshot.json` and the
 direct Rosetta identities pinned by the captured demo manifest. No clone, installation, build,

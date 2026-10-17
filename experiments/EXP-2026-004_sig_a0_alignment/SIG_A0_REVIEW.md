@@ -1,12 +1,14 @@
 # SIG-A0 Review Record
 
-Review status: `PASS_ARCHITECTURE_REVIEW_ONLY_PENDING_PR_5_MERGE`
+Review status: `PASS_ARCHITECTURE_REVIEW_ONLY`
 
 Activation date: `2026-10-17`
 
 Owner: human
 
 Evidence root: `experiments/EXP-2026-004_sig_a0_alignment/`
+
+Repository effectivity: PR #5 merged as `bb5f8712a1e30b7df23608f8bd1794fc7043ad98`
 
 ## Activation decision
 
@@ -25,7 +27,7 @@ simulation, driver execution, hardware access, firmware changes or robot motion.
 | Repository and worktree baseline captured | PASS | `environment_snapshot.txt` |
 | Host toolchain baseline captured | PASS | `environment_snapshot.txt` |
 | Phase 5A package boundaries accepted | PASS | `phase5a_package_boundaries.md` |
-| Five protected interfaces and field baseline accepted | PASS | `interface_mapping.md` |
+| Five protected interface names and ownership available | PASS | `interface_mapping.md` |
 | Official upstream sources refreshed and reviewed | PASS | `upstream_snapshot.json`, `SOURCE_REVIEW_20261017.md` |
 | Exact identities captured before build/use | PASS | five repository HEAD identities captured; no build/use occurred |
 | Compatibility-spike output and cleanup plan | NOT APPLICABLE | no spike is authorized |
@@ -39,8 +41,9 @@ simulation, driver execution, hardware access, firmware changes or robot motion.
 - The policy-execution repository has no root `LICENSE`, but both ROS package directories contain
   Apache-2.0 license files and their manifests declare Apache-2.0. The two LeRobot Rosetta adapter
   repositories declare Apache-2.0 in package metadata and source headers but have no root LICENSE.
-- Field-level definitions are accepted architecture inputs but have no implementation or runtime
-  evidence yet.
+- A post-closure consistency review found non-intentional field drift against V2.9 and Gate T0.
+  The upstream research PASS remains valid, but the Phase 5A field freeze waits for the correction
+  in `PHASE5A_INTERFACE_CONSISTENCY_REVIEW_20261017.md`.
 - Upstream `HEAD` values are dated evidence only and must never be treated as floating pins.
 
 ## Fixed-source review checkpoint
@@ -70,7 +73,8 @@ No compatibility spike was executed or implicitly authorized by this checkpoint.
 
 On `2026-10-17`, the human Owner approved the following for the Phase 5A handoff:
 
-- the version 1 project field and validity baseline in `interface_mapping.md`;
+- the initial version 1 project field and validity baseline in `interface_mapping.md`, later
+  reopened only for the V2.9 and Gate T0 consistency correction;
 - `physical_ai_runtime` ownership of the host-local monotonic clock policy, action age and the
   capacity-one bounded `ActionBuffer`;
 - `physical_ai_safety_bridge` as the sole Linux-to-MCU permission boundary;
@@ -85,7 +89,17 @@ hardware access, firmware change or robot motion.
 
 `PASS — ARCHITECTURE REVIEW ONLY`
 
-All protocol acceptance criteria are satisfied by the fixed-source evidence, accepted component
-dispositions, explicit ownership and Owner decision. The decision becomes repository-effective
-only when PR #5 is merged. A mock-only compatibility spike is not required for the offline Phase 5A
-Core path and remains unauthorized. Phase 5A implementation requires a separate start decision.
+All protocol acceptance criteria for fixed-source research, component dispositions and ownership
+were satisfied, and PR #5 made that result repository-effective. A mock-only compatibility spike
+is not required for the offline Phase 5A Core path and remains unauthorized. The later field-level
+consistency correction does not reopen upstream research, but it must be reviewed before the Phase
+5A interface freeze. Phase 5A implementation still requires a separate start decision.
+
+## Post-closure interface consistency review
+
+Review against the frozen V2.9 execution book and both binding addenda found that the initial
+field draft used a non-baseline five-state safety vocabulary, omitted required logical fields and
+did not attach all Gate T0 metadata to every time field. The correction is documented in
+`PHASE5A_INTERFACE_CONSISTENCY_REVIEW_20261017.md` and changes neither upstream identities nor
+component dispositions. No new ADR is required unless Owner Review chooses to preserve a deviation
+from the frozen baseline.

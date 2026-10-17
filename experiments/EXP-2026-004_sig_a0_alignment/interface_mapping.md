@@ -1,143 +1,208 @@
 # SIG-A0 Interface Review Baseline
 
-Status: `OWNER_ACCEPTED_PENDING_PR_5_MERGE`
+Status: `CORRECTION_PROPOSED_PENDING_OWNER_REVIEW`
 
-The five contract names and their project ownership are frozen. Fixed upstream sources have been
-compared, and the human Owner accepted the Phase 5A field and ownership baseline on `2026-10-17`.
-This is an architecture contract only; it does not authorize implementation, build or hardware use.
+The SIG-A0 fixed-source research, component dispositions and ownership decisions remain valid.
+This correction restores the field baseline to the frozen L1 V2.9 execution book and its two
+binding addenda. It does not modify the frozen governing documents, admit an upstream component or
+authorize implementation, build, dependency installation or hardware use.
 
-| Contract | Fixed-source finding | Required L1 mapping | Open item before freeze |
-|---|---|---|---|
-| `Observation` | Rosetta declares topic/type/QoS, header/receive timeline and `hold`/`asof`/`drop`; `hold` has no age limit and missing streams are zero-filled | Project adapter adds schema version, units, frame/joint identity, clock domain and validity; safety-relevant missing data fails closed | Accepted below |
-| `PolicyOutput` | Rosetta/LeRobot exposes chunk size, queue threshold and aggregation, but live use collapses to one numeric observation key and one action key; action values become `float32` | Project type carries units, joint order, chunk semantics, `generated_at_ns` and `valid_until_ns`; never direct actuator authority | Accepted below |
-| `ControlCommand` | SO-ARM uses position interfaces at 50 Hz; forward controller orders five arm joints while the hardware description also contains a gripper; Feetech write has no L1 clamp/freshness check | `physical_ai_runtime` owns ordering, conversion, clamp, deadline and fail-closed command preparation | Accepted below |
-| `SafetyState` | Rosetta watchdog fires after two frame periods but allows `hold`, `zeros` or `none`; Feetech deactivation disables torque, while initialization may enable it | `physical_ai_safety_bridge` maps project state to MCU permission; Linux cannot reset or bypass STM32/Zephyr and hardware E-stop authority | Accepted below |
-| `RuntimeMetrics` | Rosetta reports queue depth and published actions; reviewed candidates do not provide complete L1 end-to-end timing | `physical_ai_runtime` owns one clock policy plus capture, inference, queue, action age, jitter, drop and deadline counters | Accepted below |
-| `InferenceBackend` | Rosetta has a separable framework adapter; the policy-execution prototype couples all stages to `Ort::Value` | `physical_ai_policy_adapter` preserves a backend-neutral boundary; OpenVINO remains the admitted Intel path | Accepted ownership; detailed API remains a Phase 5A design item |
-| bounded `ActionBuffer` | LeRobot owns an internal action queue and reports depth; reviewed wrapper does not prove project capacity, overflow or stale-action rejection | `physical_ai_runtime` owns capacity, producer/consumer handoff, overwrite, expiry and stale-action rejection | Accepted below |
+## Governing baseline
 
-Additional protected abstractions:
+| Document | SHA-256 |
+|---|---|
+| L1 V2.9 execution book | `95cd404a72f0c03435b0728aa0bd169f78a6b782f9063a4b6659cbc953bec5ef` |
+| Architecture Audit Addendum 01 | `eb34eedec544d8f327a321b9e4188055ffcd54aee4a44b7672cb5955e95e8091` |
+| Portability Addendum 02 | `e3b4aea1b8cdcf425762fa980d4bc6189e109f726d9238bea6f1c146dc7551b6` |
 
-- independent `SafetyFilter -> STM32/Zephyr` permission and emergency-stop boundary.
+## Corrected consistency result
 
-An upstream type name, successful demo or build result cannot close an open item by itself.
+| Contract | Frozen-baseline requirement | Correction |
+|---|---|---|
+| `Observation` | Capture, state and assembly time; RGB input; ordered joint and gripper state; task context; frame, units, validity and data version | Restore the omitted state/assembly, sensor, task, gripper, health and data-version semantics |
+| `PolicyOutput` | `generated_at`, `valid_until`, `sequence_id`, `model_version`, action chunk/trajectory with `dt`, status and optional confidence | Restore the omitted model, step, status and confidence semantics |
+| `ControlCommand` | Generic command after `SafetyFilter` processing | Make it a post-filter command; the pre-filter value is an internal `CommandCandidate` |
+| `SafetyState` | `DISARMED / ARMED / RUNNING / DEGRADED / FAULT / SAFE` shared by ROS 2 and MCU | Replace the non-baseline `DISABLED / READY / PERMITTED / FAULT / ESTOP` enum |
+| `RuntimeMetrics` | Full nine-point time chain, derived Age/latency/jitter, queue counters, percentiles and fault/resource/reproduction evidence | Restore the raw time points and define event versus run-summary evidence |
+| Gate T0 | Every time field records timestamp, clock domain, source, measurement point and synchronization status; benchmark output carries the clock contract version | Replace message-wide clock metadata with metadata attached to every time field |
 
-## Source-review ownership recommendation
+These are non-intentional consistency corrections. No change to the formal architecture or new ADR
+is proposed.
 
-- `physical_ai_interfaces`: field definitions and schema versions only.
-- `physical_ai_replay`: recorded input and deterministic offline replay.
-- `physical_ai_policy_adapter`: `FakePolicy` and replaceable `InferenceBackend` mapping.
-- `physical_ai_runtime`: clock selection, action age, bounded `ActionBuffer`, command preparation and
-  `RuntimeMetrics`.
-- `physical_ai_safety_bridge`: the only Linux boundary to STM32/Zephyr permission state.
+## Protected ownership and upstream findings
 
-The upstream demo's `rmw_zenoh_cpp` choice belongs to its Lyrical reference environment and is not
-inherited by L1. The Owner selected `rmw_fastrtps_cpp` for Phase 5A. It must be set explicitly by
-the future launch/test environment; this decision does not mutate the host globally or prevent a
-later evidence-backed RMW decision.
+- `physical_ai_interfaces` owns project schemas and versions only.
+- `physical_ai_replay` owns deterministic offline replay and fixtures.
+- `physical_ai_policy_adapter` owns `FakePolicy` and the replaceable `InferenceBackend` mapping.
+- `physical_ai_runtime` owns the host-local monotonic clock policy, action age, capacity-one
+  `ActionBuffer`, pre-filter command preparation and `RuntimeMetrics`.
+- `physical_ai_safety_bridge` supplies the project `SafetyState` and MCU acknowledgement to
+  `SafetyFilter`. It cannot replace STM32/Zephyr or the hardware E-stop.
+- Upstream queues, drivers, controllers and message types remain behind adapters and cannot become
+  a second source of truth.
 
-## Owner-approved Phase 5A field baseline
+The SIG-A0 component dispositions, exact upstream identities and source-review conclusions are
+unchanged. `rmw_fastrtps_cpp` remains the explicit Phase 5A test RMW and must be selected per launch
+or test, never as a global host mutation.
 
-All `*_ns` values use unsigned nanoseconds in the named `clock_domain`. Phase 5A uses one
-host-local monotonic clock domain for capture, policy, buffer, command and metrics comparisons.
-Values from different clock domains are rejected rather than compared. Array lengths must match,
-joint names are ordered identifiers, position values are radians, and every numeric value must be
-finite.
+## Gate T0 timestamp contract version 1
+
+Every logical time field is a `ClockedTimestamp` record with:
+
+- `uint64 timestamp_ns`
+- `string clock_domain`
+- `string source`
+- `string measurement_point`
+- `string synchronization_status`
+- `uint16 clock_contract_version` = `1`
+- `bool present`
+
+Phase 5A interval, age, jitter, deadline and timeout calculations use one host-local monotonic or
+steady clock domain. ROS time or system time may be recorded for human-readable or rosbag
+correlation, but it is never subtracted from a monotonic value. Values from different clock domains
+are rejected unless an explicit mapping records offset, method, error and sampling window.
+`unknown` synchronization status is preserved rather than guessed.
+
+## Corrected Phase 5A logical field baseline
+
+This is a logical contract for the message-definition Review. Standard ROS message composition may
+be selected later, but it must preserve every semantic below.
 
 ### `Observation` version 1
 
 - `uint16 schema_version` = `1`
 - `uint64 sequence_id`
-- `string clock_domain`
-- `uint64 captured_at_ns`
-- `uint64 received_at_ns`
-- `uint64 valid_until_ns`
+- `string data_version`
+- `ClockedTimestamp capture_time`
+- `ClockedTimestamp state_time`
+- `ClockedTimestamp assembled_time`
+- `ClockedTimestamp valid_until_time`
+- `image_front_rgb` with explicit encoding, shape and frame identity
 - `string frame_id`
 - `string[] joint_names`
 - `float64[] joint_positions_rad`
+- `string gripper_state_name`
+- `float64 gripper_state_value`
+- `string gripper_state_unit`
+- `uint32 hardware_health_flags`
+- `string task_id`
+- `string task_phase`
+- optional `string language_text`
 - `bool valid`
 
-The consumer requires `captured_at_ns <= received_at_ns <= valid_until_ns`, a known frame and joint
-order, matching array lengths and finite positions. Missing or invalid safety-relevant input fails
-closed; it is not converted to valid zero data.
+Joint order is the array order and cannot be inferred from a device ID. Array lengths must match
+and numeric values must be finite. The gripper unit and mapping are explicit. Missing or invalid
+safety-relevant input fails closed and is never converted into valid zero data.
 
 ### `PolicyOutput` version 1
 
 - `uint16 schema_version` = `1`
 - `uint64 sequence_id`
 - `uint64 source_observation_sequence_id`
-- `string clock_domain`
-- `uint64 generated_at_ns`
-- `uint64 valid_until_ns`
+- `ClockedTimestamp generated_time`
+- `ClockedTimestamp valid_until_time`
+- `string model_version`
 - `string[] joint_names`
 - `float64[] target_positions_rad`
+- `uint64 action_dt_ns`
 - `uint32 chunk_index`
 - `uint32 chunk_size`
+- `string status`
+- optional `float64 confidence` with an explicit presence flag
 - `bool valid`
 
-Phase 5A fixes `chunk_index = 0` and `chunk_size = 1`. A `PolicyOutput` carries no actuator or
-safety permission.
+Phase 5A fixes `chunk_index = 0` and `chunk_size = 1`. A `PolicyOutput` carries neither actuator
+authority nor safety permission.
+
+### `SafetyState` version 1
+
+- `uint16 schema_version` = `1`
+- `uint64 sequence_id`
+- `ClockedTimestamp updated_time`
+- `uint8 state` with project constants in frozen order:
+  `0 DISARMED`, `1 ARMED`, `2 RUNNING`, `3 DEGRADED`, `4 FAULT`, `5 SAFE`
+- `bool permission_granted`
+- `bool fault_latched`
+- `uint64 fault_flags`
+- `uint32 fault_code`
+- `string reason`
+- `uint64 mcu_ack_sequence`
+
+`permission_granted` is false in `DISARMED`, `ARMED`, `FAULT` and `SAFE`. It may be true in
+`RUNNING` only with a current MCU acknowledgement. V2.9 permits restricted execution in
+`DEGRADED`, but Phase 5A defines no restricted hardware profile, so mock execution treats it as no
+permission. A reset never transitions directly from `FAULT` or `SAFE` to `RUNNING`; recovery returns
+through `DISARMED` and requires the project state machine and human-owned conditions.
 
 ### `ControlCommand` version 1
 
 - `uint16 schema_version` = `1`
 - `uint64 sequence_id`
 - `uint64 source_policy_sequence_id`
-- `string clock_domain`
-- `uint64 generated_at_ns`
-- `uint64 valid_until_ns`
+- `uint64 safety_state_sequence_id`
+- `uint64 mcu_ack_sequence`
+- `ClockedTimestamp generated_time`
+- `ClockedTimestamp valid_until_time`
 - `string[] joint_names`
 - `float64[] target_positions_rad`
 - `bool clamp_applied`
 - `bool valid`
 
-`physical_ai_runtime` validates order, converts units, applies limits and rejects expired commands
-before mock execution. This message does not grant Linux or hardware execution permission.
-
-### `SafetyState` version 1
-
-- `uint16 schema_version` = `1`
-- `uint64 sequence_id`
-- `string clock_domain`
-- `uint64 updated_at_ns`
-- `uint8 state`: `0 DISABLED`, `1 READY`, `2 PERMITTED`, `3 FAULT`, `4 ESTOP`
-- `bool permission_granted`
-- `bool fault_latched`
-- `uint32 fault_code`
-- `string reason`
-- `uint64 mcu_ack_sequence`
-
-Linux may request a transition but cannot grant permission, clear a latched MCU fault or override
-the hardware E-stop. `permission_granted` is usable only with a current MCU acknowledgement and
-`state = PERMITTED`; Phase 5A exercises this rule only against mock execution.
+`ControlCommand` exists only after `SafetyFilter` accepts an internal `CommandCandidate` against a
+current `SafetyState`. It is therefore not the name of the pre-filter candidate. A false or stale
+permission result produces no executable command. Phase 5A sends accepted commands only to the mock
+executor.
 
 ### `RuntimeMetrics` version 1
+
+The event record contains:
 
 - `uint16 schema_version` = `1`
 - `string run_id`
 - `uint64 sequence_id`
-- `string clock_domain`
-- `uint64 sampled_at_ns`
+- `ClockedTimestamp sampled_time`
 - `uint64 observation_sequence_id`, `policy_sequence_id`, `command_sequence_id`
-- `uint64 observation_age_ns`, `inference_latency_ns`, `queue_delay_ns`, `action_age_ns`
-- `uint64 end_to_end_latency_ns`
+- `ClockedTimestamp t_capture`, `t_state`, `t_observation_ready`
+- `ClockedTimestamp t_infer_start`, `t_infer_end`, `t_action_generated`
+- `ClockedTimestamp t_enqueue`, `t_dequeue`, `t_execute`
+- `uint64 observation_age_ns`, `inference_latency_ns`, `queue_delay_ns`
+- `uint64 action_age_ns`, `end_to_end_age_ns`
 - `int64 execution_jitter_ns`
 - `uint32 queue_depth`, `queue_capacity`
-- `uint64 dropped_total`, `overwritten_total`, `expired_total`, `deadline_miss_total`
+- `uint64 dropped_total`, `overwritten_total`, `expired_total`,
+  `deadline_miss_total` and `stale_drop_total`
+- `uint32 active_fault_code`
 
-Counters are monotonic within one `run_id`. Reset/restart boundaries require a new `run_id` rather
-than silently joining two process lifetimes.
+Derived values are emitted only when their source timestamps have compatible clock contracts.
+Counters are monotonic within one `run_id`; restart creates a new `run_id`.
 
-## Owner-approved bounded `ActionBuffer` semantics
+The run-summary JSON or CSV, rather than every event message, reports P50/P95/P99 and maximum,
+task result and failure class, resource and thermal observations when applicable, fault
+detection/stop/recovery evidence, and Git/data/model/config/runtime identities. It carries
+`clock_contract_version = 1`.
 
-- Phase 5A capacity is exactly one pending `PolicyOutput`.
-- Capacity is fixed at startup; the buffer never grows dynamically and never blocks indefinitely.
-- Schema version, clock domain, validity interval, joint order, array lengths and finite values are
-  validated before insertion.
-- A new valid item atomically replaces an unconsumed item and increments `overwritten_total`.
-- Consumption rechecks time validity. An expired item is cleared, increments `expired_total` and
-  cannot become a `ControlCommand`.
-- Later multi-action/chunk buffering requires a separate reviewed extension; upstream queues do not
-  silently change this contract.
+## SafetyFilter processing order
 
-See `SOURCE_REVIEW_20261017.md` for fixed source links and detailed evidence.
+The only permitted Phase 5A path is:
+
+`ReplayObservation -> FakePolicy -> capacity-one ActionBuffer -> Execution consumer
+-> internal CommandCandidate -> SafetyFilter(CommandCandidate, SafetyState)
+-> ControlCommand -> mock execution -> RuntimeMetrics`
+
+The execution consumer validates schema, timestamp contract, order, units, finite values, freshness
+and limits while preparing the internal candidate. `SafetyFilter` then checks current permission,
+fault latch and acknowledgement. No candidate-to-executor bypass exists. Later Adapter, driver or
+hardware work requires a separate gate and cannot reorder this boundary.
+
+## Bounded `ActionBuffer` semantics
+
+- Capacity is exactly one pending `PolicyOutput` and is fixed at startup.
+- The buffer never grows dynamically and never blocks indefinitely.
+- Schema, timestamp contract, validity, order, lengths and finite values are checked before insert.
+- A newer valid item atomically replaces an unconsumed item and increments `overwritten_total`.
+- Consumption rechecks validity and freshness. Expired or stale items are cleared and counted and
+  cannot become a `CommandCandidate`.
+- Multi-action buffering requires a separately reviewed extension.
+
+See `PHASE5A_INTERFACE_CONSISTENCY_REVIEW_20261017.md` for the audit trail and
+`PHASE5A_MINIMAL_OFFLINE_IMPLEMENTATION_PLAN.md` for the bounded implementation proposal.
