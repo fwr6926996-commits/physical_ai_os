@@ -1,130 +1,226 @@
 {
-  "schema_version": 2,
   "review_id": "SIG-A0",
-  "snapshot_time": "2026-10-17T19:32:36+08:00",
-  "project_baseline": "bc95e2b9b2674f2e14d837fe2498b6b91637dfa2",
-  "capture_mode": "metadata_only_no_clone_no_build",
-  "dependency_closure_complete": false,
-  "official_sources": [
-    "https://physical-ai.ros.org/",
-    "https://physical-ai.ros.org/working-groups/",
-    "https://physical-ai.ros.org/working-groups/standardized-interfaces/",
-    "https://physical-ai.ros.org/working-groups/training-execution/",
-    "https://physical-ai.ros.org/working-groups/reference-platform/",
-    "https://reps.openrobotics.org/rep-0157-2026/",
-    "https://reps.openrobotics.org/rep-0158-2006/"
-  ],
+  "snapshot_date_local": "2026-10-26",
+  "timezone": "Asia/Shanghai",
+  "mode": "SOURCE_INSPECTION_ONLY",
+  "status": "PARTIAL_NOT_ACCEPTED",
   "repositories": [
     {
-      "name": "ros-physical-ai/demos",
-      "url": "https://github.com/ros-physical-ai/demos",
-      "default_branch": "main",
-      "head_sha": "ea931a9fc58de19d9c9bea0fc7dc99da1f30274b",
-      "license": "Apache-2.0",
-      "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
-      "identity_method": "git ls-remote --symref over authenticated SSH",
-      "manifest_review": "SOURCE_REVIEWED_REFERENCE_ONLY_LYRICAL_PYTHON314_ZENOH"
-    },
-    {
-      "name": "ros-physical-ai/ros2_so_arm",
-      "url": "https://github.com/ros-physical-ai/ros2_so_arm",
-      "default_branch": "main",
-      "head_sha": "e166df9d51f43b24da9b99047c6c51c306bda74f",
+      "repo": "ros-physical-ai/ros2_so_arm",
+      "sha": "e166df9d51f43b24da9b99047c6c51c306bda74f",
       "license": "BSD-3-Clause",
-      "license_blob_sha": "22ef916d18683683d661e5e4003c18a4588b3c8a",
-      "identity_method": "git ls-remote --symref over authenticated SSH",
-      "manifest_review": "SOURCE_REVIEWED_JAZZY_CI_DECLARED_MOCK_BOUNDARY_PRESENT"
+      "evidence": [
+        {
+          "path": "README.md",
+          "local_path": "sources/ros-physical-ai__ros2_so_arm/README.md",
+          "blob_sha": "5c6349f704a635bf64cef4232f8bec5fee71f05c",
+          "url": "https://github.com/ros-physical-ai/ros2_so_arm/blob/e166df9d51f43b24da9b99047c6c51c306bda74f/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "local_path": "sources/ros-physical-ai__ros2_so_arm/LICENSE",
+          "blob_sha": "22ef916d18683683d661e5e4003c18a4588b3c8a",
+          "url": "https://github.com/ros-physical-ai/ros2_so_arm/blob/e166df9d51f43b24da9b99047c6c51c306bda74f/LICENSE"
+        },
+        {
+          "path": ".github/workflows/build_and_test.yaml",
+          "local_path": "sources/ros-physical-ai__ros2_so_arm/.github/workflows/build_and_test.yaml",
+          "blob_sha": "9f1305c5f68e0b81e63b329422cbdea08b8b29fe",
+          "url": "https://github.com/ros-physical-ai/ros2_so_arm/blob/e166df9d51f43b24da9b99047c6c51c306bda74f/.github/workflows/build_and_test.yaml"
+        },
+        {
+          "path": "so_arm101_description/package.xml",
+          "local_path": "sources/ros-physical-ai__ros2_so_arm/so_arm101_description/package.xml",
+          "blob_sha": "4d7808d7047c2979e984d3738423ae96b480ba1b",
+          "url": "https://github.com/ros-physical-ai/ros2_so_arm/blob/e166df9d51f43b24da9b99047c6c51c306bda74f/so_arm101_description/package.xml"
+        },
+        {
+          "path": "so_arm101_description/control/ros2_controllers.yaml",
+          "local_path": "sources/ros-physical-ai__ros2_so_arm/so_arm101_description/control/ros2_controllers.yaml",
+          "blob_sha": "d6223d69ac5c5003c3da703ecd29859ba88392f6",
+          "url": "https://github.com/ros-physical-ai/ros2_so_arm/blob/e166df9d51f43b24da9b99047c6c51c306bda74f/so_arm101_description/control/ros2_controllers.yaml"
+        },
+        {
+          "path": "so_arm101_description/launch/controllers_bringup.launch.py",
+          "local_path": "sources/ros-physical-ai__ros2_so_arm/so_arm101_description/launch/controllers_bringup.launch.py",
+          "blob_sha": "d756096cbf6008a87a80461238b7bd8b7aae5a3f",
+          "url": "https://github.com/ros-physical-ai/ros2_so_arm/blob/e166df9d51f43b24da9b99047c6c51c306bda74f/so_arm101_description/launch/controllers_bringup.launch.py"
+        }
+      ]
     },
     {
-      "name": "ros-physical-ai/feetech_ros2_driver",
-      "url": "https://github.com/ros-physical-ai/feetech_ros2_driver",
-      "default_branch": "main",
-      "head_sha": "18aed7fb26d3e2b4c0b47762f39d8698b7032422",
+      "repo": "ros-physical-ai/feetech_ros2_driver",
+      "sha": "18aed7fb26d3e2b4c0b47762f39d8698b7032422",
       "license": "BSD-3-Clause",
-      "license_blob_sha": "85e355c0ea206abf55d54a75454394b03ad40a81",
-      "identity_method": "git ls-remote --symref over authenticated SSH",
-      "manifest_review": "SOURCE_REVIEWED_JAZZY_CI_DECLARED_HARDWARE_SAFETY_GAPS"
+      "evidence": [
+        {
+          "path": "README.md",
+          "local_path": "sources/ros-physical-ai__feetech_ros2_driver/README.md",
+          "blob_sha": "693378aa1c42986dc2b9f2beeb8e841f1de8c53e",
+          "url": "https://github.com/ros-physical-ai/feetech_ros2_driver/blob/18aed7fb26d3e2b4c0b47762f39d8698b7032422/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "local_path": "sources/ros-physical-ai__feetech_ros2_driver/LICENSE",
+          "blob_sha": "85e355c0ea206abf55d54a75454394b03ad40a81",
+          "url": "https://github.com/ros-physical-ai/feetech_ros2_driver/blob/18aed7fb26d3e2b4c0b47762f39d8698b7032422/LICENSE"
+        },
+        {
+          "path": "package.xml",
+          "local_path": "sources/ros-physical-ai__feetech_ros2_driver/package.xml",
+          "blob_sha": "034a779e60d887ccc4f5f668c70796a660df25bc",
+          "url": "https://github.com/ros-physical-ai/feetech_ros2_driver/blob/18aed7fb26d3e2b4c0b47762f39d8698b7032422/package.xml"
+        },
+        {
+          "path": ".github/workflows/build_and_test.yaml",
+          "local_path": "sources/ros-physical-ai__feetech_ros2_driver/.github/workflows/build_and_test.yaml",
+          "blob_sha": "4d4ba2ebfaa6852b3579d1d91ff541a8900ec74d",
+          "url": "https://github.com/ros-physical-ai/feetech_ros2_driver/blob/18aed7fb26d3e2b4c0b47762f39d8698b7032422/.github/workflows/build_and_test.yaml"
+        },
+        {
+          "path": "src/feetech_ros2_driver.cpp",
+          "local_path": "sources/ros-physical-ai__feetech_ros2_driver/src/feetech_ros2_driver.cpp",
+          "blob_sha": "af7ecd7462fea2df9e696c36b357b7becfb2e19d",
+          "url": "https://github.com/ros-physical-ai/feetech_ros2_driver/blob/18aed7fb26d3e2b4c0b47762f39d8698b7032422/src/feetech_ros2_driver.cpp"
+        }
+      ]
     },
     {
-      "name": "iblnkn/rosetta",
-      "url": "https://github.com/iblnkn/rosetta",
-      "default_branch": "main",
-      "head_sha": "294136dc435a040d608d9efd773d70ae0b421d00",
+      "repo": "iblnkn/rosetta",
+      "sha": "294136dc435a040d608d9efd773d70ae0b421d00",
       "license": "Apache-2.0",
-      "license_blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
-      "identity_method": "git ls-remote --symref over authenticated SSH",
-      "manifest_review": "SOURCE_REVIEWED_JAZZY_CI_DECLARED_ADAPTER_REQUIRED"
+      "evidence": [
+        {
+          "path": "README.md",
+          "local_path": "sources/iblnkn__rosetta/README.md",
+          "blob_sha": "70a04527f277d497d6bb4d44b253ae49dd6a1cef",
+          "url": "https://github.com/iblnkn/rosetta/blob/294136dc435a040d608d9efd773d70ae0b421d00/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "local_path": "sources/iblnkn__rosetta/LICENSE",
+          "blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "url": "https://github.com/iblnkn/rosetta/blob/294136dc435a040d608d9efd773d70ae0b421d00/LICENSE"
+        },
+        {
+          "path": "package.xml",
+          "local_path": "sources/iblnkn__rosetta/package.xml",
+          "blob_sha": "ef1c8e620a84ca56c135a9aa75613aeaefd52d4a",
+          "url": "https://github.com/iblnkn/rosetta/blob/294136dc435a040d608d9efd773d70ae0b421d00/package.xml"
+        },
+        {
+          "path": ".github/workflows/ci.yml",
+          "local_path": "sources/iblnkn__rosetta/.github/workflows/ci.yml",
+          "blob_sha": "2ab43f39de8fdc7669aaa80beb2c6ae5a4c8e5af",
+          "url": "https://github.com/iblnkn/rosetta/blob/294136dc435a040d608d9efd773d70ae0b421d00/.github/workflows/ci.yml"
+        },
+        {
+          "path": "contracts/so_101.yaml",
+          "local_path": "sources/iblnkn__rosetta/contracts/so_101.yaml",
+          "blob_sha": "8d9b3ee6515717ffd278bc9bc41dbe5aec627238",
+          "url": "https://github.com/iblnkn/rosetta/blob/294136dc435a040d608d9efd773d70ae0b421d00/contracts/so_101.yaml"
+        }
+      ]
     },
     {
-      "name": "saikishor/ros2_policy_execution_pipeline",
-      "url": "https://github.com/saikishor/ros2_policy_execution_pipeline",
-      "default_branch": "master",
-      "head_sha": "9e3478a948be4ea327d43e375a51e9b535c02b0c",
-      "license": "Apache-2.0_PACKAGE_SCOPED_NO_ROOT_LICENSE",
-      "license_blob_sha": null,
-      "identity_method": "git ls-remote --symref over authenticated SSH",
-      "license_evidence": [
-        "ros2_policy_execution_core/LICENSE",
-        "ros2_policy_execution_pipeline/LICENSE",
-        "ros2_policy_execution_core/package.xml",
-        "ros2_policy_execution_pipeline/package.xml"
-      ],
-      "manifest_review": "SOURCE_REVIEWED_NO_CI_WORKFLOW_REFERENCE_ONLY"
+      "repo": "ros-physical-ai/demos",
+      "sha": "ea931a9fc58de19d9c9bea0fc7dc99da1f30274b",
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "path": "README.md",
+          "local_path": "sources/ros-physical-ai__demos/README.md",
+          "blob_sha": "731dcfe37383f2bfc8b1edf0f77994cf58a8bb15",
+          "url": "https://github.com/ros-physical-ai/demos/blob/ea931a9fc58de19d9c9bea0fc7dc99da1f30274b/README.md"
+        },
+        {
+          "path": "LICENSE",
+          "local_path": "sources/ros-physical-ai__demos/LICENSE",
+          "blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "url": "https://github.com/ros-physical-ai/demos/blob/ea931a9fc58de19d9c9bea0fc7dc99da1f30274b/LICENSE"
+        },
+        {
+          "path": "pixi.toml",
+          "local_path": "sources/ros-physical-ai__demos/pixi.toml",
+          "blob_sha": "eb76ec57d496b4e6fbcc6ba4459421e212e8b797",
+          "url": "https://github.com/ros-physical-ai/demos/blob/ea931a9fc58de19d9c9bea0fc7dc99da1f30274b/pixi.toml"
+        },
+        {
+          "path": "pai.repos",
+          "local_path": "sources/ros-physical-ai__demos/pai.repos",
+          "blob_sha": "0a6e8bfdeb99a136d69d206be73f4dc94d7130c8",
+          "url": "https://github.com/ros-physical-ai/demos/blob/ea931a9fc58de19d9c9bea0fc7dc99da1f30274b/pai.repos"
+        }
+      ]
+    },
+    {
+      "repo": "saikishor/ros2_policy_execution_pipeline",
+      "sha": "9e3478a948be4ea327d43e375a51e9b535c02b0c",
+      "license": "Apache-2.0 core package license inspected",
+      "evidence": [
+        {
+          "path": "ros2_policy_execution_core/LICENSE",
+          "local_path": "sources/saikishor__ros2_policy_execution_pipeline/ros2_policy_execution_core/LICENSE",
+          "blob_sha": "b1a313f58020e84379135e2b048b042a6582538d",
+          "url": "https://github.com/saikishor/ros2_policy_execution_pipeline/blob/9e3478a948be4ea327d43e375a51e9b535c02b0c/ros2_policy_execution_core/LICENSE"
+        },
+        {
+          "path": "ros2_policy_execution_core/README.md",
+          "local_path": "sources/saikishor__ros2_policy_execution_pipeline/ros2_policy_execution_core/README.md",
+          "blob_sha": "b50a1ea18064e53cdb1bf7c4723110bc94c11477",
+          "url": "https://github.com/saikishor/ros2_policy_execution_pipeline/blob/9e3478a948be4ea327d43e375a51e9b535c02b0c/ros2_policy_execution_core/README.md"
+        },
+        {
+          "path": "ros2_policy_execution_pipeline/README.md",
+          "local_path": "sources/saikishor__ros2_policy_execution_pipeline/ros2_policy_execution_pipeline/README.md",
+          "blob_sha": "3694e773b9846a2a749b727f876194b1138fc449",
+          "url": "https://github.com/saikishor/ros2_policy_execution_pipeline/blob/9e3478a948be4ea327d43e375a51e9b535c02b0c/ros2_policy_execution_pipeline/README.md"
+        }
+      ]
     }
   ],
-  "captured_demo_direct_pins": [
-    {
-      "name": "ros-physical-ai/ros2_so_arm",
-      "head_sha": "12fbcb8cf30da7c3d679db384c43765ea311eb18",
-      "note": "The demo pin differs from the standalone SIG-A0 candidate identity."
-    },
-    {
-      "name": "ros-physical-ai/feetech_ros2_driver",
-      "head_sha": "18aed7fb26d3e2b4c0b47762f39d8698b7032422"
-    },
-    {
-      "name": "iblnkn/rosetta",
-      "head_sha": "dfd07e40e1a20825e3a3f37cc897663fb3759285",
-      "note": "The demo pin differs from the standalone SIG-A0 candidate identity."
-    },
-    {
-      "name": "iblnkn/rosetta_interfaces",
-      "head_sha": "17d06b639960b8a4de0d1970b4c42d306951d567"
-    },
-    {
-      "name": "iblnkn/lerobot-robot-rosetta",
-      "head_sha": "cd9b4c140ee5b6b02f3e57f76dfeb1a737646d86"
-    },
-    {
-      "name": "iblnkn/lerobot-rosetta",
-      "head_sha": "1ea49d620fb344360e4982b9d59031c09efd4564"
-    }
+  "notes": [
+    "Commits resolved from the default-branch commits API; exact identities freeze the inspected source, not a tested stack.",
+    "The demo pai.repos pins ros2_so_arm and rosetta to different commits from their independently inspected default heads. These must not be combined and described as a tested dependency closure.",
+    "License names identify inspected files only; nested assets and transitive dependency licenses are not fully reviewed.",
+    "Workflow files describe configured CI coverage; CI run outcomes and local builds are not verified.",
+    "No source candidate is adopted."
   ],
-  "source_review": {
-    "date": "2026-10-17",
-    "mode": "fixed_commit_read_only_no_clone_no_build",
-    "evidence": "SOURCE_REVIEW_20261017.md",
-    "dependency_closure_complete": false,
-    "remaining_dependency_gap": "LeRobot adapter CI installs unpinned current Python packages; full transitive closure is not reproducible.",
-    "compatibility_spike_executed": false
-  },
-  "standards_watch": [
+  "official_documents": [
     {
-      "id": "REP-0157",
+      "url": "https://physical-ai.ros.org/",
+      "coverage": "home"
+    },
+    {
+      "url": "https://physical-ai.ros.org/working-groups/",
+      "coverage": "index only; individual roadmaps not exhaustively reviewed"
+    },
+    {
+      "url": "https://osralliance.org/2026/08/ros-keeps-evolving-via-physical-ai-sig/",
+      "coverage": "official overview; latest-report completeness not established"
+    },
+    {
+      "url": "https://design.ros2.org/articles/clock_and_time.html",
+      "coverage": "clock-domain design reference"
+    },
+    {
       "url": "https://reps.openrobotics.org/rep-0157-2026/",
-      "observed_state": "proposal_with_TBD_reference_implementation",
-      "project_routing": "DEFER_UNTIL_MEASURED_TRANSPORT_BOTTLENECK"
+      "coverage": "scope refreshed; runtime-agnostic memory layout proposal"
     },
     {
-      "id": "REP-0158",
       "url": "https://reps.openrobotics.org/rep-0158-2006/",
-      "observed_state": "DRAFT",
-      "project_routing": "DEFER_TO_E3_SIMULATION_ASSET_REVIEW"
+      "coverage": "scope and page status refreshed; OpenUSD convention, page displays Accepted and updated 2026-10-22"
+    },
+    {
+      "url": "https://docs.ros.org/en/jazzy/Concepts/Intermediate/About-Executors.html",
+      "coverage": "ACCESS_DENIED; no claim derived from page body"
     }
   ],
-  "limits": [
-    "HEAD identities are a dated source-review snapshot, not admitted dependencies.",
-    "Transitive dependencies and manifest pins remain to be reviewed before any build.",
-    "No clone, dependency installation, build, simulation, hardware access or robot motion occurred."
+  "remaining": [
+    "current charter identity refresh",
+    "latest official status and individual working-group roadmap review",
+    "transitive dependencies and actual CI results",
+    "human handoff",
+    "P1/L1 candidate-pool and original L2 trigger lookup before Phase 5A architecture freeze"
   ]
 }

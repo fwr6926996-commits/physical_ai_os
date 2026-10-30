@@ -1,105 +1,66 @@
-# SIG-A0 Review Record
+# SIG A0 首轮源码对齐与 Phase 5A 学习入口
 
-Review status: `PASS_ARCHITECTURE_REVIEW_ONLY`
+日期：2026-10-26（Asia/Shanghai）
 
-Activation date: `2026-10-17`
+状态：`SOURCE_REVIEW_IN_PROGRESS`。人审与 Phase 5 handoff：`NOT_RECORDED`。SIG-A0：未判 PASS。
 
-Owner: human
+本轮把“继续项目”推进为可复核的 Phase 5 入口材料：重验阶段资格和环境、固定五个上游仓库身份、比较核心接口，并提出无硬件的第一个闭环。
+尚未安装、构建、启动 ROS 节点、执行策略或连接 DK-2500/机械臂。所有新增材料位于本目录。
 
-Evidence root: `experiments/EXP-2026-004_sig_a0_alignment/`
+## 当前事实
 
-Repository effectivity: PR #5 merged as `bb5f8712a1e30b7df23608f8bd1794fc7043ad98`
+- 当前 HEAD：`3f141d0c444fbacea62d3d5b788980d437c95aad`，分支 `main`。
+- Phase 4 关闭记录为 `PASS — CPU FP32 OFFLINE BACKEND ONLY`，`Next phase entry: ALLOWED`。这允许设计下一协议；不扩展冻结 CPU FP32 后端的准入范围。
+- 执行书及两份绑定 Addenda 的 SHA-256 均与 `docs/reference/l1/README.md` 一致，具体值见 `environment_snapshot.txt`。
+- 本地主机为 ThinkBook，Ubuntu 24.04.4、Jazzy、GCC 13.3、Python 3.12.3。本次 Python 进程解析的 RMW 为 `rmw_fastrtps_cpp`；已安装 Fast DDS 包版本为 2.14.6。它们不是 DK-2500 的实时环境快照，也不证明节点可运行。
+- `ros2_ws` 与 `runtime_core` 下未发现实现文件。五类接口目前以治理文档约束为依据，不声称已有可编译消息定义。
+- 历史 LeRobot 源环境版本只从 `software_baseline.yaml` 读取，未激活和复验；FakePolicy 首步不依赖该环境。
 
-## Activation decision
+## 本轮证据与覆盖
 
-The human owner approved the minimal activation package after Phase 4 closure and Gate A2d-1
-merge. `SIG-A0` may now perform bounded official-source and architecture review.
+| 文件 | 用途 |
+|---|---|
+| environment_snapshot.txt | 命令及输出、ROS/RMW/DDS 本地身份、三份上位文档哈希 |
+| preserved_worktree.json | 本轮写入前已有 25 个修改/未跟踪文件的状态与 SHA-256 |
+| governing_extracts.txt | 执行书 3、7、9 节及 T0/R M1/可迁移性约束；段落定位不是页码 |
+| upstream_snapshot.json | 五个仓库精确 commit、23 个已获取源码/配置/许可证文件及原始 URL |
+| sources/ | 固定 commit 的读取副本，只作审查证据，不是激活的依赖或可执行环境 |
+| interface_mapping.md | 七项职责比较、包职责草案、首轮验证问题和学习判断 |
+| component_dispositions.md | 八项组件的唯一建议处置、依据与重开条件 |
 
-This decision does not authorize dependency installation, source cloning, a compatibility build,
-simulation, driver execution, hardware access, firmware changes or robot motion.
+官方首页、工作组索引、2026-08-18 状态文章及两项 REP 的页面已刷新；未声称穷尽最新会议和全部 roadmap。
+Jazzy Executor 网页返回 Access Denied，未把它作为已读取的技术依据。
+ROS 时间原理参考 [Clock and Time](https://design.ros2.org/articles/clock_and_time.html)：ROS time 可以暂停或跳变，不能把它与另一时钟的数字直接相减。
 
-## Entry check
+上游 demo 使用 Lyrical/Python 3.14，SO-ARM、Feetech、Rosetta 的已阅 CI 配置分别包含 Jazzy。由此只能建议分组件审查，不能认定兼容性通过。
+Feetech 的真实初始化路径含舵机参数写入与扭矩使能，因此首个闭环的执行端采用纯日志 Mock Adapter。
 
-| Condition | Result | Evidence |
-|---|---|---|
-| Phase 4 permits Phase 5 entry | PASS | Phase 4 closure records `Next phase entry: ALLOWED` |
-| Governing document hashes match | PASS | `environment_snapshot.txt` |
-| Repository and worktree baseline captured | PASS | `environment_snapshot.txt` |
-| Host toolchain baseline captured | PASS | `environment_snapshot.txt` |
-| Phase 5A package boundaries accepted | PASS | `phase5a_package_boundaries.md` |
-| Five protected interface names and ownership available | PASS | `interface_mapping.md` |
-| Official upstream sources refreshed and reviewed | PASS | `upstream_snapshot.json`, `SOURCE_REVIEW_20261017.md` |
-| Exact identities captured before build/use | PASS | five repository HEAD identities captured; no build/use occurred |
-| Compatibility-spike output and cleanup plan | NOT APPLICABLE | no spike is authorized |
+## 后续顺序
 
-## Current limits and risks
+1. 补齐 SIG-A0 的 charter、相关工作组 roadmap 与最新官方状态覆盖；保持总预算最多两个有效工作日，未解决项写明 DEFER 和触发条件。本轮为第一个源码审查工作日，无兼容性 spike。
+2. 在 Phase 5A 架构冻结前，刷新 Notion 的 `P1 / L1 + Phase 5A` 候选池和原 L2 双入口，完整读取候选要求。本轮未访问 Notion，历史候选结论不得当作当前覆盖。
+3. 人审接口职责和组件处置，完成首次能力的关键判断后，记录 SIG-A0 handoff。无人工决定前保持本状态，不宣称架构已冻结。
+4. 先设计 Gate T0：字段来源与测量点、clock_domain、同步状态、契约版本；审查回放时间映射。通过所需负向测试前不发布跨时钟域 E2E 数字。
+5. 冻结 Phase 5A 首个本地 ReplayObservation + FakePolicy 协议：mock-only 路由、容量与覆盖、动作有效期、执行节拍、超时、最大时长、停止/清理和证据路径。参数仍待确定。
+6. 按首次学习规则由用户完成一个学习关键操作；随后助手可以处理约定范围内的实现、测试与重复证据。首个 mock 闭环不等于 Gate R 完整通过；QoS/Executor/Callback Group/Lifecycle、受控阻塞/积压和 rosbag2 回放仍需后续证据。
+7. mock 闭环及相关入口条件具备后，再设计变化输入/全主机链的 CPU FP32 集成协议。模型、目标身份和新实验授权独立核对。
 
-- Fixed manifests and direct demo source pins are reviewed, but full transitive dependency closure
-  is incomplete. The LeRobot adapters install unpinned current Python packages in CI.
-- `rmw_fastrtps_cpp` is selected but has not been exercised by this source-only review.
-- LeRobot is not installed in the active Python environment.
-- The policy-execution repository has no root `LICENSE`, but both ROS package directories contain
-  Apache-2.0 license files and their manifests declare Apache-2.0. The two LeRobot Rosetta adapter
-  repositories declare Apache-2.0 in package metadata and source headers but have no root LICENSE.
-- A post-closure consistency review found non-intentional field drift against V2.9 and Gate T0.
-  The upstream research PASS remains valid, but the Phase 5A field freeze waits for the correction
-  in `PHASE5A_INTERFACE_CONSISTENCY_REVIEW_20261017.md`.
-- Upstream `HEAD` values are dated evidence only and must never be treated as floating pins.
+## 学习检查
 
-## Fixed-source review checkpoint
+本次模式为 `LEARN`，学习深度为 `OPERATOR`：先理解职责和失效路径，不要求手写哈希、解析器或整套实现。
+按仓库 `AGENT.md` Rule 1，首次重要能力需要解释原理并让用户完成关键步骤；人审不由助手代签。
 
-Read-only source review is complete for the five recorded candidates and the direct Rosetta
-identities pinned by the captured demo manifest. Evidence and exact source links are recorded in
-`SOURCE_REVIEW_20261017.md`.
+只需先看这三个入口：
 
-Source review supports these conclusions:
+1. `interface_mapping.md` 的“首个闭环”和“教学用的一个判断”：动作何时允许被消费？
+2. `component_dispositions.md` 的 driver/Rosetta/demos 三类差异：为什么 Jazzy CI 配置还不足以采纳整个栈？
+3. `governing_extracts.txt` 的 Gate T0：为什么同一个 timestamp 类型仍可能不能相减？
 
-- the full demo remains `REFERENCE_ONLY` because its executable environment is Lyrical,
-  Python 3.14 and Zenoh rather than the L1 Jazzy baseline;
-- `ros2_so_arm` remains the only current candidate worth a later isolated Jazzy mock-only build;
-- the Feetech driver remains deferred because initialization can configure hardware and enable
-  torque, and it does not own the project safety boundary;
-- Rosetta remains deferred to a project-owned offline adapter because upstream `hold`, zero-fill,
-  direct publishing and queue semantics do not define L1 freshness or fail-closed behavior;
-- the policy-execution prototype is recommended as `REFERENCE_ONLY`, not a Core dependency,
-  because every stage is coupled to the ONNX Runtime value type and its executor does not implement
-  L1 action-age or safety ownership; and
-- no upstream adoption is needed to start the offline replay/FakePolicy Phase 5A Core path after
-  SIG-A0 receives its human architecture decision.
+关键问题：动作有效至 100 ms、120 ms 才被执行端取出时，在哪个环节拒绝它？若没有其他有效动作，模拟执行端应记录什么行为？
+这个回答用于选择后续设计与用户关键操作，不是本轮工程验收或机器人运行许可。
 
-No compatibility spike was executed or implicitly authorized by this checkpoint.
+## 结论与限制
 
-## Owner architecture decision
-
-On `2026-10-17`, the human Owner approved the following for the Phase 5A handoff:
-
-- the initial version 1 project field and validity baseline in `interface_mapping.md`, later
-  reopened only for the V2.9 and Gate T0 consistency correction;
-- `physical_ai_runtime` ownership of the host-local monotonic clock policy, action age and the
-  capacity-one bounded `ActionBuffer`;
-- `physical_ai_safety_bridge` as the sole Linux-to-MCU permission boundary;
-- explicit `RMW_IMPLEMENTATION=rmw_fastrtps_cpp` for future Phase 5A launch/test evidence; and
-- no compatibility spike now; `ros2_so_arm` remains `DEFER` until a separately authorized
-  ros2_control/mock-hardware integration decision.
-
-This decision does not authorize dependency installation, implementation, build, simulation,
-hardware access, firmware change or robot motion.
-
-## Pass decision
-
-`PASS — ARCHITECTURE REVIEW ONLY`
-
-All protocol acceptance criteria for fixed-source research, component dispositions and ownership
-were satisfied, and PR #5 made that result repository-effective. A mock-only compatibility spike
-is not required for the offline Phase 5A Core path and remains unauthorized. The later field-level
-consistency correction does not reopen upstream research, but it must be reviewed before the Phase
-5A interface freeze. Phase 5A implementation still requires a separate start decision.
-
-## Post-closure interface consistency review
-
-Review against the frozen V2.9 execution book and both binding addenda found that the initial
-field draft used a non-baseline five-state safety vocabulary, omitted required logical fields and
-did not attach all Gate T0 metadata to every time field. The correction is documented in
-`PHASE5A_INTERFACE_CONSISTENCY_REVIEW_20261017.md` and changes neither upstream identities nor
-component dispositions. No new ADR is required unless Owner Review chooses to preserve a deviation
-from the frozen baseline.
+建议首步采用项目自有 ReplayObservation / FakePolicy / 有限 ActionBuffer / 周期消费 / 软件门控 / 日志 Mock Adapter。
+不引入新的上游运行依赖。完整 SIG-A0、T0、Gate R、Gate C、Gate PR、实时性和物理安全均未通过本轮取得新 PASS。
+本轮没有产生已接受的阶段/候选处置决定，未变更 Notion 阶段投影或历史记录。

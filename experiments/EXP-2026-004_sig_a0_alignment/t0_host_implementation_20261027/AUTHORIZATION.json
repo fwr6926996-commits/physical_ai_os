@@ -1,0 +1,30 @@
+{
+  "authorization_id": "P5A-T0-H-01-AUTH-20261027-01",
+  "human_quote": "好的，接受",
+  "context": "承接已明确列出的T0-H方案接受、本地实现/开发验证，以及开发通过并冻结后的一次12场景suite；只使用本机进程、匿名管道和Mock日志。",
+  "status": "DESIGN_ACCEPTED_IMPLEMENTATION_AND_CONDITIONAL_SINGLE_SUITE_AUTHORIZED",
+  "recorded_at": "2026-10-27T08:32:39.680011+00:00",
+  "protocol_id": "P5A-T0-H-0.1",
+  "source_sha256": {
+    "docs/protocols/PHASE5A_T0_HOST_CLOCK_V0_1_CANDIDATE.md": "25ef914e98d87bb7efb398ad722d681ca1ae1cff59ad6866aec7febd2e3159ad",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/sha256_manifest.json": "fecc41276a122c80177f4c4cd5d77444bd75f5e67f4b7391c55770183cf8beef",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/pre_write_snapshot.json": "6380d144bf8f05b0b6b838a9659740224715b06580c336d4296893d9475c2a2a",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/scenarios_v0_1_candidate.json": "84061d0e47a561c3b377649dc57f0759d4ada401abfae1568fbea035b97d25c3",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/environment_inventory.json": "972a064c5b38e5702bd67e1a5f2541ecf01841ec5e4e0b1d6d9299da79aea9bf",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/verification.json": "b3914847bbd23d8951eb4254db570482d0e590c1cf872334aa38f6a9e872cecc",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/REVIEW.md": "7e99157227c1151032bb7bbcd31abf61671710135a9ccdc0e2e3b1469838284c",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/design_snapshot.json": "bb0a308088890454d87e7e4d0820576a97b61a3fdad5f7477d6868fee1913023",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/source_review.json": "c13ecd71c4239983768dacc68cde16b73c4b44c5f9ebbb93754b9155c9420c85"
+  },
+  "maximum_formal_attempts": 1,
+  "prohibited": [
+    "ROS",
+    "network sockets",
+    "models",
+    "hardware",
+    "system clock or namespace mutation",
+    "dependency install",
+    "automatic formal rerun"
+  ],
+  "result_acceptance": "HUMAN_REVIEW_PENDING"
+}

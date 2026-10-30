@@ -1,208 +1,82 @@
-# SIG-A0 Interface Review Baseline
+# Phase 5A 接口与执行职责草案
 
-Status: `CORRECTION_PROPOSED_PENDING_OWNER_REVIEW`
+日期：2026-10-26。状态：`DRAFT_FOR_REVIEW`。这是源码对齐和学习材料，尚未冻结消息或执行协议。
 
-The SIG-A0 fixed-source research, component dispositions and ownership decisions remain valid.
-This correction restores the field baseline to the frozen L1 V2.9 execution book and its two
-binding addenda. It does not modify the frozen governing documents, admit an upstream component or
-authorize implementation, build, dependency installation or hardware use.
+## 首个闭环
 
-## Governing baseline
+```mermaid
+flowchart LR
+    R[ReplayObservation 回放] --> O[Observation Runtime]
+    O --> P[FakePolicy 确定性假策略]
+    P --> B[有限 ActionBuffer]
+    B --> E[周期 Execution]
+    E --> F[SafetyFilter 软件门控]
+    F --> S[Mock Adapter 只记录命令]
+    M[RuntimeMetrics 与状态监控] -.-> O
+    M -.-> B
+    M -.-> E
+    M -.-> F
+```
 
-| Document | SHA-256 |
-|---|---|
-| L1 V2.9 execution book | `95cd404a72f0c03435b0728aa0bd169f78a6b782f9063a4b6659cbc953bec5ef` |
-| Architecture Audit Addendum 01 | `eb34eedec544d8f327a321b9e4188055ffcd54aee4a44b7672cb5955e95e8091` |
-| Portability Addendum 02 | `e3b4aea1b8cdcf425762fa980d4bc6189e109f726d9238bea6f1c146dc7551b6` |
+这是数据流和职责图，不要求每一格单独成为 ROS 节点。监控不能替代执行路径中的有效性检查。
+Mock Adapter 不打开串口、不加载真实驱动、不发布到真实控制器。这里的停止只指停止产生模拟命令；物理安全仍需后续独立验证。
 
-## Corrected consistency result
+模型推理是动作的生产者，执行端是消费者。推理完成时间可以变化；执行端在约定的时刻选择仍然有效的动作。
+ActionBuffer 负责有限容量、选取、覆盖和丢弃；Execution 在消费时重新检查有效期；SafetyFilter 保留最终软件门控。
+把推理与执行分开后，才能分别观察推理延迟、队列等待和执行抖动。ROS 通信成功本身不能证明这些性质。
 
-| Contract | Frozen-baseline requirement | Correction |
+## 项目契约与上游比较
+
+以下来源路径均在 `sources/` 下；精确 commit 和原始 URL 见 `upstream_snapshot.json`。
+“缺口”表示本次已阅文件没有建立证据，不等于整个上游项目不存在该能力。
+
+| 项目职责 | 本次已阅上游证据 | 差异或未证实项 | Phase 5A 草案约束 |
+|---|---|---|---|
+| Observation | Rosetta `contracts/so_101.yaml` 提供 topic/type/QoS、hold 对齐、header 时间线、resize 和字段选择 | 该例使用三路 512×512 图像及不同关节名称；不能直接替代 Phase 4 的 wrist 输入与六维状态。hold 的最大允许年龄及项目时钟映射尚未核验 | 保留本项目数据契约；显式记录来源、缺帧、观测年龄及无效原因 |
+| PolicyOutput | Rosetta README 说明同一 YAML 映射用于离线数据与策略执行；policy core README 描述通用推理阶段 | 尚未证明其动作块具备本项目 generated_at / valid_until / sequence_id、单位和关节顺序语义 | FakePolicy 先输出确定性动作和可追溯观测关联；动作块索引、重叠与替换规则另行冻结 |
+| ControlCommand | SO-ARM101 `ros2_controllers.yaml` 配置 position 接口，机械臂关节与 gripper 分开 | 六维策略输出到机械臂/夹爪的映射、范围和单位不能按数组长度猜测；50 Hz 只是该上游配置 | SafetyFilter 后形成项目命令，设备私有转换留在 Adapter；首轮仅写日志 |
+| SafetyState | Feetech `src/feetech_ros2_driver.cpp` 的 on_init → configure_joints_ 会访问串口、写参数，并对有命令接口的关节使能扭矩 | 无本项目 STM32/Zephyr 许可及急停语义的验证证据；初始化不能视为无作用的读取 | 保留 DISARMED / ARMED / RUNNING / DEGRADED / FAULT / SAFE 语义；本轮无真实驱动加载 |
+| RuntimeMetrics | 上游样例存在 header / receive 时间线与定时运行描述 | 未建立本项目完整 Age 链、测量点、clock_domain 和同步状态证据 | 先通过 Gate T0 再固化时间戳链；未同步的时钟不直接相减 |
+| InferenceBackend | policy core README 公开阶段间使用 Ort::Value；运行节点按 timer 顺序执行各阶段 | 概念上的可换后端不等于符合项目公开接口；内部 ORT 类型不能自动成为项目公共契约。串行 timer 周期不是解耦执行证据 | 保留厂商无关的 Backend 边界；首轮 FakePolicy，无 ACT / OpenVINO 调用 |
+| ActionBuffer | policy pipeline README 描述每次 update 中依次预处理、推理、后处理、执行，失败时跳过当前周期 | 这些描述未建立有限 producer/consumer buffer、过期剔除或独立执行节拍 | 项目负责容量、所有权、背压、覆盖/丢弃计数与消费时有效性检查；不照搬串行路径 |
+
+## 建议包职责
+
+沿用执行书 7.1 的包名；这不是已实现或已批准的目录结构。
+
+| 包 | 首轮责任 | 暂留设计问题 |
 |---|---|---|
-| `Observation` | Capture, state and assembly time; RGB input; ordered joint and gripper state; task context; frame, units, validity and data version | Restore the omitted state/assembly, sensor, task, gripper, health and data-version semantics |
-| `PolicyOutput` | `generated_at`, `valid_until`, `sequence_id`, `model_version`, action chunk/trajectory with `dt`, status and optional confidence | Restore the omitted model, step, status and confidence semantics |
-| `ControlCommand` | Generic command after `SafetyFilter` processing | Make it a post-filter command; the pre-filter value is an internal `CommandCandidate` |
-| `SafetyState` | `DISARMED / ARMED / RUNNING / DEGRADED / FAULT / SAFE` shared by ROS 2 and MCU | Replace the non-baseline `DISABLED / READY / PERMITTED / FAULT / ESTOP` enum |
-| `RuntimeMetrics` | Full nine-point time chain, derived Age/latency/jitter, queue counters, percentiles and fault/resource/reproduction evidence | Restore the raw time points and define event versus run-summary evidence |
-| Gate T0 | Every time field records timestamp, clock domain, source, measurement point and synchronization status; benchmark output carries the clock contract version | Replace message-wide clock metadata with metadata attached to every time field |
+| physical_ai_msgs | 五类项目契约的 ROS 表达 | Gate T0 时钟字段与版本；避免新增第二套数据真相源 |
+| observation_runtime | ReplayObservation、输入有效性与观测来源 | replay time 和 host steady time 的映射及重置 |
+| policy_runtime | FakePolicy、可控延迟/错误输出；动作交给有限缓存 | ActionBuffer 的节点内所有权、回调隔离与后续 C++ 迁移 |
+| runtime_monitor | 完整 timing 事件、丢弃原因、退出证据 | RMW/DDS、QoS、Executor、Callback Group、Lifecycle 身份 |
+| safety_bridge | 软件许可与停止状态的 mock 边界 | 不连接 MCU；真实许可、复位和重连留给后续协议 |
+| bringup | 仅 mock/replay 的组合及退出顺序 | Execution、SafetyFilter 和 Mock Adapter 的具体宿主待审查 |
 
-These are non-intentional consistency corrections. No change to the formal architecture or new ADR
-is proposed.
+## 第一轮验证设计
 
-## Protected ownership and upstream findings
+先完成 SIG-A0 和 T0 设计审查，再编写并冻结可执行协议。下表是待冻结的验证问题，不是运行授权或已通过的测试。
 
-- `physical_ai_interfaces` owns project schemas and versions only.
-- `physical_ai_replay` owns deterministic offline replay and fixtures.
-- `physical_ai_policy_adapter` owns `FakePolicy` and the replaceable `InferenceBackend` mapping.
-- `physical_ai_runtime` owns the host-local monotonic clock policy, action age, capacity-one
-  `ActionBuffer`, pre-filter command preparation and `RuntimeMetrics`.
-- `physical_ai_safety_bridge` supplies the project `SafetyState` and MCU acknowledgement to
-  `SafetyFilter`. It cannot replace STM32/Zephyr or the hardware E-stop.
-- Upstream queues, drivers, controllers and message types remain behind adapters and cannot become
-  a second source of truth.
+| 场景 | 需要观察的行为 |
+|---|---|
+| 正常回放 | Observation → PolicyOutput → enqueue/dequeue → mock execute 的关联完整 |
+| FakePolicy 延迟 | 执行端不阻塞等待推理；只消费符合时间和动作块约定的有效动作 |
+| 动作到期 | 消费时拒绝到期动作，记录 expired 计数；无有效动作时停止模拟命令并记录状态 |
+| 队列满 | 容量不增长，按预先定义的覆盖/丢弃规则记录原因 |
+| 回放结束、输入失效或节点退出 | 不继续消费残留动作；状态与资源释放可核对 |
+| wall clock 跳变或 use_sim_time 变化 | steady 段的超时不受错误时钟比较影响；跨域计算明确拒绝或使用已验证映射 |
 
-The SIG-A0 component dispositions, exact upstream identities and source-review conclusions are
-unchanged. `rmw_fastrtps_cpp` remains the explicit Phase 5A test RMW and must be selected per launch
-or test, never as a global host mutation.
+消费有效期建议采用半开区间，`now >= valid_until` 即到期；这仍需在协议中确认。
+回放前一轮录制的 monotonic 数字不能当成本轮的有效时间；需要保留源时间并明确回放映射。
+初始队列策略、周期、有效期、最大运行时长及失败阈值都尚未冻结，不能从上游 50 Hz 或 Phase 4 推理 P50 推导。
 
-## Gate T0 timestamp contract version 1
+## 教学用的一个判断
 
-Every logical time field is a `ClockedTimestamp` record with:
+下面数字只是同一 host steady 时钟域内的例子，不是推荐参数：动作在 0 ms 生成，有效至 100 ms，执行端到 120 ms 才取到。
+即使队列非空，该动作也不能执行。到期不由“成功传输”或“模型输出有限数值”抵消。
+首次学习检查由用户判断：这个拒绝应该发生在哪个消费环节；如果此时没有任何有效动作，模拟执行端应留下什么证据？
 
-- `uint64 timestamp_ns`
-- `string clock_domain`
-- `string source`
-- `string measurement_point`
-- `string synchronization_status`
-- `uint16 clock_contract_version` = `1`
-- `bool present`
+## 尚未解决的接口细节
 
-Phase 5A interval, age, jitter, deadline and timeout calculations use one host-local monotonic or
-steady clock domain. ROS time or system time may be recorded for human-readable or rosbag
-correlation, but it is never subtracted from a monotonic value. Values from different clock domains
-are rejected unless an explicit mapping records offset, method, error and sampling window.
-`unknown` synchronization status is preserved rather than guessed.
-
-## Corrected Phase 5A logical field baseline
-
-This is a logical contract for the message-definition Review. Standard ROS message composition may
-be selected later, but it must preserve every semantic below.
-
-### `Observation` version 1
-
-- `uint16 schema_version` = `1`
-- `uint64 sequence_id`
-- `string data_version`
-- `ClockedTimestamp capture_time`
-- `ClockedTimestamp state_time`
-- `ClockedTimestamp assembled_time`
-- `ClockedTimestamp valid_until_time`
-- `image_front_rgb` with explicit encoding, shape and frame identity
-- `string frame_id`
-- `string[] joint_names`
-- `float64[] joint_positions_rad`
-- `string gripper_state_name`
-- `float64 gripper_state_value`
-- `string gripper_state_unit`
-- `uint32 hardware_health_flags`
-- `string task_id`
-- `string task_phase`
-- optional `string language_text`
-- `bool valid`
-
-Joint order is the array order and cannot be inferred from a device ID. Array lengths must match
-and numeric values must be finite. The gripper unit and mapping are explicit. Missing or invalid
-safety-relevant input fails closed and is never converted into valid zero data.
-
-### `PolicyOutput` version 1
-
-- `uint16 schema_version` = `1`
-- `uint64 sequence_id`
-- `uint64 source_observation_sequence_id`
-- `ClockedTimestamp generated_time`
-- `ClockedTimestamp valid_until_time`
-- `string model_version`
-- `string[] joint_names`
-- `float64[] target_positions_rad`
-- `uint64 action_dt_ns`
-- `uint32 chunk_index`
-- `uint32 chunk_size`
-- `string status`
-- optional `float64 confidence` with an explicit presence flag
-- `bool valid`
-
-Phase 5A fixes `chunk_index = 0` and `chunk_size = 1`. A `PolicyOutput` carries neither actuator
-authority nor safety permission.
-
-### `SafetyState` version 1
-
-- `uint16 schema_version` = `1`
-- `uint64 sequence_id`
-- `ClockedTimestamp updated_time`
-- `uint8 state` with project constants in frozen order:
-  `0 DISARMED`, `1 ARMED`, `2 RUNNING`, `3 DEGRADED`, `4 FAULT`, `5 SAFE`
-- `bool permission_granted`
-- `bool fault_latched`
-- `uint64 fault_flags`
-- `uint32 fault_code`
-- `string reason`
-- `uint64 mcu_ack_sequence`
-
-`permission_granted` is false in `DISARMED`, `ARMED`, `FAULT` and `SAFE`. It may be true in
-`RUNNING` only with a current MCU acknowledgement. V2.9 permits restricted execution in
-`DEGRADED`, but Phase 5A defines no restricted hardware profile, so mock execution treats it as no
-permission. A reset never transitions directly from `FAULT` or `SAFE` to `RUNNING`; recovery returns
-through `DISARMED` and requires the project state machine and human-owned conditions.
-
-### `ControlCommand` version 1
-
-- `uint16 schema_version` = `1`
-- `uint64 sequence_id`
-- `uint64 source_policy_sequence_id`
-- `uint64 safety_state_sequence_id`
-- `uint64 mcu_ack_sequence`
-- `ClockedTimestamp generated_time`
-- `ClockedTimestamp valid_until_time`
-- `string[] joint_names`
-- `float64[] target_positions_rad`
-- `bool clamp_applied`
-- `bool valid`
-
-`ControlCommand` exists only after `SafetyFilter` accepts an internal `CommandCandidate` against a
-current `SafetyState`. It is therefore not the name of the pre-filter candidate. A false or stale
-permission result produces no executable command. Phase 5A sends accepted commands only to the mock
-executor.
-
-### `RuntimeMetrics` version 1
-
-The event record contains:
-
-- `uint16 schema_version` = `1`
-- `string run_id`
-- `uint64 sequence_id`
-- `ClockedTimestamp sampled_time`
-- `uint64 observation_sequence_id`, `policy_sequence_id`, `command_sequence_id`
-- `ClockedTimestamp t_capture`, `t_state`, `t_observation_ready`
-- `ClockedTimestamp t_infer_start`, `t_infer_end`, `t_action_generated`
-- `ClockedTimestamp t_enqueue`, `t_dequeue`, `t_execute`
-- `uint64 observation_age_ns`, `inference_latency_ns`, `queue_delay_ns`
-- `uint64 action_age_ns`, `end_to_end_age_ns`
-- `int64 execution_jitter_ns`
-- `uint32 queue_depth`, `queue_capacity`
-- `uint64 dropped_total`, `overwritten_total`, `expired_total`,
-  `deadline_miss_total` and `stale_drop_total`
-- `uint32 active_fault_code`
-
-Derived values are emitted only when their source timestamps have compatible clock contracts.
-Counters are monotonic within one `run_id`; restart creates a new `run_id`.
-
-The run-summary JSON or CSV, rather than every event message, reports P50/P95/P99 and maximum,
-task result and failure class, resource and thermal observations when applicable, fault
-detection/stop/recovery evidence, and Git/data/model/config/runtime identities. It carries
-`clock_contract_version = 1`.
-
-## SafetyFilter processing order
-
-The only permitted Phase 5A path is:
-
-`ReplayObservation -> FakePolicy -> capacity-one ActionBuffer -> Execution consumer
--> internal CommandCandidate -> SafetyFilter(CommandCandidate, SafetyState)
--> ControlCommand -> mock execution -> RuntimeMetrics`
-
-The execution consumer validates schema, timestamp contract, order, units, finite values, freshness
-and limits while preparing the internal candidate. `SafetyFilter` then checks current permission,
-fault latch and acknowledgement. No candidate-to-executor bypass exists. Later Adapter, driver or
-hardware work requires a separate gate and cannot reorder this boundary.
-
-## Bounded `ActionBuffer` semantics
-
-- Capacity is exactly one pending `PolicyOutput` and is fixed at startup.
-- The buffer never grows dynamically and never blocks indefinitely.
-- Schema, timestamp contract, validity, order, lengths and finite values are checked before insert.
-- A newer valid item atomically replaces an unconsumed item and increments `overwritten_total`.
-- Consumption rechecks validity and freshness. Expired or stale items are cleared and counted and
-  cannot become a `CommandCandidate`.
-- Multi-action buffering requires a separately reviewed extension.
-
-See `PHASE5A_INTERFACE_CONSISTENCY_REVIEW_20261017.md` for the audit trail and
-`PHASE5A_MINIMAL_OFFLINE_IMPLEMENTATION_PLAN.md` for the bounded implementation proposal.
+执行书 9.2 的 initialize/infer/metrics/reset 与 Portability Addendum 02 的 prepare/infer/health/shutdown/capabilities 需要在实现设计中明确映射。
+本草案不静默选取其中一组 API，也不宣称 C++ 签名已冻结。源文摘录见 `governing_extracts.txt`，P 编号为 OOXML 段落序号而非页码。

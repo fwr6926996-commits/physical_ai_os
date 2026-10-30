@@ -1,25 +1,21 @@
-# SIG-A0 Initial Component Dispositions
+# SIG A0 组件处置建议
 
-Status: `OWNER_ACCEPTED_PENDING_PR_5_MERGE`
+日期：2026-10-26。状态：`PROPOSED_NOT_ACCEPTED`。每个组件只有一个建议处置；无组件获得运行时准入。
+精确源码身份、文件入口和原始 URL 见 `upstream_snapshot.json`。
 
-The human Owner accepted these conservative dispositions on `2026-10-17`. No item is admitted as a
-runtime dependency by this architecture review.
-
-| Candidate | Snapshot identity | Disposition | Evidence or trigger |
+| 组件 | 建议处置 | 已有依据与缺口 | 重新评估的触发条件 |
 |---|---|---|---|
-| `ros-physical-ai/demos` | `ea931a9fc58de19d9c9bea0fc7dc99da1f30274b` | `REFERENCE_ONLY` | Lyrical/Python 3.14/Zenoh reference environment; never import it as a second architecture |
-| `ros2_so_arm` | `e166df9d51f43b24da9b99047c6c51c306bda74f` | `DEFER` | Jazzy CI and mock boundary are source-positive; reconsider only through a separately approved mock-only build |
-| `feetech_ros2_driver` | `18aed7fb26d3e2b4c0b47762f39d8698b7032422` | `DEFER` | Initialization can configure hardware and enable torque; requires a later hardware/safety gate |
-| `iblnkn/rosetta` | `294136dc435a040d608d9efd773d70ae0b421d00` | `DEFER` | Useful adapter candidate, but unbounded-age hold, zero-fill and direct publish semantics require a project wrapper |
-| `ros2_policy_execution_pipeline` | `9e3478a948be4ea327d43e375a51e9b535c02b0c` | `REFERENCE_ONLY` | Package-level Apache-2.0 is resolved; ORT interchange coupling and direct executor ownership conflict with Core boundaries |
-| `rosetta_interfaces` | `17d06b639960b8a4de0d1970b4c42d306951d567` | `REFERENCE_ONLY` | Action lifecycle is a useful comparison, but project contracts remain the source of truth |
-| `lerobot-rosetta` | `1ea49d620fb344360e4982b9d59031c09efd4564` | `DEFER` | Transitive Python dependency set is not reproducibly pinned and root license scope is absent |
-| `lerobot-robot-rosetta` | `cd9b4c140ee5b6b02f3e57f76dfeb1a737646d86` | `DEFER` | Live adapter has one-numeric-key/one-action-key constraints; dependency and license closure remain open |
-| REP-0157/native buffers | dated official REP page | `DEFER` | Trigger only after a measured copy or serialization bottleneck exists |
-| REP-0158/OpenUSD conventions | official page observed as `DRAFT` | `DEFER` | Route to the later E3 simulation-asset review |
+| ros2_so_arm | DEFER | 已阅工作流包含 Jazzy；SO-ARM101 launch 默认 mock，控制配置可作映射依据。未构建、未验证本项目动作/夹爪映射，资产许可证未全面核对 | 首个项目 mock 闭环完成，且确有 ros2_control mock 适配问题需要用独立 spike 回答 |
+| feetech_ros2_driver | DEFER | 工作流包含 Jazzy/Humble/Rolling；真实初始化路径会写参数和使能扭矩。源码阅读不能证明硬件安全，也未完成 shutdown/recovery 审查 | 单独硬件/安全协议、映射和许可链齐备；兼容性构建仍优先在无硬件隔离环境进行 |
+| Rosetta | DEFER | 工作流配置 Jazzy，样例展示 topic/contract 与回放映射；其相机、shape、关节、hold 和时间语义未与本项目契约对齐，关联仓库未全部固定 | 项目 Observation/T0 契约明确，出现需验证的 bag→Observation 边界问题；冻结关联仓库后做离线契约对照 |
+| SIG demos | REFERENCE_ONLY | 固定身份下的 pixi.toml 使用 Lyrical/Python 3.14，pai.repos 有独立组件 pins；与本地 Jazzy/Python 3.12 不同 | 若拟成为运行依赖，重新做兼容性、边界及 ADR 审查；当前只参考组合方式 |
+| ros2_policy_execution_pipeline | REFERENCE_ONLY | README 描述阶段式插件与按 timer 串行 update，core 公开类型依赖 Ort::Value；不能据此替代厂商无关 Backend 与解耦 ActionBuffer | Phase 5B 比较推理放置、并发及 custom Runtime/ros2_control；若拟采用，先审查公开类型与失败语义 |
+| native buffers / REP-0157 | DEFER | 官方页面讨论内存布局及低开销消息；当前没有本项目拷贝/序列化瓶颈测量 | profiling 证明瓶颈影响已冻结指标，另立可行性协议 |
+| REP-0158 / OpenUSD | DEFER | 官方页面现标 Accepted，范围是仿真资产互操作；本次未验证具体工具链 | Technical Core 与 Employment Gate 后，E3 需要跨仿真资产时再评估 |
+| Agentic / ROS MCP | DEFER | ADR-0002 将其置于 E5；首个 Phase 5A 闭环不需要 agent 控制 | E5 正式开启且权限、安全与审计边界明确 |
 
-No component is `ADOPT_AND_PIN` or `ADAPT_BEHIND_BOUNDARY`. The optional `ros2_so_arm` compatibility
-spike is not required now; its trigger is a separately authorized ros2_control/mock-hardware
-integration decision.
+CI 配置包含某发行版，只能证明工作流配置意图；本轮没有核验相应 run 结果，也没有本地构建证据。
+独立审查的 default-head commits 与 demo 的 pai.repos pins 不完全一致，不能组合成“已测试整栈”。
 
-Detailed fixed-source evidence and the accepted Owner decision are in `SOURCE_REVIEW_20261017.md`.
+建议当前保留项目自己的五类契约、时钟与安全所有权。任何 ADOPT_AND_PIN / ADAPT_BEHIND_BOUNDARY 均需协议要求的构建、失败、恢复、回滚和学习证据。
+本表是待人审的建议；登记、源码阅读、处置建议与正式采纳分别记录。

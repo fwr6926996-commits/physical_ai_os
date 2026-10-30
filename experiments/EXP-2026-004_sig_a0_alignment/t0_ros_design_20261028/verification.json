@@ -1,0 +1,22 @@
+{
+  "status": "PASS_STATIC_DESIGN_PRESERVATION_AND_PRIOR_SYNC_ONLY",
+  "client_date": "2026-10-28",
+  "observed_at_utc": "2026-10-28T02:22:41.588167+00:00",
+  "scenario_count": 10,
+  "case_results": null,
+  "XML_check": "WELL_FORMED_AND_DECLARED_STRUCTURE_ONLY_NOT_FASTDDS_PARSE_OR_RUNTIME",
+  "source_files_protected": 431,
+  "intentional_prior_change": [
+    "docs/process/notion_sync_registry.json"
+  ],
+  "other_prior_files_unchanged": true,
+  "T0_H_formal_evidence_unchanged": true,
+  "T0_H_human_result_acceptance": "PENDING",
+  "notion_records": 15,
+  "notion_pending_count": 0,
+  "notion_stale_count": 0,
+  "new_ROS_DDS_or_strace_target_started": false,
+  "new_runtime_or_test_code_created": false,
+  "old_formal_suite_rerun": false,
+  "git_diff_check_exit_code": 0
+}

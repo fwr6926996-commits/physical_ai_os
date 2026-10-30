@@ -1,0 +1,14 @@
+{
+  "result": "PASS_EVIDENCE_INTEGRITY_ONLY",
+  "preexisting_files_verified_unchanged": 25,
+  "governing_doc_hashes_verified": 3,
+  "source_git_blob_hashes_verified": 23,
+  "git_diff_check_exit_code": 0,
+  "json_parse": "PASS",
+  "source_copy_terminal_newline_normalized_to_original": 23,
+  "limitations": [
+    "No build or ROS/runtime tests executed",
+    "No SIG-A0 acceptance or architecture freeze",
+    "This PASS describes file integrity only"
+  ]
+}

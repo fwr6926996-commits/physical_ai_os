@@ -1,0 +1,12 @@
+{
+  "experiments/EXP-2026-004_sig_a0_alignment/SIG_A0_ACCEPTANCE_20261027.md": "d460c17ae197a2678f6e885a63f817bc3d0c1bdbc39cc0e5867add75e3cd7dc6",
+  "docs/protocols/PHASE5A_T0_OFFLINE_MOCK_V0_1_DRAFT.md": "7548a9034266059c611b43a31d26a0feacae7f1d9dd8e75212a44242ee94911d",
+  "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/accepted_scope_snapshot.json": "cabd861df839ccb46118233717a6be17bdbf55c760939e7892f5512ba2ac7bfa",
+  "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/design_artifact_manifest.json": "95990f4df1ddb1477184c69a5212de4fa7207733d9714a071082e3141ddb2c9c",
+  "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/notion_readback.json": "03fb45a53ca9d1ae278557a532c219589b4e0058edd85e817fadd85cc72f9334",
+  "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/pre_write_snapshot.json": "0460259c9b668fb821030ccfe079c0045f6e11b252e0700f20daa20def54a152",
+  "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/schema_validation.json": "3bf736199b6426dae4ec5af350b3f2931d39084501e9672a7c6219347571b77f",
+  "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/t0_test_vectors_v0_1_draft.json": "551692431d31387e84d4352f7df06b93b835b4e065f797b0543f3f7941fb622a",
+  "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/timepoint_v0_1_draft.schema.json": "88db70d38160ea7f586e1df896ea1ff74ccb21a09106b0b3700c4e967b3d3e98",
+  "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/verification.json": "b36efafcf09ab7a3f22a48ea530afbc07b307f5a444ae686aeb145586eec98f4"
+}

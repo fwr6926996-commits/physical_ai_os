@@ -1,0 +1,69 @@
+{
+  "status": "PASS_BOUNDED_NATIVE_IMPLEMENTATION_AND_EVIDENCE_WITH_NOTION_SYNC_PENDING",
+  "verified_at": "2026-10-27T08:52:25.685043+00:00",
+  "protected_existing_file_count": 167,
+  "intentional_existing_changes": [
+    "docs/process/notion_sync_registry.json",
+    "README.md"
+  ],
+  "all_other_prior_files_unchanged": true,
+  "frozen_code_and_inputs_unchanged": true,
+  "development_attempts": 3,
+  "development_results": [
+    "FAIL_STOPPED_FRAME_LIMIT",
+    "PASS_12_OF_12",
+    "PASS_12_OF_12"
+  ],
+  "regression_checks_passed": 26,
+  "formal_attempts": 1,
+  "formal_cases_matched": 12,
+  "engineering_result": "T0_H_NATIVE_CLOCK_AND_LOCAL_PIPE_MOCK_PASS",
+  "raw_audit": {
+    "status": "PASS_READ_ONLY_RAW_AUDIT",
+    "suite_rerun": false,
+    "source_and_artifact_hashes_valid": true,
+    "maximum_owned_processes": 3,
+    "all_owned_workers_exited": true,
+    "worker_instances": 20,
+    "binding_observations": 40,
+    "actual_commands": 2,
+    "stop_windows": [
+      {
+        "case_id": "H-06",
+        "duration_ns": "200098198",
+        "ticks": 10,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "maximum_tick_lateness_ns": 164589
+      },
+      {
+        "case_id": "H-07",
+        "duration_ns": "200147789",
+        "ticks": 10,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "maximum_tick_lateness_ns": 211059
+      }
+    ],
+    "H_07_recheck": {
+      "initial_age_ns": "3423278",
+      "sink_age_ns": "200117186"
+    },
+    "total_output_bytes": 450802,
+    "maximum_jsonl_line_bytes": 2531,
+    "physical_jsonl_line_count_including_aggregates": 482,
+    "audit_script_sha256": "a6d776bdd40d0f86d408d9cf51be8991a06ec759e12e12b19259828201e41ec5"
+  },
+  "human_result_acceptance": "PENDING",
+  "full_gate_t0": "NOT_ESTABLISHED",
+  "notion_sync_state": "PENDING_CONNECTOR_TRANSPORT_ERROR",
+  "notion_pending_records": [
+    "NSYNC-T0-H-01-20261027-01",
+    "NSYNC-CURRENT-PRIORITIES-T0-H-01-20261027-01"
+  ],
+  "notion_existing_synced_records": 13,
+  "notion_stale_count": 0,
+  "git_diff_check_exit_code": 0,
+  "new_ROS_model_hardware_execution": false,
+  "T0_L_formal_rerun": false
+}

@@ -1,51 +1,110 @@
-SIG-A0 ENVIRONMENT SNAPSHOT
-snapshot_time=2026-10-17T19:32:36+08:00
-capture_mode=read_only
-compatibility_spike=not_authorized
-
-[repository]
-origin=git@github.com:fwr6926996-commits/physical_ai_os.git
-baseline_commit=bc95e2b9b2674f2e14d837fe2498b6b91637dfa2
-baseline_tag=<none>
-activation_branch=codex/sig-a0-minimal-activation
-worktree_state_before_activation_files=clean
-
-[preserved_primary_worktree]
-branch=main
-head=3f141d0c444fbacea62d3d5b788980d437c95aad
-remote_relation=behind_origin_main_by_4
-tracked_modified=5
-untracked_entries=20
-tracked_deleted=0
-staged_entries=0
-sync_action=none_worktree_preserved
-
-[governing_documents]
-execution_book_sha256=95cd404a72f0c03435b0728aa0bd169f78a6b782f9063a4b6659cbc953bec5ef
-architecture_addendum_sha256=eb34eedec544d8f327a321b9e4188055ffcd54aee4a44b7672cb5955e95e8091
-portability_addendum_sha256=e3b4aea1b8cdcf425762fa980d4bc6189e109f726d9238bea6f1c146dc7551b6
-governing_hash_check=PASS
-
-[host]
-os=Ubuntu 24.04.4 LTS (Noble Numbat)
-kernel=Linux 7.0.0-31-generic x86_64 GNU/Linux
-
-[ros]
-ROS_DISTRO=jazzy
-RMW_IMPLEMENTATION=<unset>
-ros-jazzy-ros-base=0.11.0-1noble.20260616.084325
-ros-jazzy-rmw-implementation=2.15.6-1noble.20260615.132010
-ros-jazzy-rmw-cyclonedds-cpp=2.2.3-1noble.20260615.123728
-ros-jazzy-rmw-fastrtps-cpp=8.4.4-1noble.20260615.124621
-
-[toolchain]
-g++=13.3.0
-cmake=3.28.3
-python=3.12.3
-lerobot=<not-installed-in-active-python>
-
-[interpretation]
-The active host satisfies the project's Ubuntu 24.04 and ROS 2 Jazzy baseline. The RMW is not
-explicitly selected and LeRobot is not installed in the active Python environment. These are
-compatibility facts, not requests to mutate the host. Any later dependency environment must be
-isolated and separately authorized.
+{
+  "captured_at": "2026-10-26T20:06:27.269138+08:00",
+  "scope": "LOCAL_READ_ONLY_NO_GRAPH_NO_HARDWARE",
+  "cwd": "/home/lucas/physical_ai_os",
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.4 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.4 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "ros_distro_env": "jazzy",
+  "rmw_env": "UNSET",
+  "rmw_resolved_for_this_python_process": "rmw_fastrtps_cpp",
+  "ros_package_versions": {
+    "rclcpp": "28.1.21",
+    "rclpy": "7.1.11",
+    "rmw_fastrtps_cpp": "8.4.4",
+    "rmw_cyclonedds_cpp": "2.2.3"
+  },
+  "commands": [
+    {
+      "command": [
+        "hostname"
+      ],
+      "exit_code": 0,
+      "stdout": "lucas-ThinkBook-16-G7-IAH\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "3f141d0c444fbacea62d3d5b788980d437c95aad\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "main\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uname",
+        "-r"
+      ],
+      "exit_code": 0,
+      "stdout": "7.0.0-31-generic\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "c++",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Python 3.12.3\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "dpkg-query",
+        "-W",
+        "-f=${binary:Package}\t${Version}\n",
+        "ros-jazzy-fastrtps",
+        "ros-jazzy-fastcdr",
+        "ros-jazzy-rmw-fastrtps-cpp"
+      ],
+      "exit_code": 0,
+      "stdout": "ros-jazzy-fastcdr\t2.2.7-1noble.20260225.051855\nros-jazzy-fastrtps\t2.14.6-1noble.20260303.233638\nros-jazzy-rmw-fastrtps-cpp\t8.4.4-1noble.20260615.124621\n",
+      "stderr": ""
+    }
+  ],
+  "governing_documents": [
+    {
+      "path": "docs/reference/l1/L1V2.9_Deep_Research_Architecture_Audit_Addendum_01_正式版.docx",
+      "sha256": "eb34eedec544d8f327a321b9e4188055ffcd54aee4a44b7672cb5955e95e8091"
+    },
+    {
+      "path": "docs/reference/l1/L1V2.9_Portability_Addendum_02_正式版.docx",
+      "sha256": "e3b4aea1b8cdcf425762fa980d4bc6189e109f726d9238bea6f1c146dc7551b6"
+    },
+    {
+      "path": "docs/reference/l1/SO-101_PhysicalAI_Runtime_L1_最终执行书_V2.9_S1S2_EmploymentGate增强版.docx",
+      "sha256": "95cd404a72f0c03435b0728aa0bd169f78a6b782f9063a4b6659cbc953bec5ef"
+    }
+  ],
+  "implementation_files": {
+    "ros2_ws": [],
+    "runtime_core": []
+  },
+  "lerobot": "Historical source-policy baseline: projects/so101_L1/software_baseline.yaml; source environment not activated or live verified. No LeRobot required for FakePolicy.",
+  "limits": [
+    "No ROS node or daemon launched",
+    "No DK-2500 connection",
+    "No device files opened",
+    "Package presence and RMW resolution do not prove runtime operation"
+  ]
+}

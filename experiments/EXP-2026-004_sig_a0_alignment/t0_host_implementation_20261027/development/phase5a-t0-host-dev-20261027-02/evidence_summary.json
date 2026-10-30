@@ -1,0 +1,247 @@
+{
+  "cases": [
+    {
+      "case_id": "H-01",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 1,
+        "decision": "ALLOW",
+        "age_available": true,
+        "action_age_ns": "1090992",
+        "observation_age_ns": "1097255",
+        "expired_drop": 0,
+        "causal_bracket_valid": true,
+        "sink_write_completed_before_expiry": true
+      },
+      "detail": {
+        "windows": [],
+        "commands": 1,
+        "rejected_tokens": []
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-02",
+      "actual": {
+        "binding_verdict": "REJECT",
+        "binding_reason": "BINDING_PROVIDER_MISMATCH",
+        "age_available": false,
+        "mock_commands": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": []
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-03",
+      "actual": {
+        "binding_verdict": "REJECT",
+        "binding_reason": "BINDING_NAMESPACE_MISMATCH",
+        "age_available": false,
+        "mock_commands": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": []
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-04",
+      "actual": {
+        "binding_verdict": "REJECT",
+        "binding_reason": "BINDING_EVIDENCE_UNAVAILABLE",
+        "age_available": false,
+        "mock_commands": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": []
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-05",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 0,
+        "decision": "REJECT",
+        "reason": "UNKNOWN_CLOCK_SOURCE",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": [
+          "T0-H-dev-02/H-05/g0/5f93dd6f-acea-4036-9629-4a2724c766b7/H-05/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-06",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 0,
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "age_available": true,
+        "action_age_ns": "200084666",
+        "observation_age_ns": "200091147",
+        "expired_drop": 1,
+        "stop_window_verdict": "PASS_MOCK_STOP_WINDOW_ONLY"
+      },
+      "detail": {
+        "windows": [
+          {
+            "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+            "ticks": 10,
+            "expired_drop": 1,
+            "mock_commands": 0,
+            "duration_ns": "200169941"
+          }
+        ],
+        "commands": 0,
+        "rejected_tokens": [
+          "T0-H-dev-02/H-06/g0/375eac2e-7a85-466c-aeca-5888acf4b17c/H-06/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-07",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 0,
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "age_available": true,
+        "action_age_ns": "200094246",
+        "observation_age_ns": "200101252",
+        "expired_drop": 1,
+        "initial_check": "ALLOW",
+        "sink_check": "REJECT",
+        "stop_window_verdict": "PASS_MOCK_STOP_WINDOW_ONLY"
+      },
+      "detail": {
+        "windows": [
+          {
+            "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+            "ticks": 10,
+            "expired_drop": 1,
+            "mock_commands": 0,
+            "duration_ns": "200084097"
+          }
+        ],
+        "commands": 0,
+        "rejected_tokens": [
+          "T0-H-dev-02/H-07/g0/1a2afa0c-2fc1-4637-a376-fd90773d3952/H-07/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-08",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 1,
+        "decision": "ALLOW",
+        "age_available": true,
+        "action_age_ns": "3496136",
+        "observation_age_ns": "3502613",
+        "expired_drop": 0,
+        "old_token_reason": "SESSION_MISMATCH",
+        "old_token_mock_commands": 0,
+        "new_token_mock_commands": 1,
+        "source_identity_unchanged": true,
+        "session_changed": true
+      },
+      "detail": {
+        "windows": [],
+        "commands": 1,
+        "rejected_tokens": [
+          "T0-H-dev-02/H-08/g0/bda901a5-061f-438c-9919-9689cba32de8/H-08/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-09",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 0,
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_METADATA_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": [
+          "T0-H-dev-02/H-09/g0/d3ebff8d-baf1-41d5-bb06-866374dfa072/H-09/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-10",
+      "actual": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "detail": {},
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-11",
+      "actual": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "detail": {},
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-12",
+      "actual": {
+        "verdict": "FAIL_MOCK_STOP_WINDOW_ONLY",
+        "reason": "UNEXPECTED_MOCK_OUTPUT",
+        "fixture_mock_commands": 1
+      },
+      "detail": {},
+      "matches_expected": true,
+      "mismatches": {}
+    }
+  ],
+  "event_count": 323,
+  "actual_commands": 2,
+  "raw_worker_streams": 20,
+  "maximum_simultaneous_workers": 2,
+  "constructed_fixture_cases": [
+    "H-10",
+    "H-11",
+    "H-12"
+  ]
+}

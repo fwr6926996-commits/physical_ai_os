@@ -1,0 +1,11 @@
+{
+  "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/timepoint_v0_2_candidate.schema.json": "759915d6825b5de4e79e2f45b8a8da9c52767e2ca28c516be3bae7c50441457f",
+  "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/pre_write_snapshot.json": "42cb526b352e80048f3943d228b40a7b72a116ca3ea668d9dd56116e5a126a5b",
+  "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/static_validation.json": "31b459d94f1a8bd254a7e1199414f69621739ecf87f466bc1feaa656f67d6b2a",
+  "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/ecmascript_regex_validation.json": "d20e1495eb5a712b526ec5828a6d4f7893e76aa9cc1abcb90272a7ec78d6416c",
+  "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/verification.json": "e55deb52fb5c72edc31f05d271754ea2fd9230375f0801dcb461ff0a64a97899",
+  "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/t0_test_vectors_v0_2_candidate.json": "e8a2d5339752594b0ac757ace3281948c5fa8f55be998c94498011d86dd10220",
+  "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/REVIEW.md": "dd13e1c4120f570d6207ce05d75ddd8d157b85062106fb7cf8316efe02a96004",
+  "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/design_snapshot.json": "6814f038e4d7ca98f08c8a731319d8fba92663a3dab2ee51bb19dfb6b5347366",
+  "docs/protocols/PHASE5A_T0_OFFLINE_MOCK_V0_2_CANDIDATE.md": "275ad66c3530b1f3f2160cb68945cdd42a7446556f5108ac818f456aa6d08a11"
+}

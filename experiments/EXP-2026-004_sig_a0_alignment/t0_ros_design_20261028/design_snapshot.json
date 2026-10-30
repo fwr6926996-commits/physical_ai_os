@@ -1,0 +1,16 @@
+{
+  "status": "DESIGN_SNAPSHOT_NOT_RUNTIME_FREEZE",
+  "protocol_id": "P5A-T0-ROS-0.1",
+  "client_date": "2026-10-28",
+  "source_sha256": {
+    "docs/protocols/PHASE5A_T0_ROS_CLOCK_V0_1_CANDIDATE.md": "43e557fc2af77be7ce9dc4dd3e1c24f70a63b6e594afebfc7a425b39cccb9f14",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_ros_design_20261028/REVIEW.md": "526aa8f76e5c5bfc7f1002ec40ed868a35e93964e2aa66f3d399e88ae850679e",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_ros_design_20261028/scenarios_v0_1_candidate.json": "f23fb06ab09d4e5e0e9ce4c92d9e3cf0fdfaced7f893d9d53a89e6e967cfcea9",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_ros_design_20261028/loopback_udp_v0_1_candidate.xml": "78bfadc647c9d662508c3dc34a2b0bad189495156bd36dcdb0dc8f814396572d",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_ros_design_20261028/environment_inventory.json": "21a99cce4ced912b7cd2b0c35555191caf01725543c69dd02e874c0f18f272d9",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_ros_design_20261028/source_review.json": "05843b8a2989e67f29212e8344f78061fca81ef22ba71ea6e103cc17648d8147"
+  },
+  "design_acceptance": "NOT_RECORDED",
+  "implementation_authorization": "NOT_RECORDED",
+  "execution_results": null
+}

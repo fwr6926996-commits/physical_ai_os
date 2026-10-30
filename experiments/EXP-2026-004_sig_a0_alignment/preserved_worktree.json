@@ -1,0 +1,41 @@
+{
+  "captured_before_review_outputs": true,
+  "git_status": {
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--untracked-files=all"
+    ],
+    "exit_code": 0,
+    "stdout": " M README.md\n M docs/process/ENGINEERING_WORKFLOW.md\n M docs/process/TEMPLATE_REGISTRY.md\n M docs/process/templates/BUG_DIAGNOSIS.md\n M docs/process/templates/PHASE_ACCEPTANCE.md\n?? docs/decisions/ADR-0002-ros-physical-ai-sig-alignment.md\n?? docs/process/NOTION_SYNC.md\n?? docs/process/notion_sync_registry.json\n?? docs/protocols/SIG-A0_UPSTREAM_ALIGNMENT_REVIEW.md\n?? experiments/EXP-2026-002_so101_inventory/inventory.md\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/phase4_r3_stability_20261014_01.json\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/thermal_d2_idle_20261014_01.json\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/thermal_d2_preflight_20261014_01.json\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/thermal_d3_load_20261014_01.json\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/no_model_preflight_stability_20261014_01.json\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_20261014_01/command.json\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_20261014_01/raw_events.jsonl\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/command.json\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/remote_stdout.txt\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/result.json\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_20261014_01/command.json\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_20261014_01/raw_events.jsonl\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/stability_monitor.jsonl\n?? projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/supervisor_result.json\n?? scripts/check_notion_sync.py\n",
+    "stderr": ""
+  },
+  "sha256_by_path": {
+    "README.md": "af3bff0505515c10ada3bea2cd46ef96c133040e23fe2955e835c65193e97e2a",
+    "docs/process/ENGINEERING_WORKFLOW.md": "82c024f036b42d7870f857b59a47a1a9d1425d14a06fd2f40731ca66b0919a24",
+    "docs/process/TEMPLATE_REGISTRY.md": "3b6c4bac3dcdd3bb3ee9e951fb304b39bc3372a57a41d74d9f496eff50e9cdc2",
+    "docs/process/templates/BUG_DIAGNOSIS.md": "89586255b573fc517ac8d8db4084cec8481e4072c2dd1871157715ffab13de0a",
+    "docs/process/templates/PHASE_ACCEPTANCE.md": "3f17bed4adc5d0f4a5dc9cd98bd5554182da7cd28813845c6866f522925fba51",
+    "docs/decisions/ADR-0002-ros-physical-ai-sig-alignment.md": "3ec2b27f9c4dc78d785c434b1dc370d40465fcef4a1f0106066c48e31ac7650d",
+    "docs/process/NOTION_SYNC.md": "9c48fce215d298dca3104767c2c3b68252582327c39ba8ef35ec18fb2058e12a",
+    "docs/process/notion_sync_registry.json": "c10e7b36d17250d9503868a8a9f2a3f0e3334de6ac882b1f03558338667dd5fd",
+    "docs/protocols/SIG-A0_UPSTREAM_ALIGNMENT_REVIEW.md": "a04ad250080f7b0821958479364ac4aa605391316ebdf3792aec95b5d52ffb95",
+    "experiments/EXP-2026-002_so101_inventory/inventory.md": "a787a1015659167ce28f95d2deef23919005c88b5c955072142f6568f45789f3",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/phase4_r3_stability_20261014_01.json": "3de4d013bbc686a3b564bc9d71da3d1f9d12c615d997aa64ac43fb21ffeb7804",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/thermal_d2_idle_20261014_01.json": "07ed1c54b3b8c70ad1d8e6f4b9ab2838bf77fc18e3f3a9b9b478eb289f596cce",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/thermal_d2_preflight_20261014_01.json": "3b198cb715d9fcee25e99208b28c2d3edae46097f1961953eaed382b70930a95",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/authorizations/thermal_d3_load_20261014_01.json": "c9082cef198e307465509bffde17b910766823690be74449807a8f5a4982e221",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/no_model_preflight_stability_20261014_01.json": "beeddcc10e4daa480026f5ca5ea59360fad88d3dafcbabdea435c6653cd95355",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_20261014_01/command.json": "17034b90de13030adb8d9cad68719ba3f44289250b72dac47532068bd6120a78",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_idle_20261014_01/raw_events.jsonl": "693718c670aa3d2e62794917d970eca125a03d36a0ab5f2a89389586ef4d2b02",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/command.json": "261d303a7e2660324263b979217724ada1034147fa48792be6520fff2c4cf2f7",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/remote_stdout.txt": "09e64e448c90c6efedb188b9954d41433f6ca14ab38510ef7c20f417c187d564",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d2_preflight_20261014_01/result.json": "d61f181e905a29a281b4e16622ade165120ca3f103bd0da9adeb81596b8f6636",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_20261014_01/command.json": "c85551c9f3ef2352b988514e4bfc78672a7238e54a8604a4343cc5b5919dd2c3",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_0_harness/thermal_d3_load_20261014_01/raw_events.jsonl": "772ea0f34451d9188f47047f9e30e05a16aca19b848d263772e73dfc393d7a22",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/stability_monitor.jsonl": "8c744c40de4422c7f89c827846c9ab1be7f462a01a9480aa101913d4e3dcea72",
+    "projects/so101_L1/openvino/phase4_v0_1/evidence/phase4_3_stability/supervisor_result.json": "81da6b6266ad00a76f42bc5b844fe7f8aa0590b7d0ccba71e77c932bcf933d1c",
+    "scripts/check_notion_sync.py": "29682265cd36bc832912bd285493efeeeb3a2be57f9b10502393311dcef18a25"
+  }
+}

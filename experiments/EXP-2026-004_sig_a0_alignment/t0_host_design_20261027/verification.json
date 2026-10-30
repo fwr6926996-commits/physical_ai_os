@@ -1,0 +1,20 @@
+{
+  "status": "PASS_STATIC_DESIGN_AND_PRESERVATION_ONLY",
+  "verified_at": "2026-10-27T03:39:58.900000+00:00",
+  "scenario_count": 12,
+  "slot_count": 10,
+  "prior_files_unchanged": 158,
+  "accepted_t0_l_evidence_unchanged": true,
+  "new_runtime_or_test_code_created": false,
+  "new_clock_sampling_suite_executed": false,
+  "old_suite_rerun": false,
+  "ROS_nodes_started": false,
+  "notion_projection": "NOT_REQUIRED_UNACCEPTED_DESIGN_NO_GATE_CHANGE",
+  "notion_stale_count": 0,
+  "git_diff_check_exit_code": 0,
+  "limitations": [
+    "static checks validate identifiers, declared scenario/slot arithmetic and file integrity only",
+    "not a schema validator or runtime verifier implementation",
+    "source metadata readability is not two-process binding evidence"
+  ]
+}

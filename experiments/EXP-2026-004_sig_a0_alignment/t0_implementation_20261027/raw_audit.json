@@ -1,0 +1,48 @@
+{
+  "status": "PASS_READ_ONLY_RAW_AUDIT",
+  "suite_rerun": false,
+  "case_count": 34,
+  "actual_event_count": 190,
+  "constructed_fixture_event_count": 83,
+  "actual_commands": 2,
+  "actual_stop_windows": [
+    {
+      "case_id": "T0-11",
+      "ticks": 11,
+      "commands": 0,
+      "expired_drop": 1
+    },
+    {
+      "case_id": "T0-12",
+      "ticks": 11,
+      "commands": 0,
+      "expired_drop": 1
+    },
+    {
+      "case_id": "T0-28",
+      "ticks": 11,
+      "commands": 0,
+      "expired_drop": 1
+    },
+    {
+      "case_id": "T0-31",
+      "ticks": 11,
+      "commands": 0,
+      "expired_drop": 1
+    },
+    {
+      "case_id": "T0-32",
+      "ticks": 11,
+      "commands": 0,
+      "expired_drop": 1
+    },
+    {
+      "case_id": "T0-34",
+      "ticks": 11,
+      "commands": 0,
+      "expired_drop": 1
+    }
+  ],
+  "total_output_bytes": 147289,
+  "audit_script_sha256": "a7dfe2a046d57568410f1bc2c1b5228a77fb78f87dfc61061c1f1a48ef9f5613"
+}

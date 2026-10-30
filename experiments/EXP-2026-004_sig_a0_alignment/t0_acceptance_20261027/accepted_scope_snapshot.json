@@ -1,0 +1,44 @@
+{
+  "decision_id": "P5A-T0-L-02-ACCEPT-20261027-01",
+  "recorded_at": "2026-10-27T03:28:24.299754+00:00",
+  "human_quote": "接受",
+  "human_reply_context": "承接上一条已展示的T0-L 0.2正式34/34结果、26项回归和三个重点证据的有界结果审阅。",
+  "status": "ACCEPTED_T0_L_OFFLINE_MOCK_ONLY",
+  "engineering_result": "T0_L_LOGIC_AND_MOCK_EVIDENCE_PASS",
+  "protocol_id": "P5A-T0-L-0.2",
+  "run_id": "T0-L-20261027-01",
+  "source_revision": "WORKTREE_BASE:3f141d0c444fbacea62d3d5b788980d437c95aad",
+  "source_sha256": {
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/REVIEW.md": "e68a5bd381134bc5ffb1bd76447621e51020720b13329a62564f7f9ba5023426",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/AUTHORIZATION.json": "30cf130783824b00f4bdcc5e99955a92e38237f2ba135197a52208b80826347c",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/run_freeze.json": "70263a1e839dafd8f9643b2f23f27b80740a14edd286e1672b6466d3d7c76d75",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/run_freeze.json.attempt.json": "24f011a1c80a535dc9849ab34cdd2feec55864b4706dbdac67592ff2cf60a433",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/raw_audit.json": "33a0d943fa862dfffe3d054c73d56ac7c90053be767748d14feebeca84bcb362",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/verification.json": "45f73ae774cbb2470527bf8ae86cd8eb515aec9e266d0c46926f588fc2f1f71e",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/sha256_manifest.json": "9917716e4863275364397f160c1702bb431cf3a139e72a2ecdcfe2798577cc07",
+    "artifacts/phase5a/t0/T0-L-20261027-01/result.json": "55a6b447b5ddf7c9e8be284e96a4bba6f03e876b037b4ea64ede196f8da6ce36",
+    "artifacts/phase5a/t0/T0-L-20261027-01/hashes.json": "afb2e81ed9cbc6e371ed20add2bd86032a9843bf4b2a3f9b9e69d3a92878d61c",
+    "artifacts/phase5a/t0/T0-L-20261027-01/evidence_summary.json": "0f457943e10dd73acfbfb173d730c5861d87eda68f3264eff22d23b3851476a6"
+  },
+  "accepted": [
+    "fixed synthetic time/source/session eligibility checks",
+    "dequeue and sink-before-output expiry rejection",
+    "one-use mock tokens and expired-count deduplication",
+    "collected mock stop-window evidence",
+    "constructed negative verifier inputs correctly rejected or marked incomplete"
+  ],
+  "not_accepted": [
+    "full Gate T0",
+    "actual clock source binding or jump detection",
+    "ROS graph, cross-process integration or concurrent ActionBuffer",
+    "model or camera integration",
+    "hardware, physical stop or real-time safety"
+  ],
+  "next_permitted": [
+    "read-only evidence review and explanation",
+    "design and review next bounded integration protocol"
+  ],
+  "new_execution_authorized": false,
+  "formal_attempts_used": 1,
+  "automatic_formal_rerun": false
+}

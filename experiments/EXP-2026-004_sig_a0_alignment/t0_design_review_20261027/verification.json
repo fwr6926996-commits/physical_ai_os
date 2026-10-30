@@ -1,0 +1,16 @@
+{
+  "result": "PASS_STATIC_REVIEW_AND_INTEGRITY_ONLY",
+  "preexisting_files_unchanged": 78,
+  "all_previous_review_and_acceptance_manifests": "UNCHANGED",
+  "python_jsonschema_structure_checks": "PASS",
+  "javascript_regex_probes": "PASS",
+  "cases": 34,
+  "timepoints": 37,
+  "stop_window_ticks": 11,
+  "age_unavailable_rules_and_reference_shapes": "CONSISTENT_DESIGN_ORACLES",
+  "notion_stale_count": 0,
+  "git_diff_check": 0,
+  "runtime_code_or_tests_created": false,
+  "runtime_logic_or_qualification_run": false,
+  "design_acceptance_and_execution_authorization": "NOT_RECORDED"
+}

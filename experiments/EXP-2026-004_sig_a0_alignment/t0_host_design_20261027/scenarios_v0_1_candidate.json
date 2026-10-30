@@ -1,0 +1,224 @@
+{
+  "protocol_id": "P5A-T0-H-0.1",
+  "status": "DESIGN_CANDIDATE_NOT_ACCEPTED_NOT_AUTHORIZED",
+  "timepoint_contract_version": "phase5a.t0.timepoint/0.2-candidate",
+  "units": "ns",
+  "runtime_context_owner": "supervisor; allocated before actions; immutable per session",
+  "control_clock": {
+    "api": "time.clock_gettime_ns",
+    "clock_id_symbol": "CLOCK_MONOTONIC",
+    "permitted_domain": "HOST_STEADY",
+    "mapping_registry": {}
+  },
+  "source_identity_fields": [
+    "boot_id_sha256",
+    "namespace_dev",
+    "namespace_ino",
+    "clock_id_symbol"
+  ],
+  "guard_clock": "CLOCK_BOOTTIME; resource guarding only; no control subtraction",
+  "limits": {
+    "maximum_simultaneous_processes": 3,
+    "parent_guard_seconds": 30,
+    "expiry_wait_guard_seconds": 2,
+    "maximum_total_events": 1024,
+    "maximum_frame_bytes": 16384,
+    "maximum_total_output_bytes": 2097152,
+    "maximum_formal_attempts_per_authorization": 1
+  },
+  "thresholds_ns": {
+    "normal_token_ttl": "2000000000",
+    "expiry_case_token_ttl": "200000000",
+    "max_observation_age": "5000000000",
+    "stop_window_minimum": "200000000",
+    "tick_slot_period": "20000000"
+  },
+  "stop_slots": {
+    "count": 10,
+    "target_offsets_ns": [
+      "0",
+      "20000000",
+      "40000000",
+      "60000000",
+      "80000000",
+      "100000000",
+      "120000000",
+      "140000000",
+      "160000000",
+      "180000000"
+    ],
+    "actual_tick_rule": "target <= actual_tick < next_target; one tick per slot; no synthetic catch-up",
+    "window_end_rule": "fresh actual sample >= start+200000000; terminal event required"
+  },
+  "cases": [
+    {
+      "id": "H-01",
+      "name": "native_two_process_binding_and_causal_handoff",
+      "evidence_kind": "COLLECTED_NATIVE_MOCK",
+      "setup_or_fault": "NONE",
+      "expected": {
+        "binding_verdict": "ALLOW",
+        "decision": "ALLOW",
+        "mock_commands": 1,
+        "causal_bracket_valid": true,
+        "sink_write_completed_before_expiry": true
+      }
+    },
+    {
+      "id": "H-02",
+      "name": "wrong_provider_with_steady_label",
+      "evidence_kind": "EXPLICIT_PROVIDER_FAULT",
+      "setup_or_fault": "select_CLOCK_REALTIME_but_claim_HOST_STEADY",
+      "expected": {
+        "binding_verdict": "REJECT",
+        "binding_reason": "BINDING_PROVIDER_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false
+      }
+    },
+    {
+      "id": "H-03",
+      "name": "namespace_descriptor_conflict",
+      "evidence_kind": "METADATA_FAULT_NO_NAMESPACE_MUTATION",
+      "setup_or_fault": "modify_reported_namespace_ino",
+      "expected": {
+        "binding_verdict": "REJECT",
+        "binding_reason": "BINDING_NAMESPACE_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false
+      }
+    },
+    {
+      "id": "H-04",
+      "name": "missing_binding_evidence",
+      "evidence_kind": "COLLECTOR_FAULT_NO_SYSTEM_FILE_MUTATION",
+      "setup_or_fault": "inject_unavailable_required_identity",
+      "expected": {
+        "binding_verdict": "REJECT",
+        "binding_reason": "BINDING_EVIDENCE_UNAVAILABLE",
+        "mock_commands": 0,
+        "age_available": false
+      }
+    },
+    {
+      "id": "H-05",
+      "name": "forged_unregistered_timepoint_source",
+      "evidence_kind": "NATIVE_TOKEN_PAYLOAD_FAULT",
+      "setup_or_fault": "replace_source_with_unregistered_value",
+      "expected": {
+        "binding_verdict": "ALLOW",
+        "decision": "REJECT",
+        "reason": "UNKNOWN_CLOCK_SOURCE",
+        "mock_commands": 0,
+        "age_available": false,
+        "expired_drop": 0
+      },
+      "must_be_numerically_unexpired_before_target_check": true,
+      "if_unmet": "SETUP_TIMING_NOT_MET_STOP_NO_RETRY"
+    },
+    {
+      "id": "H-06",
+      "name": "native_dequeue_after_expiry",
+      "evidence_kind": "COLLECTED_NATIVE_MOCK",
+      "setup_or_fault": "wait_actual_now_ge_expiry_before_dequeue",
+      "expected": {
+        "binding_verdict": "ALLOW",
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "stop_window_verdict": "PASS_MOCK_STOP_WINDOW_ONLY"
+      }
+    },
+    {
+      "id": "H-07",
+      "name": "native_sink_recheck_after_expiry",
+      "evidence_kind": "COLLECTED_NATIVE_MOCK",
+      "setup_or_fault": "wait_actual_now_ge_expiry_after_initial_allow",
+      "expected": {
+        "binding_verdict": "ALLOW",
+        "initial_check": "ALLOW",
+        "sink_check": "REJECT",
+        "reason": "EXPIRED",
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "stop_window_verdict": "PASS_MOCK_STOP_WINDOW_ONLY"
+      },
+      "must_be_numerically_unexpired_before_target_check": true,
+      "if_unmet": "SETUP_TIMING_NOT_MET_STOP_NO_RETRY"
+    },
+    {
+      "id": "H-08",
+      "name": "supervised_restart_and_session_rotation",
+      "evidence_kind": "COLLECTED_NATIVE_MOCK_EXPLICIT_RESTART",
+      "setup_or_fault": "replay_unexpired_old_token_after_new_session",
+      "expected": {
+        "binding_verdict": "ALLOW",
+        "old_token_reason": "SESSION_MISMATCH",
+        "old_token_mock_commands": 0,
+        "new_token_mock_commands": 1,
+        "source_identity_unchanged": true,
+        "session_changed": true
+      },
+      "must_be_numerically_unexpired_before_target_check": true,
+      "if_unmet": "SETUP_TIMING_NOT_MET_STOP_NO_RETRY"
+    },
+    {
+      "id": "H-09",
+      "name": "source_domain_metadata_conflict",
+      "evidence_kind": "NATIVE_TOKEN_PAYLOAD_FAULT",
+      "setup_or_fault": "replace_domain_with_MCU_UPTIME_keep_native_source",
+      "expected": {
+        "binding_verdict": "ALLOW",
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_METADATA_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "expired_drop": 0
+      },
+      "must_be_numerically_unexpired_before_target_check": true,
+      "if_unmet": "SETUP_TIMING_NOT_MET_STOP_NO_RETRY"
+    },
+    {
+      "id": "H-10",
+      "name": "missing_critical_event_in_copy",
+      "evidence_kind": "POST_COLLECTION_VERIFIER_FIXTURE",
+      "setup_or_fault": "remove_one_critical_event_preserve_sequence_gap",
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "source_case": "H-06",
+      "no_new_consumer_execution": true
+    },
+    {
+      "id": "H-11",
+      "name": "contradictory_sink_count_in_copy",
+      "evidence_kind": "POST_COLLECTION_VERIFIER_FIXTURE",
+      "setup_or_fault": "increment_end_count_without_command_record",
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "source_case": "H-06",
+      "no_new_consumer_execution": true
+    },
+    {
+      "id": "H-12",
+      "name": "unexpected_mock_command_in_copy",
+      "evidence_kind": "POST_COLLECTION_VERIFIER_FIXTURE",
+      "setup_or_fault": "insert_command_and_update_event_order_counts_consistently",
+      "expected": {
+        "verdict": "FAIL_MOCK_STOP_WINDOW_ONLY",
+        "reason": "UNEXPECTED_MOCK_OUTPUT",
+        "fixture_mock_commands": 1
+      },
+      "source_case": "H-06",
+      "no_new_consumer_execution": true
+    }
+  ],
+  "result_scope": "T0_H_NATIVE_CLOCK_AND_LOCAL_PIPE_MOCK_PASS only; not full Gate T0",
+  "formal_output_template": "artifacts/phase5a/t0_host/<run_id>/",
+  "development_output_template": "/tmp/phase5a-t0-host-<id>/",
+  "execution_results": null
+}

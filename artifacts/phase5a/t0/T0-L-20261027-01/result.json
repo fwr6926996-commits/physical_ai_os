@@ -1,0 +1,7 @@
+{
+  "status": "T0_L_LOGIC_AND_MOCK_EVIDENCE_PASS",
+  "case_count": 34,
+  "matched_count": 34,
+  "final_acceptance": "HUMAN_REVIEW_PENDING",
+  "full_gate_t0": "NOT_ESTABLISHED"
+}

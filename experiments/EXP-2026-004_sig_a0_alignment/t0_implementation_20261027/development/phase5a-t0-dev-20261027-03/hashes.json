@@ -1,0 +1,12 @@
+{
+  "REVIEW.md": "585b8289c145f7b477ad8117c25d7aee5b224acae6c187b0aef0f8e38d2f40b8",
+  "events.jsonl": "0df02c24a8e3384ef57f90e30892de57027a43591660e93a91982881a62a72f9",
+  "evidence_summary.json": "0f457943e10dd73acfbfb173d730c5861d87eda68f3264eff22d23b3851476a6",
+  "launcher_result.json": "aa95fdb61c80f0f746075536270584447c78cfaee3a7bd148bcfff2c0cf0f5da",
+  "mock_commands.jsonl": "6ae39b144e73743ecef3c34194ad33cc79ef80d3b2047a5a43e2d0bdfbd9da22",
+  "result.json": "55a6b447b5ddf7c9e8be284e96a4bba6f03e876b037b4ea64ede196f8da6ce36",
+  "run_manifest.json": "817b2120666e0d1ceede4736d4282a4b9ac349bdba2bdec0c202e5906e30e7b8",
+  "verifier_inputs.jsonl": "fa8acbf2351dddefa6c2101c0839ac196c88cda6893efc465a8fe392813a95b4",
+  "worker_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "worker_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

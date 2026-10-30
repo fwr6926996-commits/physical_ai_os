@@ -1,0 +1,23 @@
+{
+  "retrieved_at": "2026-10-27T03:39:19.445091+00:00",
+  "sources": [
+    {
+      "url": "https://docs.python.org/3.13/library/time.html",
+      "scope": "clock_gettime_ns explicitly selects clk_id and returns integer ns; sleep may overshoot; get_clock_info is metadata, not runtime binding",
+      "document_version": "3.13 family currently served as 3.13.18; local candidate interpreter 3.13.12 is separately inventoried",
+      "application": "Use explicit CLOCK_MONOTONIC rather than infer origin from ns unit or generic API name."
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man7/time_namespaces.7.html",
+      "scope": "CLOCK_MONOTONIC/BOOTTIME have namespace-relative readings; time_for_children can differ from parent namespace",
+      "application": "Inspect each controlled worker independently; descriptor mismatch fixtures do not prove real namespace-isolation behavior."
+    },
+    {
+      "url": "https://design.ros2.org/articles/clock_and_time.html",
+      "scope": "ROS Time can follow use_sim_time/clock and jump; steady and ROS time have different purposes",
+      "application": "Keep actual ROS clock negative test outstanding; native pipe result does not cover ROS."
+    }
+  ],
+  "repository_requirement": "governing_extracts.txt: Addendum01 P96-P112/P208-P211; execution book P719/P756-P762",
+  "candidate_context": "Reused same-day review_20261027/CANDIDATE_TRIGGER_REVIEW.md and full notion_candidate_snapshot.json as historical design constraints only. No fresh pool status, adoption or trigger-change claim; no new technology selected."
+}

@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "watchdog_triggered": false,
+  "elapsed_wall_seconds": 0.25954256393015385,
+  "interpretation": "watchdog only; not a real-time performance result"
+}

@@ -1,0 +1,39 @@
+{
+  "client_date": "2026-10-28",
+  "status": "PRIMARY_SOURCE_DESIGN_REVIEW_ONLY",
+  "sources": [
+    {
+      "url": "https://design.ros2.org/articles/clock_and_time.html",
+      "used_for": "ROS time fallback/activation, zero before initialization, pause and jump notifications; not evidence that the project ran those paths."
+    },
+    {
+      "local_paths": [
+        "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/clock.py",
+        "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/time_source.py"
+      ],
+      "used_for": "Installed JumpThreshold requires negative nonzero min_backward; callback must be nonblocking. TimeSource best-effort depth1 subscription and last_time_set cache persist across activation toggles. Hashes are in environment_inventory.json."
+    },
+    {
+      "url": "https://github.com/ros2/rmw_fastrtps/blob/8.4.4/rmw_fastrtps_shared_cpp/src/participant.cpp",
+      "used_for": "LOCALHOST branch adds SHM and UDP transports; SYSTEM_DEFAULT leaves middleware transport profile configuration in place. Exact package version alone does not prove binary/source equivalence."
+    },
+    {
+      "url": "https://github.com/ros2/rmw_fastrtps/blob/8.4.4/README.md",
+      "used_for": "SYSTEM_DEFAULT for XML discovery configuration, FASTRTPS_DEFAULT_PROFILES_FILE, default RMW DataSharing OFF and XML QoS override controls."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ros2/rcl/9.2.11/rcl/src/rcl/discovery_options.c",
+      "used_for": "SYSTEM_DEFAULT is a recognized discovery-range value; local headers agree with this enum."
+    },
+    {
+      "url": "https://fast-rtps.docs.eprosima.com/en/2.x/fastdds/transport/whitelist.html",
+      "used_for": "Interface whitelist and explicit user transport/builtin transport controls; served docs currently2.14.7, localbinary2.14.6 requires actual profile/runtime validation."
+    }
+  ],
+  "documentation_limit": "docs.ros.org Jazzy clock/discovery pages returned access-denied; installed source and version-tagged upstream code used instead. No claim of a successful online API-doc read.",
+  "governing_requirements": [
+    "governing_extracts.txt:Addendum01 P96-P112 and P177-P180",
+    "T0-H REVIEW.md explicitly leaves actual ROS use_sim_time and jump tests outstanding"
+  ],
+  "runtime_results": null
+}

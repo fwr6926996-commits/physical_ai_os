@@ -1,0 +1,253 @@
+{
+  "cases": [
+    {
+      "case_id": "H-01",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 1,
+        "decision": "ALLOW",
+        "age_available": true,
+        "action_age_ns": "1534777",
+        "observation_age_ns": "1540706",
+        "expired_drop": 0,
+        "causal_bracket_valid": true,
+        "sink_write_completed_before_expiry": true
+      },
+      "detail": {
+        "windows": [],
+        "commands": 1,
+        "rejected_tokens": []
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-02",
+      "actual": {
+        "binding_verdict": "REJECT",
+        "binding_reason": "BINDING_PROVIDER_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": []
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-03",
+      "actual": {
+        "binding_verdict": "REJECT",
+        "binding_reason": "BINDING_NAMESPACE_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": []
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-04",
+      "actual": {
+        "binding_verdict": "REJECT",
+        "binding_reason": "BINDING_EVIDENCE_UNAVAILABLE",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": []
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-05",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 0,
+        "decision": "REJECT",
+        "reason": "UNKNOWN_CLOCK_SOURCE",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": [
+          "T0-H-dev-03/H-05/g0/aaeaccb4-8b1f-4f40-a9f3-080d27384075/H-05/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-06",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 0,
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "age_available": true,
+        "action_age_ns": "200096387",
+        "observation_age_ns": "200103384",
+        "expired_drop": 1,
+        "stop_window_verdict": "PASS_MOCK_STOP_WINDOW_ONLY"
+      },
+      "detail": {
+        "windows": [
+          {
+            "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+            "ticks": 10,
+            "expired_drop": 1,
+            "mock_commands": 0,
+            "duration_ns": "200076069"
+          }
+        ],
+        "commands": 0,
+        "rejected_tokens": [
+          "T0-H-dev-03/H-06/g0/ca5f7f53-ed6e-48e3-9dea-92d658c6f917/H-06/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-07",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 0,
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "age_available": true,
+        "action_age_ns": "200158995",
+        "observation_age_ns": "200166479",
+        "expired_drop": 1,
+        "initial_check": "ALLOW",
+        "sink_check": "REJECT",
+        "stop_window_verdict": "PASS_MOCK_STOP_WINDOW_ONLY"
+      },
+      "detail": {
+        "windows": [
+          {
+            "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+            "ticks": 10,
+            "expired_drop": 1,
+            "mock_commands": 0,
+            "duration_ns": "200184432"
+          }
+        ],
+        "commands": 0,
+        "rejected_tokens": [
+          "T0-H-dev-03/H-07/g0/03c02eb3-8d79-4d13-921a-cc87401d8125/H-07/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-08",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 1,
+        "decision": "ALLOW",
+        "age_available": true,
+        "action_age_ns": "4021312",
+        "observation_age_ns": "4027820",
+        "expired_drop": 0,
+        "old_token_reason": "SESSION_MISMATCH",
+        "old_token_mock_commands": 0,
+        "new_token_mock_commands": 1,
+        "source_identity_unchanged": true,
+        "session_changed": true
+      },
+      "detail": {
+        "windows": [],
+        "commands": 1,
+        "rejected_tokens": [
+          "T0-H-dev-03/H-08/g0/60204717-31ce-4648-9ad1-9c3e8f8a1013/H-08/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-09",
+      "actual": {
+        "binding_verdict": "ALLOW",
+        "mock_commands": 0,
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_METADATA_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "detail": {
+        "windows": [],
+        "commands": 0,
+        "rejected_tokens": [
+          "T0-H-dev-03/H-09/g0/67479b46-956f-4698-b0a2-27e8a50755bc/H-09/g0/token-1"
+        ]
+      },
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-10",
+      "actual": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "detail": {},
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-11",
+      "actual": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "detail": {},
+      "matches_expected": true,
+      "mismatches": {}
+    },
+    {
+      "case_id": "H-12",
+      "actual": {
+        "verdict": "FAIL_MOCK_STOP_WINDOW_ONLY",
+        "reason": "UNEXPECTED_MOCK_OUTPUT",
+        "fixture_mock_commands": 1
+      },
+      "detail": {},
+      "matches_expected": true,
+      "mismatches": {}
+    }
+  ],
+  "event_count": 343,
+  "actual_commands": 2,
+  "raw_worker_streams": 20,
+  "maximum_simultaneous_workers": 2,
+  "constructed_fixture_cases": [
+    "H-10",
+    "H-11",
+    "H-12"
+  ]
+}

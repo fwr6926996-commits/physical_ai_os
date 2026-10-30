@@ -1,0 +1,32 @@
+{
+  "protocol_id": "P5A-T0-L-0.2",
+  "status": "READY_FOR_HUMAN_DESIGN_REVIEW_NOT_AUTHORIZED",
+  "captured_at": "2026-10-27T10:06:44.756330+08:00",
+  "source_revision": "WORKTREE_BASE:3f141d0c444fbacea62d3d5b788980d437c95aad",
+  "source_sha256": {
+    "docs/protocols/PHASE5A_T0_OFFLINE_MOCK_V0_2_CANDIDATE.md": "275ad66c3530b1f3f2160cb68945cdd42a7446556f5108ac818f456aa6d08a11",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/timepoint_v0_2_candidate.schema.json": "759915d6825b5de4e79e2f45b8a8da9c52767e2ca28c516be3bae7c50441457f",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/t0_test_vectors_v0_2_candidate.json": "e8a2d5339752594b0ac757ace3281948c5fa8f55be998c94498011d86dd10220",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/REVIEW.md": "dd13e1c4120f570d6207ce05d75ddd8d157b85062106fb7cf8316efe02a96004"
+  },
+  "run_limit_proposal": {
+    "formal_suites_per_frozen_snapshot": 1,
+    "cases": 34,
+    "wall_watchdog_seconds": 10,
+    "max_events": 512,
+    "max_total_output_bytes": 1048576
+  },
+  "separate_decisions": [
+    "accept candidate design",
+    "authorize local implementation/development validation",
+    "optional conditional one formal suite after freeze"
+  ],
+  "protected_scope": [
+    "no ROS nodes",
+    "no network",
+    "no model integration",
+    "no device files",
+    "no system clock changes",
+    "no dependency installation"
+  ]
+}
