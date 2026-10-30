@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "authorized_at_date": "2026-10-14",
+  "authorized_by": "human_owner",
+  "protocol_id": "P4-DK2500-THERMAL-D2-PREFLIGHT-001",
+  "protocol_version": "0.1",
+  "run_id": "thermal_d2_preflight_20261014_01",
+  "stage": "D2_PREFLIGHT",
+  "target": "hepintel@192.168.77.2",
+  "timeout_seconds": 30.0,
+  "status": "AUTHORIZED_FOR_ONE_ATTEMPT",
+  "automatic_retry": false,
+  "runner_sha256": "eb976ad3dda9bd1d3c8adcea50d038af39b7cb2c8583e7d9d364476260a623d6",
+  "remote_probe_sha256": "9da45e6ef16a38a20206bc8e343b2c9052b156d155534a5548dbfefa756b4e6f",
+  "protocol_sha256": "670fc9e1276171a4ea8bac7f94da5adfaed230f43aea891acfb8655382a4101e",
+  "permitted_scope": [
+    "one read-only SSH preflight attempt",
+    "one-shot identity and thermal-interface reads",
+    "local preservation and review of returned evidence"
+  ],
+  "prohibited_scope": [
+    "automatic or manual retry under this authorization",
+    "target file creation",
+    "OpenVINO, model or load execution",
+    "D2-IDLE",
+    "Stability",
+    "deployment"
+  ]
+}

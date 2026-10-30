@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "authorized_at_date": "2026-10-14",
+  "authorized_by": "human_owner",
+  "protocol_id": "P4-DK2500-THERMAL-D3-LOAD-001",
+  "protocol_version": "0.1",
+  "run_id": "thermal_d3_load_20261014_01",
+  "stage": "D3_LOAD",
+  "target": "hepintel@192.168.77.2",
+  "startup_seconds": 30.0,
+  "watchdog_seconds": 15.0,
+  "overall_seconds": 660.0,
+  "status": "AUTHORIZED_FOR_ONE_ATTEMPT",
+  "automatic_retry": false,
+  "protocol_sha256": "a3f5b60a84f8f1d67eb7daaf030d660663766cd8acd5fc012174014f78ca0763",
+  "supervisor_sha256": "098142645256d454881599850343248525d5cf5ec74426b7f462c695c0367c11",
+  "remote_sampler_sha256": "923a82f754a137a58b973c39a915fd9a76fd5a30d3d8522299ece543e6d2c0fe",
+  "permitted_scope": [
+    "one supervised D3-LOAD SSH attempt",
+    "30-second no-load pre-observation",
+    "at most 600 seconds with exactly 12 arithmetic CPU workers",
+    "local evidence preservation and review"
+  ],
+  "prohibited_scope": [
+    "automatic or manual retry or reconnect under this authorization",
+    "target file creation or configuration change",
+    "OpenVINO, model or external stress-tool execution",
+    "Short rerun, Stability or deployment"
+  ]
+}

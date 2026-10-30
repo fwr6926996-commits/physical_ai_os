@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/usr/bin/ssh",
+    "-i",
+    "<DEDICATED_DK2500_KEY>",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "hepintel@192.168.77.2",
+    "/usr/bin/python3",
+    "-"
+  ]
+}
