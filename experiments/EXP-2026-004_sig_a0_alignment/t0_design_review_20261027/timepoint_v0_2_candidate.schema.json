@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase 5A TimePoint 0.2 review candidate",
+  "$comment": "Review candidate only. The lexical end assertion excludes trailing newlines; JSON Schema does not establish a registered source, active clock, int64 semantics or action eligibility.",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "timestamp",
+    "unit",
+    "clock_domain",
+    "source",
+    "measurement_point",
+    "synchronization_status",
+    "session_id",
+    "validity"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "phase5a.t0.timepoint/0.2-candidate"
+    },
+    "timestamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^(?:0|-?[1-9][0-9]{0,18})(?![\\s\\S])",
+      "maxLength": 20,
+      "description": "Signed decimal ns string; semantic checker must additionally enforce int64 range and nonnegative HOST_STEADY values."
+    },
+    "unit": {
+      "const": "ns"
+    },
+    "clock_domain": {
+      "enum": [
+        "HOST_STEADY",
+        "SYSTEM_TIME",
+        "ROS_TIME",
+        "CAMERA_DEVICE",
+        "MCU_UPTIME"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "description": "Clock-instance identity, resolved through run manifest; a PID alone is insufficient."
+    },
+    "measurement_point": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "synchronization_status": {
+      "enum": [
+        "SAME_SOURCE",
+        "UNSYNCHRONIZED",
+        "UNKNOWN",
+        "MAPPED_VALID"
+      ]
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 96
+    },
+    "validity": {
+      "enum": [
+        "VALID",
+        "INVALID"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "validity": {
+            "const": "VALID"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "timestamp": {
+            "type": "string"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "timestamp": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

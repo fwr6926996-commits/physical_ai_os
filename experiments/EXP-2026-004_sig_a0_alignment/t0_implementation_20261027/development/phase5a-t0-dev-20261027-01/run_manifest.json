@@ -1,0 +1,57 @@
+{
+  "source_sha256": {
+    "docs/protocols/PHASE5A_T0_OFFLINE_MOCK_V0_2_CANDIDATE.md": "275ad66c3530b1f3f2160cb68945cdd42a7446556f5108ac818f456aa6d08a11",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/t0_test_vectors_v0_2_candidate.json": "e8a2d5339752594b0ac757ace3281948c5fa8f55be998c94498011d86dd10220",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/timepoint_v0_2_candidate.schema.json": "759915d6825b5de4e79e2f45b8a8da9c52767e2ca28c516be3bae7c50441457f",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/AUTHORIZATION.json": "30cf130783824b00f4bdcc5e99955a92e38237f2ba135197a52208b80826347c",
+    "runtime_core/phase5a_t0/__init__.py": "52d7321fbb20a56b1eb528ab455907a9131d2f4c4f8853c5ada3c5905ad080e8",
+    "runtime_core/phase5a_t0/evidence.py": "50c99e6d99336391af35903fe988a732a36e6ab977c0a4104d61006746a184f8",
+    "runtime_core/phase5a_t0/logic.py": "9b03f0b627e211d9e77c262a8526ee4b2782542c36b0ef945926dbb0a3d33379",
+    "runtime_core/phase5a_t0/run.py": "e7e1db6c83439e198f9b9d76ca22d9e6e1af1c9a2285d973333e2847712946b4",
+    "runtime_core/phase5a_t0/suite.py": "ee18f61d9fcfd40922c7c2267862689fab739598dc7ebf04ee2546e883558881"
+  },
+  "environment": {
+    "interpreter": "/home/lucas/miniconda3/bin/python",
+    "resolved_interpreter": "/home/lucas/miniconda3/bin/python3.13",
+    "interpreter_sha256": "6d2361e714a779d25e3181bd43e9568173a9a7af961d4430fa9f968182e4923f",
+    "python_version": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "hostname": "lucas-ThinkBook-16-G7-IAH",
+    "dependencies": {
+      "jsonschema": {
+        "version": "4.26.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/jsonschema",
+        "file_count": 38,
+        "tree_sha256": "c45f1eab882976b9ee3bfb4e048b8b12a66bb307d076a335326002bc6e2c5305"
+      },
+      "attrs": {
+        "version": "25.4.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/attrs",
+        "file_count": 8,
+        "tree_sha256": "666c0f6b1b36df7936abd181cb1e64ed10eb5a4e55cf9ca3942e65e8c4c4cd94"
+      },
+      "referencing": {
+        "version": "0.37.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/referencing",
+        "file_count": 15,
+        "tree_sha256": "e1d22ff4794b833d44aadc433bd54137407f2ae511e60a0420cb2cd69de0096e"
+      },
+      "rpds": {
+        "version": "0.30.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/rpds",
+        "file_count": 4,
+        "tree_sha256": "8842f529c5815c3a44b3b135d8ba9e3b45ae6a7c0f325ee1921563b00d946e52"
+      },
+      "jsonschema_specifications": {
+        "version": "2025.9.1",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/jsonschema_specifications",
+        "file_count": 24,
+        "tree_sha256": "42c84b92f173a8ad4b488401a39fa4e4b892320b1b19a2d1225aefd2c507bcd8"
+      }
+    }
+  },
+  "mode": "development",
+  "run_id": "development",
+  "started_at": "2026-10-27T03:05:41.019457+00:00",
+  "formal_attempt": 0
+}

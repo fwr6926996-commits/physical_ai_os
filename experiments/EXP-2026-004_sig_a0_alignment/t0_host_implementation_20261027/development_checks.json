@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "source_sha256": {
+    "docs/protocols/PHASE5A_T0_HOST_CLOCK_V0_1_CANDIDATE.md": "25ef914e98d87bb7efb398ad722d681ca1ae1cff59ad6866aec7febd2e3159ad",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/scenarios_v0_1_candidate.json": "84061d0e47a561c3b377649dc57f0759d4ada401abfae1568fbea035b97d25c3",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_implementation_20261027/AUTHORIZATION.json": "290a952589ab1331fd7b93d5a1277c3ff0642374c242f258ddb283d16a07bf42",
+    "runtime_core/phase5a_t0/logic.py": "89cdba11e0acdb92fd9b9315c67cc69ed7575e8cb42e9d3c4544f56bfa7027be",
+    "runtime_core/phase5a_t0/run.py": "58ddc4c863cc5147f97ea1cbf7a8f1fea1ddbc6b9487b83f58348018ff4fb42b",
+    "runtime_core/phase5a_t0/__init__.py": "52d7321fbb20a56b1eb528ab455907a9131d2f4c4f8853c5ada3c5905ad080e8",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/timepoint_v0_2_candidate.schema.json": "759915d6825b5de4e79e2f45b8a8da9c52767e2ca28c516be3bae7c50441457f",
+    "runtime_core/phase5a_t0_host/__init__.py": "c53ef04febbc0fc0ea0596dbecbd0094250e8ed09127b47cf2377ad6bab3acc5",
+    "runtime_core/phase5a_t0_host/native.py": "28a003f3c08d17945364b06cfbcfab1cb0d7f86ef5425b27bed1c455fcfc49eb",
+    "runtime_core/phase5a_t0_host/run.py": "2f30c1cd8bce5d53edc4dfb573842755a93e1183b3318217bb6886019e1b695a",
+    "runtime_core/phase5a_t0_host/suite.py": "ad156d1737ad879269295c7f165b023333b7839aed89effe02119ed92ab4b739",
+    "runtime_core/phase5a_t0_host/verify.py": "d91fd22d11fc59ce68c6725c9b92e07b7123fc3509a8b8395740d1e8c400bd39",
+    "runtime_core/phase5a_t0_host/worker.py": "6a83ed51b2e458c89d14b871433f626cbd85639fa6a99f964e29a832427e7378",
+    "tests/phase5a_t0_host/test_host.py": "7066e69a0f8f8e87642f3ebc1cf924da3325e3aea31eebd9ae4d4489378dff87"
+  },
+  "regression_test_count": 26,
+  "unit_test_command": [
+    "/home/lucas/miniconda3/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/phase5a_t0_host",
+    "-v"
+  ],
+  "unit_test_log": "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_host_implementation_20261027/development/phase5a-t0-host-unit-20261027-01.txt",
+  "unit_test_log_sha256": "23cb51490be750b5a28b668776f17ced9b7746513a22176db5710712a197a6cc",
+  "development_attempts": 3,
+  "development_results": [
+    "FAIL_STOPPED_FRAME_LIMIT",
+    "PASS_12_OF_12",
+    "PASS_12_OF_12"
+  ],
+  "last_development": "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_host_implementation_20261027/development/phase5a-t0-host-dev-20261027-03",
+  "failure_resolution": "An entire constructed window copy exceeded a single JSON frame. Framed its events/commands separately with begin/end counts; kept 16KiB cap and all scenario expectations unchanged.",
+  "formal_runs_so_far": 0
+}

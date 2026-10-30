@@ -1,0 +1,26 @@
+{
+  "recorded_at": "2026-10-27T03:39:19.445091+00:00",
+  "kind": "READ_ONLY_DESIGN_ENVIRONMENT_INVENTORY_NOT_BINDING_TEST",
+  "interpreter": "/usr/bin/python3",
+  "python_version": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "hostname": "lucas-ThinkBook-16-G7-IAH",
+  "kernel": "7.0.0-31-generic",
+  "CLOCK_MONOTONIC_constant": 1,
+  "CLOCK_BOOTTIME_available": true,
+  "clock_gettime_ns_available": true,
+  "monotonic_info": {
+    "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-09
+  },
+  "time_namespace": "time:[4026531834]",
+  "children_time_namespace": "time:[4026531834]",
+  "namespace_dev": 5,
+  "namespace_ino": 4026531834,
+  "timens_offsets": "monotonic           0         0\nboottime            0         0\n",
+  "boot_id_sha256": "bcafe536a03675823700251883e1c6ac0f84ea4860a7fd88f8f5d39d77cafe93",
+  "runtime_sampling_suite_executed": false,
+  "ROS_nodes_started": false,
+  "limitation": "Only current metadata readability/API availability; no worker origin binding, sample comparison or timing qualification."
+}

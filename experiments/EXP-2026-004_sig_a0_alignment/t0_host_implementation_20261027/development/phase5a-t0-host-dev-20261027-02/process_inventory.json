@@ -1,0 +1,722 @@
+[
+  {
+    "case_id": "H-01",
+    "instance_id": "H-01-g0-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-01-g0-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-01/g0/d97e9fa0-5d62-42b0-b024-bc79485963c0",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 4,
+    "process_starttime": "389156456",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-01-g0-producer",
+      "--case-id",
+      "H-01",
+      "--instance-id",
+      "H-01-g0-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-01",
+    "instance_id": "H-01-g0-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-01-g0-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-01/g0/d97e9fa0-5d62-42b0-b024-bc79485963c0",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 5,
+    "process_starttime": "389156466",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-01-g0-executor",
+      "--case-id",
+      "H-01",
+      "--instance-id",
+      "H-01-g0-executor",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-02",
+    "instance_id": "H-02-g0-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-02-g0-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-02/g0/5b0da714-73cd-45cb-b71b-ae0b89e182b9",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 6,
+    "process_starttime": "389156484",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-02-g0-producer",
+      "--case-id",
+      "H-02",
+      "--instance-id",
+      "H-02-g0-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-02",
+    "instance_id": "H-02-g0-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-02-g0-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-02/g0/5b0da714-73cd-45cb-b71b-ae0b89e182b9",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 7,
+    "process_starttime": "389156494",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-02-g0-executor",
+      "--case-id",
+      "H-02",
+      "--instance-id",
+      "H-02-g0-executor",
+      "--provider",
+      "CLOCK_REALTIME",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-03",
+    "instance_id": "H-03-g0-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-03-g0-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-03/g0/7d5db6b6-56aa-413d-9737-676d87ea1b67",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 8,
+    "process_starttime": "389156507",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-03-g0-producer",
+      "--case-id",
+      "H-03",
+      "--instance-id",
+      "H-03-g0-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-03",
+    "instance_id": "H-03-g0-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-03-g0-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-03/g0/7d5db6b6-56aa-413d-9737-676d87ea1b67",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 9,
+    "process_starttime": "389156517",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-03-g0-executor",
+      "--case-id",
+      "H-03",
+      "--instance-id",
+      "H-03-g0-executor",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "namespace"
+    ]
+  },
+  {
+    "case_id": "H-04",
+    "instance_id": "H-04-g0-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-04-g0-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-04/g0/1b88e322-f192-434b-8ff1-b1ba8473b1b2",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 10,
+    "process_starttime": "389156534",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-04-g0-producer",
+      "--case-id",
+      "H-04",
+      "--instance-id",
+      "H-04-g0-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-04",
+    "instance_id": "H-04-g0-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-04-g0-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-04/g0/1b88e322-f192-434b-8ff1-b1ba8473b1b2",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 11,
+    "process_starttime": "389156544",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-04-g0-executor",
+      "--case-id",
+      "H-04",
+      "--instance-id",
+      "H-04-g0-executor",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "unavailable"
+    ]
+  },
+  {
+    "case_id": "H-05",
+    "instance_id": "H-05-g0-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-05-g0-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-05/g0/5f93dd6f-acea-4036-9629-4a2724c766b7",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 12,
+    "process_starttime": "389156560",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-05-g0-producer",
+      "--case-id",
+      "H-05",
+      "--instance-id",
+      "H-05-g0-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-05",
+    "instance_id": "H-05-g0-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-05-g0-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-05/g0/5f93dd6f-acea-4036-9629-4a2724c766b7",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 13,
+    "process_starttime": "389156569",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-05-g0-executor",
+      "--case-id",
+      "H-05",
+      "--instance-id",
+      "H-05-g0-executor",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-06",
+    "instance_id": "H-06-g0-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-06-g0-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-06/g0/375eac2e-7a85-466c-aeca-5888acf4b17c",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 14,
+    "process_starttime": "389156588",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-06-g0-producer",
+      "--case-id",
+      "H-06",
+      "--instance-id",
+      "H-06-g0-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-06",
+    "instance_id": "H-06-g0-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-06-g0-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-06/g0/375eac2e-7a85-466c-aeca-5888acf4b17c",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 15,
+    "process_starttime": "389156599",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-06-g0-executor",
+      "--case-id",
+      "H-06",
+      "--instance-id",
+      "H-06-g0-executor",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-07",
+    "instance_id": "H-07-g0-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-07-g0-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-07/g0/1a2afa0c-2fc1-4637-a376-fd90773d3952",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 16,
+    "process_starttime": "389156669",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-07-g0-producer",
+      "--case-id",
+      "H-07",
+      "--instance-id",
+      "H-07-g0-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-07",
+    "instance_id": "H-07-g0-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-07-g0-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-07/g0/1a2afa0c-2fc1-4637-a376-fd90773d3952",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 17,
+    "process_starttime": "389156688",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-07-g0-executor",
+      "--case-id",
+      "H-07",
+      "--instance-id",
+      "H-07-g0-executor",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-08",
+    "instance_id": "H-08-g0-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-08-g0-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-08/g0/bda901a5-061f-438c-9919-9689cba32de8",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 18,
+    "process_starttime": "389156756",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-08-g0-producer",
+      "--case-id",
+      "H-08",
+      "--instance-id",
+      "H-08-g0-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-08",
+    "instance_id": "H-08-g0-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-08-g0-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-08/g0/bda901a5-061f-438c-9919-9689cba32de8",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 19,
+    "process_starttime": "389156774",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-08-g0-executor",
+      "--case-id",
+      "H-08",
+      "--instance-id",
+      "H-08-g0-executor",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-08",
+    "instance_id": "H-08-g1-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-08-g1-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-08/g1/af4c7fb1-b832-46f5-b8dd-7b23fc07e6ec",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 20,
+    "process_starttime": "389156802",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-08-g1-producer",
+      "--case-id",
+      "H-08",
+      "--instance-id",
+      "H-08-g1-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-08",
+    "instance_id": "H-08-g1-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-08-g1-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-08/g1/af4c7fb1-b832-46f5-b8dd-7b23fc07e6ec",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 21,
+    "process_starttime": "389156820",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-08-g1-executor",
+      "--case-id",
+      "H-08",
+      "--instance-id",
+      "H-08-g1-executor",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-09",
+    "instance_id": "H-09-g0-producer",
+    "role": "producer",
+    "relative_directory": "raw/H-09-g0-producer",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-09/g0/d3ebff8d-baf1-41d5-bb06-866374dfa072",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 22,
+    "process_starttime": "389156849",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "producer",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-09-g0-producer",
+      "--case-id",
+      "H-09",
+      "--instance-id",
+      "H-09-g0-producer",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  },
+  {
+    "case_id": "H-09",
+    "instance_id": "H-09-g0-executor",
+    "role": "executor",
+    "relative_directory": "raw/H-09-g0-executor",
+    "context": {
+      "run_id": "T0-H-dev-02",
+      "session_id": "T0-H-dev-02/H-09/g0/d3ebff8d-baf1-41d5-bb06-866374dfa072",
+      "control_clock_source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+      "permitted_control_domains": [
+        "HOST_STEADY"
+      ],
+      "max_observation_age_ns": "5000000000",
+      "mapping_registry": {}
+    },
+    "pid": 23,
+    "process_starttime": "389156867",
+    "command": [
+      "/home/lucas/miniconda3/bin/python",
+      "-B",
+      "-m",
+      "runtime_core.phase5a_t0_host.run",
+      "--worker",
+      "executor",
+      "--output",
+      "/tmp/phase5a-t0-host-dev-20261027-02/raw/H-09-g0-executor",
+      "--case-id",
+      "H-09",
+      "--instance-id",
+      "H-09-g0-executor",
+      "--provider",
+      "CLOCK_MONOTONIC",
+      "--fault",
+      "none"
+    ]
+  }
+]

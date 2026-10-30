@@ -1,0 +1,1613 @@
+{
+  "protocol_id": "P5A-T0-L-0.2",
+  "status": "REVIEW_CANDIDATE_NOT_FROZEN_NOT_EXECUTED",
+  "scope": "Synthetic time logic and mock-token evidence only. Not a PolicyOutput/action-chunk schema, live ROS test or physical control.",
+  "numeric_thresholds": "Synthetic teaching/test boundaries, not control requirements or real-time claims.",
+  "reference_rules": "Input strings reference named timepoints. runtime_context_overrides are trusted fixed test setup, never part of an incoming action. Evidence objects are synthetic test inputs, not collected logs. A suite passes when actual results match expected, including expected evidence failures.",
+  "clock_sources": {
+    "fixture/host-A/boot-A/VIRTUAL_STEADY": {
+      "clock_domain": "HOST_STEADY",
+      "kind": "VIRTUAL_TEST_CLOCK"
+    },
+    "fixture/host-B/boot-B/VIRTUAL_STEADY": {
+      "clock_domain": "HOST_STEADY",
+      "kind": "VIRTUAL_TEST_CLOCK",
+      "same_origin_as_host_A": false
+    },
+    "fixture/mcu-A/boot-A/UPTIME": {
+      "clock_domain": "MCU_UPTIME",
+      "kind": "VIRTUAL_TEST_CLOCK",
+      "mapping_to_host_A": "NOT_IMPLEMENTED"
+    },
+    "fixture/host-A/boot-A/VIRTUAL_SYSTEM": {
+      "clock_domain": "SYSTEM_TIME",
+      "kind": "VIRTUAL_TEST_CLOCK"
+    }
+  },
+  "decision_precedence": [
+    "SCHEMA_INVALID",
+    "TIMESTAMP_OUT_OF_RANGE",
+    "INVALID_TIMESTAMP",
+    "SESSION_MISMATCH",
+    "UNKNOWN_CLOCK_SOURCE",
+    "CLOCK_SOURCE_METADATA_MISMATCH",
+    "MAPPING_NOT_SUPPORTED",
+    "CLOCK_DOMAIN_MISMATCH",
+    "CLOCK_DOMAIN_NOT_PERMITTED",
+    "CLOCK_SOURCE_MISMATCH",
+    "SYNCHRONIZATION_UNKNOWN_OR_INVALID",
+    "INVALID_MEASUREMENT_POINT",
+    "INVALID_TIME_ORDER",
+    "EXPIRED",
+    "OBSERVATION_STALE",
+    "ALLOW"
+  ],
+  "timepoints": {
+    "observation_0": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "0",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "capture",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "generated_0": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "0",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "generated",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "expiry_100": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "100000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "derived_expiry",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "now_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "now_100": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "100000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "now_120": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "120000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "now_200": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "200000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "generated_190": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "190000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "generated",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "expiry_290": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "290000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "derived_expiry",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "now_40": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "40000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "expiry_50": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "50000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "derived_expiry",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "invalid_time": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": null,
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "UNKNOWN",
+      "session_id": "session-A",
+      "validity": "INVALID"
+    },
+    "overflow": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "9223372036854775808",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "mcu_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "MCU_UPTIME",
+      "source": "fixture/mcu-A/boot-A/UPTIME",
+      "measurement_point": "dequeue",
+      "synchronization_status": "UNSYNCHRONIZED",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "host_B_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-B/boot-B/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "new_session_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-B",
+      "validity": "VALID"
+    },
+    "claimed_mapping_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "MCU_UPTIME",
+      "source": "fixture/mcu-A/boot-A/UPTIME",
+      "measurement_point": "dequeue",
+      "synchronization_status": "MAPPED_VALID",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "attempt_120": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "120000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "execute_attempt",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "unregistered_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/unknown/clock",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "forged_domain_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "MCU_UPTIME",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "system_observation_0": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "0",
+      "unit": "ns",
+      "clock_domain": "SYSTEM_TIME",
+      "source": "fixture/host-A/boot-A/VIRTUAL_SYSTEM",
+      "measurement_point": "capture",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "system_generated_0": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "0",
+      "unit": "ns",
+      "clock_domain": "SYSTEM_TIME",
+      "source": "fixture/host-A/boot-A/VIRTUAL_SYSTEM",
+      "measurement_point": "generated",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "system_expiry_100": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "100000000",
+      "unit": "ns",
+      "clock_domain": "SYSTEM_TIME",
+      "source": "fixture/host-A/boot-A/VIRTUAL_SYSTEM",
+      "measurement_point": "derived_expiry",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "system_now_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "SYSTEM_TIME",
+      "source": "fixture/host-A/boot-A/VIRTUAL_SYSTEM",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "unknown_sync_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "UNKNOWN",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "observation_90": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "90000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "capture",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "generated_90": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "90000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "generated",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "expiry_0": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "0",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "derived_expiry",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "negative_steady": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "-1",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "number_timestamp_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": 80000000,
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "attempt_40": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "40000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "execute_attempt",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "host_B_observation_0": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "0",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-B/boot-B/VIRTUAL_STEADY",
+      "measurement_point": "capture",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "host_B_generated_0": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "0",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-B/boot-B/VIRTUAL_STEADY",
+      "measurement_point": "generated",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "host_B_expiry_100": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "100000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-B/boot-B/VIRTUAL_STEADY",
+      "measurement_point": "derived_expiry",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "host_B_now_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-B/boot-B/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "wrong_version_80": {
+      "contract_version": "phase5a.t0.timepoint/0.1-draft",
+      "timestamp": "80000000",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    },
+    "newline_timestamp_80": {
+      "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+      "timestamp": "80000000\n",
+      "unit": "ns",
+      "clock_domain": "HOST_STEADY",
+      "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+      "measurement_point": "dequeue",
+      "synchronization_status": "SAME_SOURCE",
+      "session_id": "session-A",
+      "validity": "VALID"
+    }
+  },
+  "cases": [
+    {
+      "id": "T0-01",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_80"
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "mock_commands": 1,
+        "action_age_ns": "80000000",
+        "age_available": true,
+        "expired_drop": 0,
+        "observation_age_ns": "80000000"
+      }
+    },
+    {
+      "id": "T0-02",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_100"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "age_available": true,
+        "action_age_ns": "100000000",
+        "observation_age_ns": "100000000"
+      }
+    },
+    {
+      "id": "T0-03",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_120"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "age_available": true,
+        "action_age_ns": "120000000",
+        "observation_age_ns": "120000000"
+      }
+    },
+    {
+      "id": "T0-04",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "mcu_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_DOMAIN_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-05",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "host_B_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-06",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "new_session_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SESSION_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "runtime_context_overrides": {
+        "session_id": "session-B"
+      }
+    },
+    {
+      "id": "T0-07",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "invalid_time"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIMESTAMP",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-08",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "claimed_mapping_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "MAPPING_NOT_SUPPORTED",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-09",
+      "operation": "wall_clock_jump",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_50",
+        "mock_token": "action-1",
+        "now": "now_40",
+        "fake_wall_series_ns": [
+          "1000000000",
+          "500000000",
+          "2000000000"
+        ],
+        "fake_steady_series_ns": [
+          "0",
+          "20000000",
+          "40000000"
+        ]
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "mock_commands": 1,
+        "action_age_ns": "40000000",
+        "result_independent_of_wall_series": true,
+        "age_available": true,
+        "expired_drop": 0,
+        "observation_age_ns": "40000000"
+      }
+    },
+    {
+      "id": "T0-10",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_190",
+        "valid_until": "expiry_290",
+        "mock_token": "action-1",
+        "now": "now_200"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "OBSERVATION_STALE",
+        "observation_age_ns": "200000000",
+        "action_age_ns": "10000000",
+        "mock_commands": 0,
+        "age_available": true,
+        "expired_drop": 0
+      },
+      "runtime_context_overrides": {
+        "max_observation_age_ns": "100000000"
+      }
+    },
+    {
+      "id": "T0-11",
+      "operation": "observe_stop_window",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_120",
+        "window_start_ns": "120000000",
+        "window_end_ns": "340000000",
+        "tick_period_ns": "20000000",
+        "new_tokens": [],
+        "evidence": {
+          "window_start_event_ns": "120000000",
+          "window_end_event_ns": "340000000",
+          "consumer_tick_times_ns": [
+            "120000000",
+            "140000000",
+            "160000000",
+            "180000000",
+            "200000000",
+            "220000000",
+            "240000000",
+            "260000000",
+            "280000000",
+            "300000000",
+            "320000000"
+          ],
+          "mock_command_records": [],
+          "mock_sink_count_at_start": 0,
+          "mock_sink_count_at_end": 0,
+          "expired_drop_count": 1,
+          "rejected_token_keys": [
+            "session-A/action-1"
+          ],
+          "recorder_loss_count": 0,
+          "critical_event_sequences": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "recorded_event_count": 16,
+          "window_close_reason": "NORMAL_END",
+          "critical_event_types": [
+            "WINDOW_START",
+            "CONSUMER_TICK",
+            "ACTION_REJECTED",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "WINDOW_END",
+            "SINK_FINAL_COUNT",
+            "RECORDER_STATS"
+          ],
+          "rejection_records": [
+            {
+              "event_sequence": 2,
+              "token_key": "session-A/action-1",
+              "checked_at_ref": "now_120",
+              "valid_until_ref": "expiry_100",
+              "reason": "EXPIRED"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+        "tick_count": 11,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "evidence_complete": true
+      }
+    },
+    {
+      "id": "T0-12",
+      "operation": "observe_stop_window",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_120",
+        "window_start_ns": "120000000",
+        "window_end_ns": "340000000",
+        "tick_period_ns": "20000000",
+        "new_tokens": [],
+        "evidence": {
+          "window_start_event_ns": "120000000",
+          "consumer_tick_times_ns": [
+            "120000000",
+            "140000000",
+            "160000000",
+            "180000000",
+            "200000000",
+            "220000000",
+            "240000000",
+            "260000000",
+            "280000000",
+            "300000000",
+            "320000000"
+          ],
+          "mock_command_records": [],
+          "mock_sink_count_at_start": 0,
+          "expired_drop_count": 1,
+          "rejected_token_keys": [
+            "session-A/action-1"
+          ],
+          "recorder_loss_count": 0,
+          "critical_event_sequences": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "recorded_event_count": 16,
+          "window_close_reason": "NORMAL_END",
+          "critical_event_types": [
+            "WINDOW_START",
+            "CONSUMER_TICK",
+            "ACTION_REJECTED",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "WINDOW_END",
+            "SINK_FINAL_COUNT",
+            "RECORDER_STATS"
+          ],
+          "rejection_records": [
+            {
+              "event_sequence": 2,
+              "token_key": "session-A/action-1",
+              "checked_at_ref": "now_120",
+              "valid_until_ref": "expiry_100",
+              "reason": "EXPIRED"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      }
+    },
+    {
+      "id": "T0-13",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "overflow"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "TIMESTAMP_OUT_OF_RANGE",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-14",
+      "operation": "validate_timepoint",
+      "input": {
+        "timepoint_inline": {
+          "contract_version": "phase5a.t0.timepoint/0.2-candidate",
+          "timestamp": "NaN",
+          "unit": "ns",
+          "clock_domain": "HOST_STEADY",
+          "source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+          "measurement_point": "dequeue",
+          "synchronization_status": "SAME_SOURCE",
+          "session_id": "session-A",
+          "validity": "VALID"
+        }
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-15",
+      "operation": "consume_then_sink_recheck",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_80",
+        "sink_attempt_at": "attempt_120"
+      },
+      "expected": {
+        "initial_check": "ALLOW",
+        "sink_check": "REJECT",
+        "reason": "EXPIRED",
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "age_available": true,
+        "initial_action_age_ns": "80000000",
+        "sink_action_age_ns": "120000000",
+        "sink_observation_age_ns": "120000000"
+      }
+    },
+    {
+      "id": "T0-16",
+      "operation": "replay_reset_invalidates_session",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "new_session_80",
+        "fake_ros_time_before_ns": "1000000000",
+        "fake_ros_time_after_ns": "800000000",
+        "event": "REPLAY_CLOCK_RESET"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SESSION_MISMATCH",
+        "mock_commands": 0,
+        "old_tokens_invalidated": true,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "runtime_context_overrides": {
+        "session_id": "session-B"
+      }
+    },
+    {
+      "id": "T0-17",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "unregistered_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "UNKNOWN_CLOCK_SOURCE",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-18",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "forged_domain_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_METADATA_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-19",
+      "operation": "consume_token",
+      "input": {
+        "observation": "system_observation_0",
+        "generated_at": "system_generated_0",
+        "valid_until": "system_expiry_100",
+        "mock_token": "action-1",
+        "now": "system_now_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_DOMAIN_NOT_PERMITTED",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-20",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "unknown_sync_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SYNCHRONIZATION_UNKNOWN_OR_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-21",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_90",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-22",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_90",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-23",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_0",
+        "mock_token": "action-1",
+        "now": "now_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-24",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "negative_steady"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIMESTAMP",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-25",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "number_timestamp_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-26",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "observation_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_MEASUREMENT_POINT",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-27",
+      "operation": "consume_then_sink_recheck",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_80",
+        "sink_attempt_at": "attempt_40"
+      },
+      "expected": {
+        "initial_check": "ALLOW",
+        "sink_check": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0,
+        "initial_action_age_ns": "80000000"
+      }
+    },
+    {
+      "id": "T0-28",
+      "operation": "observe_stop_window",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_120",
+        "window_start_ns": "120000000",
+        "window_end_ns": "340000000",
+        "tick_period_ns": "20000000",
+        "new_tokens": [],
+        "evidence": {
+          "window_start_event_ns": "120000000",
+          "window_end_event_ns": "340000000",
+          "consumer_tick_times_ns": [
+            "120000000",
+            "140000000",
+            "160000000",
+            "180000000",
+            "200000000",
+            "220000000",
+            "240000000",
+            "260000000",
+            "280000000",
+            "300000000",
+            "320000000"
+          ],
+          "mock_command_records": [],
+          "mock_sink_count_at_start": 0,
+          "mock_sink_count_at_end": 0,
+          "expired_drop_count": 1,
+          "rejected_token_keys": [
+            "session-A/action-1"
+          ],
+          "recorder_loss_count": 1,
+          "critical_event_sequences": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "recorded_event_count": 16,
+          "window_close_reason": "NORMAL_END",
+          "critical_event_types": [
+            "WINDOW_START",
+            "CONSUMER_TICK",
+            "ACTION_REJECTED",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "WINDOW_END",
+            "SINK_FINAL_COUNT",
+            "RECORDER_STATS"
+          ],
+          "rejection_records": [
+            {
+              "event_sequence": 2,
+              "token_key": "session-A/action-1",
+              "checked_at_ref": "now_120",
+              "valid_until_ref": "expiry_100",
+              "reason": "EXPIRED"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      }
+    },
+    {
+      "id": "T0-29",
+      "operation": "consume_token",
+      "input": {
+        "observation": "host_B_observation_0",
+        "generated_at": "host_B_generated_0",
+        "valid_until": "host_B_expiry_100",
+        "mock_token": "action-1",
+        "now": "host_B_now_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-30",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "wrong_version_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-31",
+      "operation": "observe_stop_window",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_120",
+        "window_start_ns": "120000000",
+        "window_end_ns": "340000000",
+        "tick_period_ns": "20000000",
+        "new_tokens": [],
+        "evidence": {
+          "window_start_event_ns": "120000000",
+          "window_end_event_ns": "340000000",
+          "consumer_tick_times_ns": [
+            "120000000",
+            "140000000",
+            "160000000",
+            "180000000",
+            "200000000",
+            "220000000",
+            "240000000",
+            "260000000",
+            "280000000",
+            "300000000",
+            "320000000"
+          ],
+          "mock_command_records": [
+            {
+              "command_sequence": 1,
+              "token_key": "session-A/action-1",
+              "timestamp_ns": "140000000",
+              "event_sequence": 4
+            }
+          ],
+          "mock_sink_count_at_start": 0,
+          "mock_sink_count_at_end": 1,
+          "expired_drop_count": 1,
+          "rejected_token_keys": [
+            "session-A/action-1"
+          ],
+          "recorder_loss_count": 0,
+          "critical_event_sequences": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "recorded_event_count": 17,
+          "window_close_reason": "NORMAL_END",
+          "critical_event_types": [
+            "WINDOW_START",
+            "CONSUMER_TICK",
+            "ACTION_REJECTED",
+            "CONSUMER_TICK",
+            "MOCK_COMMAND",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "WINDOW_END",
+            "SINK_FINAL_COUNT",
+            "RECORDER_STATS"
+          ],
+          "rejection_records": [
+            {
+              "event_sequence": 2,
+              "token_key": "session-A/action-1",
+              "checked_at_ref": "now_120",
+              "valid_until_ref": "expiry_100",
+              "reason": "EXPIRED"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "verdict": "FAIL_MOCK_STOP_WINDOW_ONLY",
+        "reason": "UNEXPECTED_MOCK_OUTPUT",
+        "mock_commands": 1
+      }
+    },
+    {
+      "id": "T0-32",
+      "operation": "observe_stop_window",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_120",
+        "window_start_ns": "120000000",
+        "window_end_ns": "340000000",
+        "tick_period_ns": "20000000",
+        "new_tokens": [],
+        "evidence": {
+          "window_start_event_ns": "120000000",
+          "window_end_event_ns": "340000000",
+          "consumer_tick_times_ns": [],
+          "mock_command_records": [],
+          "mock_sink_count_at_start": 0,
+          "mock_sink_count_at_end": 0,
+          "expired_drop_count": 1,
+          "rejected_token_keys": [
+            "session-A/action-1"
+          ],
+          "recorder_loss_count": 0,
+          "critical_event_sequences": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "recorded_event_count": 5,
+          "window_close_reason": "NORMAL_END",
+          "critical_event_types": [
+            "WINDOW_START",
+            "ACTION_REJECTED",
+            "WINDOW_END",
+            "SINK_FINAL_COUNT",
+            "RECORDER_STATS"
+          ],
+          "rejection_records": [
+            {
+              "event_sequence": 1,
+              "token_key": "session-A/action-1",
+              "checked_at_ref": "now_120",
+              "valid_until_ref": "expiry_100",
+              "reason": "EXPIRED"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      }
+    },
+    {
+      "id": "T0-33",
+      "operation": "consume_token",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "newline_timestamp_80"
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      }
+    },
+    {
+      "id": "T0-34",
+      "operation": "observe_stop_window",
+      "input": {
+        "observation": "observation_0",
+        "generated_at": "generated_0",
+        "valid_until": "expiry_100",
+        "mock_token": "action-1",
+        "now": "now_120",
+        "window_start_ns": "120000000",
+        "window_end_ns": "340000000",
+        "tick_period_ns": "20000000",
+        "new_tokens": [],
+        "evidence": {
+          "window_start_event_ns": "120000000",
+          "window_end_event_ns": "340000000",
+          "consumer_tick_times_ns": [
+            "120000000",
+            "140000000",
+            "160000000",
+            "180000000",
+            "200000000",
+            "220000000",
+            "240000000",
+            "260000000",
+            "280000000",
+            "300000000",
+            "320000000"
+          ],
+          "mock_command_records": [],
+          "mock_sink_count_at_start": 0,
+          "mock_sink_count_at_end": 0,
+          "expired_drop_count": 1,
+          "rejected_token_keys": [
+            "session-A/action-1"
+          ],
+          "recorder_loss_count": 0,
+          "critical_event_sequences": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "recorded_event_count": 15,
+          "window_close_reason": "NORMAL_END",
+          "critical_event_types": [
+            "WINDOW_START",
+            "CONSUMER_TICK",
+            "ACTION_REJECTED",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "CONSUMER_TICK",
+            "WINDOW_END",
+            "SINK_FINAL_COUNT",
+            "RECORDER_STATS"
+          ],
+          "rejection_records": [
+            {
+              "event_sequence": 2,
+              "token_key": "session-A/action-1",
+              "checked_at_ref": "now_120",
+              "valid_until_ref": "expiry_100",
+              "reason": "EXPIRED"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      }
+    }
+  ],
+  "runtime_context": {
+    "run_id": "T0-L-02-DESIGN-ONLY",
+    "session_id": "session-A",
+    "control_clock_source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+    "permitted_control_domains": [
+      "HOST_STEADY"
+    ],
+    "max_observation_age_ns": "1000000000",
+    "mapping_registry": {},
+    "ownership": "Trusted harness/run-manifest context; never derived from an incoming action or its timestamp labels."
+  },
+  "measurement_point_roles": {
+    "observation": "capture",
+    "generated_at": "generated",
+    "valid_until": "derived_expiry",
+    "now": "dequeue",
+    "sink_attempt_at": "execute_attempt"
+  },
+  "schema_invalid_named_timepoints": [
+    "number_timestamp_80",
+    "wrong_version_80",
+    "newline_timestamp_80"
+  ],
+  "static_schema_probe_lexemes": {
+    "must_reject": [
+      "0\n",
+      "-0",
+      "01",
+      "+1",
+      "1.0",
+      "NaN",
+      "８０"
+    ],
+    "must_accept": [
+      "0",
+      "-1",
+      "9223372036854775807",
+      "9223372036854775808"
+    ]
+  },
+  "static_schema_probe_note": "The overflow lexeme is intentionally structurally valid; semantic range checks must reject it. These lexical probes are static review checks, outside the 34-case runtime suite.",
+  "fault_design_note": "Source/domain/session negatives use numeric time 80 ms, before expiry 100 ms; default observation budget is 1000 ms so expiry cases are not simultaneously observation-stale. T0-10 alone narrows the synthetic observation budget to 100 ms."
+}

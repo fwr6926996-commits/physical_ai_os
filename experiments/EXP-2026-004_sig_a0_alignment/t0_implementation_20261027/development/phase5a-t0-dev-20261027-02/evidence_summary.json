@@ -1,0 +1,821 @@
+{
+  "cases": [
+    {
+      "case_id": "T0-01",
+      "actual": {
+        "decision": "ALLOW",
+        "age_available": true,
+        "action_age_ns": "80000000",
+        "observation_age_ns": "80000000",
+        "mock_commands": 1,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "mock_commands": 1,
+        "action_age_ns": "80000000",
+        "age_available": true,
+        "expired_drop": 0,
+        "observation_age_ns": "80000000"
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-02",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "age_available": true,
+        "action_age_ns": "100000000",
+        "observation_age_ns": "100000000",
+        "mock_commands": 0,
+        "expired_drop": 1
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "age_available": true,
+        "action_age_ns": "100000000",
+        "observation_age_ns": "100000000"
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-03",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "age_available": true,
+        "action_age_ns": "120000000",
+        "observation_age_ns": "120000000",
+        "mock_commands": 0,
+        "expired_drop": 1
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "age_available": true,
+        "action_age_ns": "120000000",
+        "observation_age_ns": "120000000"
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-04",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "CLOCK_DOMAIN_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_DOMAIN_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-05",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-06",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "SESSION_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SESSION_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-07",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIMESTAMP",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIMESTAMP",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-08",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "MAPPING_NOT_SUPPORTED",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "MAPPING_NOT_SUPPORTED",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-09",
+      "actual": {
+        "decision": "ALLOW",
+        "age_available": true,
+        "action_age_ns": "40000000",
+        "observation_age_ns": "40000000",
+        "mock_commands": 1,
+        "expired_drop": 0,
+        "result_independent_of_wall_series": true
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "mock_commands": 1,
+        "action_age_ns": "40000000",
+        "result_independent_of_wall_series": true,
+        "age_available": true,
+        "expired_drop": 0,
+        "observation_age_ns": "40000000"
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-10",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "OBSERVATION_STALE",
+        "age_available": true,
+        "action_age_ns": "10000000",
+        "observation_age_ns": "200000000",
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "OBSERVATION_STALE",
+        "observation_age_ns": "200000000",
+        "action_age_ns": "10000000",
+        "mock_commands": 0,
+        "age_available": true,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-11",
+      "actual": {
+        "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+        "tick_count": 11,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "evidence_complete": true
+      },
+      "expected": {
+        "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+        "tick_count": 11,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "evidence_complete": true
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": {
+        "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+        "tick_count": 11,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "evidence_complete": true
+      }
+    },
+    {
+      "case_id": "T0-12",
+      "actual": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": {
+        "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+        "tick_count": 11,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "evidence_complete": true
+      }
+    },
+    {
+      "case_id": "T0-13",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "TIMESTAMP_OUT_OF_RANGE",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "TIMESTAMP_OUT_OF_RANGE",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-14",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-15",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "EXPIRED",
+        "age_available": true,
+        "action_age_ns": "120000000",
+        "observation_age_ns": "120000000",
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "initial_check": "ALLOW",
+        "sink_check": "REJECT",
+        "initial_action_age_ns": "80000000",
+        "sink_action_age_ns": "120000000",
+        "sink_observation_age_ns": "120000000"
+      },
+      "expected": {
+        "initial_check": "ALLOW",
+        "sink_check": "REJECT",
+        "reason": "EXPIRED",
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "age_available": true,
+        "initial_action_age_ns": "80000000",
+        "sink_action_age_ns": "120000000",
+        "sink_observation_age_ns": "120000000"
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-16",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "SESSION_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0,
+        "old_tokens_invalidated": true
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SESSION_MISMATCH",
+        "mock_commands": 0,
+        "old_tokens_invalidated": true,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-17",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "UNKNOWN_CLOCK_SOURCE",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "UNKNOWN_CLOCK_SOURCE",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-18",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_METADATA_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_METADATA_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-19",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "CLOCK_DOMAIN_NOT_PERMITTED",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_DOMAIN_NOT_PERMITTED",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-20",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "SYNCHRONIZATION_UNKNOWN_OR_INVALID",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SYNCHRONIZATION_UNKNOWN_OR_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-21",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-22",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-23",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-24",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIMESTAMP",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIMESTAMP",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-25",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-26",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "INVALID_MEASUREMENT_POINT",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "INVALID_MEASUREMENT_POINT",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-27",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0,
+        "initial_check": "ALLOW",
+        "sink_check": "REJECT",
+        "initial_action_age_ns": "80000000",
+        "sink_action_age_ns": null,
+        "sink_observation_age_ns": null
+      },
+      "expected": {
+        "initial_check": "ALLOW",
+        "sink_check": "REJECT",
+        "reason": "INVALID_TIME_ORDER",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0,
+        "initial_action_age_ns": "80000000"
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-28",
+      "actual": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": {
+        "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+        "tick_count": 11,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "evidence_complete": true
+      }
+    },
+    {
+      "case_id": "T0-29",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "CLOCK_SOURCE_MISMATCH",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-30",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-31",
+      "actual": {
+        "verdict": "FAIL_MOCK_STOP_WINDOW_ONLY",
+        "reason": "UNEXPECTED_MOCK_OUTPUT",
+        "mock_commands": 1
+      },
+      "expected": {
+        "verdict": "FAIL_MOCK_STOP_WINDOW_ONLY",
+        "reason": "UNEXPECTED_MOCK_OUTPUT",
+        "mock_commands": 1
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": {
+        "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+        "tick_count": 11,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "evidence_complete": true
+      }
+    },
+    {
+      "case_id": "T0-32",
+      "actual": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": {
+        "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+        "tick_count": 11,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "evidence_complete": true
+      }
+    },
+    {
+      "case_id": "T0-33",
+      "actual": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0,
+        "expired_drop": 0
+      },
+      "expected": {
+        "decision": "REJECT",
+        "reason": "SCHEMA_INVALID",
+        "mock_commands": 0,
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "expired_drop": 0
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": null
+    },
+    {
+      "case_id": "T0-34",
+      "actual": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "matches_expected": true,
+      "mismatches": {},
+      "collected_mock_window": {
+        "verdict": "PASS_MOCK_STOP_WINDOW_ONLY",
+        "tick_count": 11,
+        "mock_commands": 0,
+        "expired_drop": 1,
+        "evidence_complete": true
+      }
+    }
+  ],
+  "collected_mock_commands": 2,
+  "fixture_note": "Constructed verifier inputs are separate from collected mock execution logs.",
+  "actual_stop_windows": 6
+}

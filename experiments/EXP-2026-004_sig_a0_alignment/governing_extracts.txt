@@ -1,0 +1,236 @@
+
+## L1V2.9_Deep_Research_Architecture_Audit_Addendum_01_正式版.docx
+
+P95: 四 必须新增的 Gate 补丁
+P96: Gate T0 Clock and Timestamp Contract
+P97: 字段
+P98: 冻结内容
+P99: 落点
+P100: Phase 5A  在固化完整时间戳链之前通过
+P101: 目的
+P102: 保证 Observation Age、Queue Delay、Action Age、End to End Age、jitter 与 timeout 的计算具有明确时钟语义。ROS 2 区分 SystemTime、ROSTime 与 SteadyTime，SteadyTime 不应与 SystemTime 或 ROSTime 直接比较。参考 R1。
+P103: 通过证据
+P104: timing schema、clock domain 枚举、单元测试、一次 wall clock 跳变或 use sim time 负向测试、一次 host 与 MCU 未同步时钟拒绝直接相减的验证记录
+P105: 未通过
+P106: 不得发布跨时钟域 E2E 数字。回退为 host 段、通信段和 MCU 段分别测量，并记录 clock offset 或同步状态为 unknown。
+P107: 
+P108: 最低要求
+P109: 每个时间字段同时记录 timestamp、clock_domain、source、measurement_point 和 synchronization_status。
+P110: interval、jitter、deadline 与 timeout 使用 monotonic 或 steady clock。人类可读时间、rosbag 关联和外部事件对齐使用 ROS 或 system time。
+P111: Camera device clock、host clock、ROS time 与 MCU uptime 若未建立映射，不允许直接相减。
+P112: Host 到 MCU 的绝对 E2E 只有在 offset、同步方法、同步误差和采样窗口均有记录时才能发布。
+P176: 相同 Policy Package 的结果可解释且配置可复现  参考 R3
+P177: R M1
+P178: Phase 5A
+P179: ROS distro RMW implementation DDS version QoS profile Executor Callback Group Lifecycle intra process use sim time
+P180: 阻塞或积压实验能把延迟归因到实际配置  不能只写 ROS 2
+P181: ADR 01
+P182: Phase 5B 与 Employment Gate
+P183: Why custom Runtime instead of ros2_control  对比 Controller Manager Resource Manager Hardware Component lifecycle read write control loop
+P184: 说明自建部分的学习与研究价值  以及产品化时可复用或迁移的部分  参考 R7
+P185: RB 01
+P206: Phase 3 Stage Review 后启动  同一 Policy Package 在 DK 2500 完整使用 O M1 字段  进入前做版本漂移核对
+P207: 并入 Real Edge Benchmark  作为正式通过条件
+P208: Phase 5A
+P209: T0 R M1
+P210: 先冻结 timing schema 和 clock domain  再固化 ROS 2 时间戳链
+P211: 并入消息与 rosbag2 设计
+P212: Phase 5B
+P213: RT0 ADR 01
+P214: 默认与 RT tuned 对照  完成 custom Runtime 与 ros2_control ADR
+P215: 并入 Real Time 与 Employment Foundation
+
+## L1V2.9_Portability_Addendum_02_正式版.docx
+
+P50: Phase 3 已按原 V2.9 PASS。本条对历史实验仅做可恢复字段的归档检查；无法恢复的字段记为历史证据缺口，并从下一次转换或回归时补齐。
+P51: 四 InferenceBackend 的接口与能力
+P52: InferenceBackend 是 Runtime 调用模型推理的边界。上层发出统一输入并接收 PolicyOutput；OpenVINO、TensorRT 和 QNN 等设备 API 留在各自 Backend 内。
+P53: 接口项
+P54: 约定
+P55: prepare(policy_package)
+P56: 核对资产、配置和目标设备，准备推理资源。
+P57: infer(observation)
+P58: 按统一语义返回 PolicyOutput，或返回可解释的错误。
+P59: health() 与 shutdown()
+P60: 报告运行状态并释放资源。
+P61: capabilities()
+P62: 报告所支持的设备、精度、输入布局、形状、异步、批量、量化、内存模式和预热要求。
+P63: 
+P64: 禁止泄漏　上层 Runtime 的公开接口不得暴露 ov::InferRequest、CUDA Stream、TensorRT IExecutionContext、QNN Context 等私有类型。
+P65: 能力信息不应写成对具体设备的普遍承诺。每个 Backend 结合实际设备、驱动、模型和软件版本报告其可用能力；Runtime据此选择、降级、拒绝启动并记录原因。能力字段可在 Phase 5 设计时根据真实用例收敛。
+P66: 五 统一 Observation 与 Action 数据契约
+P67: Observation 和 Action 使用明确的字段名、时间、单位、坐标系、关节顺序、有效性和版本。SO-101 的 servo id、Feetech 单位、串口协议、关节映射和硬件范围，由 SO101 Adapter 转换，不进入 Policy、InferenceBackend、ActionBuffer 或通用 Metrics。
+P68: 边界
+P69: 输入与输出示例
+P70: 迁移判断
+P71: 机器人适配器
+P72: Feetech/LeRobot 表示 ↔ 统一关节位置（rad、固定顺序）
+P73: 换机器人时新增或替换 Adapter，并核对动作空间与任务语义；不能假设原策略权重直接适用。
+P74: 统一数据契约
+P75: image.front RGB；关节位置；capture/state/assembled 时间；action_chunk
+P76: 字段、形状、频率与坐标系均写入 schema 和版本，避免隐式约定。
+P77: 
+P78: 冻结判断　设备专有表示在 Adapter 处终止；统一数据结构只能保证接口可复用，不承诺不同机器人的动作或任务等价。
+P79: 六 Gate PR 可迁移性准备验收
+P80: Gate PR 建议在 Phase 5B Runtime Architecture Freeze 后、进入 Phase 6/7 集成前验收，并在 Phase 8 Employment Gate 复核。它是针对已建立的架构边界的检查，不增加独立研发阶段。
+P81: 检查域
+P82: PASS 证据
+P83: 模型资产
+P84: 源资产和测试向量可追溯；OpenVINO 产物标记为目标平台产物。
+P85: 数据接口
+P86: Observation、Action 和 PolicyOutput 无 Intel、OpenVINO、SO-101 或 Feetech 私有类型。
+P87: 推理边界
+P88: 公开 InferenceBackend 接口无 Vendor API；能力与限制可报告。
+P89: 替换实验
+P90: FakeBackend 与 OpenVINOBackend 运行同一组契约测试；切换时不改 ActionBuffer、Metrics 和 Safety。
+P91: 设备适配
+P92: SO-101 私有转换停留在 Adapter；数据 schema、映射和单位可查。
+P93: 安全与指标
+P94: Safety Contract 不依赖 Zephyr/STM32 API；latency、Age、jitter 的定义与 Backend 无关，并遵守 Addendum 01 的时钟契约。
+P95: 架构文档
+P96: 图和代码清楚标明 Vendor、设备、Runtime 与 Safety 边界。
+P97: 
+P98: PASS 表示现有代码没有封死未来的迁移路径，不表示目标模型已在第二硬件上成功导出、运行，或达到相同的任务表现。若本 Gate 未过，应记录泄漏位置和修复结果，再对受影响的集成部分验收。
+P99: 七 共用的 Backend 契约测试
+P100: Phase 5 起，同一测试规范覆盖 FakeBackend、PyTorchBackend（如保留）和 OpenVINOBackend；E1 新增的 Backend 复用规范。FakeBackend 可返回确定的动作或受控延迟，用来单独检验 Runtime。
+P101: 测试类
+P102: 最低检查内容
+P103: 正常路径
+P104: 输入输出 schema、shape、dtype、model_version、时间字段和状态。
+P105: 异常路径
+P106: 无效输入、初始化失败、超时、推理失败、关闭与资源释放。
+P107: 行为差异
+P108: 允许的数值容差或确定性范围；不能将不同精度的结果强行判为位级相等。
+P109: 替换路径
+P110: 替换 Backend 后上层编译/配置与动作缓存、指标、安全接口不发生 Vendor 相关变动。
+
+## SO-101_PhysicalAI_Runtime_L1_最终执行书_V2.9_S1S2_EmploymentGate增强版.docx
+
+P390: 冻结原则：Agent、VLA、RTC、MPC 都是 Safety 上层客户。越往上允许更强的语义与推理，越往下必须更简单、可测、可预测。任何 Optional 升级不得改变“MCU/硬件安全优先”的最终裁决权。
+P391: 3. 统一接口冻结
+P392: 3.1 Observation
+P393: 字段类别
+P394: 首期 SO-101 实现
+P395: 迁移要求
+P396: 时间
+P397: capture_time、state_time、assembled_time
+P398: 必须可计算观测年龄和同步误差
+P399: 传感器
+P400: 固定 RGB 图像
+P401: 未来可增加深度、车辆相机/雷达
+P402: 状态
+P403: 6 关节位置、夹爪状态、硬件健康
+P404: 策略不接触 Feetech 私有细节
+P405: 任务
+P406: task_id、任务阶段、可选语言文本
+P407: ACT 与 VLA 共用入口
+P408: 语义
+P409: 坐标系、单位、有效标志、数据版本
+P410: 禁止隐式单位和关节顺序
+P411: 
+P412: 3.2 PolicyOutput
+P413: 必须字段
+P414: 含义
+P415: generated_at
+P416: 动作块生成完成时间
+P417: valid_until
+P418: 动作有效截止时间，过期必须丢弃
+P419: sequence_id
+P420: 检测乱序、丢失和重复
+P421: model_version
+P422: 模型与配置版本
+P423: trajectory / action_chunk
+P424: 未来关节目标序列与 dt
+P425: status / confidence
+P426: 推理状态、异常或可选置信信息
+P427: 
+P428: 3.3 ControlCommand
+P429: 由 SafetyFilter 处理后的通用控制命令。SO-101 首期为关节位置目标或 JointTrajectory；未来车辆侧可替换为速度、转角和轨迹，由 Adapter 完成设备私有转换。
+P430: 3.4 SafetyState
+P431: 统一枚举冻结为：DISARMED / ARMED / RUNNING / DEGRADED / FAULT / SAFE。ROS 2 与 MCU 必须共享一致语义，设备私有状态通过 FaultFlags 扩展。
+P432: 3.5 RuntimeMetrics
+P433: 类别
+P434: 必须记录
+P435: 时间戳
+P436: t_capture / t_state / t_observation_ready / t_infer_start / t_infer_end / t_action_generated / t_enqueue / t_dequeue / t_execute
+P437: Age / 延迟
+P438: Observation Age、Inference Latency、Queue Delay、Action Age、End-to-End Age
+P439: 分位数
+P440: P50、P95、P99；必要时 Max，仅平均值不得进入核心结论
+P441: 队列
+P442: Queue Depth、入队/出队、overwrite/drop、Backpressure、stale drop、deadline miss
+P443: 任务
+P444: 成功率、完成时间、失败分类、动作平滑度
+P445: 资源
+P446: CPU/GPU/NPU、内存、温度、长稳、可选功耗代理/节流状态
+P447: 故障
+P448: 检测时间、停止时间、恢复时间、故障码、恢复条件、误触发/漏触发
+P449: 
+P450: 4. LeRobot v0.6.0 软件基线与 Bootstrap Gate
+P451: 4.1 当前真实执行状态与 clean-start 决策
+P713: 冻结：RTX 5060 负责“训练与高性能参考”，不能被当作 DK-2500 Core Edge 验收算力。TensorRT 仅属于 E1；Rhino X1 属于 Secondary Edge Extension。Intel Core benchmark 必须明确目标设备并保存证据。
+P714: 7. ROS 2 / C++ Runtime 与 Real-Time Execution：Phase 5 核心交付
+P715: 7.1 早期 C++ 骨架：可提前建立，但正式 Gate 在 Phase 5
+P716: • 建立 physical_ai_msgs、observation_runtime、policy_runtime、runtime_monitor、safety_bridge、bringup 包。
+P717: • 冻结 Observation、PolicyOutput、SafetyState 和 RuntimeMetrics 消息草案。
+P718: • 先用 FakePolicy / ReplayObservation 打通，不依赖 ACT 训练完成。
+P719: 7.2 Phase 5：Python/ROS 2 功能闭环 → C++ 核心化
+P720: 模块
+P721: 首期实现
+P722: Observation Runtime
+P723: 图像/状态同步、有限队列、旧帧丢弃、有效性检查；记录 capture/state/assembled 时间
+P724: Policy Runtime
+P725: Core 先包裹 PyTorch/OpenVINO；E1 再接 Qualcomm/TensorRT；统一发布 PolicyOutput
+P726: ActionBuffer
+P727: 消费最新有效动作，容量、超时、过期丢弃、enqueue/dequeue 时间、stale/drop 计数
+P728: SO101 Adapter
+P729: 统一关节名称/单位/限位，转换为真实硬件命令
+P730: Runtime Monitor
+P731: 记录 research-grade timing、Metrics、资源、故障和 rosbag2
+P732: 
+P733: 7.3 消息与线程原则
+P734: 线程/任务
+P735: 频率与职责
+P736: 风险控制
+P737: Observation
+P738: 按相机/状态频率采集和同步
+P739: 有限队列，旧帧丢弃，记录缺帧
+P740: Inference
+P741: 异步生成 PolicyOutput
+P742: 超时、模型版本、异常和有效期
+P743: Execution
+P744: 固定周期消费最新有效动作
+P745: Action Age、限幅、插值和安全许可
+P746: Monitor
+P747: 低频采集资源与 Metrics
+P748: 不阻塞主链路
+P749: Safety Bridge
+P750: 心跳、状态同步、停机请求
+P751: 通信异常默认禁止动作
+P752: MCU Safety
+P753: 更确定周期运行状态机/WDT
+P754: 本地条件优先
+P755: 
+P756: Gate R：ROS 2 功能闭环Observation、PolicyOutput、ActionBuffer、SO101 Adapter 可运行；图像/状态/动作带时间戳；节点退出、相机断连和动作过期均能安全停止；rosbag2 可回放。除“能通信”外，必须记录并解释本项目中的 QoS、Executor、Callback Group/Lifecycle 选择；完成至少一次受控 callback 阻塞或队列积压实验，用 timing / trace / log 说明延迟如何产生以及如何缓解。
+P757: 
+P758: 7.4 Real-Time Execution baseline：不把“实时”误写成硬实时
+P759: • Policy inference 与动作执行解耦：Inference producer 可抖动，Execution consumer 按固定周期消费最新有效动作。
+P760: • 每个 PolicyOutput 必须携带 generated_at / valid_until / sequence_id；Runtime 额外记录 t_action_generated / t_enqueue / t_dequeue / t_execute。Action Age 超阈值或动作过期必须丢弃并进入安全停机/降级路径。
+P761: • ActionBuffer 必须有限容量、线程安全、可观测 Queue Depth、Backpressure、overwrite/drop 策略。
+P762: • 报告 Observation Age、Inference Latency、Queue Delay、Action Age、End-to-End Age、Execution jitter、deadline miss、stale/expired action count 的 P50/P95/P99；不以平均推理延迟替代实时指标。
+P763: • Intel RTC 只保留为 E4 官方参考；Qualcomm/TensorRT 也只能替换 InferenceBackend，不能绕开 ActionBuffer/Timing/Safety，更不能把普通 Linux 自动宣称为硬实时。
+P764: 8. OpenVINO 双级 Intel 部署：255H Pre-Deployment → DK-2500 225U Real Edge
+P862: 
+P863: 9.2 InferenceBackend 接口冻结
+P864: class InferenceBackend {public:  virtual Status initialize(const BackendConfig&) = 0;  virtual Result<PolicyOutput> infer(const Observation&) = 0;  virtual RuntimeMetrics metrics() const = 0;  virtual Status reset() = 0;  virtual ~InferenceBackend() = default;};
+P865: 
+P866: Torch、OpenVINO、Qualcomm（Q2）、TensorRT（E1）必须遵守同一 InferenceBackend 接口；上层任务、消息、ActionBuffer、Adapter 与 Safety 不因硬件 Vendor 变化而重写。
+P867: 9.3 ActionBuffer 必须处理
+P868: ☐ 生产者—消费者与线程安全。
+P869: ☐ 有限容量、覆盖策略和 Backpressure。
+P870: ☐ generated_at、valid_until 和 Action Age。
+P871: ☐ 过期动作丢弃、空队列安全停止。
+P872: ☐ 同步 vs 异步对比实验。
+P873: 9.4 自动 Benchmark
+P874: 自动输出 JSON/CSV：vendor/platform/device/runtime/precision/shape、convert/compile/load 状态、P50/P95/P99、预处理/推理/后处理、Observation/Queue/Action/E2E Age、Queue Depth、deadline/stale drop、资源、温度、异常计数和任务结果。
+P875: Gate C：C++ RuntimeTorchBackend/OpenVINOBackend 至少有一个 C++ 实现；切换 Backend 不修改上层任务；ActionBuffer 有单元测试、并发/异步实验和边界条件测试；核心模块能够说明 ownership/lifetime、RAII、异常/退出和线程同步；至少一次 GDB 或 sanitizer 排错证据、一次 perf/trace profiling 证据；Benchmark 可自动生成报告。AI 生成代码若无法独立解释和修改，不算通过。

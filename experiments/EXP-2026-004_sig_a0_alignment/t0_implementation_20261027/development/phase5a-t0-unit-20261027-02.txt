@@ -1,0 +1,32 @@
+test_bad_record_count_is_incomplete (test_t0.EvidenceRegression.test_bad_record_count_is_incomplete) ... ok
+test_command_event_without_sink_file_is_incomplete (test_t0.EvidenceRegression.test_command_event_without_sink_file_is_incomplete) ... ok
+test_complete_fixture (test_t0.EvidenceRegression.test_complete_fixture) ... ok
+test_counter_contradiction_is_incomplete (test_t0.EvidenceRegression.test_counter_contradiction_is_incomplete) ... ok
+test_duplicate_tick_is_incomplete (test_t0.EvidenceRegression.test_duplicate_tick_is_incomplete) ... ok
+test_early_exit_is_incomplete (test_t0.EvidenceRegression.test_early_exit_is_incomplete) ... ok
+test_missing_reason_is_incomplete (test_t0.EvidenceRegression.test_missing_reason_is_incomplete) ... ok
+test_no_end_is_incomplete (test_t0.EvidenceRegression.test_no_end_is_incomplete) ... ok
+test_recorder_loss_is_incomplete (test_t0.EvidenceRegression.test_recorder_loss_is_incomplete) ... ok
+test_sequence_gap_even_when_loss_zero (test_t0.EvidenceRegression.test_sequence_gap_even_when_loss_zero) ... ok
+test_sink_output_must_fail (test_t0.EvidenceRegression.test_sink_output_must_fail) ... ok
+test_source_identity_of_rejection_must_match (test_t0.EvidenceRegression.test_source_identity_of_rejection_must_match) ... ok
+test_unknown_event_cannot_hide_command (test_t0.EvidenceRegression.test_unknown_event_cannot_hide_command) ... ok
+test_evidence_files_are_exclusive (test_t0.GuardRegression.test_evidence_files_are_exclusive) ... ok
+test_recorder_count_bound (test_t0.GuardRegression.test_recorder_count_bound) ... ok
+test_recorder_line_bound (test_t0.GuardRegression.test_recorder_line_bound) ... ok
+test_watchdog_kills_worker_and_leaves_failure_evidence (test_t0.GuardRegression.test_watchdog_kills_worker_and_leaves_failure_evidence) ... ok
+test_allowed_token_only_outputs_once (test_t0.LogicRegression.test_allowed_token_only_outputs_once) ... ok
+test_context_is_copied (test_t0.LogicRegression.test_context_is_copied) ... ok
+test_expiry_half_open_boundary (test_t0.LogicRegression.test_expiry_half_open_boundary) ... ok
+test_observation_budget_boundary (test_t0.LogicRegression.test_observation_budget_boundary) ... ok
+test_schema_failure_anywhere_precedes_session (test_t0.LogicRegression.test_schema_failure_anywhere_precedes_session) ... ok
+test_sink_recheck_and_no_duplicate_expiry (test_t0.LogicRegression.test_sink_recheck_and_no_duplicate_expiry) ... ok
+test_source_failure_precedes_expiry (test_t0.LogicRegression.test_source_failure_precedes_expiry) ... ok
+test_untrusted_action_cannot_select_active_source (test_t0.LogicRegression.test_untrusted_action_cannot_select_active_source) ... ok
+test_wall_series_does_not_change_execution (test_t0.LogicRegression.test_wall_series_does_not_change_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.035s
+
+OK
+{"status": "FAIL_STOPPED", "output": "/tmp/phase5a-t0-watchdog-parent-xa52ot2p-output"}

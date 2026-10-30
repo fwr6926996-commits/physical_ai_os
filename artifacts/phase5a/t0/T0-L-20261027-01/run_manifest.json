@@ -1,0 +1,119 @@
+{
+  "protocol_id": "P5A-T0-L-0.2",
+  "run_id": "T0-L-20261027-01",
+  "authorization_id": "P5A-T0-L-02-AUTH-20261027-01",
+  "frozen_at": "2026-10-27T03:09:32.907664+00:00",
+  "source_sha256": {
+    "docs/protocols/PHASE5A_T0_OFFLINE_MOCK_V0_2_CANDIDATE.md": "275ad66c3530b1f3f2160cb68945cdd42a7446556f5108ac818f456aa6d08a11",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/t0_test_vectors_v0_2_candidate.json": "e8a2d5339752594b0ac757ace3281948c5fa8f55be998c94498011d86dd10220",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/timepoint_v0_2_candidate.schema.json": "759915d6825b5de4e79e2f45b8a8da9c52767e2ca28c516be3bae7c50441457f",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/AUTHORIZATION.json": "30cf130783824b00f4bdcc5e99955a92e38237f2ba135197a52208b80826347c",
+    "runtime_core/phase5a_t0/__init__.py": "52d7321fbb20a56b1eb528ab455907a9131d2f4c4f8853c5ada3c5905ad080e8",
+    "runtime_core/phase5a_t0/evidence.py": "8b13119916985b5389d00dd5d13c41143bfe9a4bbe8daba2701192b84958330b",
+    "runtime_core/phase5a_t0/logic.py": "89cdba11e0acdb92fd9b9315c67cc69ed7575e8cb42e9d3c4544f56bfa7027be",
+    "runtime_core/phase5a_t0/run.py": "58ddc4c863cc5147f97ea1cbf7a8f1fea1ddbc6b9487b83f58348018ff4fb42b",
+    "runtime_core/phase5a_t0/suite.py": "04cfd60cf77d02053f59554d8424eba4ff2c626e8c56f2f6ada125731fca3c30",
+    "tests/phase5a_t0/test_t0.py": "ab9d2505dd6b7b4e6bb3833914e0bf2e45c60f9ff40f86f11b0e11a216dd5a11"
+  },
+  "environment": {
+    "interpreter": "/home/lucas/miniconda3/bin/python",
+    "resolved_interpreter": "/home/lucas/miniconda3/bin/python3.13",
+    "interpreter_sha256": "6d2361e714a779d25e3181bd43e9568173a9a7af961d4430fa9f968182e4923f",
+    "python_version": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "hostname": "lucas-ThinkBook-16-G7-IAH",
+    "dependencies": {
+      "jsonschema": {
+        "version": "4.26.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/jsonschema",
+        "file_count": 38,
+        "tree_sha256": "c45f1eab882976b9ee3bfb4e048b8b12a66bb307d076a335326002bc6e2c5305"
+      },
+      "attrs": {
+        "version": "25.4.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/attrs",
+        "file_count": 8,
+        "tree_sha256": "666c0f6b1b36df7936abd181cb1e64ed10eb5a4e55cf9ca3942e65e8c4c4cd94"
+      },
+      "referencing": {
+        "version": "0.37.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/referencing",
+        "file_count": 15,
+        "tree_sha256": "e1d22ff4794b833d44aadc433bd54137407f2ae511e60a0420cb2cd69de0096e"
+      },
+      "rpds": {
+        "version": "0.30.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/rpds",
+        "file_count": 4,
+        "tree_sha256": "8842f529c5815c3a44b3b135d8ba9e3b45ae6a7c0f325ee1921563b00d946e52"
+      },
+      "jsonschema_specifications": {
+        "version": "2025.9.1",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/jsonschema_specifications",
+        "file_count": 24,
+        "tree_sha256": "42c84b92f173a8ad4b488401a39fa4e4b892320b1b19a2d1225aefd2c507bcd8"
+      }
+    }
+  },
+  "trusted_runtime_context": {
+    "run_id": "T0-L-02-DESIGN-ONLY",
+    "session_id": "session-A",
+    "control_clock_source": "fixture/host-A/boot-A/VIRTUAL_STEADY",
+    "permitted_control_domains": [
+      "HOST_STEADY"
+    ],
+    "max_observation_age_ns": "1000000000",
+    "mapping_registry": {},
+    "ownership": "Trusted harness/run-manifest context; never derived from an incoming action or its timestamp labels."
+  },
+  "clock_sources": {
+    "fixture/host-A/boot-A/VIRTUAL_STEADY": {
+      "clock_domain": "HOST_STEADY",
+      "kind": "VIRTUAL_TEST_CLOCK"
+    },
+    "fixture/host-B/boot-B/VIRTUAL_STEADY": {
+      "clock_domain": "HOST_STEADY",
+      "kind": "VIRTUAL_TEST_CLOCK",
+      "same_origin_as_host_A": false
+    },
+    "fixture/mcu-A/boot-A/UPTIME": {
+      "clock_domain": "MCU_UPTIME",
+      "kind": "VIRTUAL_TEST_CLOCK",
+      "mapping_to_host_A": "NOT_IMPLEMENTED"
+    },
+    "fixture/host-A/boot-A/VIRTUAL_SYSTEM": {
+      "clock_domain": "SYSTEM_TIME",
+      "kind": "VIRTUAL_TEST_CLOCK"
+    }
+  },
+  "context_note": "Fixture context run_id is a virtual-data label; outer run_id identifies this execution.",
+  "command": [
+    "/home/lucas/miniconda3/bin/python",
+    "-B",
+    "-m",
+    "runtime_core.phase5a_t0.run",
+    "--mode",
+    "formal",
+    "--run-id",
+    "T0-L-20261027-01",
+    "--freeze",
+    "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/run_freeze.json"
+  ],
+  "output_directory": "/home/lucas/physical_ai_os/artifacts/phase5a/t0/T0-L-20261027-01",
+  "case_count": 34,
+  "maximum_formal_attempts": 1,
+  "bounds": {
+    "wall_watchdog_seconds": 10,
+    "event_count": 512,
+    "single_event_bytes": 16384,
+    "total_output_bytes": 1048576
+  },
+  "development_evidence": {
+    "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/development/phase5a-t0-dev-20261027-03/run_manifest.json": "817b2120666e0d1ceede4736d4282a4b9ac349bdba2bdec0c202e5906e30e7b8",
+    "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/development/phase5a-t0-dev-20261027-03/result.json": "55a6b447b5ddf7c9e8be284e96a4bba6f03e876b037b4ea64ede196f8da6ce36",
+    "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/development_checks.json": "c46f85edaa779487629fb84b72c94db167bef84b9eac714107333763b2babdab"
+  },
+  "mode": "formal",
+  "started_at": "2026-10-27T03:09:38.301123+00:00",
+  "formal_attempt": 1
+}

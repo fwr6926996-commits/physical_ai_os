@@ -2,9 +2,14 @@
 
 Review ID: `SIG-A0`
 
-Version: `0.2`
+Version: `0.1`
 
-Status: `PASS_ARCHITECTURE_REVIEW_ONLY`
+Status: `ACCEPTED_ARCHITECTURE_ALIGNMENT_ONLY`
+
+Operational update: human owner accepted the bounded review and proposed architecture on
+`2026-10-27`. Decision: `experiments/EXP-2026-004_sig_a0_alignment/SIG_A0_ACCEPTANCE_20261027.md`.
+The protocol requirements below retain version `0.1`; their evaluated evidence is in that decision
+and its review sources. This status update authorizes no build, node run or physical execution.
 
 Classification: `ARCHITECTURE_REVIEW`
 
@@ -34,34 +39,6 @@ Activation requires one of:
 
 The review must finish before the Phase 5A package and interface architecture is frozen.
 
-## Activation record
-
-- Activation date: `2026-10-17`
-- Human authorization: minimal `SIG-A0` activation package approved
-- Repository baseline: `bc95e2b9b2674f2e14d837fe2498b6b91637dfa2`
-- Evidence root: `experiments/EXP-2026-004_sig_a0_alignment/`
-- Active scope: official-source refresh, exact upstream identity capture, interface mapping and
-  component disposition review
-- Compatibility spike: `NOT_AUTHORIZED`
-- Dependency installation, build, simulation, hardware access and robot motion: `NOT_AUTHORIZED`
-
-At activation, the bounded architecture review was permitted to begin; activation itself was not a
-`SIG-A0` pass decision and admitted no upstream component into the Phase 5 runtime.
-
-## Closure record
-
-- Owner decision date: `2026-10-17`
-- Repository effectivity: PR #5 merged as `bb5f8712a1e30b7df23608f8bd1794fc7043ad98`
-- Phase 5A RMW: explicit `rmw_fastrtps_cpp`
-- Timing/buffer owner: `physical_ai_runtime`
-- Linux-to-MCU permission boundary: `physical_ai_safety_bridge`
-- Optional compatibility spike: not required and not authorized
-- Upstream runtime admission: none; dispositions remain reference or defer
-
-This PASS closes the bounded architecture review only. It does not authorize dependency
-installation, Phase 5A implementation, build, simulation, hardware access, firmware change, robot
-motion, deployment, real-time qualification or physical-safety qualification.
-
 ## Time and execution bounds
 
 - Maximum review budget: two effective execution days.
@@ -79,14 +56,14 @@ Technical Core.
 
 ## Entry conditions
 
-- [x] Phase 4 transition or explicit bounded waiver is recorded.
-- [x] Active L1 execution book and both binding addenda match their recorded SHA-256 values.
-- [x] Current repository commit and dirty-worktree state are captured.
-- [x] Ubuntu, ROS distribution, RMW, compiler, Python and relevant LeRobot baselines are captured.
-- [x] Phase 5 package boundaries and the five frozen L1 interfaces are available for review.
-- [x] Upstream repositories, documents and REPs are refreshed from official sources.
-- [x] Every source-code candidate has an exact commit or release identity before build or use.
-- [x] Compatibility-spike plan is not applicable because no spike was required or authorized.
+- [ ] Phase 4 transition or explicit bounded waiver is recorded.
+- [ ] Active L1 execution book and both binding addenda match their recorded SHA-256 values.
+- [ ] Current repository commit and dirty-worktree state are captured.
+- [ ] Ubuntu, ROS distribution, RMW, compiler, Python and relevant LeRobot baselines are captured.
+- [ ] Phase 5 draft package boundaries and the five frozen L1 interfaces are available for review.
+- [ ] Upstream repositories, documents and REPs are refreshed from official sources.
+- [ ] Every source-code candidate has an exact commit or release identity before build or use.
+- [ ] Any compatibility spike has an output directory, cleanup plan and explicit stop rule.
 
 Recorded governing document identities at protocol creation:
 
@@ -191,15 +168,15 @@ adaptation, state the exact version, owner, adapter boundary, tests, rollback an
 
 `SIG-A0` passes only when:
 
-- [x] all reviewed source candidates have exact identities;
-- [x] Jazzy versus Lyrical and Python/dependency differences are explicit;
-- [x] the interface and execution matrix contains no unmarked assumptions;
-- [x] every candidate has exactly one disposition;
-- [x] adopted or adapted candidate evidence is not applicable because none were admitted;
-- [x] Phase 5 package ownership, timing ownership and safety ownership remain unambiguous;
-- [x] no upstream component becomes a second source of truth for project interfaces or datasets;
-- [x] deferred work has a trigger and cannot silently enter the Core backlog;
-- [x] the human owner approved the selected architecture and Phase 5 handoff.
+- [ ] all reviewed source candidates have exact identities;
+- [ ] Jazzy versus Lyrical and Python/dependency differences are explicit;
+- [ ] the interface and execution matrix contains no unmarked assumptions;
+- [ ] every candidate has exactly one disposition;
+- [ ] adopted or adapted candidates have reproducible evidence proportional to their role;
+- [ ] Phase 5 package ownership, timing ownership and safety ownership remain unambiguous;
+- [ ] no upstream component becomes a second source of truth for project interfaces or datasets;
+- [ ] deferred work has a trigger and cannot silently enter the Core backlog;
+- [ ] the human owner can explain the selected architecture and approve the Phase 5 handoff.
 
 ## Stop rules
 
@@ -242,9 +219,3 @@ frozen protocol provides that authority.
 - Generalizable evidence or bug -> candidate upstream contribution, requiring human review before
   publication.
 
-## Post-closure field consistency correction
-
-A targeted V2.9 and Addendum review found non-intentional drift in the initial field draft. The
-correction is isolated in `experiments/EXP-2026-004_sig_a0_alignment/` and preserves this review's
-fixed-source research, component dispositions and ownership conclusions. Phase 5A interface freeze
-waits for Owner Review of that correction; no upstream research is reopened.

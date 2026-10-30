@@ -1,0 +1,25 @@
+{
+  "status": "DRAFT_DESIGN_INPUTS_ONLY",
+  "generated_at": "2026-10-27T09:25:19.908586+08:00",
+  "files": {
+    "docs/protocols/PHASE5A_T0_OFFLINE_MOCK_V0_1_DRAFT.md": "7548a9034266059c611b43a31d26a0feacae7f1d9dd8e75212a44242ee94911d",
+    "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/timepoint_v0_1_draft.schema.json": "88db70d38160ea7f586e1df896ea1ff74ccb21a09106b0b3700c4e967b3d3e98",
+    "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/t0_test_vectors_v0_1_draft.json": "551692431d31387e84d4352f7df06b93b835b4e065f797b0543f3f7941fb622a"
+  },
+  "not_frozen": [
+    "runner and implementation identity",
+    "execution authorization"
+  ],
+  "checks": [
+    "JSON parse",
+    "fixture IDs and references",
+    "metadata field completeness",
+    "stop-window arithmetic",
+    "JSON Schema 2020-12 meta-schema and TimePoint example validation with existing base interpreter"
+  ],
+  "limits": [
+    "Expected results are design oracles, not observed runtime results",
+    "No comparator, ActionBuffer or ROS test was executed"
+  ],
+  "schema_validation_evidence": "experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/schema_validation.json"
+}

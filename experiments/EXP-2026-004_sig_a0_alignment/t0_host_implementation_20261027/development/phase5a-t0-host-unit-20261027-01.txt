@@ -1,0 +1,31 @@
+test_clock_context_is_copied (test_host.BindingTests.test_clock_context_is_copied) ... ok
+test_clock_refuses_wrong_source (test_host.BindingTests.test_clock_refuses_wrong_source) ... ok
+test_missing_evidence (test_host.BindingTests.test_missing_evidence) ... ok
+test_namespace_mismatch_even_on_same_host (test_host.BindingTests.test_namespace_mismatch_even_on_same_host) ... ok
+test_pid_reuse_or_boot_mismatch (test_host.BindingTests.test_pid_reuse_or_boot_mismatch) ... ok
+test_provider_mismatch_precedes_namespace (test_host.BindingTests.test_provider_mismatch_precedes_namespace) ... ok
+test_source_is_independent_of_session_and_pid (test_host.BindingTests.test_source_is_independent_of_session_and_pid) ... ok
+test_valid_independent_binding (test_host.BindingTests.test_valid_independent_binding) ... ok
+test_wait_uses_predicate_and_boottime_guard (test_host.BindingTests.test_wait_uses_predicate_and_boottime_guard) ... ok
+test_complete_actual_slot_timestamps (test_host.EvidenceTests.test_complete_actual_slot_timestamps) ... ok
+test_duplicate_slot (test_host.EvidenceTests.test_duplicate_slot) ... ok
+test_expiry_counter_dedup (test_host.EvidenceTests.test_expiry_counter_dedup) ... ok
+test_fixtures_do_not_modify_raw_input (test_host.EvidenceTests.test_fixtures_do_not_modify_raw_input) ... ok
+test_foreign_clock_tick (test_host.EvidenceTests.test_foreign_clock_tick) ... ok
+test_late_tick_not_replaced_by_catchup (test_host.EvidenceTests.test_late_tick_not_replaced_by_catchup) ... ok
+test_loss_counter (test_host.EvidenceTests.test_loss_counter) ... ok
+test_missing_event_sequence (test_host.EvidenceTests.test_missing_event_sequence) ... ok
+test_missing_terminal (test_host.EvidenceTests.test_missing_terminal) ... ok
+test_rejection_ages_not_published_for_wrong_session (test_host.EvidenceTests.test_rejection_ages_not_published_for_wrong_session) ... ok
+test_rejection_time_and_expiry_required (test_host.EvidenceTests.test_rejection_time_and_expiry_required) ... ok
+test_wrong_lateness_arithmetic (test_host.EvidenceTests.test_wrong_lateness_arithmetic) ... ok
+test_zero_file_with_nonzero_counter (test_host.EvidenceTests.test_zero_file_with_nonzero_counter) ... ok
+test_authorization_claim_cannot_be_reused_with_new_run_id (test_host.GuardTests.test_authorization_claim_cannot_be_reused_with_new_run_id) ... ok
+test_frame_guard (test_host.GuardTests.test_frame_guard) ... ok
+test_pipe_frame_guard (test_host.GuardTests.test_pipe_frame_guard) ... ok
+test_supervisor_boottime_deadline (test_host.GuardTests.test_supervisor_boottime_deadline) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.004s
+
+OK

@@ -1,0 +1,9 @@
+{
+  "status": "PASS_STATIC_ECMASCRIPT_REGEX_ONLY",
+  "node_version": "v24.19.0",
+  "old_ecmascript_pattern_accepts_trailing_newline": false,
+  "new_ecmascript_pattern_accepts_trailing_newline": false,
+  "lexical_probes": 11,
+  "note": "Python jsonschema 4.26.0 accepted the old-pattern newline probe; the JS probe does not. The new pattern rejects it in both engines.",
+  "runtime_logic_executed": false
+}

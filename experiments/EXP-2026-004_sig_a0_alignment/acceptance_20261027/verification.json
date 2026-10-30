@@ -1,0 +1,25 @@
+{
+  "status": "PASS_ACCEPTANCE_RECORD_SYNC_AND_DESIGN_ARTIFACT_INTEGRITY_ONLY",
+  "checked_at": "2026-10-27T09:25:19.956355+08:00",
+  "protected_files": 67,
+  "unchanged_existing_files": 64,
+  "intentional_existing_updates": [
+    "README.md",
+    "docs/process/notion_sync_registry.json",
+    "docs/protocols/SIG-A0_UPSTREAM_ALIGNMENT_REVIEW.md"
+  ],
+  "accepted_review_sources_unchanged": 8,
+  "previous_snapshot_manifests_unchanged": true,
+  "notion_sync_records": 11,
+  "notion_stale_count": 0,
+  "notion_readback": "verified stage quote/hashes and unchanged content outside current P1 paragraph",
+  "design_cases": 16,
+  "design_timepoints": 17,
+  "fixture_refs_and_window_arithmetic": "PASS",
+  "json_schema_standard_validation": "PASS_STATIC_STRUCTURE_ONLY",
+  "runtime_tests": "NOT_RUN",
+  "implementation_and_node_execution": "NOT_AUTHORIZED_BY_SIG_A0_ACCEPTANCE",
+  "git_diff_check": 0,
+  "schema_validator_version": "4.26.0",
+  "schema_examples_checked": 18
+}

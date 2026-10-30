@@ -1,0 +1,13 @@
+{
+  "result": "PASS_DOCUMENT_AND_EVIDENCE_INTEGRITY_ONLY",
+  "protected_preexisting_files_unchanged": 57,
+  "initial_review_manifest_entries_unchanged": 30,
+  "pinned_source_git_blob_hashes_verified": 23,
+  "governing_document_hashes_verified": 3,
+  "ros_package_versions_and_resolved_rmw_unchanged": true,
+  "candidate_rows_and_fetched_bodies": 19,
+  "candidate_query_has_more": false,
+  "git_diff_check": 0,
+  "no_runtime_test_executed": true,
+  "sig_a0_human_handoff": "NOT_RECORDED"
+}

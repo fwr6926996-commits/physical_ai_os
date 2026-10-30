@@ -1,0 +1,40 @@
+{
+  "kind": "READ_ONLY_SOURCE_ABI_AND_PACKAGE_INVENTORY_NOT_NODE_PREFLIGHT",
+  "client_date": "2026-10-28",
+  "observed_at_utc": "2026-10-28T02:20:07.201785+00:00",
+  "system_python": {
+    "path": "/usr/bin/python3",
+    "version": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "default_jsonschema_available": false,
+    "default_rclpy_available": true,
+    "note": "These defaults are from a plain audit process; a ROS child needs its separately captured ROS setup environment. No ROS init/import was used."
+  },
+  "conda_python_candidate": "/home/lucas/miniconda3/bin/python",
+  "packages": [
+    "python3 3.12.3-0ubuntu2.1",
+    "ros-jazzy-rcl 9.2.11-1noble.20260615.132422",
+    "ros-jazzy-rclpy 7.1.11-1noble.20260615.133206",
+    "ros-jazzy-rmw-fastrtps-cpp 8.4.4-1noble.20260615.124621",
+    "ros-jazzy-rosgraph-msgs 2.0.4-1noble.20260615.103338",
+    "strace 6.8-0ubuntu2"
+  ],
+  "local_source_and_binary_sha256": {
+    "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/clock.py": "ff541d1386ab52115ba23413eb0a9b3ca6773d15e06129a53ca3b657c4f934f6",
+    "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/time_source.py": "9aacb85102019116edc6eb74a6993ca7efa3296273bfa53c30cebbb792d446f5",
+    "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/node.py": "518dbe153cf73d8933bb4476d245774df57ed6e621041b7c4a252f4363636c7a",
+    "/opt/ros/jazzy/include/rcl/rcl/discovery_options.h": "9cff90e88ca02965132f7f9130eebd9b2e9455e0615b6bd84c45317bb911caa5",
+    "/opt/ros/jazzy/include/rmw/rmw/discovery_options.h": "d89b6757fd23f145fa19e7d2f9dab6ac22d842ff6af4702fe26a6696636b7fd9",
+    "/opt/ros/jazzy/lib/librmw_fastrtps_cpp.so": "046375a1ef195094abb57c832b275c385261052cfed3ee044cce70e25a42cef3",
+    "/opt/ros/jazzy/lib/libfastrtps.so.2.14.6": "8d39de86a55a92e1be92640a22e6322f099227930d4fc98bd821b6effd7a3eaa",
+    "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/_rclpy_pybind11.cpython-312-x86_64-linux-gnu.so": "1693241b31637bfe6055ca492133ee3ad74173e5b8a8f318c2c8d6d4c9d26f05"
+  },
+  "strace_binary": {
+    "path": "/usr/bin/strace",
+    "sha256": "28f957c227012de0b18d1bd7fff2d396cb693ea60ed8013be68de071e84b5001"
+  },
+  "rclpy_extension_abi": "cpython-312",
+  "ROS_nodes_started": false,
+  "DDS_context_created": false,
+  "strace_target_started": false,
+  "runtime_profile_verified": false
+}

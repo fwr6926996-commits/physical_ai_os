@@ -1,0 +1,33 @@
+{
+  "decision_id": "SIG-A0-ACCEPT-20261027-01",
+  "human_decision_date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "human_quote": "我已阅读对应文件并接受这个决定和对应架构",
+  "status": "ACCEPTED_ARCHITECTURE_ALIGNMENT_ONLY",
+  "source_revision": "WORKTREE_BASE:3f141d0c444fbacea62d3d5b788980d437c95aad",
+  "accepted_review_sources_sha256": {
+    "experiments/EXP-2026-004_sig_a0_alignment/review_20261027/HANDOFF_REVIEW.md": "def4c40872235c8af8a0c7e8c8a27588aab4fdaeb9d113729d9404605ff44d1c",
+    "experiments/EXP-2026-004_sig_a0_alignment/review_20261027/T0_DESIGN_DRAFT.md": "2ed9b8e1a9f2a6bf0bcf871b378f4cb7f27a8de85f0089f5ceee01c8490304ec",
+    "experiments/EXP-2026-004_sig_a0_alignment/component_dispositions.md": "d68a4b6e0dc8cc792b9718889e76179ca8ac1e7009be6658377b6ae540b286da",
+    "experiments/EXP-2026-004_sig_a0_alignment/interface_mapping.md": "a33d202ce0c683a0570127acd092b51d566b937bcbd39bfd9b091c686bb293f6",
+    "experiments/EXP-2026-004_sig_a0_alignment/upstream_snapshot.json": "113bf22fe11b8978f4c1b174bbe51c1f2c691d89503af822a84686277fa01754",
+    "experiments/EXP-2026-004_sig_a0_alignment/review_20261027/OFFICIAL_SOURCE_REVIEW.md": "0a9265dcf09f618597b88d35a31b9495fa85c09feb1b40ea7cd116db82154634",
+    "experiments/EXP-2026-004_sig_a0_alignment/review_20261027/CANDIDATE_TRIGGER_REVIEW.md": "a6d3875d2687b865c49ea26a2fe0fe463db16bc9c0803dd464d2d1bacc96e3fb",
+    "experiments/EXP-2026-004_sig_a0_alignment/review_20261027/LEARNING_CHECK.md": "31409195fa07a186710a0c82c01649e5dd44036936eaefe7dde551a32dc43692"
+  },
+  "not_frozen": [
+    "timing schema",
+    "ROS message and C++ API details",
+    "action chunk semantics",
+    "capacity and overwrite policy",
+    "QoS and executor details",
+    "experiment thresholds"
+  ],
+  "not_authorized": [
+    "runtime implementation",
+    "build",
+    "node execution",
+    "model integration",
+    "hardware execution"
+  ]
+}

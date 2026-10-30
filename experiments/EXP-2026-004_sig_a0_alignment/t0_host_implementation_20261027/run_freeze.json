@@ -1,0 +1,103 @@
+{
+  "protocol_id": "P5A-T0-H-0.1",
+  "authorization_id": "P5A-T0-H-01-AUTH-20261027-01",
+  "frozen_at": "2026-10-27T08:44:23.437020+00:00",
+  "run_id": "T0-H-20261027-01",
+  "source_sha256": {
+    "docs/protocols/PHASE5A_T0_HOST_CLOCK_V0_1_CANDIDATE.md": "25ef914e98d87bb7efb398ad722d681ca1ae1cff59ad6866aec7febd2e3159ad",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_design_20261027/scenarios_v0_1_candidate.json": "84061d0e47a561c3b377649dc57f0759d4ada401abfae1568fbea035b97d25c3",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_host_implementation_20261027/AUTHORIZATION.json": "290a952589ab1331fd7b93d5a1277c3ff0642374c242f258ddb283d16a07bf42",
+    "runtime_core/phase5a_t0/logic.py": "89cdba11e0acdb92fd9b9315c67cc69ed7575e8cb42e9d3c4544f56bfa7027be",
+    "runtime_core/phase5a_t0/run.py": "58ddc4c863cc5147f97ea1cbf7a8f1fea1ddbc6b9487b83f58348018ff4fb42b",
+    "runtime_core/phase5a_t0/__init__.py": "52d7321fbb20a56b1eb528ab455907a9131d2f4c4f8853c5ada3c5905ad080e8",
+    "experiments/EXP-2026-004_sig_a0_alignment/t0_design_review_20261027/timepoint_v0_2_candidate.schema.json": "759915d6825b5de4e79e2f45b8a8da9c52767e2ca28c516be3bae7c50441457f",
+    "runtime_core/phase5a_t0_host/__init__.py": "c53ef04febbc0fc0ea0596dbecbd0094250e8ed09127b47cf2377ad6bab3acc5",
+    "runtime_core/phase5a_t0_host/native.py": "28a003f3c08d17945364b06cfbcfab1cb0d7f86ef5425b27bed1c455fcfc49eb",
+    "runtime_core/phase5a_t0_host/run.py": "2f30c1cd8bce5d53edc4dfb573842755a93e1183b3318217bb6886019e1b695a",
+    "runtime_core/phase5a_t0_host/suite.py": "ad156d1737ad879269295c7f165b023333b7839aed89effe02119ed92ab4b739",
+    "runtime_core/phase5a_t0_host/verify.py": "d91fd22d11fc59ce68c6725c9b92e07b7123fc3509a8b8395740d1e8c400bd39",
+    "runtime_core/phase5a_t0_host/worker.py": "6a83ed51b2e458c89d14b871433f626cbd85639fa6a99f964e29a832427e7378",
+    "tests/phase5a_t0_host/test_host.py": "7066e69a0f8f8e87642f3ebc1cf924da3325e3aea31eebd9ae4d4489378dff87"
+  },
+  "environment": {
+    "interpreter": "/home/lucas/miniconda3/bin/python",
+    "resolved_interpreter": "/home/lucas/miniconda3/bin/python3.13",
+    "interpreter_sha256": "6d2361e714a779d25e3181bd43e9568173a9a7af961d4430fa9f968182e4923f",
+    "python_version": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "hostname": "lucas-ThinkBook-16-G7-IAH",
+    "dependencies": {
+      "jsonschema": {
+        "version": "4.26.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/jsonschema",
+        "file_count": 38,
+        "tree_sha256": "c45f1eab882976b9ee3bfb4e048b8b12a66bb307d076a335326002bc6e2c5305"
+      },
+      "attrs": {
+        "version": "25.4.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/attrs",
+        "file_count": 8,
+        "tree_sha256": "666c0f6b1b36df7936abd181cb1e64ed10eb5a4e55cf9ca3942e65e8c4c4cd94"
+      },
+      "referencing": {
+        "version": "0.37.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/referencing",
+        "file_count": 15,
+        "tree_sha256": "e1d22ff4794b833d44aadc433bd54137407f2ae511e60a0420cb2cd69de0096e"
+      },
+      "rpds": {
+        "version": "0.30.0",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/rpds",
+        "file_count": 4,
+        "tree_sha256": "8842f529c5815c3a44b3b135d8ba9e3b45ae6a7c0f325ee1921563b00d946e52"
+      },
+      "jsonschema_specifications": {
+        "version": "2025.9.1",
+        "path": "/home/lucas/miniconda3/lib/python3.13/site-packages/jsonschema_specifications",
+        "file_count": 24,
+        "tree_sha256": "42c84b92f173a8ad4b488401a39fa4e4b892320b1b19a2d1225aefd2c507bcd8"
+      }
+    }
+  },
+  "clock_identity": {
+    "boot_id_sha256": "bcafe536a03675823700251883e1c6ac0f84ea4860a7fd88f8f5d39d77cafe93",
+    "namespace_dev": 5,
+    "namespace_ino": 4026531834,
+    "time_namespace": "time:[4026531834]",
+    "children_time_namespace": "time:[4026531834]",
+    "timens_offsets": "monotonic           0         0\nboottime            0         0\n",
+    "clock_id_symbol": "CLOCK_MONOTONIC",
+    "clock_id_value": 1,
+    "sampling_api": "time.clock_gettime_ns"
+  },
+  "source": "linux-monotonic:c86a534d88fb34a53e57a566196bb7c0029c2a9dcebac9cb8e0eb84ded48a43c",
+  "command": [
+    "/home/lucas/miniconda3/bin/python",
+    "-B",
+    "-m",
+    "runtime_core.phase5a_t0_host.run",
+    "--mode",
+    "formal",
+    "--run-id",
+    "T0-H-20261027-01",
+    "--freeze",
+    "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_host_implementation_20261027/run_freeze.json"
+  ],
+  "output_directory": "/home/lucas/physical_ai_os/artifacts/phase5a/t0_host/T0-H-20261027-01",
+  "worker_command_template": "<interpreter> -B -m runtime_core.phase5a_t0_host.run --worker <producer|executor> --output <fresh instance directory> --case-id <case> --instance-id <case-generation-role> --provider <fixed case provider> --fault <fixed case fault>",
+  "context_rule": "supervisor allocates run/case/generation/UUID session before READY; source from kernel binding; incoming action cannot override",
+  "limits": {
+    "maximum_simultaneous_processes": 3,
+    "parent_guard_seconds": 30,
+    "expiry_wait_guard_seconds": 2,
+    "maximum_total_events": 1024,
+    "maximum_frame_bytes": 16384,
+    "maximum_total_output_bytes": 2097152,
+    "maximum_formal_attempts_per_authorization": 1
+  },
+  "development_evidence": {
+    "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_host_implementation_20261027/development/phase5a-t0-host-dev-20261027-03/result.json": "8bf205e665b0543953ec076e0ed4d86e660622ab3cc78e9ea61b75572818dfa3",
+    "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_host_implementation_20261027/development/phase5a-t0-host-dev-20261027-03/hashes.json": "f879c6e1cf8e5a9d45a84960a630fbbc6c2507600d4c8e229332dfb6e3873cda",
+    "/home/lucas/physical_ai_os/experiments/EXP-2026-004_sig_a0_alignment/t0_host_implementation_20261027/development_checks.json": "580a3141d9a3234e71db1ef64470d2aea172032c361ef7367810f1c97624e665"
+  }
+}

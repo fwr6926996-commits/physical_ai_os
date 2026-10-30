@@ -1,0 +1,38 @@
+{
+  "status": "PASS_STATIC_PROTOCOL_AND_DATA_REVIEW_ONLY",
+  "validator": "jsonschema.Draft202012Validator",
+  "validator_version": "4.26.0",
+  "schema_meta_validation": "PASS",
+  "named_timepoint_structure_checks": 37,
+  "intentional_structure_failures": [
+    "newline_timestamp_80",
+    "number_timestamp_80",
+    "wrong_version_80"
+  ],
+  "canonical_lexical_probes": {
+    "'0\\n'": false,
+    "'-0'": false,
+    "'01'": false,
+    "'+1'": false,
+    "'1.0'": false,
+    "'NaN'": false,
+    "'８０'": false,
+    "'0'": true,
+    "'-1'": true,
+    "'9223372036854775807'": true,
+    "'9223372036854775808'": true
+  },
+  "case_ids_and_references": 34,
+  "context_negatives_before_expiry": true,
+  "stop_window_ticks": 11,
+  "evidence_field_shapes_and_counterexamples": "CONSISTENT_AS_DESIGN_INPUTS",
+  "not_executed": [
+    "time comparator",
+    "session/source decision logic",
+    "mock sink behavior",
+    "evidence verifier",
+    "ROS nodes",
+    "formal suite"
+  ],
+  "all_expected_values": "design oracles, not measured results"
+}

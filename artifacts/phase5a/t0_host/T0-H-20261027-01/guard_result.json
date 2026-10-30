@@ -1,0 +1,6 @@
+{
+  "guard_clock": "CLOCK_BOOTTIME",
+  "triggered": false,
+  "suite_elapsed_ns": "3623491063",
+  "scope": "resource guard, not a real-time metric"
+}

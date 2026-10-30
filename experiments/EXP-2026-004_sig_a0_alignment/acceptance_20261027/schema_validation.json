@@ -1,0 +1,15 @@
+{
+  "status": "PASS_STATIC_JSON_SCHEMA_VALIDATION_ONLY",
+  "interpreter": "/home/lucas/miniconda3/bin/python",
+  "validator": "jsonschema.Draft202012Validator",
+  "validator_version": "4.26.0",
+  "schema_meta_validation": "PASS",
+  "well_formed_timepoint_examples": 17,
+  "deliberately_invalid_nan_example": "REJECTED_AS_EXPECTED",
+  "overflow_example_structurally_valid": true,
+  "limits": [
+    "No source/clock comparison, int64 semantic validation or T0 logic was run",
+    "No Runtime, ActionBuffer or ROS tests executed",
+    "Used existing base interpreter; no environment installation or activation"
+  ]
+}

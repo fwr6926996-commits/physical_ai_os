@@ -1,0 +1,26 @@
+name: Build and Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  industrial_ci:
+    strategy:
+      fail-fast: false
+      matrix:
+        env:
+          - ROS_DISTRO: jazzy
+          - ROS_DISTRO: kilted
+          - ROS_DISTRO: rolling
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: 'recursive'
+      - uses: 'ros-industrial/industrial_ci@master'
+        env: ${{ matrix.env }}

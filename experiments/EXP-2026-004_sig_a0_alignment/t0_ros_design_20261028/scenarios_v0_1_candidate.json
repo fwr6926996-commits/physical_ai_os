@@ -1,0 +1,179 @@
+{
+  "protocol_id": "P5A-T0-ROS-0.1",
+  "status": "DESIGN_CANDIDATE_NOT_ACCEPTED_NOT_AUTHORIZED",
+  "client_date": "2026-10-28",
+  "runtime_results": null,
+  "ROS_DOMAIN_ID": 91,
+  "control_clock": "CLOCK_MONOTONIC",
+  "guard_clock": "CLOCK_BOOTTIME",
+  "node_count_per_ROS_worker": 2,
+  "interpreters": {
+    "ROS_worker": "/usr/bin/python3",
+    "supervisor_and_native_executor": "/home/lucas/miniconda3/bin/python"
+  },
+  "process_limit_including_tracer": 4,
+  "jump_threshold": {
+    "min_forward_ns": null,
+    "min_backward_ns": "-1",
+    "on_clock_change": true
+  },
+  "limits": {
+    "total_guard_seconds": 60,
+    "case_guard_seconds": 10,
+    "clock_step_guard_ms": 500,
+    "clock_publish_period_ms": 20,
+    "maximum_publications_per_step": 25,
+    "maximum_frame_bytes": 16384,
+    "maximum_event_records": 4096,
+    "maximum_trace_bytes": 4194304,
+    "maximum_total_output_bytes": 8388608,
+    "maximum_formal_attempts_per_authorization": 1,
+    "callback_ring_capacity": 64
+  },
+  "thresholds_ns": {
+    "native_token_ttl": "200000000",
+    "old_session_token_ttl": "2000000000",
+    "max_synthetic_observation_age": "5000000000",
+    "stop_window_minimum": "200000000",
+    "tick_slot_period": "20000000"
+  },
+  "stop_slot_count": 10,
+  "cases": [
+    {
+      "id": "R01",
+      "name": "initial_ros_fallback_and_transport_preflight",
+      "evidence_kind": "REAL_ROS_PATH",
+      "expected": {
+        "use_sim_time": false,
+        "clock_active": false,
+        "mock_commands": 0,
+        "cross_domain_age_available": false
+      }
+    },
+    {
+      "id": "R02",
+      "name": "first_activation_before_clock",
+      "evidence_kind": "REAL_ROS_PATH",
+      "expected": {
+        "use_sim_time": true,
+        "clock_active": true,
+        "raw_ros_ns": "0",
+        "contract_validity": "INVALID",
+        "contract_timestamp": null,
+        "mock_commands": 0
+      }
+    },
+    {
+      "id": "R03",
+      "name": "paused_ros_clock_native_expiry",
+      "evidence_kind": "REAL_ROS_PATH",
+      "expected": {
+        "last_confirmed_ros_ns": "1000000000",
+        "native_reason": "EXPIRED",
+        "baseline_mock_commands": 1,
+        "window_mock_command_delta": 0,
+        "expired_drop_delta": 1,
+        "actual_tick_slots": 10
+      }
+    },
+    {
+      "id": "R04",
+      "name": "actual_backward_jump_then_invalidation",
+      "evidence_kind": "REAL_ROS_PATH",
+      "expected": {
+        "ros_before_ns": "2000000000",
+        "ros_after_ns": "1000000000",
+        "backward_jump_callback_observed": true,
+        "invalidation_commit_recorded": true,
+        "pending_depth_after_commit": 0,
+        "window_mock_command_delta": 0,
+        "actual_tick_slots": 10
+      }
+    },
+    {
+      "id": "R05",
+      "name": "deactivation_after_armed",
+      "evidence_kind": "REAL_ROS_PATH",
+      "expected": {
+        "use_sim_time": false,
+        "clock_active": false,
+        "clock_change": "ROS_TIME_DEACTIVATED",
+        "invalidation_commit_recorded": true,
+        "window_mock_command_delta": 0,
+        "actual_tick_slots": 10
+      }
+    },
+    {
+      "id": "R06",
+      "name": "cached_reactivation_and_explicit_rearm",
+      "evidence_kind": "REAL_ROS_PATH",
+      "expected": {
+        "activation_cached_ros_ns": "2000000000",
+        "confirmed_fresh_ros_ns": "3000000000",
+        "clock_change": "ROS_TIME_ACTIVATED",
+        "automatic_rearm": false,
+        "session_changed": true,
+        "old_unexpired_token_mock_commands": 0,
+        "old_token_reason": "SESSION_MISMATCH",
+        "new_token_mock_commands": 1
+      }
+    },
+    {
+      "id": "R07",
+      "name": "actual_ros_reading_unmapped_domain_rejection",
+      "evidence_kind": "ACTUAL_ROS_READING_CONTRACT_NEGATIVE",
+      "expected": {
+        "reason": "CLOCK_DOMAIN_MISMATCH",
+        "age_available": false,
+        "action_age_ns": null,
+        "observation_age_ns": null,
+        "mock_commands": 0
+      }
+    },
+    {
+      "id": "R08",
+      "name": "missing_jump_marker_copy",
+      "evidence_kind": "POST_COLLECTION_VERIFIER_FIXTURE",
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "source_case": "R04",
+      "no_new_runtime_execution": true
+    },
+    {
+      "id": "R09",
+      "name": "missing_invalidation_commit_copy",
+      "evidence_kind": "POST_COLLECTION_VERIFIER_FIXTURE",
+      "expected": {
+        "verdict": "EVIDENCE_INCOMPLETE",
+        "must_not_infer_zero_output": true
+      },
+      "source_case": "R04",
+      "no_new_runtime_execution": true
+    },
+    {
+      "id": "R10",
+      "name": "command_after_invalidation_in_copy",
+      "evidence_kind": "POST_COLLECTION_VERIFIER_FIXTURE",
+      "expected": {
+        "verdict": "FAIL_MOCK_STOP_WINDOW_ONLY",
+        "reason": "UNEXPECTED_MOCK_OUTPUT",
+        "window_fixture_command_delta": 1
+      },
+      "source_case": "R04",
+      "no_new_runtime_execution": true
+    }
+  ],
+  "result_scope": "T0_ROS_CLOCK_NEGATIVE_MOCK_PASS only; full Gate T0 requires separate coverage review and human decision",
+  "transport": {
+    "profile": "loopback_udp_v0_1_candidate.xml",
+    "ROS_AUTOMATIC_DISCOVERY_RANGE": "SYSTEM_DEFAULT",
+    "RMW_FASTRTPS_USE_QOS_FROM_XML": "0",
+    "RMW_FASTRTPS_PUBLICATION_MODE": "SYNCHRONOUS",
+    "runtime_validation": "required; not performed",
+    "IP_data_traffic": "IPv4 UDP 127.0.0.1 only",
+    "SHM_transport_and_DataSharing": "not allowed",
+    "builtin_node_topics": "parameter_events and discovery metadata permitted; rosout disabled"
+  }
+}

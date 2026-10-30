@@ -1,0 +1,21 @@
+{
+  "status": "PASS_ACCEPTANCE_RECORD_SYNC_AND_INTEGRITY",
+  "decision_id": "P5A-T0-L-02-ACCEPT-20261027-01",
+  "human_quote": "接受",
+  "human_acceptance": "ACCEPTED_T0_L_OFFLINE_MOCK_ONLY",
+  "preexisting_file_count": 152,
+  "intentional_existing_changes": [
+    "docs/process/notion_sync_registry.json",
+    "README.md"
+  ],
+  "all_other_preexisting_files_unchanged": true,
+  "accepted_source_hashes_unchanged": true,
+  "formal_suite_rerun": false,
+  "new_code_or_runtime_execution": false,
+  "notion_readback": "PASS",
+  "notion_sync_records": 13,
+  "notion_stale_count": 0,
+  "git_diff_check_exit_code": 0,
+  "full_gate_t0": "NOT_ESTABLISHED",
+  "verified_at": "2026-10-27T03:29:29.530813+00:00"
+}

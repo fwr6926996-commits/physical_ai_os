@@ -1,8 +1,8 @@
 # L1 Learning & Delegation Policy
 
-Policy version: `0.2`
+Policy version: `0.4`
 
-Effective date: `2026-09-23`
+Effective date: `2026-10-30`
 
 ## Purpose
 
@@ -40,13 +40,16 @@ Examples include:
 
 Instead:
 
-1. explain the principle,
-2. explain what the command/code changes,
+1. locate the capability in its knowledge domain and identify the software/tools involved,
+2. explain the principle, how the tools connect, and what the command/code changes,
 3. identify the critical step the user should perform,
 4. let the user execute that critical step,
 5. inspect the result and continue from there.
 
 Once the user has demonstrated basic understanding and completed the workflow once, similar work may move toward greater Codex autonomy.
+
+Apply the learning orientation in Rule 9 before selecting that critical step. Agreement with a
+design, a correct verbal explanation, or permission to proceed does not demonstrate operational skill.
 
 Do not treat every new command as a First Encounter. Apply this rule to **capability-level concepts**, not trivial syntax.
 
@@ -153,6 +156,14 @@ Do not require this verification for repetitive or low-value work.
 
 If Codex completed something important that the user cannot explain or modify, flag it as **Mystery Debt** and help remove that debt before it accumulates.
 
+Track conceptual understanding and practical operation separately. Do not infer either from an
+engineering PASS or human acceptance. For an Operator learning objective, verbal review alone is
+insufficient: include a bounded user-performed operation and inspect its observable result.
+
+Distinguish explanation understood, guided execution completed, independent discovery demonstrated,
+and independent modification demonstrated. Report only the observed level. Running a supplied
+command or opening a supplied file does not demonstrate choosing that command or locating that file.
+
 ---
 
 ## Rule 6 — Ground Before Acting
@@ -192,6 +203,83 @@ Keep these states separate:
 A partial pass must not drift into a full pass through abbreviated reporting. Starting a later phase after an unmet gate requires an explicit, human-owned waiver or architecture decision with scope and reopening conditions.
 
 The operational workflow and templates for these rules are maintained in `docs/process/ENGINEERING_WORKFLOW.md`.
+
+---
+
+## Rule 9 — Build a Capability Map Before Protocol Review
+
+Use **phase-level foundations followed by project-based practice**. At a new phase, or when repeated
+questions reveal a common prerequisite gap, first connect the small set of foundations needed for
+the next project milestone. Do not wait for the user to discover every unfamiliar term. Do not
+require a broad course unrelated to the immediate capability.
+
+Before asking the user to review an unfamiliar technical protocol or architecture, provide a short
+orientation in the user's language that answers:
+
+* **Purpose and domain** — what concrete problem is being solved, and which engineering subjects
+  contain the relevant knowledge;
+* **Software and connections** — the actual programs, libraries and tools used, where they run,
+  and how data/control passes between them; distinguish an executable tool from a concept,
+  configuration file, message or evidence artifact;
+* **Human skills** — what the user needs to understand, operate or modify at the declared learning
+  depth, what is already demonstrated, and what remains unknown;
+* **Prerequisites** — what must be learned now, what can be learned during this task, and what
+  Codex can handle or defer; explain why each immediate prerequisite is needed;
+* **One practical loop** — a small user-performed operation, its starting environment and exact
+  entry point, expected observable result, one meaningful variation or fault, and how to stop or
+  restore the initial state. Demonstrate and guide before assessing independent use.
+
+Use the actual repository and environment as examples. Give normally one to three precise sources
+for the next learning step; explain what to read and why. A list of links, jargon definitions, or
+an unexplained command sequence does not replace this orientation.
+
+For Operator depth, aim for the user to locate the entry point, start/inspect/stop the bounded
+example, change or review one meaningful control, and interpret its output with references open.
+Implementer depth additionally includes changing and debugging the code; do not silently make
+writing a harness, parser or verifier a prerequisite for operating the system. Conversely,
+delegating implementation must not hide which tools were used or how their outputs can be checked.
+
+Use a small, connected learning sequence for shared prerequisites. When a user understands the
+logic but cannot name the tools, locate the entry point or describe the next operation, repair
+that gap before presenting another protocol for acceptance. Do not respond with a longer protocol,
+another approval request, or a chain of recall questions. Update only the relevant learning status;
+do not retroactively revoke engineering evidence or acceptance.
+
+Protocols remain engineering review and qualification records. Teach the capability before asking
+the user to judge such a record. Learning examples must state whether they are explanation only,
+read-only inspection or actual execution; they do not inherit formal-run authorization or become
+qualification evidence. Keep existing environment, hardware and execution boundaries intact.
+
+Keep the orientation lightweight and reusable. Prefer conversation and existing project files over
+new templates or a document for every substep. Declare learning depth, knowledge domain and tools
+when introducing an important capability; repeat them only when the capability or scope changes.
+
+### Show how the next clue was obtained
+
+When teaching navigation or diagnosis, make the discovery path reproducible. For each meaningful
+transition, state the current question, available clue and its source, the operation/tool and search
+scope, the relevant observation, and how it supports the next bounded step. Use concise observable
+steps rather than a fully solved command sequence with unexplained paths or keywords.
+
+Identify whether a path, filename, symbol, line number or search term came from the user's output,
+a document, a prior search, or Codex's supplied context. If Codex supplies the clue, say so and show
+how it could be found from a user-known entry point. Do not silently turn an agent-provided clue
+into something the user independently discovered. A directory supplied by Codex is still a supplied
+clue even when the user successfully lists its contents.
+
+For source tracing, demonstrate the links: known project entry -> documented output location ->
+directory contents -> record or filename -> source references -> assignment/open operation -> uses
+of the resulting variable or attribute. Adapt this path to the task; do not require every link when
+the user already knows it. Explain why the search term changes, distinguish a search hit from a
+confirmed writer, and distinguish original generation from reading, aggregation and verification.
+
+Before a new practical step, confirm tool availability in the user's environment and explain the
+relevant input context, syntax and state lifetime. Codex's execution environment does not establish
+the user's installed tools or shell state. Use an available equivalent when suitable; do not add
+installation work solely because a preferred search tool is absent. Teach unfamiliar language
+constructs in a small example before assigning production-code reading. If several consecutive
+steps expose shared prerequisite gaps, regroup them into a short foundation lesson instead of
+continuing a command-by-command sequence that relies on unexplained concepts.
 
 ---
 

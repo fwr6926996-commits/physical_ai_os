@@ -1,0 +1,7 @@
+{
+  "status": "T0_H_NATIVE_CLOCK_AND_LOCAL_PIPE_MOCK_PASS",
+  "case_count": 12,
+  "matched_count": 12,
+  "human_result_acceptance": "PENDING",
+  "full_gate_t0": "NOT_ESTABLISHED"
+}

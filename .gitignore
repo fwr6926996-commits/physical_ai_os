@@ -44,3 +44,13 @@ projects/**/openvino/**/policy_package*/**/*.npz
 # System
 .DS_Store
 *.swp
+
+# Local Notion evidence with real page identifiers; preserve original evidence bytes.
+/experiments/EXP-2026-004_sig_a0_alignment/acceptance_20261027/notion_readback.json
+/experiments/EXP-2026-004_sig_a0_alignment/review_20261027/CANDIDATE_TRIGGER_REVIEW.md
+/experiments/EXP-2026-004_sig_a0_alignment/review_20261027/notion_candidate_snapshot.json
+/experiments/EXP-2026-004_sig_a0_alignment/t0_acceptance_20261027/notion_readback.json
+/experiments/EXP-2026-004_sig_a0_alignment/t0_host_implementation_20261027/notion_sync_pending.json
+/experiments/EXP-2026-004_sig_a0_alignment/t0_implementation_20261027/notion_readback.json
+/experiments/EXP-2026-004_sig_a0_alignment/t0_ros_design_20261028/host_notion_partial.json
+/experiments/EXP-2026-004_sig_a0_alignment/t0_ros_design_20261028/host_notion_sync_resolution.json

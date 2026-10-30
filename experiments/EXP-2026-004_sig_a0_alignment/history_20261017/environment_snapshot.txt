@@ -1,0 +1,51 @@
+SIG-A0 ENVIRONMENT SNAPSHOT
+snapshot_time=2026-10-17T19:32:36+08:00
+capture_mode=read_only
+compatibility_spike=not_authorized
+
+[repository]
+origin=git@github.com:fwr6926996-commits/physical_ai_os.git
+baseline_commit=bc95e2b9b2674f2e14d837fe2498b6b91637dfa2
+baseline_tag=<none>
+activation_branch=codex/sig-a0-minimal-activation
+worktree_state_before_activation_files=clean
+
+[preserved_primary_worktree]
+branch=main
+head=3f141d0c444fbacea62d3d5b788980d437c95aad
+remote_relation=behind_origin_main_by_4
+tracked_modified=5
+untracked_entries=20
+tracked_deleted=0
+staged_entries=0
+sync_action=none_worktree_preserved
+
+[governing_documents]
+execution_book_sha256=95cd404a72f0c03435b0728aa0bd169f78a6b782f9063a4b6659cbc953bec5ef
+architecture_addendum_sha256=eb34eedec544d8f327a321b9e4188055ffcd54aee4a44b7672cb5955e95e8091
+portability_addendum_sha256=e3b4aea1b8cdcf425762fa980d4bc6189e109f726d9238bea6f1c146dc7551b6
+governing_hash_check=PASS
+
+[host]
+os=Ubuntu 24.04.4 LTS (Noble Numbat)
+kernel=Linux 7.0.0-31-generic x86_64 GNU/Linux
+
+[ros]
+ROS_DISTRO=jazzy
+RMW_IMPLEMENTATION=<unset>
+ros-jazzy-ros-base=0.11.0-1noble.20260616.084325
+ros-jazzy-rmw-implementation=2.15.6-1noble.20260615.132010
+ros-jazzy-rmw-cyclonedds-cpp=2.2.3-1noble.20260615.123728
+ros-jazzy-rmw-fastrtps-cpp=8.4.4-1noble.20260615.124621
+
+[toolchain]
+g++=13.3.0
+cmake=3.28.3
+python=3.12.3
+lerobot=<not-installed-in-active-python>
+
+[interpretation]
+The active host satisfies the project's Ubuntu 24.04 and ROS 2 Jazzy baseline. The RMW is not
+explicitly selected and LeRobot is not installed in the active Python environment. These are
+compatibility facts, not requests to mutate the host. Any later dependency environment must be
+isolated and separately authorized.
